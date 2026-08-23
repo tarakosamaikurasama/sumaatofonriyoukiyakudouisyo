@@ -10,7 +10,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#17202a">
 
-<title>スマートフォン利用規約　Ver.1</title>
+<title>スマートフォン利用規約</title>
 
 <style>
 
@@ -36,11 +36,6 @@ body{
     sans-serif;
 }
 
-
-/* =========================
-   ヘッダー
-========================= */
-
 .header{
   background:#17202a;
   color:white;
@@ -62,11 +57,6 @@ body{
   opacity:.8;
 }
 
-
-/* =========================
-   画面
-========================= */
-
 .screen{
   display:none;
   min-height:calc(100vh - 80px);
@@ -80,11 +70,6 @@ body{
   width:min(850px,calc(100% - 14px));
   margin:8px auto 30px;
 }
-
-
-/* =========================
-   カード
-========================= */
 
 .card{
   background:white;
@@ -102,10 +87,7 @@ body{
   margin-bottom:10px;
 }
 
-
-/* =========================
-   メニュー
-========================= */
+/* メニュー */
 
 .menu-card{
   text-align:center;
@@ -155,10 +137,7 @@ body{
   font-weight:bold;
 }
 
-
-/* =========================
-   規約
-========================= */
+/* 規約 */
 
 .important-notice{
   color:red;
@@ -213,10 +192,7 @@ body{
   font-size:13px;
 }
 
-
-/* =========================
-   入力
-========================= */
+/* 入力 */
 
 .field{
   margin:9px 0;
@@ -240,10 +216,7 @@ input[type="password"]{
   font-size:16px;
 }
 
-
-/* =========================
-   署名
-========================= */
+/* 署名 */
 
 .signature-box{
   width:100%;
@@ -253,7 +226,14 @@ input[type="password"]{
   border-radius:8px;
   background:white;
   overflow:hidden;
+
+  /*
+   * ここがスマホでの署名に重要。
+   * 指で触れたときにブラウザのスクロールではなく
+   * Canvasへタッチを渡す。
+   */
   touch-action:none;
+  -ms-touch-action:none;
 }
 
 #signatureCanvas,
@@ -261,10 +241,18 @@ input[type="password"]{
   position:absolute;
   left:0;
   top:0;
+
   width:100%;
   height:100%;
+
   display:block;
+
   touch-action:none;
+  -ms-touch-action:none;
+
+  user-select:none;
+  -webkit-user-select:none;
+  -webkit-touch-callout:none;
 }
 
 .signature-hint{
@@ -286,10 +274,7 @@ input[type="password"]{
   border-radius:7px;
 }
 
-
-/* =========================
-   ボタン
-========================= */
+/* ボタン */
 
 .agree-button{
   width:100%;
@@ -349,10 +334,7 @@ input[type="password"]{
   font-weight:bold;
 }
 
-
-/* =========================
-   エラー
-========================= */
+/* エラー */
 
 .error{
   display:none;
@@ -365,10 +347,7 @@ input[type="password"]{
   line-height:1.5;
 }
 
-
-/* =========================
-   確認画面
-========================= */
+/* 確認画面 */
 
 .confirmation-screen-container{
   width:min(700px,calc(100% - 14px));
@@ -514,10 +493,7 @@ input[type="password"]{
   background:white;
 }
 
-
-/* =========================
-   管理者
-========================= */
+/* 管理者 */
 
 .admin-list-item{
   background:#f7f8f9;
@@ -577,10 +553,7 @@ input[type="password"]{
   font-size:12px;
 }
 
-
-/* =========================
-   読み込み画面
-========================= */
+/* 読み込み */
 
 .loading-screen{
   position:fixed;
@@ -659,11 +632,6 @@ input[type="password"]{
   font-weight:bold;
 }
 
-
-/* =========================
-   全画面
-========================= */
-
 .fullscreen-button{
   position:fixed;
   right:9px;
@@ -689,7 +657,6 @@ input[type="password"]{
     5px
     calc(10px + env(safe-area-inset-bottom));
 }
-
 
 @media(max-height:700px){
 
@@ -761,14 +728,13 @@ input[type="password"]{
 </style>
 </head>
 
-
 <body>
-
 
 <header class="header">
 
   <h1>
     スマートフォン利用規約
+    <span id="versionText">Ver.2</span>
   </h1>
 
   <p>
@@ -778,9 +744,9 @@ input[type="password"]{
 </header>
 
 
-<!-- =====================================================
+<!-- =========================
      メニュー
-===================================================== -->
+========================= -->
 
 <div id="menuScreen" class="screen active">
 
@@ -831,9 +797,9 @@ input[type="password"]{
 </div>
 
 
-<!-- =====================================================
+<!-- =========================
      新規登録
-===================================================== -->
+========================= -->
 
 <div id="inputScreen" class="screen">
 
@@ -967,9 +933,9 @@ input[type="password"]{
 </div>
 
 
-<!-- =====================================================
+<!-- =========================
      継続利用
-===================================================== -->
+========================= -->
 
 <div id="continueScreen" class="screen">
 
@@ -1042,9 +1008,9 @@ input[type="password"]{
 </div>
 
 
-<!-- =====================================================
+<!-- =========================
      確認画面
-===================================================== -->
+========================= -->
 
 <div id="confirmationScreen" class="screen">
 
@@ -1068,7 +1034,6 @@ input[type="password"]{
 
       </div>
 
-
       <div class="number-label">
         確認番号
       </div>
@@ -1077,7 +1042,6 @@ input[type="password"]{
         id="confirmationNumber"
         class="confirmation-number">
       </div>
-
 
       <div class="info-grid">
 
@@ -1094,7 +1058,6 @@ input[type="password"]{
 
         </div>
 
-
         <div class="info-box">
 
           <span class="info-label">
@@ -1108,7 +1071,6 @@ input[type="password"]{
 
         </div>
 
-
         <div class="info-box">
 
           <span class="info-label">
@@ -1121,7 +1083,6 @@ input[type="password"]{
           </span>
 
         </div>
-
 
         <div class="info-box">
 
@@ -1138,7 +1099,6 @@ input[type="password"]{
 
       </div>
 
-
       <div class="rules-confirmed">
 
         <div class="rules-confirmed-title">
@@ -1151,7 +1111,6 @@ input[type="password"]{
         </div>
 
       </div>
-
 
       <div class="signature-section">
 
@@ -1166,14 +1125,12 @@ input[type="password"]{
 
       </div>
 
-
       <p class="preface">
 
         上記の内容および各規約を確認し、
         内容に誤りがないことを確認してください。
 
       </p>
-
 
       <button
         class="start-button"
@@ -1190,9 +1147,9 @@ input[type="password"]{
 </div>
 
 
-<!-- =====================================================
+<!-- =========================
      管理者ログイン
-===================================================== -->
+========================= -->
 
 <div id="adminLoginScreen" class="screen">
 
@@ -1211,7 +1168,6 @@ input[type="password"]{
 
       </p>
 
-
       <div class="field">
 
         <label for="adminPassword">
@@ -1225,12 +1181,10 @@ input[type="password"]{
 
       </div>
 
-
       <div
         id="adminLoginError"
         class="error">
       </div>
-
 
       <button
         class="agree-button"
@@ -1239,7 +1193,6 @@ input[type="password"]{
         管理者画面を開く
 
       </button>
-
 
       <button
         class="back-button"
@@ -1256,9 +1209,9 @@ input[type="password"]{
 </div>
 
 
-<!-- =====================================================
+<!-- =========================
      管理者一覧
-===================================================== -->
+========================= -->
 
 <div id="adminListScreen" class="screen">
 
@@ -1279,7 +1232,6 @@ input[type="password"]{
 
       <div id="adminList"></div>
 
-
       <button
         class="back-button"
         onclick="adminLogout()">
@@ -1295,9 +1247,9 @@ input[type="password"]{
 </div>
 
 
-<!-- =====================================================
+<!-- =========================
      管理者編集
-===================================================== -->
+========================= -->
 
 <div id="adminEditScreen" class="screen">
 
@@ -1308,7 +1260,6 @@ input[type="password"]{
       <div class="title">
         登録情報を編集
       </div>
-
 
       <div class="field">
 
@@ -1322,7 +1273,6 @@ input[type="password"]{
 
       </div>
 
-
       <div class="field">
 
         <label>
@@ -1334,7 +1284,6 @@ input[type="password"]{
           type="text">
 
       </div>
-
 
       <div class="field">
 
@@ -1348,7 +1297,6 @@ input[type="password"]{
 
       </div>
 
-
       <div class="field">
 
         <label>
@@ -1360,7 +1308,6 @@ input[type="password"]{
           type="date">
 
       </div>
-
 
       <div class="field">
 
@@ -1374,7 +1321,6 @@ input[type="password"]{
 
       </div>
 
-
       <div class="admin-section">
 
         <div class="title">
@@ -1384,7 +1330,6 @@ input[type="password"]{
         <div id="adminRules"></div>
 
       </div>
-
 
       <div class="admin-section">
 
@@ -1404,7 +1349,6 @@ input[type="password"]{
 
         </div>
 
-
         <button
           class="clear-button"
           onclick="clearAdminSignature()">
@@ -1415,12 +1359,10 @@ input[type="password"]{
 
       </div>
 
-
       <div
         id="adminEditError"
         class="error">
       </div>
-
 
       <button
         class="save-button"
@@ -1430,7 +1372,6 @@ input[type="password"]{
 
       </button>
 
-
       <button
         class="delete-button"
         onclick="deleteAdminData()">
@@ -1438,7 +1379,6 @@ input[type="password"]{
         この登録情報を削除
 
       </button>
-
 
       <button
         class="back-button"
@@ -1455,9 +1395,9 @@ input[type="password"]{
 </div>
 
 
-<!-- =====================================================
-     読み込み画面
-===================================================== -->
+<!-- =========================
+     読み込み
+========================= -->
 
 <div
   id="loadingScreen"
@@ -1514,6 +1454,18 @@ input[type="password"]{
 
 <script>
 
+/* =====================================================
+   バージョン
+   今回の変更で Ver.2
+===================================================== */
+
+const VERSION = "2";
+
+document.getElementById(
+  "versionText"
+).textContent =
+  "Ver." + VERSION;
+
 
 /* =====================================================
    設定
@@ -1534,49 +1486,42 @@ const rules = [
 
   {
     title:"貸与物であることの認識",
-
     text:
       "本スマートフォンは利用者自身の所有物ではなく、貸し主から貸与されたものであることを認識し、そのことを常に意識して利用するものとする。"
   },
 
   {
     title:"利用範囲の制限",
-
     text:
       "本スマートフォンの利用にあたっては、貸し主が指定したアプリケーション、ウェブサイトおよび操作のみを行うものとする。"
   },
 
   {
     title:"貸し主からの指示",
-
     text:
       "貸し主から本スマートフォンの返却その他の操作を求められた場合、利用者はこれに従うものとする。"
   },
 
   {
     title:"禁止行為",
-
     text:
       "本スマートフォンを使用して、投稿を行うこと、パスワードを入力すること、その他の個人情報を取り扱う行為、または何らかのトラブルにつながるおそれのある行為を禁止する。"
   },
 
   {
     title:"例外",
-
     text:
       "前各項の定めについて、貸し主が必要と認めた場合には、個別に例外を設けることがある。"
   },
 
   {
     title:"貸し出しの停止等",
-
     text:
       "貸し主は、必要に応じて本スマートフォンを貸し出さないことがある。"
   },
 
   {
     title:"規約違反時の措置",
-
     text:
       "本規約に違反した場合、利用者の本スマートフォンの利用を2週間停止するものとする。"
   }
@@ -1585,56 +1530,49 @@ const rules = [
 
 
 /* =====================================================
-   規約を表示
+   規約表示
 ===================================================== */
 
 const rulesArea =
   document.getElementById("rules");
 
+rules.forEach((rule,index)=>{
 
-rules.forEach(
-  (rule,index)=>{
+  const div =
+    document.createElement("div");
 
-    const div =
-      document.createElement("div");
+  div.className="rule";
 
-    div.className="rule";
+  div.innerHTML=`
 
-    div.innerHTML=`
+    <label>
 
-      <label>
+      <input
+        type="checkbox"
+        class="ruleCheck">
 
-        <input
-          type="checkbox"
-          class="ruleCheck">
+      <span>
 
-        <span>
-
-          <span class="rule-title">
-
-            第${index+1}条　
-            ${escapeHTML(rule.title)}
-
-          </span>
-
-          <br>
-
-          <span class="rule-text">
-
-            ${escapeHTML(rule.text)}
-
-          </span>
-
+        <span class="rule-title">
+          第${index+1}条　
+          ${escapeHTML(rule.title)}
         </span>
 
-      </label>
+        <br>
 
-    `;
+        <span class="rule-text">
+          ${escapeHTML(rule.text)}
+        </span>
 
-    rulesArea.appendChild(div);
+      </span>
 
-  }
-);
+    </label>
+
+  `;
+
+  rulesArea.appendChild(div);
+
+});
 
 
 /* =====================================================
@@ -1769,8 +1707,7 @@ function generateNumber(){
     result +=
       chars[
         Math.floor(
-          Math.random()*
-          chars.length
+          Math.random()*chars.length
         )
       ];
 
@@ -1797,10 +1734,7 @@ function showScreen(id){
     .getElementById(id)
     .classList.add("active");
 
-  window.scrollTo(
-    0,
-    0
-  );
+  window.scrollTo(0,0);
 
 }
 
@@ -1811,8 +1745,11 @@ function showScreen(id){
 
 function selectNewRegistration(){
 
-  showScreen(
-    "inputScreen"
+  showScreen("inputScreen");
+
+  setTimeout(
+    resizeSignatureCanvas,
+    50
   );
 
 }
@@ -1820,33 +1757,27 @@ function selectNewRegistration(){
 
 function selectContinuation(){
 
-  showScreen(
-    "continueScreen"
-  );
+  showScreen("continueScreen");
 
 }
 
 
 function backToMenu(){
 
-  showScreen(
-    "menuScreen"
-  );
+  showScreen("menuScreen");
 
 }
 
 
 function backToMenuFromInput(){
 
-  showScreen(
-    "menuScreen"
-  );
+  showScreen("menuScreen");
 
 }
 
 
 /* =====================================================
-   署名
+   新しい署名システム
 ===================================================== */
 
 const canvas =
@@ -1858,14 +1789,25 @@ const ctx =
   canvas.getContext("2d");
 
 let drawing=false;
-
 let signed=false;
 
 
-function setupCanvas(){
+/*
+ * Canvasを表示サイズに合わせる
+ */
+
+function resizeSignatureCanvas(){
 
   const rect =
     canvas.getBoundingClientRect();
+
+  if(
+    rect.width<=0 ||
+    rect.height<=0
+  ){
+    return;
+  }
+
 
   const ratio =
     Math.max(
@@ -1873,15 +1815,25 @@ function setupCanvas(){
       1
     );
 
+
+  /*
+   * Canvasの実ピクセルサイズを設定
+   */
+
   canvas.width =
     Math.round(
-      rect.width*ratio
+      rect.width * ratio
     );
 
   canvas.height =
     Math.round(
-      rect.height*ratio
+      rect.height * ratio
     );
+
+
+  /*
+   * 座標系をCSSピクセルにする
+   */
 
   ctx.setTransform(
     ratio,
@@ -1892,53 +1844,89 @@ function setupCanvas(){
     0
   );
 
-  ctx.lineWidth=2.2;
+
+  ctx.strokeStyle="#111";
+
+  ctx.fillStyle="#111";
+
+  ctx.lineWidth=2.5;
+
   ctx.lineCap="round";
+
   ctx.lineJoin="round";
 
 }
 
 
-setupCanvas();
+window.addEventListener(
+  "resize",
+  resizeSignatureCanvas
+);
 
 
-function getPosition(
-  target,
-  e
-){
+setTimeout(
+  resizeSignatureCanvas,
+  100
+);
+
+
+/*
+ * Canvas上の正確な座標を取得
+ */
+
+function getCanvasPosition(e){
 
   const rect =
-    target.getBoundingClientRect();
+    canvas.getBoundingClientRect();
+
+  let clientX;
+  let clientY;
+
 
   if(
-    e.touches &&
-    e.touches.length
+    e.pointerType !== undefined
   ){
 
-    return{
-
-      x:
-        e.touches[0].clientX -
-        rect.left,
-
-      y:
-        e.touches[0].clientY -
-        rect.top
-
-    };
+    clientX=e.clientX;
+    clientY=e.clientY;
 
   }
 
+  else if(
+    e.touches &&
+    e.touches.length>0
+  ){
+
+    clientX=
+      e.touches[0].clientX;
+
+    clientY=
+      e.touches[0].clientY;
+
+  }
+
+  else{
+
+    clientX=e.clientX;
+    clientY=e.clientY;
+
+  }
+
+
   return{
 
-    x:e.clientX-rect.left,
+    x:clientX-rect.left,
 
-    y:e.clientY-rect.top
+    y:clientY-rect.top
 
   };
 
 }
 
+
+/*
+ * 描画開始
+ */
 
 function startDrawing(e){
 
@@ -1948,11 +1936,33 @@ function startDrawing(e){
 
   signed=true;
 
+
+  /*
+   * Pointer Capture
+   *
+   * 指がCanvasの外へ少し出ても
+   * 描画を継続する。
+   */
+
+  if(
+    e.pointerId !== undefined
+  ){
+
+    try{
+
+      canvas.setPointerCapture(
+        e.pointerId
+      );
+
+    }
+    catch(error){}
+
+  }
+
+
   const p =
-    getPosition(
-      canvas,
-      e
-    );
+    getCanvasPosition(e);
+
 
   ctx.beginPath();
 
@@ -1961,10 +1971,28 @@ function startDrawing(e){
     p.y
   );
 
-  updateButton();
+
+  /*
+   * クリック・タップだけでも
+   * 点を残す
+   */
+
+  ctx.arc(
+    p.x,
+    p.y,
+    1.25,
+    0,
+    Math.PI*2
+  );
+
+  ctx.fill();
 
 }
 
+
+/*
+ * 描画
+ */
 
 function draw(e){
 
@@ -1973,11 +2001,10 @@ function draw(e){
 
   e.preventDefault();
 
+
   const p =
-    getPosition(
-      canvas,
-      e
-    );
+    getCanvasPosition(e);
+
 
   ctx.lineTo(
     p.x,
@@ -1986,55 +2013,137 @@ function draw(e){
 
   ctx.stroke();
 
+
+  /*
+   * 次の線の開始点を現在位置にする
+   */
+
+  ctx.beginPath();
+
+  ctx.moveTo(
+    p.x,
+    p.y
+  );
+
 }
 
 
-function stopDrawing(){
+/*
+ * 描画終了
+ */
+
+function stopDrawing(e){
+
+  if(!drawing)
+    return;
 
   drawing=false;
 
   ctx.closePath();
 
+
+  if(
+    e &&
+    e.pointerId !== undefined
+  ){
+
+    try{
+
+      canvas.releasePointerCapture(
+        e.pointerId
+      );
+
+    }
+    catch(error){}
+
+  }
+
+
+  updateButton();
+
 }
 
 
-canvas.addEventListener(
-  "mousedown",
-  startDrawing
-);
+/*
+ * PointerEvent
+ *
+ * iPhone/iPad/Android/PC
+ * ほぼすべての入力を統一
+ */
 
-canvas.addEventListener(
-  "mousemove",
-  draw
-);
+if(window.PointerEvent){
 
-canvas.addEventListener(
-  "mouseup",
-  stopDrawing
-);
+  canvas.addEventListener(
+    "pointerdown",
+    startDrawing,
+    {passive:false}
+  );
 
-canvas.addEventListener(
-  "mouseleave",
-  stopDrawing
-);
+  canvas.addEventListener(
+    "pointermove",
+    draw,
+    {passive:false}
+  );
 
-canvas.addEventListener(
-  "touchstart",
-  startDrawing,
-  {passive:false}
-);
+  canvas.addEventListener(
+    "pointerup",
+    stopDrawing,
+    {passive:false}
+  );
 
-canvas.addEventListener(
-  "touchmove",
-  draw,
-  {passive:false}
-);
+  canvas.addEventListener(
+    "pointercancel",
+    stopDrawing,
+    {passive:false}
+  );
 
-canvas.addEventListener(
-  "touchend",
-  stopDrawing
-);
+}
 
+
+/*
+ * 古いブラウザ用
+ */
+
+else{
+
+  canvas.addEventListener(
+    "mousedown",
+    startDrawing
+  );
+
+  canvas.addEventListener(
+    "mousemove",
+    draw
+  );
+
+  canvas.addEventListener(
+    "mouseup",
+    stopDrawing
+  );
+
+  canvas.addEventListener(
+    "touchstart",
+    startDrawing,
+    {passive:false}
+  );
+
+  canvas.addEventListener(
+    "touchmove",
+    draw,
+    {passive:false}
+  );
+
+  canvas.addEventListener(
+    "touchend",
+    stopDrawing
+  );
+
+}
+
+
+/*
+ * 署名消去
+ */
 
 function clearSignature(){
 
@@ -2167,10 +2276,7 @@ function agree(){
     new Date();
 
   agreementDate.setHours(
-    0,
-    0,
-    0,
-    0
+    0,0,0,0
   );
 
 
@@ -2183,7 +2289,7 @@ function agree(){
   const data={
 
     id:
-      Date.now() +
+      Date.now()+
       "-" +
       Math.random()
         .toString(36)
@@ -2245,7 +2351,7 @@ function agree(){
 
 
   /*
-   * ★ 新規登録：約5秒
+   * 長め = 3秒
    */
 
   showLoading(
@@ -2256,7 +2362,7 @@ function agree(){
       "署名を確認しています。"
     ],
 
-    5000,
+    3000,
 
     function(){
 
@@ -2346,7 +2452,7 @@ function createRulesStatus(states){
           "div"
         );
 
-      item.className =
+      item.className=
         "rules-status-item";
 
 
@@ -2368,7 +2474,9 @@ function createRulesStatus(states){
 
       `;
 
-      area.appendChild(item);
+      area.appendChild(
+        item
+      );
 
     }
   );
@@ -2377,26 +2485,8 @@ function createRulesStatus(states){
 
 
 /* =====================================================
-   ★ 読み込み画面
+   読み込み
 ===================================================== */
-
-/*
- * 重要：
- *
- * duration が終了するまでは
- * 「完了しました。」を絶対に表示しない。
- *
- * duration終了
- * ↓
- * 100%
- * ↓
- * 「完了しました。」
- * ↓
- * 0.8秒
- * ↓
- * 次の画面
- */
-
 
 function showLoading(
   messages,
@@ -2430,10 +2520,6 @@ function showLoading(
   );
 
 
-  /*
-   * 初期状態
-   */
-
   bar.style.width="0%";
 
   percent.textContent="0%";
@@ -2445,8 +2531,7 @@ function showLoading(
   const startTime =
     performance.now();
 
-
-  let currentProgress=0;
+  let progress=0;
 
 
   function tick(){
@@ -2456,13 +2541,9 @@ function showLoading(
       startTime;
 
 
-    /*
-     * 0～1
-     */
-
     const ratio =
       Math.min(
-        elapsed / duration,
+        elapsed/duration,
         1
       );
 
@@ -2475,114 +2556,77 @@ function showLoading(
       Math.min(
         messages.length-1,
         Math.floor(
-          ratio *
-          messages.length
+          ratio*messages.length
         )
       );
 
 
-    message.textContent =
+    message.textContent=
       messages[
         messageIndex
       ];
 
 
     /*
-     * 目標進捗
-     *
-     * 0～20%
-     * 20～55%
-     * 55～82%
-     * 82～100%
+     * 不規則な進み方
      */
 
     let target;
 
 
-    if(ratio < 0.20){
+    if(ratio<0.18){
 
-      target =
-        ratio /
-        0.20 *
-        20;
+      target=
+        ratio/0.18*14;
 
     }
 
-    else if(ratio < 0.55){
+    else if(ratio<0.50){
 
-      target =
-        20 +
-        (
-          (ratio-0.20) /
-          0.35
-        ) *
-        35;
+      target=
+        14+
+        ((ratio-0.18)/0.32)*35;
 
     }
 
-    else if(ratio < 0.82){
+    else if(ratio<0.78){
 
-      target =
-        55 +
-        (
-          (ratio-0.55) /
-          0.27
-        ) *
-        27;
+      target=
+        49+
+        ((ratio-0.50)/0.28)*33;
 
     }
 
     else{
 
-      target =
-        82 +
-        (
-          (ratio-0.82) /
-          0.18
-        ) *
-        18;
+      target=
+        82+
+        ((ratio-0.78)/0.22)*17;
 
     }
 
 
-    /*
-     * ランダムな速度で進める
-     */
+    if(progress<target){
 
-    if(
-      currentProgress <
-      target
-    ){
-
-      const remaining =
-        target -
-        currentProgress;
-
-
-      const increment =
+      progress+=
         Math.min(
-          remaining,
-          0.2 +
-          Math.random()*1.3
+          target-progress,
+          0.2+
+          Math.random()*1.2
         );
 
-
-      currentProgress +=
-        increment;
-
     }
 
 
     /*
-     * 時間終了前は
-     * 100%にしない。
+     * 終了前は99%まで
      */
 
-    if(ratio < 1){
+    if(ratio<1){
 
-      currentProgress =
+      progress=
         Math.min(
-          currentProgress,
+          progress,
           99
         );
 
@@ -2590,44 +2634,33 @@ function showLoading(
 
 
     /*
-     * ★時間が完全に終了したら
-     * 初めて100%
+     * ちょうど終了した瞬間
      */
 
-    if(ratio >= 1){
+    if(ratio>=1){
 
-      currentProgress=100;
+      progress=100;
 
     }
 
 
     const display =
-      Math.floor(
-        currentProgress
-      );
+      Math.floor(progress);
 
 
-    bar.style.width =
-      display + "%";
+    bar.style.width=
+      display+"%";
 
-    percent.textContent =
-      display + "%";
+    percent.textContent=
+      display+"%";
 
 
-    /*
-     * まだ5秒/4秒が
-     * 経過していない
-     */
-
-    if(ratio < 1){
-
-      const nextDelay =
-        45 +
-        Math.random()*80;
+    if(ratio<1){
 
       setTimeout(
         tick,
-        nextDelay
+        50+
+        Math.random()*70
       );
 
       return;
@@ -2636,29 +2669,24 @@ function showLoading(
 
 
     /*
-     * ==================================
-     * ★ここで完全に100%
-     * ==================================
+     * 完全に100%
      */
 
-    bar.style.width =
-      "100%";
+    bar.style.width="100%";
 
-    percent.textContent =
-      "100%";
+    percent.textContent="100%";
 
 
     /*
-     * 100%になった「後」に
-     * 完了しました。を表示
+     * 100%になってから完了
      */
 
-    message.textContent =
+    message.textContent=
       "完了しました。";
 
 
     /*
-     * 完了表示を少し残す
+     * 少し表示
      */
 
     setTimeout(
@@ -2671,9 +2699,7 @@ function showLoading(
         callback();
 
       },
-
       800
-
     );
 
   }
@@ -2756,10 +2782,7 @@ function checkContinuation(){
     new Date();
 
   today.setHours(
-    0,
-    0,
-    0,
-    0
+    0,0,0,0
   );
 
 
@@ -2770,7 +2793,7 @@ function checkContinuation(){
     );
 
 
-  if(today <= expiry){
+  if(today<=expiry){
 
     setConfirmation(
       data
@@ -2798,6 +2821,11 @@ function checkContinuation(){
           "inputScreen"
         );
 
+        setTimeout(
+          resizeSignatureCanvas,
+          50
+        );
+
       },
       1000
     );
@@ -2808,30 +2836,23 @@ function checkContinuation(){
 
 
 /* =====================================================
-   ★ 利用開始
+   利用開始
+   普通 = 2秒
 ===================================================== */
 
 function startUse(){
 
-  /*
-   * 約5秒
-   */
-
   showLoading(
 
     [
-      "情報を保存しています."
+      "情報を保存しています。"
     ],
 
-    5000,
+    2000,
 
     function(){
 
-      /*
-       * 完了表示後にGoogle
-       */
-
-      window.location.href =
+      window.location.href=
         "https://www.google.com/";
 
     }
@@ -2887,8 +2908,7 @@ function checkAdminPassword(){
 
 
   if(
-    password !==
-    ADMIN_PASSWORD
+    password!==ADMIN_PASSWORD
   ){
 
     const error =
@@ -2907,16 +2927,16 @@ function checkAdminPassword(){
 
 
   /*
-   * ★管理者取得：約4秒
+   * 普通 = 2秒
    */
 
   showLoading(
 
     [
-      "登録情報を取得しています."
+      "登録情報を取得しています。"
     ],
 
-    4000,
+    2000,
 
     function(){
 
@@ -2968,69 +2988,67 @@ function renderAdminList(){
 
   [...allData]
     .reverse()
-    .forEach(
-      data=>{
+    .forEach(data=>{
 
-        const item =
-          document.createElement(
-            "div"
-          );
-
-        item.className=
-          "admin-list-item";
-
-
-        item.innerHTML=`
-
-          <div class="admin-list-name">
-            ${escapeHTML(data.name)}
-          </div>
-
-          <div class="admin-list-number">
-            確認番号：
-            ${escapeHTML(data.number)}
-          </div>
-
-          <div class="admin-list-expiry">
-            有効期限：
-            ${escapeHTML(data.expiryDateText)}
-          </div>
-
-        `;
-
-
-        item.onclick =
-          function(){
-
-            openAdminEdit(
-              data.id
-            );
-
-          };
-
-
-        area.appendChild(
-          item
+      const item =
+        document.createElement(
+          "div"
         );
 
-      }
-    );
+      item.className=
+        "admin-list-item";
+
+
+      item.innerHTML=`
+
+        <div class="admin-list-name">
+          ${escapeHTML(data.name)}
+        </div>
+
+        <div class="admin-list-number">
+          確認番号：
+          ${escapeHTML(data.number)}
+        </div>
+
+        <div class="admin-list-expiry">
+          有効期限：
+          ${escapeHTML(data.expiryDateText)}
+        </div>
+
+      `;
+
+
+      item.onclick=
+        function(){
+
+          openAdminEdit(
+            data.id
+          );
+
+        };
+
+
+      area.appendChild(
+        item
+      );
+
+    });
 
 }
 
 
 /* =====================================================
-   管理者編集
+   管理者署名
 ===================================================== */
 
 let currentAdminId=null;
 
-let adminSignatureCanvas =
+const adminSignatureCanvas =
   document.getElementById(
     "adminSignatureCanvas"
   );
 
-let adminSignatureCtx =
+const adminSignatureCtx =
   adminSignatureCanvas.getContext(
     "2d"
   );
@@ -3047,19 +3065,27 @@ function setupAdminCanvas(){
       .getBoundingClientRect();
 
 
+  if(
+    rect.width<=0 ||
+    rect.height<=0
+  ){
+    return;
+  }
+
+
   const ratio =
     Math.max(
-      window.devicePixelRatio || 1,
+      window.devicePixelRatio||1,
       1
     );
 
 
-  adminSignatureCanvas.width =
+  adminSignatureCanvas.width=
     Math.round(
       rect.width*ratio
     );
 
-  adminSignatureCanvas.height =
+  adminSignatureCanvas.height=
     Math.round(
       rect.height*ratio
     );
@@ -3075,18 +3101,17 @@ function setupAdminCanvas(){
   );
 
 
-  adminSignatureCtx.lineWidth=2.2;
+  adminSignatureCtx.strokeStyle="#111";
 
-  adminSignatureCtx.lineCap=
-    "round";
+  adminSignatureCtx.fillStyle="#111";
 
-  adminSignatureCtx.lineJoin=
-    "round";
+  adminSignatureCtx.lineWidth=2.5;
+
+  adminSignatureCtx.lineCap="round";
+
+  adminSignatureCtx.lineJoin="round";
 
 }
-
-
-setupAdminCanvas();
 
 
 function adminGetPosition(e){
@@ -3095,36 +3120,11 @@ function adminGetPosition(e){
     adminSignatureCanvas
       .getBoundingClientRect();
 
-
-  if(
-    e.touches &&
-    e.touches.length
-  ){
-
-    return{
-
-      x:
-        e.touches[0].clientX -
-        rect.left,
-
-      y:
-        e.touches[0].clientY -
-        rect.top
-
-    };
-
-  }
-
-
   return{
 
-    x:
-      e.clientX -
-      rect.left,
+    x:e.clientX-rect.left,
 
-    y:
-      e.clientY -
-      rect.top
+    y:e.clientY-rect.top
 
   };
 
@@ -3140,6 +3140,23 @@ function adminStartDrawing(e){
   adminSignatureEdited=true;
 
 
+  if(
+    e.pointerId!==undefined
+  ){
+
+    try{
+
+      adminSignatureCanvas
+        .setPointerCapture(
+          e.pointerId
+        );
+
+    }
+    catch(error){}
+
+  }
+
+
   const p =
     adminGetPosition(e);
 
@@ -3150,6 +3167,17 @@ function adminStartDrawing(e){
     p.x,
     p.y
   );
+
+
+  adminSignatureCtx.arc(
+    p.x,
+    p.y,
+    1.25,
+    0,
+    Math.PI*2
+  );
+
+  adminSignatureCtx.fill();
 
 }
 
@@ -3173,54 +3201,74 @@ function adminDraw(e){
 
   adminSignatureCtx.stroke();
 
+
+  adminSignatureCtx.beginPath();
+
+  adminSignatureCtx.moveTo(
+    p.x,
+    p.y
+  );
+
 }
 
 
-function adminStopDrawing(){
+function adminStopDrawing(e){
+
+  if(!adminDrawing)
+    return;
 
   adminDrawing=false;
 
   adminSignatureCtx.closePath();
 
+
+  if(
+    e &&
+    e.pointerId!==undefined
+  ){
+
+    try{
+
+      adminSignatureCanvas
+        .releasePointerCapture(
+          e.pointerId
+        );
+
+    }
+    catch(error){}
+
+  }
+
 }
 
 
-adminSignatureCanvas.addEventListener(
-  "mousedown",
-  adminStartDrawing
-);
+if(window.PointerEvent){
 
-adminSignatureCanvas.addEventListener(
-  "mousemove",
-  adminDraw
-);
+  adminSignatureCanvas.addEventListener(
+    "pointerdown",
+    adminStartDrawing,
+    {passive:false}
+  );
 
-adminSignatureCanvas.addEventListener(
-  "mouseup",
-  adminStopDrawing
-);
+  adminSignatureCanvas.addEventListener(
+    "pointermove",
+    adminDraw,
+    {passive:false}
+  );
 
-adminSignatureCanvas.addEventListener(
-  "mouseleave",
-  adminStopDrawing
-);
+  adminSignatureCanvas.addEventListener(
+    "pointerup",
+    adminStopDrawing,
+    {passive:false}
+  );
 
-adminSignatureCanvas.addEventListener(
-  "touchstart",
-  adminStartDrawing,
-  {passive:false}
-);
+  adminSignatureCanvas.addEventListener(
+    "pointercancel",
+    adminStopDrawing,
+    {passive:false}
+  );
 
-adminSignatureCanvas.addEventListener(
-  "touchmove",
-  adminDraw,
-  {passive:false}
-);
-
-adminSignatureCanvas.addEventListener(
-  "touchend",
-  adminStopDrawing
-);
+}
 
 
 function clearAdminSignature(){
@@ -3238,7 +3286,7 @@ function clearAdminSignature(){
 
 
 /* =====================================================
-   管理者編集を開く
+   管理者編集
 ===================================================== */
 
 function openAdminEdit(id){
@@ -3249,8 +3297,7 @@ function openAdminEdit(id){
 
   const data =
     allData.find(
-      item=>
-        item.id===id
+      item=>item.id===id
     );
 
 
@@ -3261,39 +3308,25 @@ function openAdminEdit(id){
   currentAdminId=id;
 
 
-  document
-    .getElementById(
-      "adminNumber"
-    )
-    .value=data.number;
+  document.getElementById(
+    "adminNumber"
+  ).value=data.number;
 
+  document.getElementById(
+    "adminName"
+  ).value=data.name;
 
-  document
-    .getElementById(
-      "adminName"
-    )
-    .value=data.name;
+  document.getElementById(
+    "adminBirth"
+  ).value=data.birth;
 
+  document.getElementById(
+    "adminAgreementDate"
+  ).value=data.agreementDate;
 
-  document
-    .getElementById(
-      "adminBirth"
-    )
-    .value=data.birth;
-
-
-  document
-    .getElementById(
-      "adminAgreementDate"
-    )
-    .value=data.agreementDate;
-
-
-  document
-    .getElementById(
-      "adminExpiryDate"
-    )
-    .value=data.expiryDate;
+  document.getElementById(
+    "adminExpiryDate"
+  ).value=data.expiryDate;
 
 
   renderAdminRules(
@@ -3301,52 +3334,56 @@ function openAdminEdit(id){
   );
 
 
-  setupAdminCanvas();
-
-  adminSignatureEdited=false;
-
-
-  adminSignatureCtx.clearRect(
-    0,
-    0,
-    adminSignatureCanvas.width,
-    adminSignatureCanvas.height
+  showScreen(
+    "adminEditScreen"
   );
 
 
-  if(data.signature){
+  setTimeout(
+    function(){
 
-    const image =
-      new Image();
+      setupAdminCanvas();
 
-
-    image.onload =
-      function(){
-
-        const rect =
-          adminSignatureCanvas
-            .getBoundingClientRect();
+      adminSignatureEdited=false;
 
 
-        adminSignatureCtx.drawImage(
-          image,
-          0,
-          0,
-          rect.width,
-          rect.height
-        );
-
-      };
+      adminSignatureCtx.clearRect(
+        0,
+        0,
+        adminSignatureCanvas.width,
+        adminSignatureCanvas.height
+      );
 
 
-    image.src =
-      data.signature;
+      if(data.signature){
 
-  }
+        const image =
+          new Image();
 
+        image.onload=
+          function(){
 
-  showScreen(
-    "adminEditScreen"
+            const rect =
+              adminSignatureCanvas
+                .getBoundingClientRect();
+
+            adminSignatureCtx.drawImage(
+              image,
+              0,
+              0,
+              rect.width,
+              rect.height
+            );
+
+          };
+
+        image.src=
+          data.signature;
+
+      }
+
+    },
+    50
   );
 
 }
@@ -3380,7 +3417,7 @@ function renderAdminRules(states){
 
       const checked =
         !states ||
-        states[index] !== false;
+        states[index]!==false;
 
 
       div.innerHTML=`
@@ -3391,7 +3428,7 @@ function renderAdminRules(states){
             type="checkbox"
             class="adminRuleCheck"
             data-index="${index}"
-            ${checked ? "checked" : ""}>
+            ${checked?"checked":""}>
 
           <span>
 
@@ -3405,9 +3442,7 @@ function renderAdminRules(states){
       `;
 
 
-      area.appendChild(
-        div
-      );
+      area.appendChild(div);
 
     }
   );
@@ -3431,8 +3466,7 @@ function saveAdminEdit(){
 
   const index =
     allData.findIndex(
-      item=>
-        item.id===currentAdminId
+      item=>item.id===currentAdminId
     );
 
 
@@ -3440,50 +3474,38 @@ function saveAdminEdit(){
     return;
 
 
-  const data =
+  const data=
     allData[index];
 
 
-  data.number =
-    document
-      .getElementById(
-        "adminNumber"
-      )
-      .value
-      .trim();
+  data.number=
+    document.getElementById(
+      "adminNumber"
+    ).value.trim();
 
 
-  data.name =
-    document
-      .getElementById(
-        "adminName"
-      )
-      .value
-      .trim();
+  data.name=
+    document.getElementById(
+      "adminName"
+    ).value.trim();
 
 
-  data.birth =
-    document
-      .getElementById(
-        "adminBirth"
-      )
-      .value;
+  data.birth=
+    document.getElementById(
+      "adminBirth"
+    ).value;
 
 
-  data.agreementDate =
-    document
-      .getElementById(
-        "adminAgreementDate"
-      )
-      .value;
+  data.agreementDate=
+    document.getElementById(
+      "adminAgreementDate"
+    ).value;
 
 
-  data.expiryDate =
-    document
-      .getElementById(
-        "adminExpiryDate"
-      )
-      .value;
+  data.expiryDate=
+    document.getElementById(
+      "adminExpiryDate"
+    ).value;
 
 
   const agreement =
@@ -3500,13 +3522,9 @@ function saveAdminEdit(){
     );
 
 
-  if(
-    !isNaN(
-      agreement.getTime()
-    )
-  ){
+  if(!isNaN(agreement.getTime())){
 
-    data.agreementDateText =
+    data.agreementDateText=
       formatDateJP(
         agreement
       );
@@ -3514,13 +3532,9 @@ function saveAdminEdit(){
   }
 
 
-  if(
-    !isNaN(
-      expiry.getTime()
-    )
-  ){
+  if(!isNaN(expiry.getTime())){
 
-    data.expiryDateText =
+    data.expiryDateText=
       formatDateJP(
         expiry
       );
@@ -3528,24 +3542,19 @@ function saveAdminEdit(){
   }
 
 
-  data.rules =
+  data.rules=
     [
-      ...document
-        .querySelectorAll(
-          ".adminRuleCheck"
-        )
-    ]
-    .map(
-      checkbox=>
-        checkbox.checked
+      ...document.querySelectorAll(
+        ".adminRuleCheck"
+      )
+    ].map(
+      checkbox=>checkbox.checked
     );
 
 
-  if(
-    adminSignatureEdited
-  ){
+  if(adminSignatureEdited){
 
-    data.signature =
+    data.signature=
       adminSignatureCanvas
         .toDataURL(
           "image/png"
@@ -3555,7 +3564,6 @@ function saveAdminEdit(){
 
 
   allData[index]=data;
-
 
   saveAllData(
     allData
@@ -3577,7 +3585,7 @@ function saveAdminEdit(){
 
 
 /* =====================================================
-   管理者削除
+   削除
 ===================================================== */
 
 function deleteAdminData(){
@@ -3586,14 +3594,13 @@ function deleteAdminData(){
     return;
 
 
-  const allData =
+  const allData=
     getAllData();
 
 
-  const data =
+  const data=
     allData.find(
-      item=>
-        item.id===currentAdminId
+      item=>item.id===currentAdminId
     );
 
 
@@ -3601,23 +3608,21 @@ function deleteAdminData(){
     return;
 
 
-  const result =
-    confirm(
+  if(
+    !confirm(
       "この登録情報を削除しますか？\n\n"+
       data.name+
       "\n"+
       data.number
-    );
-
-
-  if(!result)
+    )
+  ){
     return;
+  }
 
 
-  const newData =
+  const newData=
     allData.filter(
-      item=>
-        item.id!==currentAdminId
+      item=>item.id!==currentAdminId
     );
 
 
@@ -3643,10 +3648,6 @@ function deleteAdminData(){
 }
 
 
-/* =====================================================
-   管理者一覧へ
-===================================================== */
-
 function backToAdminList(){
 
   currentAdminId=null;
@@ -3664,11 +3665,9 @@ function adminLogout(){
 
   currentAdminId=null;
 
-  document
-    .getElementById(
-      "adminPassword"
-    )
-    .value="";
+  document.getElementById(
+    "adminPassword"
+  ).value="";
 
 
   showScreen(
@@ -3689,11 +3688,9 @@ function showError(text){
       "error"
     );
 
-
   error.textContent=text;
 
   error.style.display="block";
-
 
   error.scrollIntoView({
     behavior:"smooth",
