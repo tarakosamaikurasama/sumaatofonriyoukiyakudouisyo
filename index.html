@@ -6,1018 +6,1131 @@
 <meta charset="UTF-8">
 
 <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 <meta
-    name="apple-mobile-web-app-capable"
-    content="yes">
+  name="apple-mobile-web-app-capable"
+  content="yes">
 
 <meta
-    name="mobile-web-app-capable"
-    content="yes">
+  name="mobile-web-app-capable"
+  content="yes">
 
 <meta
-    name="theme-color"
-    content="#17202a">
+  name="theme-color"
+  content="#17202a">
 
 <title>スマートフォン利用規約</title>
 
-
 <style>
 
-/* =========================================
+/* =====================================================
    基本
-========================================= */
+===================================================== */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
 }
 
 body {
-    background: #eef0f3;
-    color: #202124;
+  background: #eef0f3;
+  color: #202124;
 
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Noto Sans JP",
-        "Yu Gothic",
-        sans-serif;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Noto Sans JP",
+    "Yu Gothic",
+    sans-serif;
 }
 
 
-/* =========================================
+/* =====================================================
    ヘッダー
-========================================= */
+===================================================== */
 
 .header {
-    background: #17202a;
-    color: white;
+  background: #17202a;
+  color: white;
 
-    text-align: center;
+  text-align: center;
 
-    padding:
-        calc(12px + env(safe-area-inset-top))
-        14px
-        12px;
+  padding:
+    calc(12px + env(safe-area-inset-top))
+    14px
+    12px;
 }
 
 .header h1 {
-    margin: 0;
-    font-size: 21px;
+  margin: 0;
+  font-size: 21px;
 }
 
 .header p {
-    margin: 4px 0 0;
-    font-size: 11px;
-    opacity: .8;
+  margin: 4px 0 0;
+  font-size: 11px;
+  opacity: .8;
 }
 
 
-/* =========================================
+/* =====================================================
    画面
-========================================= */
+===================================================== */
 
 .screen {
-    display: none;
+  display: none;
 
-    min-height:
-        calc(100vh - 80px);
+  min-height:
+    calc(100vh - 80px);
 }
 
 .screen.active {
-    display: block;
+  display: block;
 }
 
 .container {
-    width:
-        min(850px, calc(100% - 14px));
+  width:
+    min(850px, calc(100% - 14px));
 
-    margin:
-        8px auto 30px;
+  margin:
+    8px auto 30px;
 }
 
 
-/* =========================================
+/* =====================================================
    カード
-========================================= */
+===================================================== */
 
 .card {
-    background: white;
+  background: white;
 
-    border-radius: 11px;
+  border-radius: 11px;
 
-    padding: 14px;
+  padding: 14px;
 
-    margin-bottom: 9px;
+  margin-bottom: 9px;
 
-    box-shadow:
-        0 2px 8px rgba(0,0,0,.07);
+  box-shadow:
+    0 2px 8px rgba(0,0,0,.07);
 }
 
 .title {
-    font-size: 18px;
+  font-size: 18px;
 
-    font-weight: bold;
+  font-weight: bold;
 
-    border-bottom:
-        2px solid #17202a;
+  border-bottom:
+    2px solid #17202a;
 
-    padding-bottom: 6px;
+  padding-bottom: 6px;
 
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 
-/* =========================================
-   最初のメニュー
-========================================= */
+/* =====================================================
+   メニュー
+===================================================== */
 
 .menu-card {
-    text-align: center;
-    margin-top: 35px;
+  text-align: center;
+  margin-top: 35px;
 }
 
 .menu-icon {
-    font-size: 48px;
-    margin-bottom: 8px;
+  font-size: 48px;
+  margin-bottom: 8px;
 }
 
 .menu-description {
-    font-size: 13px;
-    color: #666;
-    margin: 8px 0 18px;
+  font-size: 13px;
+  color: #666;
+  margin: 8px 0 18px;
 }
 
 .menu-button {
-    width: 100%;
+  width: 100%;
 
-    padding: 15px;
+  padding: 15px;
 
-    margin: 6px 0;
+  margin: 6px 0;
 
-    border: none;
+  border: none;
 
-    border-radius: 9px;
+  border-radius: 9px;
 
-    font-size: 16px;
+  font-size: 16px;
 
-    font-weight: bold;
-
-    cursor: pointer;
+  font-weight: bold;
 }
 
 .new-button {
-    background: #17202a;
-    color: white;
+  background: #17202a;
+  color: white;
 }
 
 .continue-button {
-    background: #1f618d;
-    color: white;
+  background: #1f618d;
+  color: white;
 }
 
 
-/* =========================================
-   重要表示
-========================================= */
+/* 管理者ボタン */
+
+.admin-button {
+  width: 100%;
+
+  padding: 11px;
+
+  margin-top: 18px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #9e9e9e;
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: bold;
+}
+
+
+/* =====================================================
+   規約
+===================================================== */
 
 .important-notice {
-    color: red;
+  color: red;
 
-    font-weight: bold;
+  font-weight: bold;
 
-    font-size: 15px;
+  font-size: 15px;
 
-    line-height: 1.45;
+  line-height: 1.45;
 
-    margin-bottom: 3px;
+  margin-bottom: 3px;
 }
 
 .expiry-notice {
-    color: red;
+  color: red;
 
-    font-weight: bold;
+  font-weight: bold;
 
-    font-size: 14px;
+  font-size: 14px;
 
-    line-height: 1.4;
+  line-height: 1.4;
 
-    margin-bottom: 7px;
+  margin-bottom: 7px;
 }
 
 .preface {
-    font-size: 13px;
+  font-size: 13px;
 
-    line-height: 1.55;
+  line-height: 1.55;
 }
 
-
-/* =========================================
-   規約
-========================================= */
-
 .rule {
-    border:
-        1px solid #d5d8dc;
+  border:
+    1px solid #d5d8dc;
 
-    border-radius: 8px;
+  border-radius: 8px;
 
-    padding: 9px;
+  padding: 9px;
 
-    margin: 7px 0;
+  margin: 7px 0;
 
-    background: #fafafa;
+  background: #fafafa;
 }
 
 .rule label {
-    display: flex;
+  display: flex;
 
-    gap: 9px;
+  gap: 9px;
 
-    align-items: flex-start;
+  align-items: flex-start;
 
-    line-height: 1.45;
+  line-height: 1.45;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .rule input {
-    width: 21px;
-    height: 21px;
+  width: 21px;
+  height: 21px;
 
-    flex-shrink: 0;
+  flex-shrink: 0;
 
-    margin: 2px 0 0;
+  margin: 2px 0 0;
 }
 
 .rule-title {
-    font-weight: bold;
-    font-size: 14px;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .rule-text {
-    font-size: 13px;
+  font-size: 13px;
 }
 
 
-/* =========================================
+/* =====================================================
    入力
-========================================= */
+===================================================== */
 
 .field {
-    margin: 9px 0;
+  margin: 9px 0;
 }
 
 .field label {
-    display: block;
+  display: block;
 
-    font-weight: bold;
+  font-weight: bold;
 
-    font-size: 14px;
+  font-size: 14px;
 
-    margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 input[type="text"],
-input[type="date"] {
+input[type="date"],
+input[type="password"] {
 
-    width: 100%;
+  width: 100%;
 
-    padding: 10px;
+  padding: 10px;
 
-    border:
-        1px solid #aaa;
+  border:
+    1px solid #aaa;
 
-    border-radius: 7px;
+  border-radius: 7px;
 
-    background: white;
+  background: white;
 
-    font-size: 16px;
+  font-size: 16px;
 }
 
 
-/* =========================================
+/* =====================================================
    署名
-========================================= */
+===================================================== */
 
 .signature-box {
 
-    width: 100%;
+  width: 100%;
 
-    height:
-        clamp(120px, 28vw, 190px);
+  height:
+    clamp(120px, 28vw, 190px);
 
-    position: relative;
+  position: relative;
 
-    border:
-        2px solid #333;
+  border:
+    2px solid #333;
 
-    border-radius: 8px;
+  border-radius: 8px;
 
-    background: white;
+  background: white;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    touch-action: none;
+  touch-action: none;
 }
 
-#signatureCanvas {
+#signatureCanvas,
+#adminSignatureCanvas {
 
-    position: absolute;
+  position: absolute;
 
-    left: 0;
-    top: 0;
+  left: 0;
+  top: 0;
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    display: block;
+  display: block;
 
-    touch-action: none;
+  touch-action: none;
 }
 
 .signature-hint {
 
-    position: absolute;
+  position: absolute;
 
-    left: 10px;
-    bottom: 7px;
+  left: 10px;
+  bottom: 7px;
 
-    color: #aaa;
+  color: #aaa;
 
-    font-size: 11px;
+  font-size: 11px;
 
-    pointer-events: none;
+  pointer-events: none;
 }
 
 .clear-button {
 
-    margin-top: 6px;
+  margin-top: 6px;
 
-    padding: 8px 12px;
+  padding: 8px 12px;
 
-    background: #e5e7e9;
+  background: #e5e7e9;
 
-    color: #222;
+  color: #222;
 
-    font-size: 13px;
+  font-size: 13px;
 
-    border: none;
+  border: none;
 
-    border-radius: 7px;
+  border-radius: 7px;
 }
 
 
-/* =========================================
+/* =====================================================
    ボタン
-========================================= */
-
-button {
-    cursor: pointer;
-}
+===================================================== */
 
 .agree-button {
 
-    width: 100%;
+  width: 100%;
 
-    background: #17202a;
+  background: #17202a;
 
-    color: white;
+  color: white;
 
-    font-weight: bold;
+  font-weight: bold;
 
-    border: none;
+  border: none;
 
-    border-radius: 8px;
+  border-radius: 8px;
 
-    padding: 12px 16px;
+  padding: 12px 16px;
 
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .agree-button:disabled {
 
-    background: #aaa;
+  background: #aaa;
 
-    cursor: not-allowed;
+  cursor: not-allowed;
 }
 
 .start-button {
 
-    width: 100%;
+  width: 100%;
 
-    background: #1f618d;
+  background: #1f618d;
 
-    color: white;
+  color: white;
 
-    font-weight: bold;
+  font-weight: bold;
 
-    border: none;
+  border: none;
 
-    border-radius: 8px;
+  border-radius: 8px;
 
-    font-size: 16px;
+  font-size: 16px;
 
-    padding: 13px;
+  padding: 13px;
 }
 
 .back-button {
 
-    width: 100%;
+  width: 100%;
 
-    margin-top: 6px;
+  margin-top: 6px;
 
-    background: #e5e7e9;
+  background: #e5e7e9;
 
-    border: none;
+  border: none;
 
-    border-radius: 8px;
+  border-radius: 8px;
 
-    font-size: 13px;
+  font-size: 13px;
 
-    padding: 10px;
+  padding: 10px;
+}
+
+.delete-button {
+
+  width: 100%;
+
+  margin-top: 8px;
+
+  background: #c0392b;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+
+  padding: 11px;
+
+  font-weight: bold;
+}
+
+.save-button {
+
+  width: 100%;
+
+  background: #1e8449;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+
+  padding: 12px;
+
+  font-size: 15px;
+
+  font-weight: bold;
 }
 
 
-/* =========================================
+/* =====================================================
    エラー
-========================================= */
+===================================================== */
 
 .error {
 
-    display: none;
+  display: none;
 
-    background: #fadbd8;
+  background: #fadbd8;
 
-    color: #922b21;
+  color: #922b21;
 
-    padding: 9px;
+  padding: 9px;
 
-    border-radius: 7px;
+  border-radius: 7px;
 
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 
-    font-size: 13px;
+  font-size: 13px;
 
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
 
-/* =========================================
+/* =====================================================
    確認画面
-========================================= */
+===================================================== */
 
 .confirmation-screen-container {
 
-    width:
-        min(700px, calc(100% - 14px));
+  width:
+    min(700px, calc(100% - 14px));
 
-    margin: 7px auto;
+  margin: 7px auto;
 }
 
 .confirm-card {
 
-    background: white;
+  background: white;
 
-    border-radius: 11px;
+  border-radius: 11px;
 
-    padding: 12px;
+  padding: 12px;
 
-    box-shadow:
-        0 2px 8px rgba(0,0,0,.07);
+  box-shadow:
+    0 2px 8px rgba(0,0,0,.07);
 }
 
 .confirmation-header {
 
-    text-align: center;
+  text-align: center;
 
-    margin-bottom: 7px;
+  margin-bottom: 7px;
 }
 
 .checkmark {
 
-    width: 43px;
-    height: 43px;
+  width: 43px;
+  height: 43px;
 
-    margin:
-        0 auto 5px;
+  margin:
+    0 auto 5px;
 
-    border-radius: 50%;
+  border-radius: 50%;
 
-    background: #1e8449;
+  background: #1e8449;
 
-    color: white;
+  color: white;
 
-    display: flex;
+  display: flex;
 
-    align-items: center;
+  align-items: center;
 
-    justify-content: center;
+  justify-content: center;
 
-    font-size: 25px;
+  font-size: 25px;
 
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .confirmation-header h2 {
 
-    margin: 0;
+  margin: 0;
 
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .confirmation-header p {
 
-    margin: 3px 0;
+  margin: 3px 0;
 
-    font-size: 12px;
+  font-size: 12px;
 }
 
 
-/* =========================================
+/* =====================================================
    確認番号
-========================================= */
+===================================================== */
 
 .number-label {
 
-    text-align: center;
+  text-align: center;
 
-    font-size: 11px;
+  font-size: 11px;
 
-    color: #666;
+  color: #666;
 }
 
 .confirmation-number {
 
-    text-align: center;
+  text-align: center;
 
-    background: #f1f3f4;
+  background: #f1f3f4;
 
-    border:
-        1px solid #17202a;
+  border:
+    1px solid #17202a;
 
-    border-radius: 7px;
+  border-radius: 7px;
 
-    padding: 6px;
+  padding: 6px;
 
-    margin: 3px 0 7px;
+  margin: 3px 0 7px;
 
-    font-size: 20px;
+  font-size: 20px;
 
-    font-weight: bold;
+  font-weight: bold;
 
-    letter-spacing: 3px;
+  letter-spacing: 3px;
 }
 
 
-/* =========================================
-   確認情報
-========================================= */
+/* =====================================================
+   情報
+===================================================== */
 
 .info-grid {
 
-    display: grid;
+  display: grid;
 
-    grid-template-columns:
-        1fr 1fr;
+  grid-template-columns:
+    1fr 1fr;
 
-    gap: 5px;
+  gap: 5px;
 
-    margin-bottom: 7px;
+  margin-bottom: 7px;
 }
 
 .info-box {
 
-    background: #f7f8f9;
+  background: #f7f8f9;
 
-    border-radius: 6px;
+  border-radius: 6px;
 
-    padding: 6px 8px;
+  padding: 6px 8px;
 
-    min-width: 0;
+  min-width: 0;
 }
 
 .info-label {
 
-    display: block;
+  display: block;
 
-    font-size: 10px;
+  font-size: 10px;
 
-    color: #777;
+  color: #777;
 
-    margin-bottom: 1px;
+  margin-bottom: 1px;
 }
 
 .info-value {
 
-    display: block;
+  display: block;
 
-    font-size: 13px;
+  font-size: 13px;
 
-    font-weight: bold;
+  font-weight: bold;
 
-    word-break: break-word;
+  word-break: break-word;
 }
 
 .expiry-result {
 
-    color: red;
+  color: red;
 }
 
 
-/* =========================================
-   規約確認状況
-========================================= */
+/* =====================================================
+   規約確認
+===================================================== */
 
 .rules-confirmed {
 
-    background: #f7f8f9;
+  background: #f7f8f9;
 
-    border-radius: 7px;
+  border-radius: 7px;
 
-    padding: 7px 9px;
+  padding: 7px 9px;
 
-    margin-bottom: 7px;
+  margin-bottom: 7px;
 }
 
 .rules-confirmed-title {
 
-    font-size: 12px;
+  font-size: 12px;
 
-    font-weight: bold;
+  font-weight: bold;
 
-    margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .rules-status {
 
-    display: grid;
+  display: grid;
 
-    grid-template-columns:
-        repeat(2, 1fr);
+  grid-template-columns:
+    repeat(2, 1fr);
 
-    gap: 3px;
+  gap: 3px;
 }
 
 .rules-status-item {
 
-    font-size: 10px;
+  font-size: 10px;
 
-    background: white;
+  background: white;
 
-    border-radius: 4px;
+  border-radius: 4px;
 
-    padding: 3px 5px;
+  padding: 3px 5px;
 }
 
 .rules-status-item span {
 
-    color: #176f3d;
+  color: #176f3d;
 
-    font-weight: bold;
+  font-weight: bold;
 }
 
 
-/* =========================================
+/* =====================================================
    署名確認
-========================================= */
+===================================================== */
 
 .signature-section {
 
-    display: flex;
+  display: flex;
 
-    align-items: center;
+  align-items: center;
 
-    gap: 10px;
+  gap: 10px;
 
-    margin-bottom: 7px;
+  margin-bottom: 7px;
 }
 
 .signature-section-title {
 
-    width: 45px;
+  width: 45px;
 
-    flex-shrink: 0;
+  flex-shrink: 0;
 
-    font-size: 11px;
+  font-size: 11px;
 
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .signature-result {
 
-    width: 100%;
+  width: 100%;
 
-    height: 65px;
+  height: 65px;
 
-    object-fit: contain;
+  object-fit: contain;
 
-    border:
-        1px solid #ddd;
+  border:
+    1px solid #ddd;
 
-    border-radius: 5px;
+  border-radius: 5px;
 
-    background: white;
+  background: white;
 }
 
 
-/* =========================================
-   確認注意
-========================================= */
+/* =====================================================
+   管理者
+===================================================== */
 
-.notice {
+.admin-list-item {
 
-    text-align: center;
+  background: #f7f8f9;
 
-    background: #fff8e1;
+  border:
+    1px solid #ddd;
 
-    border-radius: 6px;
+  border-radius: 8px;
 
-    padding: 5px;
+  padding: 10px;
 
-    margin-bottom: 7px;
+  margin: 7px 0;
 
-    line-height: 1.35;
+  cursor: pointer;
+}
 
-    font-size: 10px;
+.admin-list-item:active {
+  background: #e9ecef;
+}
+
+.admin-list-name {
+
+  font-size: 15px;
+
+  font-weight: bold;
+}
+
+.admin-list-number {
+
+  font-size: 12px;
+
+  color: #555;
+
+  margin-top: 3px;
+}
+
+.admin-list-expiry {
+
+  font-size: 12px;
+
+  color: red;
+
+  margin-top: 3px;
+}
+
+.admin-empty {
+
+  text-align: center;
+
+  color: #777;
+
+  padding: 25px 5px;
+
+  font-size: 13px;
+}
+
+.admin-section {
+
+  margin-top: 12px;
+
+  padding-top: 10px;
+
+  border-top:
+    1px solid #ddd;
+}
+
+.admin-rule-edit {
+
+  border:
+    1px solid #ddd;
+
+  border-radius: 7px;
+
+  padding: 8px;
+
+  margin: 5px 0;
+
+  background: #fafafa;
+}
+
+.admin-rule-edit label {
+
+  display: flex;
+
+  gap: 8px;
+
+  align-items: flex-start;
+
+  font-size: 12px;
 }
 
 
-/* =========================================
-   全画面ボタン
-========================================= */
-
-.fullscreen-button {
-
-    position: fixed;
-
-    right: 9px;
-    bottom: 9px;
-
-    z-index: 1000;
-
-    width: 42px;
-    height: 42px;
-
-    padding: 0;
-
-    border-radius: 50%;
-
-    border: none;
-
-    background: #17202a;
-
-    color: white;
-
-    font-size: 18px;
-
-    box-shadow:
-        0 3px 10px rgba(0,0,0,.25);
-}
-
-
-/* =========================================
-   フッター
-========================================= */
-
-.footer {
-
-    text-align: center;
-
-    color: #777;
-
-    font-size: 10px;
-
-    padding:
-        5px 5px
-        calc(10px + env(safe-area-inset-bottom));
-}
-
-
-/* =========================================
-   読み込み画面
-========================================= */
+/* =====================================================
+   読み込み
+===================================================== */
 
 .loading-screen {
 
-    position: fixed;
+  position: fixed;
 
-    inset: 0;
+  inset: 0;
 
-    z-index: 5000;
+  z-index: 5000;
 
-    background:
-        rgba(255,255,255,.97);
+  background:
+    rgba(255,255,255,.97);
 
-    display: none;
+  display: none;
 
-    align-items: center;
+  align-items: center;
 
-    justify-content: center;
+  justify-content: center;
 
-    padding: 20px;
+  padding: 20px;
 }
 
 .loading-screen.active {
 
-    display: flex;
+  display: flex;
 }
 
 .loading-box {
 
-    width:
-        min(400px, 100%);
+  width:
+    min(400px, 100%);
 
-    text-align: center;
+  text-align: center;
 }
-
-
-/* =========================================
-   くるくる
-========================================= */
 
 .loading-spinner {
 
-    width: 55px;
-    height: 55px;
+  width: 55px;
+  height: 55px;
 
-    margin:
-        0 auto 18px;
+  margin:
+    0 auto 18px;
 
-    border:
-        6px solid #e5e7e9;
+  border:
+    6px solid #e5e7e9;
 
-    border-top:
-        6px solid #17202a;
+  border-top:
+    6px solid #17202a;
 
-    border-radius: 50%;
+  border-radius: 50%;
 
-    animation:
-        loadingSpin .8s linear infinite;
+  animation:
+    loadingSpin .8s linear infinite;
 }
 
 @keyframes loadingSpin {
 
-    from {
-        transform: rotate(0deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
 
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 
 }
 
 .loading-title {
 
-    font-size: 20px;
+  font-size: 20px;
 
-    font-weight: bold;
+  font-weight: bold;
 
-    margin-bottom: 6px;
+  margin-bottom: 6px;
 }
 
 .loading-message {
 
-    color: #666;
+  color: #666;
 
-    font-size: 13px;
+  font-size: 13px;
 
-    min-height: 20px;
+  min-height: 20px;
 
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
-
-
-/* =========================================
-   プログレス
-========================================= */
 
 .progress-container {
 
-    width: 100%;
+  width: 100%;
 
-    height: 14px;
+  height: 14px;
 
-    background: #e5e7e9;
+  background: #e5e7e9;
 
-    border-radius: 999px;
+  border-radius: 999px;
 
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .progress-bar {
 
-    height: 100%;
+  height: 100%;
 
-    width: 0%;
+  width: 0%;
 
-    background: #17202a;
+  background: #17202a;
 
-    border-radius: 999px;
+  border-radius: 999px;
 
-    transition:
-        width .15s ease-out;
+  transition:
+    width .15s ease-out;
 }
 
 .progress-percent {
 
-    margin-top: 7px;
+  margin-top: 7px;
 
-    font-size: 13px;
+  font-size: 13px;
 
-    font-weight: bold;
+  font-weight: bold;
 }
 
 
-/* =========================================
-   小さいスマホ
-========================================= */
+/* =====================================================
+   全画面
+===================================================== */
+
+.fullscreen-button {
+
+  position: fixed;
+
+  right: 9px;
+  bottom: 9px;
+
+  z-index: 1000;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+
+  border-radius: 50%;
+
+  border: none;
+
+  background: #17202a;
+
+  color: white;
+
+  font-size: 18px;
+
+  box-shadow:
+    0 3px 10px rgba(0,0,0,.25);
+}
+
+
+/* =====================================================
+   フッター
+===================================================== */
+
+.footer {
+
+  text-align: center;
+
+  color: #777;
+
+  font-size: 10px;
+
+  padding:
+    5px 5px
+    calc(10px + env(safe-area-inset-bottom));
+}
+
+
+/* =====================================================
+   小さい画面
+===================================================== */
 
 @media (max-height: 700px) {
 
-    .header {
+  .header {
+    padding:
+      calc(8px + env(safe-area-inset-top))
+      10px
+      8px;
+  }
 
-        padding:
-            calc(8px + env(safe-area-inset-top))
-            10px
-            8px;
-    }
+  .header h1 {
+    font-size: 18px;
+  }
 
-    .header h1 {
-        font-size: 18px;
-    }
+  .container {
+    margin-top: 5px;
+  }
 
-    .container {
-        margin-top: 5px;
-    }
+  .card {
+    padding: 10px;
+    margin-bottom: 6px;
+  }
 
-    .card {
-        padding: 10px;
-        margin-bottom: 6px;
-    }
+  .title {
+    font-size: 16px;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+  }
 
-    .title {
-        font-size: 16px;
-        padding-bottom: 4px;
-        margin-bottom: 6px;
-    }
+  .rule {
+    padding: 6px;
+    margin: 4px 0;
+  }
 
-    .rule {
-        padding: 6px;
-        margin: 4px 0;
-    }
+  .rule-title {
+    font-size: 12px;
+  }
 
-    .rule-title {
-        font-size: 12px;
-    }
+  .rule-text {
+    font-size: 11px;
+  }
 
-    .rule-text {
-        font-size: 11px;
-    }
+  .preface {
+    font-size: 11px;
+  }
 
-    .preface {
-        font-size: 11px;
-    }
+  .important-notice {
+    font-size: 13px;
+  }
 
-    .important-notice {
-        font-size: 13px;
-    }
+  .expiry-notice {
+    font-size: 12px;
+  }
 
-    .expiry-notice {
-        font-size: 12px;
-    }
+  .field {
+    margin: 5px 0;
+  }
 
-    .field {
-        margin: 5px 0;
-    }
-
-    .signature-box {
-        height: 100px;
-    }
-
+  .signature-box {
+    height: 100px;
+  }
 }
 
 
-/* =========================================
-   全画面
-========================================= */
+/* =====================================================
+   fullscreen
+===================================================== */
 
 :fullscreen {
-    background: #eef0f3;
+  background: #eef0f3;
 }
 
 :-webkit-full-screen {
-    background: #eef0f3;
+  background: #eef0f3;
 }
 
 </style>
@@ -1028,2207 +1141,3101 @@ button {
 <body>
 
 
-<!-- =======================================
+<!-- =====================================================
      ヘッダー
-======================================= -->
+===================================================== -->
 
 <header class="header">
 
-    <h1>
-        スマートフォン利用規約
-    </h1>
+  <h1>
+    スマートフォン利用規約
+  </h1>
 
-    <p>
-        利用に関する確認・同意書
-    </p>
+  <p>
+    利用に関する確認・同意書
+  </p>
 
 </header>
 
 
-<!-- =======================================
-     最初の選択画面
-======================================= -->
+<!-- =====================================================
+     最初の画面
+===================================================== -->
 
 <div
-    id="menuScreen"
-    class="screen active">
+  id="menuScreen"
+  class="screen active">
 
-    <div class="container">
+  <div class="container">
 
-        <div class="card menu-card">
+    <div class="card menu-card">
 
-            <div class="menu-icon">
-                📱
-            </div>
+      <div class="menu-icon">
+        📱
+      </div>
 
-            <div class="title">
-                スマートフォン利用
-            </div>
+      <div class="title">
+        スマートフォン利用
+      </div>
 
-            <p class="menu-description">
+      <p class="menu-description">
+        利用方法を選択してください。
+      </p>
 
-                利用方法を選択してください。
+      <button
+        class="menu-button new-button"
+        onclick="selectNewRegistration()">
 
-            </p>
+        新規登録
+
+      </button>
+
+      <button
+        class="menu-button continue-button"
+        onclick="selectContinuation()">
+
+        継続利用
+
+      </button>
 
 
-            <button
-                class="menu-button new-button"
-                onclick="selectNewRegistration()">
+      <!-- 管理者 -->
 
-                新規登録
+      <button
+        class="admin-button"
+        onclick="openAdminLogin()">
 
-            </button>
+        管理者用画面を開く
 
-
-            <button
-                class="menu-button continue-button"
-                onclick="selectContinuation()">
-
-                継続利用
-
-            </button>
-
-        </div>
+      </button>
 
     </div>
+
+  </div>
 
 </div>
 
 
-<!-- =======================================
-     新規登録・規約画面
-======================================= -->
+<!-- =====================================================
+     新規登録
+===================================================== -->
 
 <div
-    id="inputScreen"
-    class="screen">
+  id="inputScreen"
+  class="screen">
 
-    <div class="container">
-
-
-        <!-- 規約 -->
-
-        <div class="card">
-
-            <div class="title">
-                スマートフォン利用規約
-            </div>
+  <div class="container">
 
 
-            <div class="preface">
+    <div class="card">
 
-                <div class="important-notice">
-
-                    本規約に同意いただけない場合、
-                    スマートフォンを利用することができません。
-
-                </div>
+      <div class="title">
+        スマートフォン利用規約
+      </div>
 
 
-                <div
-                    id="inputExpiryNotice"
-                    class="expiry-notice">
+      <div class="preface">
 
-                    本規約の有効期限：
-                    同意日から1ヶ月
+        <div class="important-notice">
 
-                </div>
-
-
-                本規約は、貸し主から貸与されたスマートフォンの
-                利用に関し、利用者が遵守すべき事項を定めるものである。
-                利用者は、以下の各条項を確認し、その内容に同意した
-                うえで本スマートフォンを利用するものとする。
-
-            </div>
-
-
-            <div id="rules"></div>
+          本規約に同意いただけない場合、
+          スマートフォンを利用することができません。
 
         </div>
 
 
-        <!-- 利用者情報 -->
+        <div
+          id="inputExpiryNotice"
+          class="expiry-notice">
 
-        <div class="card">
-
-            <div class="title">
-                利用者情報
-            </div>
-
-
-            <div class="field">
-
-                <label for="name">
-                    氏名
-                </label>
-
-                <input
-                    id="name"
-                    type="text"
-                    placeholder="氏名を入力">
-
-            </div>
-
-
-            <div class="field">
-
-                <label for="birth">
-                    生年月日
-                </label>
-
-                <input
-                    id="birth"
-                    type="date">
-
-            </div>
+          本規約の有効期限：
+          同意日から1ヶ月
 
         </div>
 
 
-        <!-- 署名 -->
+        本規約は、貸し主から貸与されたスマートフォンの
+        利用に関し、利用者が遵守すべき事項を定めるものである。
+        利用者は、以下の各条項を確認し、その内容に同意した
+        うえで本スマートフォンを利用するものとする。
 
-        <div class="card">
-
-            <div class="title">
-                署名
-            </div>
-
-
-            <div class="signature-box">
-
-                <canvas
-                    id="signatureCanvas">
-                </canvas>
-
-                <div class="signature-hint">
-
-                    ここに手書きで署名してください
-
-                </div>
-
-            </div>
+      </div>
 
 
-            <button
-                class="clear-button"
-                onclick="clearSignature()">
-
-                署名を消去
-
-            </button>
-
-        </div>
-
-
-        <!-- 同意 -->
-
-        <div class="card">
-
-            <div class="title">
-                同意
-            </div>
-
-
-            <div
-                id="error"
-                class="error">
-            </div>
-
-
-            <button
-                id="agreeButton"
-                class="agree-button"
-                disabled
-                onclick="agree()">
-
-                以上の項目に同意する
-
-            </button>
-
-
-            <button
-                class="back-button"
-                onclick="backToMenuFromInput()">
-
-                戻る
-
-            </button>
-
-        </div>
-
+      <div id="rules"></div>
 
     </div>
+
+
+    <!-- 利用者情報 -->
+
+    <div class="card">
+
+      <div class="title">
+        利用者情報
+      </div>
+
+
+      <div class="field">
+
+        <label for="name">
+          氏名
+        </label>
+
+        <input
+          id="name"
+          type="text"
+          placeholder="氏名を入力">
+
+      </div>
+
+
+      <div class="field">
+
+        <label for="birth">
+          生年月日
+        </label>
+
+        <input
+          id="birth"
+          type="date">
+
+      </div>
+
+    </div>
+
+
+    <!-- 署名 -->
+
+    <div class="card">
+
+      <div class="title">
+        署名
+      </div>
+
+
+      <div class="signature-box">
+
+        <canvas id="signatureCanvas"></canvas>
+
+        <div class="signature-hint">
+          ここに手書きで署名してください
+        </div>
+
+      </div>
+
+
+      <button
+        class="clear-button"
+        onclick="clearSignature()">
+
+        署名を消去
+
+      </button>
+
+    </div>
+
+
+    <!-- 同意 -->
+
+    <div class="card">
+
+      <div class="title">
+        同意
+      </div>
+
+
+      <div
+        id="error"
+        class="error">
+      </div>
+
+
+      <button
+        id="agreeButton"
+        class="agree-button"
+        disabled
+        onclick="agree()">
+
+        以上の項目に同意する
+
+      </button>
+
+
+      <button
+        class="back-button"
+        onclick="backToMenuFromInput()">
+
+        戻る
+
+      </button>
+
+    </div>
+
+  </div>
 
 </div>
 
 
-<!-- =======================================
-     継続利用画面
-======================================= -->
+<!-- =====================================================
+     継続利用
+===================================================== -->
 
 <div
-    id="continueScreen"
-    class="screen">
+  id="continueScreen"
+  class="screen">
 
-    <div class="container">
+  <div class="container">
 
-        <div class="card">
+    <div class="card">
 
-            <div class="title">
-                継続利用
-            </div>
-
-
-            <p class="preface">
-
-                以前登録した氏名と生年月日を入力してください。
-                登録された有効期限内であれば、
-                規約への再同意を行わず利用を開始できます。
-
-            </p>
+      <div class="title">
+        継続利用
+      </div>
 
 
-            <div class="field">
+      <p class="preface">
 
-                <label for="continueName">
-                    氏名
-                </label>
+        以前登録した氏名と生年月日を入力してください。
+        登録された有効期限内であれば、
+        規約への再同意を行わず利用できます。
 
-                <input
-                    id="continueName"
-                    type="text"
-                    placeholder="氏名を入力">
-
-            </div>
+      </p>
 
 
-            <div class="field">
+      <div class="field">
 
-                <label for="continueBirth">
-                    生年月日
-                </label>
+        <label for="continueName">
+          氏名
+        </label>
 
-                <input
-                    id="continueBirth"
-                    type="date">
+        <input
+          id="continueName"
+          type="text"
+          placeholder="氏名を入力">
 
-            </div>
-
-
-            <div
-                id="continueError"
-                class="error">
-            </div>
+      </div>
 
 
-            <button
-                class="agree-button"
-                onclick="checkContinuation()">
+      <div class="field">
 
-                継続して利用する
+        <label for="continueBirth">
+          生年月日
+        </label>
 
-            </button>
+        <input
+          id="continueBirth"
+          type="date">
+
+      </div>
 
 
-            <button
-                class="back-button"
-                onclick="backToMenu()">
+      <div
+        id="continueError"
+        class="error">
+      </div>
 
-                戻る
 
-            </button>
+      <button
+        class="agree-button"
+        onclick="checkContinuation()">
 
-        </div>
+        継続して利用する
+
+      </button>
+
+
+      <button
+        class="back-button"
+        onclick="backToMenu()">
+
+        戻る
+
+      </button>
 
     </div>
+
+  </div>
 
 </div>
 
 
-<!-- =======================================
+<!-- =====================================================
      確認画面
-======================================= -->
+===================================================== -->
 
 <div
-    id="confirmationScreen"
-    class="screen">
+  id="confirmationScreen"
+  class="screen">
 
-    <div class="confirmation-screen-container">
+  <div class="confirmation-screen-container">
 
-        <div class="confirm-card">
-
-
-            <div class="confirmation-header">
-
-                <div class="checkmark">
-                    ✓
-                </div>
-
-                <h2>
-                    同意確認完了
-                </h2>
-
-                <p>
-                    以下の内容を確認してください
-                </p>
-
-            </div>
+    <div class="confirm-card">
 
 
-            <div class="number-label">
-                確認番号
-            </div>
+      <div class="confirmation-header">
+
+        <div class="checkmark">
+          ✓
+        </div>
+
+        <h2>
+          同意状況確認
+        </h2>
+
+        <p>
+          以下の内容を確認してください
+        </p>
+
+      </div>
 
 
-            <div
-                id="confirmationNumber"
-                class="confirmation-number">
-            </div>
+      <div class="number-label">
+        確認番号
+      </div>
 
 
-            <div class="info-grid">
+      <div
+        id="confirmationNumber"
+        class="confirmation-number">
+      </div>
 
 
-                <div class="info-box">
-
-                    <span class="info-label">
-                        氏名
-                    </span>
-
-                    <span
-                        id="resultName"
-                        class="info-value">
-                    </span>
-
-                </div>
+      <div class="info-grid">
 
 
-                <div class="info-box">
+        <div class="info-box">
 
-                    <span class="info-label">
-                        生年月日
-                    </span>
+          <span class="info-label">
+            氏名
+          </span>
 
-                    <span
-                        id="resultBirth"
-                        class="info-value">
-                    </span>
-
-                </div>
-
-
-                <div class="info-box">
-
-                    <span class="info-label">
-                        同意日
-                    </span>
-
-                    <span
-                        id="resultAgreementDate"
-                        class="info-value">
-                    </span>
-
-                </div>
-
-
-                <div class="info-box">
-
-                    <span class="info-label">
-                        有効期限
-                    </span>
-
-                    <span
-                        id="resultExpiryDate"
-                        class="info-value expiry-result">
-                    </span>
-
-                </div>
-
-
-            </div>
-
-
-            <div class="rules-confirmed">
-
-                <div class="rules-confirmed-title">
-
-                    規約確認状況
-
-                </div>
-
-
-                <div
-                    id="rulesStatus"
-                    class="rules-status">
-                </div>
-
-            </div>
-
-
-            <div class="signature-section">
-
-                <div class="signature-section-title">
-                    署名
-                </div>
-
-                <img
-                    id="resultSignature"
-                    class="signature-result"
-                    alt="署名">
-
-            </div>
-
-
-            <div class="notice">
-
-                上記の内容および各規約を確認し、
-                内容に誤りがないことを確認してください。
-
-            </div>
-
-
-            <button
-                class="start-button"
-                onclick="startUse()">
-
-                以上を確認し利用を開始する
-
-            </button>
-
-
-            <button
-                class="back-button"
-                onclick="backToInput()">
-
-                内容を修正する
-
-            </button>
-
+          <span
+            id="resultName"
+            class="info-value">
+          </span>
 
         </div>
 
+
+        <div class="info-box">
+
+          <span class="info-label">
+            生年月日
+          </span>
+
+          <span
+            id="resultBirth"
+            class="info-value">
+          </span>
+
+        </div>
+
+
+        <div class="info-box">
+
+          <span class="info-label">
+            同意日
+          </span>
+
+          <span
+            id="resultAgreementDate"
+            class="info-value">
+          </span>
+
+        </div>
+
+
+        <div class="info-box">
+
+          <span class="info-label">
+            有効期限
+          </span>
+
+          <span
+            id="resultExpiryDate"
+            class="info-value expiry-result">
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="rules-confirmed">
+
+        <div class="rules-confirmed-title">
+          規約確認状況
+        </div>
+
+        <div
+          id="rulesStatus"
+          class="rules-status">
+        </div>
+
+      </div>
+
+
+      <div class="signature-section">
+
+        <div class="signature-section-title">
+          署名
+        </div>
+
+        <img
+          id="resultSignature"
+          class="signature-result"
+          alt="署名">
+
+      </div>
+
+
+      <div class="notice">
+
+        上記の内容および各規約を確認し、
+        内容に誤りがないことを確認してください。
+
+      </div>
+
+
+      <button
+        class="start-button"
+        onclick="startUse()">
+
+        以上を確認し利用を開始する
+
+      </button>
+
     </div>
+
+  </div>
 
 </div>
 
 
-<!-- =======================================
-     読み込み
-======================================= -->
+<!-- =====================================================
+     管理者ログイン
+===================================================== -->
 
 <div
-    id="loadingScreen"
-    class="loading-screen">
+  id="adminLoginScreen"
+  class="screen">
 
-    <div class="loading-box">
+  <div class="container">
 
-        <div class="loading-spinner"></div>
+    <div class="card">
 
-
-        <div class="loading-title">
-            読み込み中…
-        </div>
-
-
-        <div
-            id="loadingMessage"
-            class="loading-message">
-
-            内容を確認しています…
-
-        </div>
+      <div class="title">
+        管理者認証
+      </div>
 
 
-        <div class="progress-container">
+      <p class="preface">
 
-            <div
-                id="progressBar"
-                class="progress-bar">
-            </div>
+        管理者用画面を開くには
+        パスワードを入力してください。
 
-        </div>
+      </p>
 
 
-        <div
-            id="progressPercent"
-            class="progress-percent">
+      <div class="field">
 
-            0%
+        <label for="adminPassword">
+          パスワード
+        </label>
 
-        </div>
+        <input
+          id="adminPassword"
+          type="password"
+          placeholder="パスワード">
+
+      </div>
+
+
+      <div
+        id="adminLoginError"
+        class="error">
+      </div>
+
+
+      <button
+        class="agree-button"
+        onclick="checkAdminPassword()">
+
+        管理者画面を開く
+
+      </button>
+
+
+      <button
+        class="back-button"
+        onclick="backToMenuFromAdminLogin()">
+
+        戻る
+
+      </button>
 
     </div>
+
+  </div>
 
 </div>
 
 
-<!-- =======================================
+<!-- =====================================================
+     管理者一覧
+===================================================== -->
+
+<div
+  id="adminListScreen"
+  class="screen">
+
+  <div class="container">
+
+    <div class="card">
+
+      <div class="title">
+        管理者画面
+      </div>
+
+
+      <p class="preface">
+
+        保存されている登録情報の一覧です。
+        情報を選択すると詳細を編集できます。
+
+      </p>
+
+
+      <div id="adminList"></div>
+
+
+      <button
+        class="back-button"
+        onclick="adminLogout()">
+
+        管理者画面を閉じる
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     管理者編集
+===================================================== -->
+
+<div
+  id="adminEditScreen"
+  class="screen">
+
+  <div class="container">
+
+    <div class="card">
+
+      <div class="title">
+        登録情報を編集
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          確認番号
+        </label>
+
+        <input
+          id="adminNumber"
+          type="text">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          氏名
+        </label>
+
+        <input
+          id="adminName"
+          type="text">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          生年月日
+        </label>
+
+        <input
+          id="adminBirth"
+          type="date">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          同意日
+        </label>
+
+        <input
+          id="adminAgreementDate"
+          type="date">
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          有効期限
+        </label>
+
+        <input
+          id="adminExpiryDate"
+          type="date">
+
+      </div>
+
+
+      <div class="admin-section">
+
+        <div class="title">
+          規約同意状況
+        </div>
+
+
+        <div id="adminRules"></div>
+
+      </div>
+
+
+      <div class="admin-section">
+
+        <div class="title">
+          署名
+        </div>
+
+
+        <div class="signature-box">
+
+          <canvas
+            id="adminSignatureCanvas">
+          </canvas>
+
+          <div class="signature-hint">
+            署名を編集できます
+          </div>
+
+        </div>
+
+
+        <button
+          class="clear-button"
+          onclick="clearAdminSignature()">
+
+          署名を消去
+
+        </button>
+
+      </div>
+
+
+      <div
+        id="adminEditError"
+        class="error">
+      </div>
+
+
+      <button
+        class="save-button"
+        onclick="saveAdminEdit()">
+
+        編集内容を保存
+
+      </button>
+
+
+      <button
+        class="delete-button"
+        onclick="deleteAdminData()">
+
+        この登録情報を削除
+
+      </button>
+
+
+      <button
+        class="back-button"
+        onclick="backToAdminList()">
+
+        一覧に戻る
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     読み込み画面
+===================================================== -->
+
+<div
+  id="loadingScreen"
+  class="loading-screen">
+
+  <div class="loading-box">
+
+    <div class="loading-spinner"></div>
+
+
+    <div class="loading-title">
+      読み込み中…
+    </div>
+
+
+    <div
+      id="loadingMessage"
+      class="loading-message">
+    </div>
+
+
+    <div class="progress-container">
+
+      <div
+        id="progressBar"
+        class="progress-bar">
+      </div>
+
+    </div>
+
+
+    <div
+      id="progressPercent"
+      class="progress-percent">
+
+      0%
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
      全画面
-======================================= -->
+===================================================== -->
 
 <button
-    class="fullscreen-button"
-    onclick="toggleFullscreen()"
-    title="全画面表示">
+  class="fullscreen-button"
+  onclick="toggleFullscreen()">
 
-    ⛶
+  ⛶
 
 </button>
 
 
 <footer class="footer">
-
-    スマートフォン利用規約
-
+  スマートフォン利用規約
 </footer>
 
 
 <script>
 
 
-/* =========================================
+/* =====================================================
+   定数
+===================================================== */
+
+const ADMIN_PASSWORD =
+  "Tarakosama2525";
+
+const STORAGE_KEY =
+  "smartphoneAgreements";
+
+
+/* =====================================================
    規約
-========================================= */
+===================================================== */
 
 const rules = [
 
-    {
-        title:
-            "貸与物であることの認識",
+  {
+    title:
+      "貸与物であることの認識",
 
-        text:
-            "本スマートフォンは利用者自身の所有物ではなく、貸し主から貸与されたものであることを認識し、そのことを常に意識して利用するものとする。"
-    },
+    text:
+      "本スマートフォンは利用者自身の所有物ではなく、貸し主から貸与されたものであることを認識し、そのことを常に意識して利用するものとする。"
+  },
 
+  {
+    title:
+      "利用範囲の制限",
 
-    {
-        title:
-            "利用範囲の制限",
+    text:
+      "本スマートフォンの利用にあたっては、貸し主が指定したアプリケーション、ウェブサイトおよび操作のみを行うものとする。"
+  },
 
-        text:
-            "本スマートフォンの利用にあたっては、貸し主が指定したアプリケーション、ウェブサイトおよび操作のみを行うものとする。"
-    },
+  {
+    title:
+      "貸し主からの指示",
 
+    text:
+      "貸し主から本スマートフォンの返却その他の操作を求められた場合、利用者はこれに従うものとする。"
+  },
 
-    {
-        title:
-            "貸し主からの指示",
+  {
+    title:
+      "禁止行為",
 
-        text:
-            "貸し主から本スマートフォンの返却その他の操作を求められた場合、利用者はこれに従うものとする。"
-    },
+    text:
+      "本スマートフォンを使用して、投稿を行うこと、パスワードを入力すること、その他の個人情報を取り扱う行為、または何らかのトラブルにつながるおそれのある行為を禁止する。"
+  },
 
+  {
+    title:
+      "例外",
 
-    {
-        title:
-            "禁止行為",
+    text:
+      "前各項の定めについて、貸し主が必要と認めた場合には、個別に例外を設けることがある。"
+  },
 
-        text:
-            "本スマートフォンを使用して、投稿を行うこと、パスワードを入力すること、その他の個人情報を取り扱う行為、または何らかのトラブルにつながるおそれのある行為を禁止する。"
-    },
+  {
+    title:
+      "貸し出しの停止等",
 
+    text:
+      "貸し主は、必要に応じて本スマートフォンを貸し出さないことがある。"
+  },
 
-    {
-        title:
-            "例外",
+  {
+    title:
+      "規約違反時の措置",
 
-        text:
-            "前各項の定めについて、貸し主が必要と認めた場合には、個別に例外を設けることがある。"
-    },
-
-
-    {
-        title:
-            "貸し出しの停止等",
-
-        text:
-            "貸し主は、必要に応じて本スマートフォンを貸し出さないことがある。"
-    },
-
-
-    {
-        title:
-            "規約違反時の措置",
-
-        text:
-            "本規約に違反した場合、利用者の本スマートフォンの利用を2週間停止するものとする。"
-    }
+    text:
+      "本規約に違反した場合、利用者の本スマートフォンの利用を2週間停止するものとする。"
+  }
 
 ];
 
 
-/* =========================================
-   規約を表示
-========================================= */
+/* =====================================================
+   規約表示
+===================================================== */
 
 const rulesArea =
-    document.getElementById("rules");
-
+  document.getElementById("rules");
 
 rules.forEach(
-    (rule, index) => {
+  (rule, index) => {
 
-        const div =
-            document.createElement("div");
+    const div =
+      document.createElement("div");
 
-        div.className = "rule";
+    div.className =
+      "rule";
 
-        div.innerHTML = `
+    div.innerHTML = `
 
-            <label>
+      <label>
 
-                <input
-                    type="checkbox"
-                    class="ruleCheck">
+        <input
+          type="checkbox"
+          class="ruleCheck">
 
-                <span>
+        <span>
 
-                    <span class="rule-title">
+          <span class="rule-title">
 
-                        第${index + 1}条　
-                        ${escapeHTML(rule.title)}
+            第${index + 1}条　
+            ${escapeHTML(rule.title)}
 
-                    </span>
+          </span>
 
-                    <br>
+          <br>
 
-                    <span class="rule-text">
+          <span class="rule-text">
 
-                        ${escapeHTML(rule.text)}
+            ${escapeHTML(rule.text)}
 
-                    </span>
+          </span>
 
-                </span>
+        </span>
 
-            </label>
+      </label>
 
-        `;
+    `;
 
-        rulesArea.appendChild(div);
+    rulesArea.appendChild(div);
 
-    }
+  }
 );
 
 
-/* =========================================
-   署名
-========================================= */
+/* =====================================================
+   データ取得
+===================================================== */
 
-const canvas =
-    document.getElementById(
-        "signatureCanvas"
-    );
+function getAllData() {
 
-const ctx =
-    canvas.getContext("2d");
+  try {
 
+    const data =
+      localStorage.getItem(
+        STORAGE_KEY
+      );
 
-let drawing = false;
+    if (!data)
+      return [];
 
-let signed = false;
+    const parsed =
+      JSON.parse(data);
 
+    return Array.isArray(parsed)
+      ? parsed
+      : [];
 
-function resizeCanvas() {
+  }
 
-    const rect =
-        canvas.getBoundingClientRect();
+  catch (e) {
 
+    return [];
 
-    const ratio =
-        Math.max(
-            window.devicePixelRatio || 1,
-            1
-        );
-
-
-    canvas.width =
-        Math.round(
-            rect.width * ratio
-        );
-
-    canvas.height =
-        Math.round(
-            rect.height * ratio
-        );
-
-
-    ctx.setTransform(
-        ratio,
-        0,
-        0,
-        ratio,
-        0,
-        0
-    );
-
-
-    ctx.lineWidth = 2.2;
-
-    ctx.lineCap = "round";
-
-    ctx.lineJoin = "round";
+  }
 
 }
 
 
-resizeCanvas();
+/* =====================================================
+   データ保存
+===================================================== */
 
+function saveAllData(data) {
 
-window.addEventListener(
-    "resize",
-    resizeCanvas
-);
-
-
-/* =========================================
-   署名位置
-========================================= */
-
-function getPosition(e) {
-
-    const rect =
-        canvas.getBoundingClientRect();
-
-
-    if (e.touches) {
-
-        return {
-
-            x:
-                e.touches[0].clientX -
-                rect.left,
-
-            y:
-                e.touches[0].clientY -
-                rect.top
-
-        };
-
-    }
-
-
-    return {
-
-        x:
-            e.clientX -
-            rect.left,
-
-        y:
-            e.clientY -
-            rect.top
-
-    };
+  localStorage.setItem(
+    STORAGE_KEY,
+    JSON.stringify(data)
+  );
 
 }
 
 
-/* =========================================
-   署名開始
-========================================= */
-
-function startDrawing(e) {
-
-    e.preventDefault();
-
-    drawing = true;
-
-    signed = true;
-
-
-    const p =
-        getPosition(e);
-
-
-    ctx.beginPath();
-
-    ctx.moveTo(
-        p.x,
-        p.y
-    );
-
-
-    updateButton();
-
-}
-
-
-/* =========================================
-   描画
-========================================= */
-
-function draw(e) {
-
-    if (!drawing) return;
-
-    e.preventDefault();
-
-
-    const p =
-        getPosition(e);
-
-
-    ctx.lineTo(
-        p.x,
-        p.y
-    );
-
-    ctx.stroke();
-
-}
-
-
-/* =========================================
-   署名終了
-========================================= */
-
-function stopDrawing() {
-
-    drawing = false;
-
-    ctx.closePath();
-
-}
-
-
-canvas.addEventListener(
-    "mousedown",
-    startDrawing
-);
-
-canvas.addEventListener(
-    "mousemove",
-    draw
-);
-
-canvas.addEventListener(
-    "mouseup",
-    stopDrawing
-);
-
-canvas.addEventListener(
-    "mouseleave",
-    stopDrawing
-);
-
-
-canvas.addEventListener(
-    "touchstart",
-    startDrawing,
-    { passive: false }
-);
-
-canvas.addEventListener(
-    "touchmove",
-    draw,
-    { passive: false }
-);
-
-canvas.addEventListener(
-    "touchend",
-    stopDrawing
-);
-
-
-/* =========================================
-   署名消去
-========================================= */
-
-function clearSignature() {
-
-    ctx.clearRect(
-        0,
-        0,
-        canvas.width,
-        canvas.height
-    );
-
-    signed = false;
-
-    updateButton();
-
-}
-
-
-/* =========================================
-   入力チェック
-========================================= */
-
-const checkboxes =
-    document.querySelectorAll(
-        ".ruleCheck"
-    );
-
-
-checkboxes.forEach(
-    checkbox => {
-
-        checkbox.addEventListener(
-            "change",
-            updateButton
-        );
-
-    }
-);
-
-
-document
-    .getElementById("name")
-    .addEventListener(
-        "input",
-        updateButton
-    );
-
-
-document
-    .getElementById("birth")
-    .addEventListener(
-        "change",
-        updateButton
-    );
-
-
-function updateButton() {
-
-    const allChecked =
-        [...checkboxes]
-        .every(
-            checkbox =>
-                checkbox.checked
-        );
-
-
-    const name =
-        document
-        .getElementById("name")
-        .value
-        .trim();
-
-
-    const birth =
-        document
-        .getElementById("birth")
-        .value;
-
-
-    document
-        .getElementById("agreeButton")
-        .disabled =
-        !(
-            allChecked &&
-            name &&
-            birth &&
-            signed
-        );
-
-}
-
-
-/* =========================================
-   日付表示
-========================================= */
+/* =====================================================
+   日付
+===================================================== */
 
 function formatDateJP(date) {
 
-    return date.getFullYear()
-        + "年"
-        + (date.getMonth() + 1)
-        + "月"
-        + date.getDate()
-        + "日";
+  return date.getFullYear()
+    + "年"
+    + (date.getMonth() + 1)
+    + "月"
+    + date.getDate()
+    + "日";
 
 }
 
 
-/* =========================================
-   1ヶ月後
-========================================= */
+function dateToInput(date) {
+
+  const d =
+    new Date(date);
+
+  if (isNaN(d.getTime()))
+    return "";
+
+  return d.getFullYear()
+    + "-"
+    + String(
+        d.getMonth() + 1
+      ).padStart(2, "0")
+    + "-"
+    + String(
+        d.getDate()
+      ).padStart(2, "0");
+
+}
+
 
 function addOneMonth(date) {
 
-    const result =
-        new Date(date);
+  const result =
+    new Date(date);
 
-    const originalDay =
-        result.getDate();
+  const day =
+    result.getDate();
 
+  result.setMonth(
+    result.getMonth() + 1
+  );
 
-    result.setMonth(
-        result.getMonth() + 1
-    );
+  if (
+    result.getDate() !== day
+  ) {
 
+    result.setDate(0);
 
-    /*
-     * 例えば1月31日→2月31日
-     * のような場合を調整
-     */
+  }
 
-    if (
-        result.getDate() !== originalDay
-    ) {
-
-        result.setDate(0);
-
-    }
-
-
-    return result;
+  return result;
 
 }
 
 
-/* =========================================
+function formatBirth(value) {
+
+  const date =
+    new Date(
+      value + "T00:00:00"
+    );
+
+  if (
+    isNaN(
+      date.getTime()
+    )
+  ) {
+
+    return value;
+
+  }
+
+  return date.toLocaleDateString(
+    "ja-JP",
+    {
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    }
+  );
+
+}
+
+
+/* =====================================================
    確認番号
-========================================= */
+===================================================== */
 
 function generateNumber() {
 
-    const chars =
-        "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+  const chars =
+    "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
 
+  let result =
+    "SP-";
 
-    let result = "SP-";
+  for (
+    let i = 0;
+    i < 8;
+    i++
+  ) {
 
+    result +=
+      chars[
+        Math.floor(
+          Math.random() *
+          chars.length
+        )
+      ];
 
-    for (
-        let i = 0;
-        i < 8;
-        i++
-    ) {
+  }
 
-        result +=
-            chars[
-                Math.floor(
-                    Math.random() *
-                    chars.length
-                )
-            ];
-
-    }
-
-
-    return result;
+  return result;
 
 }
 
 
-/* =========================================
+/* =====================================================
+   画面切替
+===================================================== */
+
+function showScreen(id) {
+
+  document
+    .querySelectorAll(".screen")
+    .forEach(
+      screen =>
+        screen.classList.remove(
+          "active"
+        )
+    );
+
+  document
+    .getElementById(id)
+    .classList.add("active");
+
+  window.scrollTo(
+    0,
+    0
+  );
+
+}
+
+
+/* =====================================================
    新規登録
-========================================= */
+===================================================== */
 
 function selectNewRegistration() {
 
-    document
-        .getElementById("menuScreen")
-        .classList
-        .remove("active");
-
-
-    document
-        .getElementById("inputScreen")
-        .classList
-        .add("active");
-
-
-    window.scrollTo(
-        0,
-        0
-    );
+  showScreen(
+    "inputScreen"
+  );
 
 }
 
 
-/* =========================================
+/* =====================================================
    継続利用
-========================================= */
+===================================================== */
 
 function selectContinuation() {
 
-    document
-        .getElementById("menuScreen")
-        .classList
-        .remove("active");
-
-
-    document
-        .getElementById("continueScreen")
-        .classList
-        .add("active");
-
-
-    window.scrollTo(
-        0,
-        0
-    );
+  showScreen(
+    "continueScreen"
+  );
 
 }
 
 
-/* =========================================
-   メニューへ戻る
-========================================= */
+/* =====================================================
+   戻る
+===================================================== */
 
 function backToMenu() {
 
-    document
-        .getElementById("continueScreen")
-        .classList
-        .remove("active");
-
-
-    document
-        .getElementById("menuScreen")
-        .classList
-        .add("active");
-
-
-    window.scrollTo(
-        0,
-        0
-    );
+  showScreen(
+    "menuScreen"
+  );
 
 }
 
 
 function backToMenuFromInput() {
 
-    document
-        .getElementById("inputScreen")
-        .classList
-        .remove("active");
-
-
-    document
-        .getElementById("menuScreen")
-        .classList
-        .add("active");
-
-
-    window.scrollTo(
-        0,
-        0
-    );
+  showScreen(
+    "menuScreen"
+  );
 
 }
 
 
-/* =========================================
-   localStorage保存
-========================================= */
+/* =====================================================
+   署名
+===================================================== */
 
-function saveAgreementData(data) {
+const canvas =
+  document.getElementById(
+    "signatureCanvas"
+  );
 
-    localStorage.setItem(
-        "smartphoneAgreement",
-        JSON.stringify(data)
+const ctx =
+  canvas.getContext("2d");
+
+let drawing = false;
+
+let signed = false;
+
+
+function setupCanvas(
+  canvas,
+  ctx
+) {
+
+  const rect =
+    canvas.getBoundingClientRect();
+
+  const ratio =
+    Math.max(
+      window.devicePixelRatio || 1,
+      1
     );
+
+  canvas.width =
+    Math.round(
+      rect.width * ratio
+    );
+
+  canvas.height =
+    Math.round(
+      rect.height * ratio
+    );
+
+  ctx.setTransform(
+    ratio,
+    0,
+    0,
+    ratio,
+    0,
+    0
+  );
+
+  ctx.lineWidth =
+    2.2;
+
+  ctx.lineCap =
+    "round";
+
+  ctx.lineJoin =
+    "round";
 
 }
 
 
-/* =========================================
-   同意
-========================================= */
+setupCanvas(
+  canvas,
+  ctx
+);
+
+
+window.addEventListener(
+  "resize",
+  () => {
+
+    setupCanvas(
+      canvas,
+      ctx
+    );
+
+  }
+);
+
+
+function getPosition(
+  canvas,
+  e
+) {
+
+  const rect =
+    canvas.getBoundingClientRect();
+
+  if (
+    e.touches &&
+    e.touches.length
+  ) {
+
+    return {
+
+      x:
+        e.touches[0].clientX -
+        rect.left,
+
+      y:
+        e.touches[0].clientY -
+        rect.top
+
+    };
+
+  }
+
+  return {
+
+    x:
+      e.clientX -
+      rect.left,
+
+    y:
+      e.clientY -
+      rect.top
+
+  };
+
+}
+
+
+function startDrawing(e) {
+
+  e.preventDefault();
+
+  drawing =
+    true;
+
+  signed =
+    true;
+
+  const p =
+    getPosition(
+      canvas,
+      e
+    );
+
+  ctx.beginPath();
+
+  ctx.moveTo(
+    p.x,
+    p.y
+  );
+
+  updateButton();
+
+}
+
+
+function draw(e) {
+
+  if (!drawing)
+    return;
+
+  e.preventDefault();
+
+  const p =
+    getPosition(
+      canvas,
+      e
+    );
+
+  ctx.lineTo(
+    p.x,
+    p.y
+  );
+
+  ctx.stroke();
+
+}
+
+
+function stopDrawing() {
+
+  drawing =
+    false;
+
+  ctx.closePath();
+
+}
+
+
+canvas.addEventListener(
+  "mousedown",
+  startDrawing
+);
+
+canvas.addEventListener(
+  "mousemove",
+  draw
+);
+
+canvas.addEventListener(
+  "mouseup",
+  stopDrawing
+);
+
+canvas.addEventListener(
+  "mouseleave",
+  stopDrawing
+);
+
+canvas.addEventListener(
+  "touchstart",
+  startDrawing,
+  {passive:false}
+);
+
+canvas.addEventListener(
+  "touchmove",
+  draw,
+  {passive:false}
+);
+
+canvas.addEventListener(
+  "touchend",
+  stopDrawing
+);
+
+
+function clearSignature() {
+
+  ctx.clearRect(
+    0,
+    0,
+    canvas.width,
+    canvas.height
+  );
+
+  signed =
+    false;
+
+  updateButton();
+
+}
+
+
+/* =====================================================
+   入力チェック
+===================================================== */
+
+const checkboxes =
+  document.querySelectorAll(
+    ".ruleCheck"
+  );
+
+
+checkboxes.forEach(
+  checkbox => {
+
+    checkbox.addEventListener(
+      "change",
+      updateButton
+    );
+
+  }
+);
+
+
+document
+  .getElementById("name")
+  .addEventListener(
+    "input",
+    updateButton
+  );
+
+
+document
+  .getElementById("birth")
+  .addEventListener(
+    "change",
+    updateButton
+  );
+
+
+function updateButton() {
+
+  const allChecked =
+    [...checkboxes]
+    .every(
+      checkbox =>
+        checkbox.checked
+    );
+
+  const name =
+    document
+    .getElementById("name")
+    .value
+    .trim();
+
+  const birth =
+    document
+    .getElementById("birth")
+    .value;
+
+  document
+    .getElementById(
+      "agreeButton"
+    )
+    .disabled =
+      !(
+        allChecked &&
+        name &&
+        birth &&
+        signed
+      );
+
+}
+
+
+/* =====================================================
+   新規登録
+===================================================== */
 
 function agree() {
 
-    const name =
-        document
-        .getElementById("name")
-        .value
-        .trim();
+  const name =
+    document
+    .getElementById("name")
+    .value
+    .trim();
+
+  const birth =
+    document
+    .getElementById("birth")
+    .value;
+
+  const allChecked =
+    [...checkboxes]
+    .every(
+      checkbox =>
+        checkbox.checked
+    );
+
+  if (
+    !name ||
+    !birth ||
+    !allChecked ||
+    !signed
+  ) {
+
+    showError(
+      "すべての規約にチェックを入れ、氏名・生年月日・署名を入力してください。"
+    );
+
+    return;
+
+  }
 
 
-    const birth =
-        document
-        .getElementById("birth")
-        .value;
+  const agreementDate =
+    new Date();
+
+  agreementDate.setHours(
+    0,
+    0,
+    0,
+    0
+  );
 
 
-    const allChecked =
-        [...checkboxes]
-        .every(
-            checkbox =>
-                checkbox.checked
+  const expiryDate =
+    addOneMonth(
+      agreementDate
+    );
+
+
+  const number =
+    generateNumber();
+
+
+  const signature =
+    canvas.toDataURL(
+      "image/png"
+    );
+
+
+  const data = {
+
+    id:
+      Date.now().toString()
+      + "-"
+      + Math.random()
+        .toString(36)
+        .slice(2),
+
+    number:
+      number,
+
+    name:
+      name,
+
+    birth:
+      birth,
+
+    agreementDate:
+      dateToInput(
+        agreementDate
+      ),
+
+    agreementDateText:
+      formatDateJP(
+        agreementDate
+      ),
+
+    expiryDate:
+      dateToInput(
+        expiryDate
+      ),
+
+    expiryDateText:
+      formatDateJP(
+        expiryDate
+      ),
+
+    rules:
+      rules.map(
+        () => true
+      ),
+
+    signature:
+      signature
+
+  };
+
+
+  const allData =
+    getAllData();
+
+
+  allData.push(
+    data
+  );
+
+
+  /*
+   * 新規登録データを保存
+   */
+
+  saveAllData(
+    allData
+  );
+
+
+  /*
+   * 確認画面の内容をセット
+   */
+
+  setConfirmation(
+    data
+  );
+
+
+  /*
+   * 指定された読み込み
+   */
+
+  newAgreementLoading();
+
+}
+
+
+/* =====================================================
+   確認画面セット
+===================================================== */
+
+function setConfirmation(data) {
+
+  document
+    .getElementById(
+      "confirmationNumber"
+    )
+    .textContent =
+      data.number;
+
+  document
+    .getElementById(
+      "resultName"
+    )
+    .textContent =
+      data.name;
+
+  document
+    .getElementById(
+      "resultBirth"
+    )
+    .textContent =
+      formatBirth(
+        data.birth
+      );
+
+  document
+    .getElementById(
+      "resultAgreementDate"
+    )
+    .textContent =
+      data.agreementDateText;
+
+  document
+    .getElementById(
+      "resultExpiryDate"
+    )
+    .textContent =
+      data.expiryDateText;
+
+  document
+    .getElementById(
+      "resultSignature"
+    )
+    .src =
+      data.signature;
+
+  createRulesStatus(
+    data.rules
+  );
+
+}
+
+
+/* =====================================================
+   規約確認表示
+===================================================== */
+
+function createRulesStatus(
+  ruleStates
+) {
+
+  const area =
+    document.getElementById(
+      "rulesStatus"
+    );
+
+  area.innerHTML =
+    "";
+
+  rules.forEach(
+    (rule, index) => {
+
+      const item =
+        document.createElement(
+          "div"
         );
 
+      item.className =
+        "rules-status-item";
 
-    if (
-        !name ||
-        !birth ||
-        !allChecked ||
-        !signed
-    ) {
+      const checked =
+        !ruleStates ||
+        ruleStates[index] !== false;
 
-        showError(
-            "すべての規約にチェックを入れ、氏名・生年月日・署名を入力してください。"
-        );
+      item.innerHTML = `
 
-        return;
+        <span>
+          ${checked ? "✓" : "－"}
+        </span>
+
+        第${index + 1}条
+        ${escapeHTML(
+          rule.title
+        )}
+
+      `;
+
+      area.appendChild(
+        item
+      );
 
     }
-
-
-    /* 同意日 */
-
-    const now =
-        new Date();
-
-
-    const agreementDate =
-        new Date(
-            now.getFullYear(),
-            now.getMonth(),
-            now.getDate()
-        );
-
-
-    /* 有効期限 */
-
-    const expiryDate =
-        addOneMonth(
-            agreementDate
-        );
-
-
-    /* 確認番号 */
-
-    const number =
-        generateNumber();
-
-
-    /* 署名 */
-
-    const signature =
-        canvas.toDataURL(
-            "image/png"
-        );
-
-
-    /* localStorage保存 */
-
-    saveAgreementData({
-
-        number:
-            number,
-
-        name:
-            name,
-
-        birth:
-            birth,
-
-        agreementDate:
-            formatDateJP(
-                agreementDate
-            ),
-
-        expiryDate:
-            expiryDate.toISOString(),
-
-        expiryDateText:
-            formatDateJP(
-                expiryDate
-            ),
-
-        signature:
-            signature
-
-    });
-
-
-    /* 確認画面へ */
-
-    document
-        .getElementById(
-            "confirmationNumber"
-        )
-        .textContent =
-        number;
-
-
-    document
-        .getElementById(
-            "resultName"
-        )
-        .textContent =
-        name;
-
-
-    document
-        .getElementById(
-            "resultBirth"
-        )
-        .textContent =
-        formatBirth(birth);
-
-
-    document
-        .getElementById(
-            "resultAgreementDate"
-        )
-        .textContent =
-        formatDateJP(
-            agreementDate
-        );
-
-
-    document
-        .getElementById(
-            "resultExpiryDate"
-        )
-        .textContent =
-        formatDateJP(
-            expiryDate
-        );
-
-
-    document
-        .getElementById(
-            "resultSignature"
-        )
-        .src =
-        signature;
-
-
-    createRulesStatus();
-
-
-    /*
-     * 1回目の読み込み
-     */
-
-    showLoading(
-
-        function() {
-
-            document
-                .getElementById(
-                    "inputScreen"
-                )
-                .classList
-                .remove("active");
-
-
-            document
-                .getElementById(
-                    "confirmationScreen"
-                )
-                .classList
-                .add("active");
-
-
-            window.scrollTo(
-                0,
-                0
-            );
-
-        },
-
-        1800,
-
-        4500
-
-    );
+  );
 
 }
 
 
-/* =========================================
-   規約確認状況
-========================================= */
+/* =====================================================
+   新規登録読み込み
+===================================================== */
 
-function createRulesStatus() {
+function newAgreementLoading() {
 
-    const status =
-        document.getElementById(
-            "rulesStatus"
-        );
+  showLoading(
+    [
+      "規約を確認しています。",
+      "利用者情報を確認しています。",
+      "署名を確認しています。",
+      "完了しました。"
+    ],
 
+    5500,
 
-    status.innerHTML = "";
+    function() {
 
+      showScreen(
+        "confirmationScreen"
+      );
 
-    rules.forEach(
-        (rule, index) => {
-
-            const item =
-                document.createElement(
-                    "div"
-                );
-
-
-            item.className =
-                "rules-status-item";
-
-
-            item.innerHTML = `
-
-                <span>✓</span>
-
-                第${index + 1}条
-                ${escapeHTML(rule.title)}
-
-            `;
-
-
-            status.appendChild(
-                item
-            );
-
-        }
-    );
+    }
+  );
 
 }
 
 
-/* =========================================
-   継続利用チェック
-========================================= */
+/* =====================================================
+   継続利用
+===================================================== */
 
 function checkContinuation() {
 
-    const name =
-        document
-        .getElementById(
-            "continueName"
-        )
-        .value
-        .trim();
+  const name =
+    document
+    .getElementById(
+      "continueName"
+    )
+    .value
+    .trim();
+
+  const birth =
+    document
+    .getElementById(
+      "continueBirth"
+    )
+    .value;
+
+  const error =
+    document.getElementById(
+      "continueError"
+    );
 
 
-    const birth =
-        document
-        .getElementById(
-            "continueBirth"
-        )
-        .value;
+  error.style.display =
+    "none";
 
 
-    const error =
-        document.getElementById(
-            "continueError"
-        );
+  if (
+    !name ||
+    !birth
+  ) {
 
+    error.textContent =
+      "氏名と生年月日を入力してください。";
 
     error.style.display =
-        "none";
+      "block";
+
+    return;
+
+  }
 
 
-    if (
-        !name ||
-        !birth
-    ) {
-
-        error.textContent =
-            "氏名と生年月日を入力してください。";
-
-        error.style.display =
-            "block";
-
-        return;
-
-    }
+  const allData =
+    getAllData();
 
 
-    const saved =
-        localStorage.getItem(
-            "smartphoneAgreement"
-        );
+  /*
+   * 最新の一致データを探す
+   */
 
-
-    if (!saved) {
-
-        error.textContent =
-            "登録情報が見つかりません。新規登録を行ってください。";
-
-        error.style.display =
-            "block";
-
-        return;
-
-    }
-
-
-    let data;
-
-
-    try {
-
-        data =
-            JSON.parse(saved);
-
-    }
-
-    catch (e) {
-
-        error.textContent =
-            "登録情報を読み込めませんでした。";
-
-        error.style.display =
-            "block";
-
-        return;
-
-    }
-
-
-    /*
-     * 氏名・生年月日照合
-     */
-
-    if (
-        data.name !== name ||
-        data.birth !== birth
-    ) {
-
-        error.textContent =
-            "氏名または生年月日が登録情報と一致しません。";
-
-        error.style.display =
-            "block";
-
-        return;
-
-    }
-
-
-    /*
-     * 有効期限確認
-     */
-
-    const today =
-        new Date();
-
-
-    today.setHours(
-        0,
-        0,
-        0,
-        0
+  const data =
+    [...allData]
+    .reverse()
+    .find(
+      item =>
+        item.name === name &&
+        item.birth === birth
     );
 
 
-    const expiry =
-        new Date(
-            data.expiryDate
-        );
+  if (!data) {
+
+    error.textContent =
+      "登録情報が見つかりません。新規登録を行ってください。";
+
+    error.style.display =
+      "block";
+
+    return;
+
+  }
 
 
-    expiry.setHours(
-        0,
-        0,
-        0,
-        0
+  const today =
+    new Date();
+
+  today.setHours(
+    0,
+    0,
+    0,
+    0
+  );
+
+
+  const expiry =
+    new Date(
+      data.expiryDate +
+      "T00:00:00"
     );
 
 
+  if (
+    today <= expiry
+  ) {
+
+    setConfirmation(
+      data
+    );
+
+    showScreen(
+      "confirmationScreen"
+    );
+
+  }
+
+  else {
+
+    error.innerHTML =
+      "登録されている利用期限が切れています。<br>" +
+      "新たに規約を確認して同意してください。";
+
+    error.style.display =
+      "block";
+
+
+    setTimeout(
+      () => {
+
+        showScreen(
+          "inputScreen"
+        );
+
+      },
+      1500
+    );
+
+  }
+
+}
+
+
+/* =====================================================
+   利用開始
+===================================================== */
+
+function startUse() {
+
+  /*
+   * 指定どおり、
+   * 「情報を保存しています。」
+   * を長めに表示
+   */
+
+  showLoading(
+    [
+      "情報を保存しています。",
+      "情報を保存しています。",
+      "情報を保存しています。",
+      "完了しました。"
+    ],
+
+    6500,
+
+    function() {
+
+      window.location.href =
+        "https://www.google.com/";
+
+    }
+  );
+
+}
+
+
+/* =====================================================
+   管理者ログイン
+===================================================== */
+
+function openAdminLogin() {
+
+  document
+    .getElementById(
+      "adminPassword"
+    )
+    .value =
+      "";
+
+  document
+    .getElementById(
+      "adminLoginError"
+    )
+    .style.display =
+      "none";
+
+  showScreen(
+    "adminLoginScreen"
+  );
+
+}
+
+
+function backToMenuFromAdminLogin() {
+
+  showScreen(
+    "menuScreen"
+  );
+
+}
+
+
+function checkAdminPassword() {
+
+  const password =
+    document
+    .getElementById(
+      "adminPassword"
+    )
+    .value;
+
+
+  if (
+    password !==
+    ADMIN_PASSWORD
+  ) {
+
+    const error =
+      document.getElementById(
+        "adminLoginError"
+      );
+
+    error.textContent =
+      "パスワードが正しくありません。";
+
+    error.style.display =
+      "block";
+
+    return;
+
+  }
+
+
+  /*
+   * 管理者一覧取得時だけ読み込み
+   */
+
+  showLoading(
+    [
+      "登録情報を取得しています。",
+      "登録情報を取得しています。",
+      "登録情報を取得しています。",
+      "完了しました。"
+    ],
+
+    4500,
+
+    function() {
+
+      renderAdminList();
+
+      showScreen(
+        "adminListScreen"
+      );
+
+    }
+  );
+
+}
+
+
+/* =====================================================
+   管理者一覧
+===================================================== */
+
+function renderAdminList() {
+
+  const area =
+    document.getElementById(
+      "adminList"
+    );
+
+  const allData =
+    getAllData();
+
+
+  area.innerHTML =
+    "";
+
+
+  if (
+    allData.length === 0
+  ) {
+
+    area.innerHTML = `
+
+      <div class="admin-empty">
+
+        保存されている登録情報はありません。
+
+      </div>
+
+    `;
+
+    return;
+
+  }
+
+
+  /*
+   * 新しいものを上に
+   */
+
+  [...allData]
+    .reverse()
+    .forEach(
+      data => {
+
+        const item =
+          document.createElement(
+            "div"
+          );
+
+        item.className =
+          "admin-list-item";
+
+
+        item.innerHTML = `
+
+          <div class="admin-list-name">
+
+            ${escapeHTML(
+              data.name
+            )}
+
+          </div>
+
+          <div class="admin-list-number">
+
+            確認番号：
+            ${escapeHTML(
+              data.number
+            )}
+
+          </div>
+
+          <div class="admin-list-expiry">
+
+            有効期限：
+            ${escapeHTML(
+              data.expiryDateText
+            )}
+
+          </div>
+
+        `;
+
+
+        item.onclick =
+          () =>
+            openAdminEdit(
+              data.id
+            );
+
+
+        area.appendChild(
+          item
+        );
+
+      }
+    );
+
+}
+
+
+/* =====================================================
+   管理者編集
+===================================================== */
+
+let currentAdminId =
+  null;
+
+
+let adminSignatureCanvas =
+  document.getElementById(
+    "adminSignatureCanvas"
+  );
+
+let adminSignatureCtx =
+  adminSignatureCanvas.getContext(
+    "2d"
+  );
+
+let adminDrawing =
+  false;
+
+let adminSignatureEdited =
+  false;
+
+
+function setupAdminCanvas() {
+
+  const rect =
+    adminSignatureCanvas
+      .getBoundingClientRect();
+
+  const ratio =
+    Math.max(
+      window.devicePixelRatio || 1,
+      1
+    );
+
+  adminSignatureCanvas.width =
+    Math.round(
+      rect.width * ratio
+    );
+
+  adminSignatureCanvas.height =
+    Math.round(
+      rect.height * ratio
+    );
+
+  adminSignatureCtx.setTransform(
+    ratio,
+    0,
+    0,
+    ratio,
+    0,
+    0
+  );
+
+  adminSignatureCtx.lineWidth =
+    2.2;
+
+  adminSignatureCtx.lineCap =
+    "round";
+
+  adminSignatureCtx.lineJoin =
+    "round";
+
+}
+
+
+setupAdminCanvas();
+
+
+function adminGetPosition(e) {
+
+  const rect =
+    adminSignatureCanvas
+      .getBoundingClientRect();
+
+  if (
+    e.touches &&
+    e.touches.length
+  ) {
+
+    return {
+
+      x:
+        e.touches[0].clientX -
+        rect.left,
+
+      y:
+        e.touches[0].clientY -
+        rect.top
+
+    };
+
+  }
+
+  return {
+
+    x:
+      e.clientX -
+      rect.left,
+
+    y:
+      e.clientY -
+      rect.top
+
+  };
+
+}
+
+
+function adminStartDrawing(e) {
+
+  e.preventDefault();
+
+  adminDrawing =
+    true;
+
+  adminSignatureEdited =
+    true;
+
+  const p =
+    adminGetPosition(e);
+
+  adminSignatureCtx.beginPath();
+
+  adminSignatureCtx.moveTo(
+    p.x,
+    p.y
+  );
+
+}
+
+
+function adminDraw(e) {
+
+  if (!adminDrawing)
+    return;
+
+  e.preventDefault();
+
+  const p =
+    adminGetPosition(e);
+
+  adminSignatureCtx.lineTo(
+    p.x,
+    p.y
+  );
+
+  adminSignatureCtx.stroke();
+
+}
+
+
+function adminStopDrawing() {
+
+  adminDrawing =
+    false;
+
+  adminSignatureCtx.closePath();
+
+}
+
+
+adminSignatureCanvas.addEventListener(
+  "mousedown",
+  adminStartDrawing
+);
+
+adminSignatureCanvas.addEventListener(
+  "mousemove",
+  adminDraw
+);
+
+adminSignatureCanvas.addEventListener(
+  "mouseup",
+  adminStopDrawing
+);
+
+adminSignatureCanvas.addEventListener(
+  "mouseleave",
+  adminStopDrawing
+);
+
+adminSignatureCanvas.addEventListener(
+  "touchstart",
+  adminStartDrawing,
+  {passive:false}
+);
+
+adminSignatureCanvas.addEventListener(
+  "touchmove",
+  adminDraw,
+  {passive:false}
+);
+
+adminSignatureCanvas.addEventListener(
+  "touchend",
+  adminStopDrawing
+);
+
+
+function clearAdminSignature() {
+
+  adminSignatureCtx.clearRect(
+    0,
+    0,
+    adminSignatureCanvas.width,
+    adminSignatureCanvas.height
+  );
+
+  adminSignatureEdited =
+    true;
+
+}
+
+
+/* =====================================================
+   管理者編集画面を開く
+===================================================== */
+
+function openAdminEdit(id) {
+
+  const allData =
+    getAllData();
+
+  const data =
+    allData.find(
+      item =>
+        item.id === id
+    );
+
+
+  if (!data)
+    return;
+
+
+  currentAdminId =
+    id;
+
+
+  document
+    .getElementById(
+      "adminNumber"
+    )
+    .value =
+      data.number;
+
+
+  document
+    .getElementById(
+      "adminName"
+    )
+    .value =
+      data.name;
+
+
+  document
+    .getElementById(
+      "adminBirth"
+    )
+    .value =
+      data.birth;
+
+
+  document
+    .getElementById(
+      "adminAgreementDate"
+    )
+    .value =
+      data.agreementDate;
+
+
+  document
+    .getElementById(
+      "adminExpiryDate"
+    )
+    .value =
+      data.expiryDate;
+
+
+  renderAdminRules(
+    data.rules
+  );
+
+
+  /*
+   * 署名をセット
+   */
+
+  setupAdminCanvas();
+
+  adminSignatureEdited =
+    false;
+
+
+  adminSignatureCtx.clearRect(
+    0,
+    0,
+    adminSignatureCanvas.width,
+    adminSignatureCanvas.height
+  );
+
+
+  if (data.signature) {
+
+    const image =
+      new Image();
+
+    image.onload =
+      function() {
+
+        const rect =
+          adminSignatureCanvas
+            .getBoundingClientRect();
+
+        adminSignatureCtx.drawImage(
+          image,
+          0,
+          0,
+          rect.width,
+          rect.height
+        );
+
+      };
+
+    image.src =
+      data.signature;
+
+  }
+
+
+  showScreen(
+    "adminEditScreen"
+  );
+
+}
+
+
+/* =====================================================
+   管理者規約編集
+===================================================== */
+
+function renderAdminRules(
+  states
+) {
+
+  const area =
+    document.getElementById(
+      "adminRules"
+    );
+
+  area.innerHTML =
+    "";
+
+
+  rules.forEach(
+    (rule, index) => {
+
+      const div =
+        document.createElement(
+          "div"
+        );
+
+      div.className =
+        "admin-rule-edit";
+
+
+      const checked =
+        !states ||
+        states[index] !== false;
+
+
+      div.innerHTML = `
+
+        <label>
+
+          <input
+            type="checkbox"
+            class="adminRuleCheck"
+            data-index="${index}"
+            ${checked ? "checked" : ""}>
+
+          <span>
+
+            第${index + 1}条　
+            ${escapeHTML(
+              rule.title
+            )}
+
+          </span>
+
+        </label>
+
+      `;
+
+
+      area.appendChild(
+        div
+      );
+
+    }
+  );
+
+}
+
+
+/* =====================================================
+   管理者保存
+===================================================== */
+
+function saveAdminEdit() {
+
+  if (!currentAdminId)
+    return;
+
+
+  const allData =
+    getAllData();
+
+
+  const index =
+    allData.findIndex(
+      item =>
+        item.id ===
+        currentAdminId
+    );
+
+
+  if (index === -1)
+    return;
+
+
+  const data =
+    allData[index];
+
+
+  data.number =
+    document
+    .getElementById(
+      "adminNumber"
+    )
+    .value
+    .trim();
+
+
+  data.name =
+    document
+    .getElementById(
+      "adminName"
+    )
+    .value
+    .trim();
+
+
+  data.birth =
+    document
+    .getElementById(
+      "adminBirth"
+    )
+    .value;
+
+
+  data.agreementDate =
+    document
+    .getElementById(
+      "adminAgreementDate"
+    )
+    .value;
+
+
+  data.expiryDate =
+    document
+    .getElementById(
+      "adminExpiryDate"
+    )
+    .value;
+
+
+  /*
+   * 表示用日付を更新
+   */
+
+  const agreement =
+    new Date(
+      data.agreementDate +
+      "T00:00:00"
+    );
+
+  const expiry =
+    new Date(
+      data.expiryDate +
+      "T00:00:00"
+    );
+
+
+  if (
+    !isNaN(
+      agreement.getTime()
+    )
+  ) {
+
+    data.agreementDateText =
+      formatDateJP(
+        agreement
+      );
+
+  }
+
+
+  if (
+    !isNaN(
+      expiry.getTime()
+    )
+  ) {
+
+    data.expiryDateText =
+      formatDateJP(
+        expiry
+      );
+
+  }
+
+
+  /*
+   * 規約
+   */
+
+  data.rules =
+    [...document
+      .querySelectorAll(
+        ".adminRuleCheck"
+      )]
+    .map(
+      checkbox =>
+        checkbox.checked
+    );
+
+
+  /*
+   * 署名
+   */
+
+  if (
+    adminSignatureEdited
+  ) {
+
+    data.signature =
+      adminSignatureCanvas
+        .toDataURL(
+          "image/png"
+        );
+
+  }
+
+
+  allData[index] =
+    data;
+
+
+  saveAllData(
+    allData
+  );
+
+
+  alert(
+    "登録情報を保存しました。"
+  );
+
+
+  renderAdminList();
+
+  showScreen(
+    "adminListScreen"
+  );
+
+}
+
+
+/* =====================================================
+   管理者削除
+===================================================== */
+
+function deleteAdminData() {
+
+  if (!currentAdminId)
+    return;
+
+
+  const allData =
+    getAllData();
+
+
+  const data =
+    allData.find(
+      item =>
+        item.id ===
+        currentAdminId
+    );
+
+
+  if (!data)
+    return;
+
+
+  const result =
+    confirm(
+      "この登録情報を削除しますか？\n\n" +
+      data.name +
+      "\n" +
+      data.number
+    );
+
+
+  if (!result)
+    return;
+
+
+  const newData =
+    allData.filter(
+      item =>
+        item.id !==
+        currentAdminId
+    );
+
+
+  saveAllData(
+    newData
+  );
+
+
+  currentAdminId =
+    null;
+
+
+  alert(
+    "登録情報を削除しました。"
+  );
+
+
+  renderAdminList();
+
+  showScreen(
+    "adminListScreen"
+  );
+
+}
+
+
+/* =====================================================
+   管理者一覧へ
+===================================================== */
+
+function backToAdminList() {
+
+  currentAdminId =
+    null;
+
+  renderAdminList();
+
+  showScreen(
+    "adminListScreen"
+  );
+
+}
+
+
+function adminLogout() {
+
+  currentAdminId =
+    null;
+
+  document
+    .getElementById(
+      "adminPassword"
+    )
+    .value =
+      "";
+
+  showScreen(
+    "menuScreen"
+  );
+
+}
+
+
+/* =====================================================
+   読み込み
+===================================================== */
+
+function showLoading(
+  messages,
+  duration,
+  callback
+) {
+
+  const screen =
+    document.getElementById(
+      "loadingScreen"
+    );
+
+  const bar =
+    document.getElementById(
+      "progressBar"
+    );
+
+  const percent =
+    document.getElementById(
+      "progressPercent"
+    );
+
+  const message =
+    document.getElementById(
+      "loadingMessage"
+    );
+
+
+  screen.classList.add(
+    "active"
+  );
+
+
+  bar.style.width =
+    "0%";
+
+
+  percent.textContent =
+    "0%";
+
+
+  message.textContent =
+    messages[0];
+
+
+  const start =
+    Date.now();
+
+
+  let lastMessage =
+    -1;
+
+
+  function update() {
+
+    const elapsed =
+      Date.now() -
+      start;
+
+
+    const ratio =
+      Math.min(
+        elapsed / duration,
+        1
+      );
+
+
+    const progress =
+      Math.floor(
+        ratio * 100
+      );
+
+
+    bar.style.width =
+      progress + "%";
+
+
+    percent.textContent =
+      progress + "%";
+
+
+    const messageIndex =
+      Math.min(
+        messages.length - 1,
+        Math.floor(
+          ratio *
+          messages.length
+        )
+      );
+
+
     if (
-        today <= expiry
+      messageIndex !==
+      lastMessage
     ) {
 
-        /*
-         * 有効期限内
-         */
+      lastMessage =
+        messageIndex;
 
-        showContinueSuccess(
-            data
-        );
+      message.textContent =
+        messages[
+          messageIndex
+        ];
+
+    }
+
+
+    if (
+      ratio >= 1
+    ) {
+
+      setTimeout(
+        function() {
+
+          screen
+            .classList
+            .remove(
+              "active"
+            );
+
+          callback();
+
+        },
+        400
+      );
+
+      return;
+
+    }
+
+
+    setTimeout(
+      update,
+      80
+    );
+
+  }
+
+
+  update();
+
+}
+
+
+/* =====================================================
+   エラー
+===================================================== */
+
+function showError(
+  text
+) {
+
+  const error =
+    document.getElementById(
+      "error"
+    );
+
+  error.textContent =
+    text;
+
+  error.style.display =
+    "block";
+
+  error.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+
+}
+
+
+/* =====================================================
+   HTMLエスケープ
+===================================================== */
+
+function escapeHTML(
+  value
+) {
+
+  return String(value)
+
+    .replaceAll(
+      "&",
+      "&amp;"
+    )
+
+    .replaceAll(
+      "<",
+      "&lt;"
+    )
+
+    .replaceAll(
+      ">",
+      "&gt;"
+    )
+
+    .replaceAll(
+      '"',
+      "&quot;"
+    )
+
+    .replaceAll(
+      "'",
+      "&#039;"
+    );
+
+}
+
+
+/* =====================================================
+   全画面
+===================================================== */
+
+async function toggleFullscreen() {
+
+  try {
+
+    if (
+      !document.fullscreenElement
+    ) {
+
+      await document
+        .documentElement
+        .requestFullscreen();
 
     }
 
     else {
 
-        /*
-         * 期限切れ
-         */
-
-        showExpiredMessage();
+      await document
+        .exitFullscreen();
 
     }
 
-}
+  }
 
+  catch (e) {
 
-/* =========================================
-   継続利用成功
-========================================= */
-
-function showContinueSuccess(data) {
-
-    document
-        .getElementById(
-            "continueScreen"
-        )
-        .classList
-        .remove("active");
-
-
-    document
-        .getElementById(
-            "confirmationNumber"
-        )
-        .textContent =
-        data.number;
-
-
-    document
-        .getElementById(
-            "resultName"
-        )
-        .textContent =
-        data.name;
-
-
-    document
-        .getElementById(
-            "resultBirth"
-        )
-        .textContent =
-        formatBirth(
-            data.birth
-        );
-
-
-    document
-        .getElementById(
-            "resultAgreementDate"
-        )
-        .textContent =
-        data.agreementDate;
-
-
-    document
-        .getElementById(
-            "resultExpiryDate"
-        )
-        .textContent =
-        data.expiryDateText;
-
-
-    document
-        .getElementById(
-            "resultSignature"
-        )
-        .src =
-        data.signature;
-
-
-    createRulesStatus();
-
-
-    /*
-     * 継続利用時も少し読み込み
-     */
-
-    showLoading(
-
-        function() {
-
-            document
-                .getElementById(
-                    "confirmationScreen"
-                )
-                .classList
-                .add("active");
-
-
-            window.scrollTo(
-                0,
-                0
-            );
-
-        },
-
-        1000,
-
-        2500
-
+    alert(
+      "このブラウザでは全画面表示を利用できません。"
     );
 
-}
-
-
-/* =========================================
-   期限切れ
-========================================= */
-
-function showExpiredMessage() {
-
-    const error =
-        document.getElementById(
-            "continueError"
-        );
-
-
-    error.innerHTML =
-        "登録されている利用期限が切れています。<br>" +
-        "新たに規約を確認して同意してください。";
-
-
-    error.style.display =
-        "block";
-
-
-    setTimeout(
-        function() {
-
-            document
-                .getElementById(
-                    "continueScreen"
-                )
-                .classList
-                .remove("active");
-
-
-            document
-                .getElementById(
-                    "inputScreen"
-                )
-                .classList
-                .add("active");
-
-
-            window.scrollTo(
-                0,
-                0
-            );
-
-        },
-
-        1600
-    );
-
-}
-
-
-/* =========================================
-   入力画面へ戻る
-========================================= */
-
-function backToInput() {
-
-    document
-        .getElementById(
-            "confirmationScreen"
-        )
-        .classList
-        .remove("active");
-
-
-    document
-        .getElementById(
-            "inputScreen"
-        )
-        .classList
-        .add("active");
-
-
-    window.scrollTo(
-        0,
-        0
-    );
-
-}
-
-
-/* =========================================
-   利用開始
-========================================= */
-
-function startUse() {
-
-    showLoading(
-
-        function() {
-
-            window.location.href =
-                "https://www.google.com/";
-
-        },
-
-        1600,
-
-        4000
-
-    );
-
-}
-
-
-/* =========================================
-   読み込み
-========================================= */
-
-function showLoading(
-    callback,
-    minTime,
-    maxTime
-) {
-
-    const screen =
-        document.getElementById(
-            "loadingScreen"
-        );
-
-
-    const bar =
-        document.getElementById(
-            "progressBar"
-        );
-
-
-    const percent =
-        document.getElementById(
-            "progressPercent"
-        );
-
-
-    const message =
-        document.getElementById(
-            "loadingMessage"
-        );
-
-
-    const duration =
-        Math.floor(
-            Math.random() *
-            (
-                maxTime -
-                minTime +
-                1
-            )
-        )
-        +
-        minTime;
-
-
-    const start =
-        Date.now();
-
-
-    let progress = 0;
-
-    let finished = false;
-
-
-    screen.classList.add(
-        "active"
-    );
-
-
-    bar.style.width =
-        "0%";
-
-
-    percent.textContent =
-        "0%";
-
-
-    const messages = [
-
-        "内容を確認しています…",
-
-        "規約を確認しています…",
-
-        "署名を確認しています…",
-
-        "利用情報を確認しています…",
-
-        "確認画面を準備しています…",
-
-        "もう少しお待ちください…"
-
-    ];
-
-
-    let messageIndex = 0;
-
-
-    const messageTimer =
-        setInterval(
-
-            function() {
-
-                messageIndex =
-                    (
-                        messageIndex + 1
-                    )
-                    %
-                    messages.length;
-
-
-                message.textContent =
-                    messages[
-                        messageIndex
-                    ];
-
-            },
-
-            500 +
-            Math.random() * 700
-
-        );
-
-
-    function update() {
-
-        if (finished)
-            return;
-
-
-        const elapsed =
-            Date.now() -
-            start;
-
-
-        const ratio =
-            elapsed /
-            duration;
-
-
-        const target =
-            Math.min(
-                99,
-                Math.floor(
-                    ratio * 100
-                )
-            );
-
-
-        if (
-            progress < target
-        ) {
-
-            progress =
-                Math.min(
-
-                    target,
-
-                    progress +
-                    Math.floor(
-                        Math.random() * 6
-                    ) +
-                    1
-
-                );
-
-        }
-
-
-        bar.style.width =
-            progress + "%";
-
-
-        percent.textContent =
-            progress + "%";
-
-
-        if (
-            elapsed >= duration
-        ) {
-
-            finish();
-
-            return;
-
-        }
-
-
-        setTimeout(
-
-            update,
-
-            80 +
-            Math.random() * 220
-
-        );
-
-    }
-
-
-    function finish() {
-
-        if (finished)
-            return;
-
-
-        finished = true;
-
-
-        clearInterval(
-            messageTimer
-        );
-
-
-        bar.style.width =
-            "100%";
-
-
-        percent.textContent =
-            "100%";
-
-
-        message.textContent =
-            "完了しました";
-
-
-        setTimeout(
-
-            function() {
-
-                screen
-                    .classList
-                    .remove("active");
-
-
-                callback();
-
-            },
-
-            350
-
-        );
-
-    }
-
-
-    update();
-
-}
-
-
-/* =========================================
-   生年月日表示
-========================================= */
-
-function formatBirth(value) {
-
-    const date =
-        new Date(
-            value +
-            "T00:00:00"
-        );
-
-
-    return date.toLocaleDateString(
-        "ja-JP",
-        {
-            year: "numeric",
-            month: "long",
-            day: "numeric"
-        }
-    );
-
-}
-
-
-/* =========================================
-   エラー
-========================================= */
-
-function showError(text) {
-
-    const error =
-        document.getElementById(
-            "error"
-        );
-
-
-    error.textContent =
-        text;
-
-
-    error.style.display =
-        "block";
-
-
-    error.scrollIntoView({
-
-        behavior:
-            "smooth",
-
-        block:
-            "center"
-
-    });
-
-}
-
-
-/* =========================================
-   HTMLエスケープ
-========================================= */
-
-function escapeHTML(value) {
-
-    return String(value)
-
-        .replaceAll(
-            "&",
-            "&amp;"
-        )
-
-        .replaceAll(
-            "<",
-            "&lt;"
-        )
-
-        .replaceAll(
-            ">",
-            "&gt;"
-        )
-
-        .replaceAll(
-            '"',
-            "&quot;"
-        )
-
-        .replaceAll(
-            "'",
-            "&#039;"
-        );
-
-}
-
-
-/* =========================================
-   全画面
-========================================= */
-
-async function toggleFullscreen() {
-
-    try {
-
-        if (
-            !document.fullscreenElement
-        ) {
-
-            await
-            document
-            .documentElement
-            .requestFullscreen();
-
-        }
-
-        else {
-
-            await
-            document
-            .exitFullscreen();
-
-        }
-
-    }
-
-    catch (error) {
-
-        alert(
-            "このブラウザでは全画面表示を利用できません。"
-        );
-
-    }
+  }
 
 }
 
