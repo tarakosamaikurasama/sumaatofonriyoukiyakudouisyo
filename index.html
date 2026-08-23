@@ -204,12 +204,6 @@ input[type=password]{
   font-size:16px;
 }
 
-/* =========================
-   署名欄
-   新規登録・管理者で共通
-   3:1の縦横比
-========================= */
-
 .signature-box{
   width:100%;
   aspect-ratio:3 / 1;
@@ -280,9 +274,6 @@ input[type=password]{
   font-size:16px;
 }
 
-/*
-  ボタン同士の間隔
-*/
 .confirm-edit-button{
   width:100%;
   margin-top:7px;
@@ -686,7 +677,7 @@ input[type=password]{
 
   <h1>
     スマートフォン利用規約
-    <span id="versionText">Ver.4</span>
+    <span id="versionText">Ver.5</span>
   </h1>
 
   <p>
@@ -696,9 +687,7 @@ input[type=password]{
 </header>
 
 
-<!-- =========================
-     メニュー
-========================= -->
+<!-- メニュー -->
 
 <div id="menuScreen" class="screen active">
 
@@ -749,9 +738,7 @@ input[type=password]{
 </div>
 
 
-<!-- =========================
-     新規登録
-========================= -->
+<!-- 新規登録 -->
 
 <div id="inputScreen" class="screen">
 
@@ -888,9 +875,7 @@ input[type=password]{
 </div>
 
 
-<!-- =========================
-     継続利用
-========================= -->
+<!-- 継続利用 -->
 
 <div id="continueScreen" class="screen">
 
@@ -963,9 +948,7 @@ input[type=password]{
 </div>
 
 
-<!-- =========================
-     確認画面
-========================= -->
+<!-- 確認画面 -->
 
 <div id="confirmationScreen" class="screen">
 
@@ -1087,15 +1070,6 @@ input[type=password]{
 
       </p>
 
-
-      <!--
-        利用開始ボタン
-        ↓
-        修正ボタン
-
-        新規登録時のみ修正ボタン表示
-      -->
-
       <button
         class="start-button"
         onclick="startUse()">
@@ -1120,9 +1094,7 @@ input[type=password]{
 </div>
 
 
-<!-- =========================
-     管理者ログイン
-========================= -->
+<!-- 管理者ログイン -->
 
 <div id="adminLoginScreen" class="screen">
 
@@ -1182,9 +1154,7 @@ input[type=password]{
 </div>
 
 
-<!-- =========================
-     管理者一覧
-========================= -->
+<!-- 管理者一覧 -->
 
 <div id="adminListScreen" class="screen">
 
@@ -1220,9 +1190,7 @@ input[type=password]{
 </div>
 
 
-<!-- =========================
-     管理者編集
-========================= -->
+<!-- 管理者編集 -->
 
 <div id="adminEditScreen" class="screen">
 
@@ -1310,10 +1278,6 @@ input[type=password]{
           署名
         </div>
 
-        <!--
-          新規登録と同じ3:1
-        -->
-
         <div class="signature-box">
 
           <canvas
@@ -1372,9 +1336,7 @@ input[type=password]{
 </div>
 
 
-<!-- =========================
-     読み込み
-========================= -->
+<!-- 読み込み画面 -->
 
 <div
   id="loadingScreen"
@@ -1432,10 +1394,10 @@ input[type=password]{
 <script>
 
 /* ================================
-   Ver.4
+   バージョン
 ================================ */
 
-const VERSION="4";
+const VERSION="5";
 
 document.getElementById(
   "versionText"
@@ -1443,7 +1405,7 @@ document.getElementById(
 
 
 /* ================================
-   設定
+   基本設定
 ================================ */
 
 const ADMIN_PASSWORD="Tarakosama2525";
@@ -1460,49 +1422,42 @@ const rules=[
 
   {
     title:"貸与物であることの認識",
-
     text:
       "本スマートフォンは利用者自身の所有物ではなく、貸し主から貸与されたものであることを認識し、そのことを常に意識して利用するものとする。"
   },
 
   {
     title:"利用範囲の制限",
-
     text:
       "本スマートフォンの利用にあたっては、貸し主が指定したアプリケーション、ウェブサイトおよび操作のみを行うものとする。"
   },
 
   {
     title:"貸し主からの指示",
-
     text:
       "貸し主から本スマートフォンの返却その他の操作を求められた場合、利用者はこれに従うものとする。"
   },
 
   {
     title:"禁止行為",
-
     text:
       "本スマートフォンを使用して、投稿を行うこと、パスワードを入力すること、その他の個人情報を取り扱う行為、または何らかのトラブルにつながるおそれのある行為を禁止する。"
   },
 
   {
     title:"例外",
-
     text:
       "前各項の定めについて、貸し主が必要と認めた場合には、個別に例外を設けることがある。"
   },
 
   {
     title:"貸し出しの停止等",
-
     text:
       "貸し主は、必要に応じて本スマートフォンを貸し出さないことがある。"
   },
 
   {
     title:"規約違反時の措置",
-
     text:
       "本規約に違反した場合、利用者の本スマートフォンの利用を2週間停止するものとする。"
   }
@@ -1511,7 +1466,7 @@ const rules=[
 
 
 /* ================================
-   規約生成
+   規約表示
 ================================ */
 
 const rulesArea=
@@ -1548,6 +1503,7 @@ rules.forEach((rule,index)=>{
       </span>
 
     </label>
+
   `;
 
   rulesArea.appendChild(div);
@@ -1556,7 +1512,7 @@ rules.forEach((rule,index)=>{
 
 
 /* ================================
-   Storage
+   LocalStorage
 ================================ */
 
 function getAllData(){
@@ -1568,7 +1524,8 @@ function getAllData(){
         STORAGE_KEY
       );
 
-    if(!data)return [];
+    if(!data)
+      return [];
 
     const parsed=
       JSON.parse(data);
@@ -1623,7 +1580,9 @@ function formatDateJP(date){
 function formatBirth(value){
 
   const date=
-    new Date(value+"T00:00:00");
+    new Date(
+      value+"T00:00:00"
+    );
 
   if(isNaN(date.getTime()))
     return value;
@@ -1676,7 +1635,8 @@ function generateNumber(){
     result+=
       chars[
         Math.floor(
-          Math.random()*chars.length
+          Math.random()*
+          chars.length
         )
       ];
 
@@ -1688,7 +1648,7 @@ function generateNumber(){
 
 
 /* ================================
-   画面切り替え
+   画面切替
 ================================ */
 
 function showScreen(id){
@@ -1709,7 +1669,7 @@ function showScreen(id){
 
 
 /* ================================
-   新規・継続
+   メニュー
 ================================ */
 
 function selectNewRegistration(){
@@ -1735,20 +1695,24 @@ function selectContinuation(){
 
 function backToMenu(){
 
-  showScreen("menuScreen");
+  showScreen(
+    "menuScreen"
+  );
 
 }
 
 
 function backToMenuFromInput(){
 
-  showScreen("menuScreen");
+  showScreen(
+    "menuScreen"
+  );
 
 }
 
 
 /* ================================
-   署名
+   新規登録署名
 ================================ */
 
 const canvas=
@@ -1771,7 +1735,8 @@ function resizeSignatureCanvas(){
   if(
     rect.width<=0||
     rect.height<=0
-  )return;
+  )
+    return;
 
   const ratio=
     Math.max(
@@ -1876,7 +1841,8 @@ function startDrawing(e){
 
 function draw(e){
 
-  if(!drawing)return;
+  if(!drawing)
+    return;
 
   e.preventDefault();
 
@@ -1900,9 +1866,10 @@ function draw(e){
 }
 
 
-function stopDrawing(e){
+function stopDrawing(){
 
-  if(!drawing)return;
+  if(!drawing)
+    return;
 
   drawing=false;
 
@@ -1992,7 +1959,9 @@ function updateButton(){
 
   const checked=
     [...checkboxes]
-      .every(c=>c.checked);
+      .every(
+        c=>c.checked
+      );
 
   const name=
     document
@@ -2032,7 +2001,9 @@ function agree(){
 
   const checked=
     [...checkboxes]
-      .every(c=>c.checked);
+      .every(
+        c=>c.checked
+      );
 
 
   if(
@@ -2101,7 +2072,9 @@ function agree(){
       ),
 
     rules:
-      rules.map(()=>true),
+      rules.map(
+        ()=>true
+      ),
 
     signature:
       canvas.toDataURL(
@@ -2116,7 +2089,9 @@ function agree(){
 
   allData.push(data);
 
-  saveAllData(allData);
+  saveAllData(
+    allData
+  );
 
 
   setConfirmation(
@@ -2155,8 +2130,7 @@ function agree(){
 
 let confirmationFromNew=false;
 
-let currentConfirmationData=
-  null;
+let currentConfirmationData=null;
 
 
 function setConfirmation(
@@ -2181,14 +2155,11 @@ function setConfirmation(
         :"同意状況確認";
 
 
-  /*
-   * 新規登録だけ修正ボタンを表示
-   */
-
   const editButton=
     document.getElementById(
       "editAgreementButton"
     );
+
 
   editButton.style.display=
     confirmationFromNew
@@ -2253,10 +2224,6 @@ function setConfirmation(
 }
 
 
-/* ================================
-   修正
-================================ */
-
 function editAgreement(){
 
   if(!confirmationFromNew)
@@ -2275,7 +2242,7 @@ function editAgreement(){
 
 
 /* ================================
-   規約状況
+   規約確認状況
 ================================ */
 
 function createRulesStatus(states){
@@ -2299,6 +2266,7 @@ function createRulesStatus(states){
       item.className=
         "rules-status-item";
 
+
       const checked=
         !states||
         states[index]!==false;
@@ -2311,9 +2279,12 @@ function createRulesStatus(states){
         </span>
 
         第${index+1}条
-        ${escapeHTML(rule.title)}
+        ${escapeHTML(
+          rule.title
+        )}
 
       `;
+
 
       area.appendChild(item);
 
@@ -2324,7 +2295,7 @@ function createRulesStatus(states){
 
 
 /* ================================
-   Loading
+   ローディング
 ================================ */
 
 function showLoading(
@@ -2496,10 +2467,7 @@ function showLoading(
     }
 
 
-    /*
-     * 100%を完全に表示してから
-     * 完了しました。を表示
-     */
+    /* 100%を完全に表示 */
 
     bar.style.width="100%";
 
@@ -2550,6 +2518,7 @@ function checkContinuation(){
         "continueBirth"
       )
       .value;
+
 
   const error=
     document.getElementById(
@@ -2616,11 +2585,6 @@ function checkContinuation(){
 
 
   if(today<=expiry){
-
-    /*
-     * 継続利用
-     * → 修正ボタンなし
-     */
 
     setConfirmation(
       data,
@@ -2837,7 +2801,9 @@ function renderAdminList(){
         <div class="admin-list-expiry">
 
           有効期限：
-          ${escapeHTML(data.expiryDateText)}
+          ${escapeHTML(
+            data.expiryDateText
+          )}
 
         </div>
 
@@ -2890,7 +2856,8 @@ function setupAdminCanvas(){
   if(
     rect.width<=0||
     rect.height<=0
-  )return;
+  )
+    return;
 
 
   const ratio=
@@ -2965,8 +2932,7 @@ function adminStartDrawing(e){
 
   adminDrawing=true;
 
-  adminSignatureEdited=
-    true;
+  adminSignatureEdited=true;
 
 
   if(e.pointerId!==undefined){
@@ -3087,8 +3053,7 @@ function clearAdminSignature(){
     adminSignatureCanvas.height
   );
 
-  adminSignatureEdited=
-    true;
+  adminSignatureEdited=true;
 
 }
 
@@ -3109,7 +3074,8 @@ function openAdminEdit(id){
     );
 
 
-  if(!data)return;
+  if(!data)
+    return;
 
 
   currentAdminId=id;
@@ -3157,8 +3123,7 @@ function openAdminEdit(id){
 
       setupAdminCanvas();
 
-      adminSignatureEdited=
-        false;
+      adminSignatureEdited=false;
 
 
       adminSignatureCtx.clearRect(
@@ -3265,7 +3230,7 @@ function renderAdminRules(states){
 
 
 /* ================================
-   管理者保存
+   管理者編集保存
 ================================ */
 
 function saveAdminEdit(){
@@ -3392,15 +3357,31 @@ function saveAdminEdit(){
   );
 
 
-  alert(
-    "登録情報を保存しました。"
-  );
+  /*
+   * Ver.5で変更
+   *
+   * alertを廃止し、
+   * 新規登録と同じ読み込み画面を表示する。
+   */
 
+  showLoading(
 
-  renderAdminList();
+    [
+      "情報を保存しています。"
+    ],
 
-  showScreen(
-    "adminListScreen"
+    3000,
+
+    function(){
+
+      renderAdminList();
+
+      showScreen(
+        "adminListScreen"
+      );
+
+    }
+
   );
 
 }
@@ -3428,14 +3409,16 @@ function deleteAdminData(){
     );
 
 
-  if(!data)return;
+  if(!data)
+    return;
 
 
   if(!confirm(
     "この登録情報を削除しますか？\n\n"+
     data.name+"\n"+
     data.number
-  ))return;
+  ))
+    return;
 
 
   saveAllData(
@@ -3452,10 +3435,10 @@ function deleteAdminData(){
   currentAdminId=null;
 
 
-  alert(
-    "登録情報を削除しました。"
-  );
-
+  /*
+   * 削除については今回変更せず、
+   * 確認ダイアログのあと一覧へ戻る。
+   */
 
   renderAdminList();
 
