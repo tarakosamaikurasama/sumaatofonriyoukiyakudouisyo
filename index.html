@@ -10,7 +10,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#17202a">
 
-<title>スマートフォン利用規約</title>
+<title>スマートフォン利用規約 Ver.1</title>
 
 <style>
 
@@ -18,7 +18,8 @@
   box-sizing:border-box;
 }
 
-html,body{
+html,
+body{
   margin:0;
   padding:0;
   min-height:100%;
@@ -612,12 +613,15 @@ input[type="password"]{
 }
 
 @keyframes loadingSpin{
+
   from{
     transform:rotate(0deg);
   }
+
   to{
     transform:rotate(360deg);
   }
+
 }
 
 .loading-title{
@@ -680,7 +684,10 @@ input[type="password"]{
   text-align:center;
   color:#777;
   font-size:10px;
-  padding:5px 5px calc(10px + env(safe-area-inset-bottom));
+  padding:
+    5px
+    5px
+    calc(10px + env(safe-area-inset-bottom));
 }
 
 
@@ -744,6 +751,7 @@ input[type="password"]{
   .signature-box{
     height:100px;
   }
+
 }
 
 :fullscreen{
@@ -758,14 +766,21 @@ input[type="password"]{
 
 
 <header class="header">
-  <h1>スマートフォン利用規約</h1>
-  <p>利用に関する確認・同意書</p>
+
+  <h1>
+    スマートフォン利用規約
+  </h1>
+
+  <p>
+    利用に関する確認・同意書
+  </p>
+
 </header>
 
 
-<!-- =========================
+<!-- =====================================================
      メニュー
-========================= -->
+===================================================== -->
 
 <div id="menuScreen" class="screen active">
 
@@ -773,7 +788,9 @@ input[type="password"]{
 
     <div class="card menu-card">
 
-      <div class="menu-icon">📱</div>
+      <div class="menu-icon">
+        📱
+      </div>
 
       <div class="title">
         スマートフォン利用
@@ -786,19 +803,25 @@ input[type="password"]{
       <button
         class="menu-button new-button"
         onclick="selectNewRegistration()">
+
         新規登録
+
       </button>
 
       <button
         class="menu-button continue-button"
         onclick="selectContinuation()">
+
         継続利用
+
       </button>
 
       <button
         class="admin-button"
         onclick="openAdminLogin()">
+
         管理者用画面を開く
+
       </button>
 
     </div>
@@ -808,9 +831,9 @@ input[type="password"]{
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      新規登録
-========================= -->
+===================================================== -->
 
 <div id="inputScreen" class="screen">
 
@@ -825,13 +848,17 @@ input[type="password"]{
       <div class="preface">
 
         <div class="important-notice">
+
           本規約に同意いただけない場合、
           スマートフォンを利用することができません。
+
         </div>
 
         <div class="expiry-notice">
+
           本規約の有効期限：
           同意日から1ヶ月
+
         </div>
 
         本規約は、貸し主から貸与されたスマートフォンの
@@ -899,7 +926,9 @@ input[type="password"]{
       <button
         class="clear-button"
         onclick="clearSignature()">
+
         署名を消去
+
       </button>
 
     </div>
@@ -918,13 +947,17 @@ input[type="password"]{
         class="agree-button"
         disabled
         onclick="agree()">
+
         以上の項目に同意する
+
       </button>
 
       <button
         class="back-button"
         onclick="backToMenuFromInput()">
+
         戻る
+
       </button>
 
     </div>
@@ -934,9 +967,9 @@ input[type="password"]{
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      継続利用
-========================= -->
+===================================================== -->
 
 <div id="continueScreen" class="screen">
 
@@ -949,9 +982,11 @@ input[type="password"]{
       </div>
 
       <p class="preface">
+
         以前登録した氏名と生年月日を入力してください。
         登録された有効期限内であれば、
         規約への再同意を行わず利用できます。
+
       </p>
 
       <div class="field">
@@ -987,13 +1022,17 @@ input[type="password"]{
       <button
         class="agree-button"
         onclick="checkContinuation()">
+
         継続して利用する
+
       </button>
 
       <button
         class="back-button"
         onclick="backToMenu()">
+
         戻る
+
       </button>
 
     </div>
@@ -1003,9 +1042,9 @@ input[type="password"]{
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      確認画面
-========================= -->
+===================================================== -->
 
 <div id="confirmationScreen" class="screen">
 
@@ -1029,6 +1068,7 @@ input[type="password"]{
 
       </div>
 
+
       <div class="number-label">
         確認番号
       </div>
@@ -1038,29 +1078,66 @@ input[type="password"]{
         class="confirmation-number">
       </div>
 
+
       <div class="info-grid">
 
         <div class="info-box">
-          <span class="info-label">氏名</span>
-          <span id="resultName" class="info-value"></span>
+
+          <span class="info-label">
+            氏名
+          </span>
+
+          <span
+            id="resultName"
+            class="info-value">
+          </span>
+
         </div>
 
-        <div class="info-box">
-          <span class="info-label">生年月日</span>
-          <span id="resultBirth" class="info-value"></span>
-        </div>
 
         <div class="info-box">
-          <span class="info-label">同意日</span>
-          <span id="resultAgreementDate" class="info-value"></span>
+
+          <span class="info-label">
+            生年月日
+          </span>
+
+          <span
+            id="resultBirth"
+            class="info-value">
+          </span>
+
         </div>
 
+
         <div class="info-box">
-          <span class="info-label">有効期限</span>
-          <span id="resultExpiryDate" class="info-value expiry-result"></span>
+
+          <span class="info-label">
+            同意日
+          </span>
+
+          <span
+            id="resultAgreementDate"
+            class="info-value">
+          </span>
+
+        </div>
+
+
+        <div class="info-box">
+
+          <span class="info-label">
+            有効期限
+          </span>
+
+          <span
+            id="resultExpiryDate"
+            class="info-value expiry-result">
+          </span>
+
         </div>
 
       </div>
+
 
       <div class="rules-confirmed">
 
@@ -1068,9 +1145,13 @@ input[type="password"]{
           規約確認状況
         </div>
 
-        <div id="rulesStatus" class="rules-status"></div>
+        <div
+          id="rulesStatus"
+          class="rules-status">
+        </div>
 
       </div>
+
 
       <div class="signature-section">
 
@@ -1085,15 +1166,21 @@ input[type="password"]{
 
       </div>
 
+
       <p class="preface">
+
         上記の内容および各規約を確認し、
         内容に誤りがないことを確認してください。
+
       </p>
+
 
       <button
         class="start-button"
         onclick="startUse()">
+
         以上を確認し利用を開始する
+
       </button>
 
     </div>
@@ -1103,9 +1190,9 @@ input[type="password"]{
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      管理者ログイン
-========================= -->
+===================================================== -->
 
 <div id="adminLoginScreen" class="screen">
 
@@ -1118,9 +1205,12 @@ input[type="password"]{
       </div>
 
       <p class="preface">
+
         管理者用画面を開くには
         パスワードを入力してください。
+
       </p>
+
 
       <div class="field">
 
@@ -1135,21 +1225,28 @@ input[type="password"]{
 
       </div>
 
+
       <div
         id="adminLoginError"
         class="error">
       </div>
 
+
       <button
         class="agree-button"
         onclick="checkAdminPassword()">
+
         管理者画面を開く
+
       </button>
+
 
       <button
         class="back-button"
         onclick="backToMenuFromAdminLogin()">
+
         戻る
+
       </button>
 
     </div>
@@ -1159,9 +1256,9 @@ input[type="password"]{
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      管理者一覧
-========================= -->
+===================================================== -->
 
 <div id="adminListScreen" class="screen">
 
@@ -1174,16 +1271,21 @@ input[type="password"]{
       </div>
 
       <p class="preface">
+
         保存されている登録情報の一覧です。
         情報を選択すると詳細を編集できます。
+
       </p>
 
       <div id="adminList"></div>
 
+
       <button
         class="back-button"
         onclick="adminLogout()">
+
         管理者画面を閉じる
+
       </button>
 
     </div>
@@ -1193,9 +1295,9 @@ input[type="password"]{
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      管理者編集
-========================= -->
+===================================================== -->
 
 <div id="adminEditScreen" class="screen">
 
@@ -1206,6 +1308,7 @@ input[type="password"]{
       <div class="title">
         登録情報を編集
       </div>
+
 
       <div class="field">
 
@@ -1219,6 +1322,7 @@ input[type="password"]{
 
       </div>
 
+
       <div class="field">
 
         <label>
@@ -1230,6 +1334,7 @@ input[type="password"]{
           type="text">
 
       </div>
+
 
       <div class="field">
 
@@ -1243,6 +1348,7 @@ input[type="password"]{
 
       </div>
 
+
       <div class="field">
 
         <label>
@@ -1254,6 +1360,7 @@ input[type="password"]{
           type="date">
 
       </div>
+
 
       <div class="field">
 
@@ -1287,7 +1394,9 @@ input[type="password"]{
 
         <div class="signature-box">
 
-          <canvas id="adminSignatureCanvas"></canvas>
+          <canvas
+            id="adminSignatureCanvas">
+          </canvas>
 
           <div class="signature-hint">
             署名を編集できます
@@ -1295,10 +1404,13 @@ input[type="password"]{
 
         </div>
 
+
         <button
           class="clear-button"
           onclick="clearAdminSignature()">
+
           署名を消去
+
         </button>
 
       </div>
@@ -1309,22 +1421,31 @@ input[type="password"]{
         class="error">
       </div>
 
+
       <button
         class="save-button"
         onclick="saveAdminEdit()">
+
         編集内容を保存
+
       </button>
+
 
       <button
         class="delete-button"
         onclick="deleteAdminData()">
+
         この登録情報を削除
+
       </button>
+
 
       <button
         class="back-button"
         onclick="backToAdminList()">
+
         一覧に戻る
+
       </button>
 
     </div>
@@ -1334,9 +1455,9 @@ input[type="password"]{
 </div>
 
 
-<!-- =========================
-     読み込み
-========================= -->
+<!-- =====================================================
+     読み込み画面
+===================================================== -->
 
 <div
   id="loadingScreen"
@@ -1367,7 +1488,9 @@ input[type="password"]{
     <div
       id="progressPercent"
       class="progress-percent">
+
       0%
+
     </div>
 
   </div>
@@ -1378,7 +1501,9 @@ input[type="password"]{
 <button
   class="fullscreen-button"
   onclick="toggleFullscreen()">
+
   ⛶
+
 </button>
 
 
@@ -1409,42 +1534,49 @@ const rules = [
 
   {
     title:"貸与物であることの認識",
+
     text:
       "本スマートフォンは利用者自身の所有物ではなく、貸し主から貸与されたものであることを認識し、そのことを常に意識して利用するものとする。"
   },
 
   {
     title:"利用範囲の制限",
+
     text:
       "本スマートフォンの利用にあたっては、貸し主が指定したアプリケーション、ウェブサイトおよび操作のみを行うものとする。"
   },
 
   {
     title:"貸し主からの指示",
+
     text:
       "貸し主から本スマートフォンの返却その他の操作を求められた場合、利用者はこれに従うものとする。"
   },
 
   {
     title:"禁止行為",
+
     text:
       "本スマートフォンを使用して、投稿を行うこと、パスワードを入力すること、その他の個人情報を取り扱う行為、または何らかのトラブルにつながるおそれのある行為を禁止する。"
   },
 
   {
     title:"例外",
+
     text:
       "前各項の定めについて、貸し主が必要と認めた場合には、個別に例外を設けることがある。"
   },
 
   {
     title:"貸し出しの停止等",
+
     text:
       "貸し主は、必要に応じて本スマートフォンを貸し出さないことがある。"
   },
 
   {
     title:"規約違反時の措置",
+
     text:
       "本規約に違反した場合、利用者の本スマートフォンの利用を2週間停止するものとする。"
   }
@@ -1453,11 +1585,12 @@ const rules = [
 
 
 /* =====================================================
-   規約表示
+   規約を表示
 ===================================================== */
 
 const rulesArea =
   document.getElementById("rules");
+
 
 rules.forEach(
   (rule,index)=>{
@@ -1465,8 +1598,7 @@ rules.forEach(
     const div =
       document.createElement("div");
 
-    div.className =
-      "rule";
+    div.className="rule";
 
     div.innerHTML=`
 
@@ -1496,6 +1628,7 @@ rules.forEach(
         </span>
 
       </label>
+
     `;
 
     rulesArea.appendChild(div);
@@ -1527,7 +1660,8 @@ function getAllData(){
       ? parsed
       : [];
 
-  }catch(e){
+  }
+  catch(e){
 
     return [];
 
@@ -1632,7 +1766,7 @@ function generateNumber(){
 
   for(let i=0;i<8;i++){
 
-    result+=
+    result +=
       chars[
         Math.floor(
           Math.random()*
@@ -1663,7 +1797,10 @@ function showScreen(id){
     .getElementById(id)
     .classList.add("active");
 
-  window.scrollTo(0,0);
+  window.scrollTo(
+    0,
+    0
+  );
 
 }
 
@@ -1721,6 +1858,7 @@ const ctx =
   canvas.getContext("2d");
 
 let drawing=false;
+
 let signed=false;
 
 
@@ -1731,7 +1869,7 @@ function setupCanvas(){
 
   const ratio =
     Math.max(
-      window.devicePixelRatio||1,
+      window.devicePixelRatio || 1,
       1
     );
 
@@ -1778,20 +1916,25 @@ function getPosition(
   ){
 
     return{
+
       x:
-        e.touches[0].clientX-
+        e.touches[0].clientX -
         rect.left,
 
       y:
-        e.touches[0].clientY-
+        e.touches[0].clientY -
         rect.top
+
     };
 
   }
 
   return{
+
     x:e.clientX-rect.left,
+
     y:e.clientY-rect.top
+
   };
 
 }
@@ -1802,6 +1945,7 @@ function startDrawing(e){
   e.preventDefault();
 
   drawing=true;
+
   signed=true;
 
   const p =
@@ -1848,6 +1992,7 @@ function draw(e){
 function stopDrawing(){
 
   drawing=false;
+
   ctx.closePath();
 
 }
@@ -1918,11 +2063,13 @@ const checkboxes =
 
 
 checkboxes.forEach(
-  c=>{
-    c.addEventListener(
+  checkbox=>{
+
+    checkbox.addEventListener(
       "change",
       updateButton
     );
+
   }
 );
 
@@ -1947,9 +2094,9 @@ function updateButton(){
 
   const checked =
     [...checkboxes]
-    .every(
-      c=>c.checked
-    );
+      .every(
+        c=>c.checked
+      );
 
   const name =
     document
@@ -1961,6 +2108,7 @@ function updateButton(){
     document
       .getElementById("birth")
       .value;
+
 
   document
     .getElementById("agreeButton")
@@ -1994,9 +2142,10 @@ function agree(){
 
   const checked =
     [...checkboxes]
-    .every(
-      c=>c.checked
-    );
+      .every(
+        c=>c.checked
+      );
+
 
   if(
     !name ||
@@ -2018,7 +2167,10 @@ function agree(){
     new Date();
 
   agreementDate.setHours(
-    0,0,0,0
+    0,
+    0,
+    0,
+    0
   );
 
 
@@ -2031,7 +2183,8 @@ function agree(){
   const data={
 
     id:
-      Date.now()+"-"+
+      Date.now() +
+      "-" +
       Math.random()
         .toString(36)
         .slice(2),
@@ -2085,12 +2238,35 @@ function agree(){
     allData
   );
 
+
   setConfirmation(
     data
   );
 
 
-  newAgreementLoading();
+  /*
+   * ★ 新規登録：約5秒
+   */
+
+  showLoading(
+
+    [
+      "規約を確認しています。",
+      "利用者情報を確認しています。",
+      "署名を確認しています。"
+    ],
+
+    5000,
+
+    function(){
+
+      showScreen(
+        "confirmationScreen"
+      );
+
+    }
+
+  );
 
 }
 
@@ -2152,9 +2328,7 @@ function setConfirmation(data){
 }
 
 
-function createRulesStatus(
-  states
-){
+function createRulesStatus(states){
 
   const area =
     document.getElementById(
@@ -2162,6 +2336,7 @@ function createRulesStatus(
     );
 
   area.innerHTML="";
+
 
   rules.forEach(
     (rule,index)=>{
@@ -2174,20 +2349,23 @@ function createRulesStatus(
       item.className =
         "rules-status-item";
 
+
       const checked =
         !states ||
-        states[index]!==false;
+        states[index] !== false;
+
 
       item.innerHTML=`
 
         <span>
-          ${checked?"✓":"－"}
+          ${checked ? "✓" : "－"}
         </span>
 
         第${index+1}条
         ${escapeHTML(
           rule.title
         )}
+
       `;
 
       area.appendChild(item);
@@ -2199,19 +2377,24 @@ function createRulesStatus(
 
 
 /* =====================================================
-   ★ 本物っぽい進捗処理
+   ★ 読み込み画面
 ===================================================== */
 
 /*
- * 単純な0→100のタイマーではなく、
+ * 重要：
  *
- * ・処理ごとに目標値を設定
- * ・目標値まで不規則に進む
- * ・途中で短い停止
- * ・後半はゆっくり
- * ・100%到達後もしばらく100%を表示
+ * duration が終了するまでは
+ * 「完了しました。」を絶対に表示しない。
  *
- * という動きにする。
+ * duration終了
+ * ↓
+ * 100%
+ * ↓
+ * 「完了しました。」
+ * ↓
+ * 0.8秒
+ * ↓
+ * 次の画面
  */
 
 
@@ -2247,6 +2430,10 @@ function showLoading(
   );
 
 
+  /*
+   * 初期状態
+   */
+
   bar.style.width="0%";
 
   percent.textContent="0%";
@@ -2255,201 +2442,188 @@ function showLoading(
     messages[0];
 
 
-  /*
-   * 全体時間を処理区間に分割
-   *
-   * 例えば4メッセージなら
-   *
-   * 0～25%
-   * 25～50%
-   * 50～75%
-   * 75～100%
-   *
-   * とする。
-   */
-
-  const stepCount =
-    messages.length;
-
-
-  const stepDuration =
-    duration /
-    stepCount;
+  const startTime =
+    performance.now();
 
 
   let currentProgress=0;
 
-  let currentStep=0;
-
-  const startTime=
-    performance.now();
-
-
-  /*
-   * 乱数を使って
-   * 次の更新までの時間を変える
-   */
 
   function tick(){
 
-    const now=
-      performance.now();
-
-    const elapsed=
-      now-startTime;
+    const elapsed =
+      performance.now() -
+      startTime;
 
 
     /*
-     * 現在の処理段階
+     * 0～1
      */
 
-    currentStep=
+    const ratio =
       Math.min(
-        stepCount-1,
-        Math.floor(
-          elapsed /
-          stepDuration
-        )
-      );
-
-
-    message.textContent=
-      messages[currentStep];
-
-
-    /*
-     * 全体の進行割合
-     */
-
-    const realRatio=
-      Math.min(
-        elapsed/duration,
+        elapsed / duration,
         1
       );
 
 
     /*
-     * 一定速度に見えないようにする。
-     *
-     * 最初：やや速い
-     * 中盤：やや遅い
-     * 後半：また少し進む
+     * メッセージ
      */
 
-    let targetProgress;
+    const messageIndex =
+      Math.min(
+        messages.length-1,
+        Math.floor(
+          ratio *
+          messages.length
+        )
+      );
 
 
-    if(realRatio<0.18){
+    message.textContent =
+      messages[
+        messageIndex
+      ];
 
-      targetProgress=
-        realRatio/
-        0.18*
+
+    /*
+     * 目標進捗
+     *
+     * 0～20%
+     * 20～55%
+     * 55～82%
+     * 82～100%
+     */
+
+    let target;
+
+
+    if(ratio < 0.20){
+
+      target =
+        ratio /
+        0.20 *
         20;
 
     }
 
-    else if(realRatio<0.55){
+    else if(ratio < 0.55){
 
-      targetProgress=
-        20+
+      target =
+        20 +
         (
-          (realRatio-0.18)/
-          0.37
-        )*
+          (ratio-0.20) /
+          0.35
+        ) *
         35;
 
     }
 
-    else if(realRatio<0.82){
+    else if(ratio < 0.82){
 
-      targetProgress=
-        55+
+      target =
+        55 +
         (
-          (realRatio-0.55)/
+          (ratio-0.55) /
           0.27
-        )*
+        ) *
         27;
 
     }
 
     else{
 
-      targetProgress=
-        82+
+      target =
+        82 +
         (
-          (realRatio-0.82)/
+          (ratio-0.82) /
           0.18
-        )*
+        ) *
         18;
 
     }
 
 
     /*
-     * 現在値を目標へ少しずつ近づける
+     * ランダムな速度で進める
      */
 
-    if(currentProgress<targetProgress){
+    if(
+      currentProgress <
+      target
+    ){
 
-      /*
-       * 1回で進む量をランダム化
-       */
-
-      const remaining=
-        targetProgress-
+      const remaining =
+        target -
         currentProgress;
 
-      const increment=
+
+      const increment =
         Math.min(
           remaining,
-          0.25+
-          Math.random()*1.15
+          0.2 +
+          Math.random()*1.3
         );
 
-      currentProgress+=
+
+      currentProgress +=
         increment;
 
     }
 
 
     /*
-     * 100%を超えない
+     * 時間終了前は
+     * 100%にしない。
      */
 
-    currentProgress=
-      Math.min(
-        currentProgress,
-        100
-      );
+    if(ratio < 1){
+
+      currentProgress =
+        Math.min(
+          currentProgress,
+          99
+        );
+
+    }
 
 
-    const display=
+    /*
+     * ★時間が完全に終了したら
+     * 初めて100%
+     */
+
+    if(ratio >= 1){
+
+      currentProgress=100;
+
+    }
+
+
+    const display =
       Math.floor(
         currentProgress
       );
 
 
-    bar.style.width=
-      display+"%";
+    bar.style.width =
+      display + "%";
 
-    percent.textContent=
-      display+"%";
+    percent.textContent =
+      display + "%";
 
 
     /*
-     * まだ処理中
+     * まだ5秒/4秒が
+     * 経過していない
      */
 
-    if(realRatio<1){
+    if(ratio < 1){
 
-      /*
-       * 更新間隔もランダム
-       * →一定速度に見えにくい
-       */
-
-      const nextDelay=
-        45+
-        Math.random()*95;
+      const nextDelay =
+        45 +
+        Math.random()*80;
 
       setTimeout(
         tick,
@@ -2462,76 +2636,43 @@ function showLoading(
 
 
     /*
-     * ★ここが重要
-     *
-     * まず100%にする。
+     * ==================================
+     * ★ここで完全に100%
+     * ==================================
      */
 
-    currentProgress=100;
+    bar.style.width =
+      "100%";
 
-    bar.style.width="100%";
-    percent.textContent="100%";
+    percent.textContent =
+      "100%";
 
 
     /*
-     * 100%になったあと、
-     * すぐに画面を切り替えない。
+     * 100%になった「後」に
+     * 完了しました。を表示
      */
 
-    message.textContent=
-      messages[
-        messages.length-1
-      ];
+    message.textContent =
+      "完了しました。";
 
 
     /*
-     * 100%のまま少し表示
+     * 完了表示を少し残す
      */
 
     setTimeout(
-      ()=>{
+      function(){
 
-        /*
-         * 完了しました。を
-         * さらに少し表示
-         */
-
-        message.textContent=
-          "完了しました。";
-
-        bar.style.width="100%";
-        percent.textContent="100%";
-
-
-        setTimeout(
-          ()=>{
-
-            screen
-              .classList
-              .remove(
-                "active"
-              );
-
-            callback();
-
-          },
-
-          /*
-           * 完了表示時間
-           */
-
-          900
-
+        screen.classList.remove(
+          "active"
         );
+
+        callback();
 
       },
 
-      /*
-       * 100%になってから
-       * 完了表示に切り替えるまで
-       */
-
-      650
+      800
 
     );
 
@@ -2539,40 +2680,6 @@ function showLoading(
 
 
   tick();
-
-}
-
-
-/* =====================================================
-   新規登録の読み込み
-===================================================== */
-
-function newAgreementLoading(){
-
-  showLoading(
-
-    [
-      "規約を確認しています。",
-      "利用者情報を確認しています。",
-      "署名を確認しています。",
-      "完了しました。"
-    ],
-
-    /*
-     * 長さ
-     */
-
-    5200,
-
-    function(){
-
-      showScreen(
-        "confirmationScreen"
-      );
-
-    }
-
-  );
 
 }
 
@@ -2597,6 +2704,7 @@ function checkContinuation(){
         "continueBirth"
       )
       .value;
+
 
   const error =
     document.getElementById(
@@ -2648,7 +2756,10 @@ function checkContinuation(){
     new Date();
 
   today.setHours(
-    0,0,0,0
+    0,
+    0,
+    0,
+    0
   );
 
 
@@ -2659,9 +2770,11 @@ function checkContinuation(){
     );
 
 
-  if(today<=expiry){
+  if(today <= expiry){
 
-    setConfirmation(data);
+    setConfirmation(
+      data
+    );
 
     showScreen(
       "confirmationScreen"
@@ -2679,12 +2792,14 @@ function checkContinuation(){
 
 
     setTimeout(
-      ()=>{
+      function(){
+
         showScreen(
           "inputScreen"
         );
+
       },
-      1500
+      1000
     );
 
   }
@@ -2698,28 +2813,25 @@ function checkContinuation(){
 
 function startUse(){
 
+  /*
+   * 約5秒
+   */
+
   showLoading(
 
     [
-      "情報を保存しています。",
-      "情報を保存しています。",
-      "情報を保存しています。",
-      "完了しました。"
+      "情報を保存しています."
     ],
 
-    /*
-     * 保存処理は長め
-     */
-
-    6500,
+    5000,
 
     function(){
 
       /*
-       * 完了表示が終わったらGoogleへ
+       * 完了表示後にGoogle
        */
 
-      window.location.href=
+      window.location.href =
         "https://www.google.com/";
 
     }
@@ -2746,6 +2858,7 @@ function openAdminLogin(){
       "adminLoginError"
     )
     .style.display="none";
+
 
   showScreen(
     "adminLoginScreen"
@@ -2774,7 +2887,8 @@ function checkAdminPassword(){
 
 
   if(
-    password!==ADMIN_PASSWORD
+    password !==
+    ADMIN_PASSWORD
   ){
 
     const error =
@@ -2793,20 +2907,16 @@ function checkAdminPassword(){
 
 
   /*
-   * 管理者一覧を取得する時だけ
-   * 読み込み画面を出す
+   * ★管理者取得：約4秒
    */
 
   showLoading(
 
     [
-      "登録情報を取得しています。",
-      "登録情報を取得しています。",
-      "登録情報を取得しています。",
-      "完了しました。"
+      "登録情報を取得しています."
     ],
 
-    4600,
+    4000,
 
     function(){
 
@@ -2836,6 +2946,7 @@ function renderAdminList(){
 
   const allData =
     getAllData();
+
 
   area.innerHTML="";
 
@@ -2868,6 +2979,7 @@ function renderAdminList(){
         item.className=
           "admin-list-item";
 
+
         item.innerHTML=`
 
           <div class="admin-list-name">
@@ -2886,12 +2998,20 @@ function renderAdminList(){
 
         `;
 
-        item.onclick=
-          ()=>openAdminEdit(
-            data.id
-          );
 
-        area.appendChild(item);
+        item.onclick =
+          function(){
+
+            openAdminEdit(
+              data.id
+            );
+
+          };
+
+
+        area.appendChild(
+          item
+        );
 
       }
     );
@@ -2905,12 +3025,12 @@ function renderAdminList(){
 
 let currentAdminId=null;
 
-let adminSignatureCanvas=
+let adminSignatureCanvas =
   document.getElementById(
     "adminSignatureCanvas"
   );
 
-let adminSignatureCtx=
+let adminSignatureCtx =
   adminSignatureCanvas.getContext(
     "2d"
   );
@@ -2926,21 +3046,24 @@ function setupAdminCanvas(){
     adminSignatureCanvas
       .getBoundingClientRect();
 
+
   const ratio =
     Math.max(
-      window.devicePixelRatio||1,
+      window.devicePixelRatio || 1,
       1
     );
 
-  adminSignatureCanvas.width=
+
+  adminSignatureCanvas.width =
     Math.round(
       rect.width*ratio
     );
 
-  adminSignatureCanvas.height=
+  adminSignatureCanvas.height =
     Math.round(
       rect.height*ratio
     );
+
 
   adminSignatureCtx.setTransform(
     ratio,
@@ -2951,9 +3074,14 @@ function setupAdminCanvas(){
     0
   );
 
+
   adminSignatureCtx.lineWidth=2.2;
-  adminSignatureCtx.lineCap="round";
-  adminSignatureCtx.lineJoin="round";
+
+  adminSignatureCtx.lineCap=
+    "round";
+
+  adminSignatureCtx.lineJoin=
+    "round";
 
 }
 
@@ -2967,26 +3095,37 @@ function adminGetPosition(e){
     adminSignatureCanvas
       .getBoundingClientRect();
 
+
   if(
     e.touches &&
     e.touches.length
   ){
 
     return{
+
       x:
-        e.touches[0].clientX-
+        e.touches[0].clientX -
         rect.left,
 
       y:
-        e.touches[0].clientY-
+        e.touches[0].clientY -
         rect.top
+
     };
 
   }
 
+
   return{
-    x:e.clientX-rect.left,
-    y:e.clientY-rect.top
+
+    x:
+      e.clientX -
+      rect.left,
+
+    y:
+      e.clientY -
+      rect.top
+
   };
 
 }
@@ -2997,10 +3136,13 @@ function adminStartDrawing(e){
   e.preventDefault();
 
   adminDrawing=true;
+
   adminSignatureEdited=true;
 
-  const p=
+
+  const p =
     adminGetPosition(e);
+
 
   adminSignatureCtx.beginPath();
 
@@ -3019,8 +3161,10 @@ function adminDraw(e){
 
   e.preventDefault();
 
-  const p=
+
+  const p =
     adminGetPosition(e);
+
 
   adminSignatureCtx.lineTo(
     p.x,
@@ -3099,13 +3243,16 @@ function clearAdminSignature(){
 
 function openAdminEdit(id){
 
-  const allData=
+  const allData =
     getAllData();
 
-  const data=
+
+  const data =
     allData.find(
-      item=>item.id===id
+      item=>
+        item.id===id
     );
+
 
   if(!data)
     return;
@@ -3115,23 +3262,37 @@ function openAdminEdit(id){
 
 
   document
-    .getElementById("adminNumber")
+    .getElementById(
+      "adminNumber"
+    )
     .value=data.number;
 
+
   document
-    .getElementById("adminName")
+    .getElementById(
+      "adminName"
+    )
     .value=data.name;
 
+
   document
-    .getElementById("adminBirth")
+    .getElementById(
+      "adminBirth"
+    )
     .value=data.birth;
 
-  document
-    .getElementById("adminAgreementDate")
-    .value=data.agreementDate;
 
   document
-    .getElementById("adminExpiryDate")
+    .getElementById(
+      "adminAgreementDate"
+    )
+    .value=data.agreementDate;
+
+
+  document
+    .getElementById(
+      "adminExpiryDate"
+    )
     .value=data.expiryDate;
 
 
@@ -3155,15 +3316,17 @@ function openAdminEdit(id){
 
   if(data.signature){
 
-    const image=
+    const image =
       new Image();
 
-    image.onload=
+
+    image.onload =
       function(){
 
-        const rect=
+        const rect =
           adminSignatureCanvas
             .getBoundingClientRect();
+
 
         adminSignatureCtx.drawImage(
           image,
@@ -3175,7 +3338,8 @@ function openAdminEdit(id){
 
       };
 
-    image.src=
+
+    image.src =
       data.signature;
 
   }
@@ -3194,7 +3358,7 @@ function openAdminEdit(id){
 
 function renderAdminRules(states){
 
-  const area=
+  const area =
     document.getElementById(
       "adminRules"
     );
@@ -3205,7 +3369,7 @@ function renderAdminRules(states){
   rules.forEach(
     (rule,index)=>{
 
-      const div=
+      const div =
         document.createElement(
           "div"
         );
@@ -3214,9 +3378,9 @@ function renderAdminRules(states){
         "admin-rule-edit";
 
 
-      const checked=
+      const checked =
         !states ||
-        states[index]!==false;
+        states[index] !== false;
 
 
       div.innerHTML=`
@@ -3227,18 +3391,23 @@ function renderAdminRules(states){
             type="checkbox"
             class="adminRuleCheck"
             data-index="${index}"
-            ${checked?"checked":""}>
+            ${checked ? "checked" : ""}>
 
           <span>
+
             第${index+1}条　
             ${escapeHTML(rule.title)}
+
           </span>
 
         </label>
 
       `;
 
-      area.appendChild(div);
+
+      area.appendChild(
+        div
+      );
 
     }
   );
@@ -3256,84 +3425,127 @@ function saveAdminEdit(){
     return;
 
 
-  const allData=
+  const allData =
     getAllData();
 
-  const index=
+
+  const index =
     allData.findIndex(
       item=>
         item.id===currentAdminId
     );
 
+
   if(index===-1)
     return;
 
 
-  const data=
+  const data =
     allData[index];
 
 
-  data.number=
+  data.number =
     document
-      .getElementById("adminNumber")
-      .value.trim();
+      .getElementById(
+        "adminNumber"
+      )
+      .value
+      .trim();
 
-  data.name=
-    document
-      .getElementById("adminName")
-      .value.trim();
 
-  data.birth=
+  data.name =
     document
-      .getElementById("adminBirth")
+      .getElementById(
+        "adminName"
+      )
+      .value
+      .trim();
+
+
+  data.birth =
+    document
+      .getElementById(
+        "adminBirth"
+      )
       .value;
 
-  data.agreementDate=
+
+  data.agreementDate =
     document
-      .getElementById("adminAgreementDate")
+      .getElementById(
+        "adminAgreementDate"
+      )
       .value;
 
-  data.expiryDate=
+
+  data.expiryDate =
     document
-      .getElementById("adminExpiryDate")
+      .getElementById(
+        "adminExpiryDate"
+      )
       .value;
 
 
-  const agreement=
+  const agreement =
     new Date(
       data.agreementDate+
       "T00:00:00"
     );
 
-  const expiry=
+
+  const expiry =
     new Date(
       data.expiryDate+
       "T00:00:00"
     );
 
 
-  if(!isNaN(agreement.getTime()))
-    data.agreementDateText=
-      formatDateJP(agreement);
+  if(
+    !isNaN(
+      agreement.getTime()
+    )
+  ){
 
-  if(!isNaN(expiry.getTime()))
-    data.expiryDateText=
-      formatDateJP(expiry);
+    data.agreementDateText =
+      formatDateJP(
+        agreement
+      );
+
+  }
 
 
-  data.rules=
-    [...document
-      .querySelectorAll(
-        ".adminRuleCheck"
-      )]
+  if(
+    !isNaN(
+      expiry.getTime()
+    )
+  ){
+
+    data.expiryDateText =
+      formatDateJP(
+        expiry
+      );
+
+  }
+
+
+  data.rules =
+    [
+      ...document
+        .querySelectorAll(
+          ".adminRuleCheck"
+        )
+    ]
     .map(
-      c=>c.checked
+      checkbox=>
+        checkbox.checked
     );
 
 
-  if(adminSignatureEdited){
+  if(
+    adminSignatureEdited
+  ){
 
-    data.signature=
+    data.signature =
       adminSignatureCanvas
         .toDataURL(
           "image/png"
@@ -3344,7 +3556,10 @@ function saveAdminEdit(){
 
   allData[index]=data;
 
-  saveAllData(allData);
+
+  saveAllData(
+    allData
+  );
 
 
   alert(
@@ -3371,20 +3586,22 @@ function deleteAdminData(){
     return;
 
 
-  const allData=
+  const allData =
     getAllData();
 
-  const data=
+
+  const data =
     allData.find(
       item=>
         item.id===currentAdminId
     );
 
+
   if(!data)
     return;
 
 
-  const result=
+  const result =
     confirm(
       "この登録情報を削除しますか？\n\n"+
       data.name+
@@ -3397,7 +3614,7 @@ function deleteAdminData(){
     return;
 
 
-  const newData=
+  const newData =
     allData.filter(
       item=>
         item.id!==currentAdminId
@@ -3453,6 +3670,7 @@ function adminLogout(){
     )
     .value="";
 
+
   showScreen(
     "menuScreen"
   );
@@ -3466,14 +3684,16 @@ function adminLogout(){
 
 function showError(text){
 
-  const error=
+  const error =
     document.getElementById(
       "error"
     );
 
+
   error.textContent=text;
 
   error.style.display="block";
+
 
   error.scrollIntoView({
     behavior:"smooth",
@@ -3533,13 +3753,17 @@ async function toggleFullscreen(){
         .documentElement
         .requestFullscreen();
 
-    }else{
+    }
+
+    else{
 
       await document.exitFullscreen();
 
     }
 
-  }catch(e){
+  }
+
+  catch(e){
 
     alert(
       "このブラウザでは全画面表示を利用できません。"
