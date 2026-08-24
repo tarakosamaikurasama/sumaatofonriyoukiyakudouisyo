@@ -2,2211 +2,1608 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-
-<meta
-  name="viewport"
-  content="width=device-width,initial-scale=1,viewport-fit=cover"
->
-
-<meta
-  name="apple-mobile-web-app-capable"
-  content="yes"
->
-
-<meta
-  name="mobile-web-app-capable"
-  content="yes"
->
-
-<meta
-  name="theme-color"
-  content="#17202a"
->
-
-<title>スマートフォン利用規約</title>
+<meta name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>スマートフォン利用規約 Ver.1</title>
 
 <style>
-
 *{
   box-sizing:border-box;
+  -webkit-tap-highlight-color:transparent;
 }
 
-html,
-body{
+html,body{
   margin:0;
   padding:0;
+  width:100%;
   min-height:100%;
-}
-
-body{
-  background:#eef0f3;
-  color:#202124;
   font-family:
     -apple-system,
     BlinkMacSystemFont,
+    "Segoe UI",
     "Noto Sans JP",
-    "Yu Gothic",
     sans-serif;
+  background:#f4f5f7;
+  color:#222;
 }
 
-.header{
-  background:#17202a;
-  color:white;
-  text-align:center;
-  padding:
-    calc(12px + env(safe-area-inset-top))
-    14px
-    12px;
+body{
+  min-height:100vh;
 }
 
-.header h1{
-  margin:0;
-  font-size:21px;
+button,
+input,
+textarea,
+select{
+  font:inherit;
 }
 
-.header p{
-  margin:4px 0 0;
-  font-size:11px;
-  opacity:.8;
-}
-
-.screen{
-  display:none;
-  min-height:calc(100vh - 80px);
-}
-
-.screen.active{
-  display:block;
-}
-
-.container{
-  width:min(850px,calc(100% - 14px));
-  margin:8px auto 30px;
-}
-
-.card{
-  background:white;
-  border-radius:11px;
-  padding:14px;
-  margin-bottom:9px;
-  box-shadow:0 2px 8px rgba(0,0,0,.07);
-}
-
-.title{
-  font-size:18px;
-  font-weight:bold;
-  border-bottom:2px solid #17202a;
-  padding-bottom:6px;
-  margin-bottom:10px;
-}
-
-.menu-card{
-  text-align:center;
-  margin-top:35px;
-}
-
-.menu-icon{
-  font-size:48px;
-  margin-bottom:8px;
-}
-
-.menu-description{
-  font-size:13px;
-  color:#666;
-  margin:8px 0 18px;
-}
-
-.menu-button{
-  width:100%;
-  padding:15px;
-  margin:6px 0;
-  border:none;
-  border-radius:9px;
-  font-size:16px;
-  font-weight:bold;
-}
-
-.new-button{
-  background:#17202a;
-  color:white;
-}
-
-.continue-button{
-  background:#1f618d;
-  color:white;
-}
-
-.admin-button{
-  width:100%;
-  padding:11px;
-  margin-top:18px;
-  border:none;
-  border-radius:8px;
-  background:#9e9e9e;
-  color:white;
-  font-size:13px;
-  font-weight:bold;
-}
-
-.important-notice{
-  color:red;
-  font-weight:bold;
-  font-size:15px;
-  line-height:1.45;
-}
-
-.expiry-notice{
-  color:red;
-  font-weight:bold;
-  font-size:14px;
-  line-height:1.4;
-  margin:4px 0 7px;
-}
-
-.preface{
-  font-size:13px;
-  line-height:1.55;
-}
-
-.rule{
-  border:1px solid #d5d8dc;
-  border-radius:8px;
-  padding:9px;
-  margin:7px 0;
-  background:#fafafa;
-}
-
-.rule label{
-  display:flex;
-  gap:9px;
-  align-items:flex-start;
-  line-height:1.45;
+button{
   cursor:pointer;
 }
 
-.rule input{
-  width:21px;
-  height:21px;
-  flex-shrink:0;
-  margin:2px 0 0;
+.hidden{
+  display:none !important;
 }
 
-.rule-title{
-  font-weight:bold;
-  font-size:14px;
+/* =========================
+   画面
+========================= */
+
+.screen{
+  width:100%;
+  min-height:100vh;
+  padding:20px;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
 }
 
-.rule-text{
-  font-size:13px;
+.card{
+  width:min(900px,100%);
+  background:#fff;
+  border-radius:18px;
+  padding:24px;
+  box-shadow:0 5px 25px rgba(0,0,0,.08);
+  margin:10px auto;
 }
+
+.title{
+  text-align:center;
+  font-size:clamp(25px,5vw,38px);
+  font-weight:800;
+  margin:5px 0 8px;
+}
+
+.version{
+  text-align:center;
+  font-size:15px;
+  color:#777;
+  margin-bottom:22px;
+}
+
+.subtitle{
+  font-size:21px;
+  font-weight:700;
+  margin:20px 0 12px;
+}
+
+.description{
+  line-height:1.8;
+}
+
+.warning{
+  color:#d60000;
+  font-weight:800;
+  font-size:18px;
+  line-height:1.7;
+  margin:18px 0;
+  padding:14px;
+  border:2px solid #d60000;
+  border-radius:10px;
+  background:#fff7f7;
+}
+
+.expiry{
+  color:#d60000;
+  font-weight:800;
+  margin:8px 0 20px;
+}
+
+.btn{
+  border:0;
+  border-radius:12px;
+  padding:14px 18px;
+  min-height:50px;
+  background:#1769e0;
+  color:#fff;
+  font-weight:700;
+  transition:.15s;
+}
+
+.btn:active{
+  transform:scale(.98);
+}
+
+.btn.secondary{
+  background:#6b7280;
+}
+
+.btn.green{
+  background:#159447;
+}
+
+.btn.red{
+  background:#d92d20;
+}
+
+.btn.yellow{
+  background:#e6a700;
+  color:#111;
+}
+
+.btn.admin{
+  background:#aaa;
+  color:#fff;
+}
+
+.btn:disabled{
+  opacity:.45;
+  cursor:not-allowed;
+}
+
+.button-area{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-top:22px;
+}
+
+.row{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.row > *{
+  flex:1;
+  min-width:160px;
+}
+
+/* =========================
+   入力
+========================= */
 
 .field{
-  margin:9px 0;
+  margin:15px 0;
 }
 
 .field label{
   display:block;
-  font-weight:bold;
-  font-size:14px;
-  margin-bottom:4px;
+  font-weight:700;
+  margin-bottom:7px;
 }
 
-input[type=text],
-input[type=date],
-input[type=password]{
+.field input,
+.field select,
+.field textarea{
   width:100%;
-  padding:10px;
-  border:1px solid #aaa;
-  border-radius:7px;
-  background:white;
-  font-size:16px;
+  border:1px solid #ccc;
+  border-radius:9px;
+  padding:12px;
+  background:#fff;
 }
 
-.password-note{
-  color:#777;
-  font-size:11px;
-  line-height:1.4;
-  margin-top:4px;
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  outline:2px solid #8bbcff;
+  border-color:#1769e0;
 }
 
-.signature-box{
+/* =========================
+   規約
+========================= */
+
+.rules{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.rule{
+  border:1px solid #ddd;
+  border-radius:12px;
+  padding:14px;
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  line-height:1.65;
+}
+
+.rule input{
+  width:22px;
+  height:22px;
+  flex:none;
+  margin-top:2px;
+}
+
+/* =========================
+   署名
+========================= */
+
+.signature-wrapper{
   width:100%;
+  max-width:700px;
   aspect-ratio:3 / 1;
+  margin:10px auto;
   position:relative;
-  border:2px solid #333;
-  border-radius:8px;
-  background:white;
-  overflow:hidden;
-  touch-action:none;
-  -ms-touch-action:none;
 }
 
-#signatureCanvas,
-#adminSignatureCanvas{
-  position:absolute;
-  inset:0;
+.signature{
   width:100%;
   height:100%;
+  border:2px solid #777;
+  border-radius:10px;
+  background:#fff;
   display:block;
   touch-action:none;
-  -ms-touch-action:none;
-  user-select:none;
-  -webkit-user-select:none;
-  -webkit-touch-callout:none;
 }
 
-.signature-hint{
-  position:absolute;
-  left:10px;
-  bottom:7px;
-  color:#aaa;
-  font-size:11px;
-  pointer-events:none;
-}
-
-.clear-button{
-  margin-top:6px;
-  padding:8px 12px;
-  background:#e5e7e9;
-  color:#222;
-  font-size:13px;
-  border:none;
-  border-radius:7px;
-}
-
-.agree-button,
-.start-button,
-.save-button,
-.delete-confirm-button{
-  width:100%;
-  color:white;
-  font-weight:bold;
-  border:none;
-  border-radius:8px;
-  padding:12px 16px;
-  font-size:15px;
-}
-
-.agree-button{
-  background:#17202a;
-}
-
-.agree-button:disabled{
-  background:#aaa;
-}
-
-.start-button{
-  background:#1f618d;
-  font-size:16px;
-}
-
-.confirm-edit-button{
-  width:100%;
-  margin-top:7px;
-  background:#e5e7e9;
-  border:none;
-  border-radius:8px;
-  font-size:13px;
-  padding:10px;
-}
-
-.save-button{
-  background:#1e8449;
-}
-
-.back-button{
-  width:100%;
-  margin-top:7px;
-  background:#e5e7e9;
-  border:none;
-  border-radius:8px;
-  font-size:13px;
-  padding:10px;
-}
-
-.delete-button{
-  width:100%;
-  margin-top:8px;
-  background:#c0392b;
-  color:white;
-  border:none;
-  border-radius:8px;
-  padding:11px;
-  font-weight:bold;
-}
-
-.delete-confirm-button{
-  background:#c0392b;
-}
-
-.cancel-confirm-button{
-  width:100%;
-  margin-top:7px;
-  background:#e5e7e9;
-  color:#222;
-  border:none;
-  border-radius:8px;
-  padding:11px;
-  font-weight:bold;
-}
-
-.error{
-  display:none;
-  background:#fadbd8;
-  color:#922b21;
-  padding:9px;
-  border-radius:7px;
-  margin-bottom:8px;
-  font-size:13px;
-  line-height:1.5;
-}
-
-.notice{
-  display:none;
-  background:#eaf4ea;
-  color:#176f3d;
-  padding:10px;
-  border-radius:7px;
-  margin-bottom:9px;
-  font-size:13px;
-  line-height:1.5;
-}
-
-.confirmation-screen-container{
-  width:min(700px,calc(100% - 14px));
-  margin:7px auto;
-}
-
-.confirm-card{
-  background:white;
-  border-radius:11px;
-  padding:12px;
-  box-shadow:0 2px 8px rgba(0,0,0,.07);
-}
-
-.confirmation-header{
-  text-align:center;
-  margin-bottom:7px;
-}
-
-.checkmark{
-  width:43px;
-  height:43px;
-  margin:0 auto 5px;
-  border-radius:50%;
-  background:#1e8449;
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:25px;
-  font-weight:bold;
-}
-
-.confirmation-header h2{
-  margin:0;
-  font-size:20px;
-}
-
-.confirmation-header p{
-  margin:3px 0;
-  font-size:12px;
-}
-
-.number-label{
-  text-align:center;
-  font-size:11px;
+.signature-label{
   color:#666;
-}
-
-.confirmation-number{
   text-align:center;
-  background:#f1f3f4;
-  border:1px solid #17202a;
-  border-radius:7px;
-  padding:6px;
-  margin:3px 0 7px;
-  font-size:20px;
-  font-weight:bold;
-  letter-spacing:3px;
-}
-
-.info-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:5px;
-  margin-bottom:7px;
-}
-
-.info-box{
-  background:#f7f8f9;
-  border-radius:6px;
-  padding:6px 8px;
-}
-
-.info-label{
-  display:block;
-  font-size:10px;
-  color:#777;
-}
-
-.info-value{
-  display:block;
   font-size:13px;
-  font-weight:bold;
+  margin-top:5px;
+}
+
+.clear-sign{
+  display:block;
+  margin:8px auto;
+  padding:8px 14px;
+  border:1px solid #bbb;
+  border-radius:8px;
+  background:#fff;
+}
+
+/* =========================
+   確認
+========================= */
+
+.confirm-box{
+  background:#f8f9fb;
+  border:1px solid #ddd;
+  border-radius:12px;
+  padding:16px;
+  margin:12px 0;
+}
+
+.confirm-row{
+  display:flex;
+  gap:12px;
+  padding:9px 0;
+  border-bottom:1px solid #ddd;
+}
+
+.confirm-row:last-child{
+  border-bottom:0;
+}
+
+.confirm-label{
+  width:130px;
+  flex:none;
+  font-weight:700;
+  color:#555;
+}
+
+.confirm-value{
   word-break:break-word;
 }
 
-.expiry-result{
-  color:red;
-}
-
-.rules-confirmed{
-  background:#f7f8f9;
-  border-radius:7px;
-  padding:7px 9px;
-  margin-bottom:7px;
-}
-
-.rules-confirmed-title{
-  font-size:12px;
-  font-weight:bold;
-  margin-bottom:4px;
-}
-
-.rules-status{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:3px;
-}
-
-.rules-status-item{
-  font-size:10px;
-  background:white;
-  border-radius:4px;
-  padding:3px 5px;
-}
-
-.rules-status-item span{
-  color:#176f3d;
-  font-weight:bold;
-}
-
-.signature-section{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin-bottom:7px;
-}
-
-.signature-section-title{
-  width:45px;
-  flex-shrink:0;
-  font-size:11px;
-  font-weight:bold;
-}
-
-.signature-result{
-  width:100%;
-  height:65px;
-  object-fit:contain;
-  border:1px solid #ddd;
-  border-radius:5px;
-  background:white;
-}
-
-.admin-list-item{
-  background:#f7f8f9;
-  border:1px solid #ddd;
-  border-radius:8px;
-  padding:10px;
-  margin:7px 0;
-  cursor:pointer;
-}
-
-.admin-list-name{
-  font-size:15px;
-  font-weight:bold;
-}
-
-.admin-list-number{
-  font-size:12px;
-  color:#555;
-  margin-top:3px;
-}
-
-.admin-list-expiry{
-  font-size:12px;
-  color:red;
-  margin-top:3px;
-}
-
-.admin-list-password{
-  font-size:12px;
-  color:#555;
-  margin-top:3px;
-}
-
-.admin-empty{
-  text-align:center;
-  color:#777;
-  padding:25px 5px;
-  font-size:13px;
-}
-
-.admin-section{
-  margin-top:12px;
-  padding-top:10px;
-  border-top:1px solid #ddd;
-}
-
-.admin-rule-edit{
-  border:1px solid #ddd;
-  border-radius:7px;
-  padding:8px;
-  margin:5px 0;
-  background:#fafafa;
-}
-
-.admin-rule-edit label{
-  display:flex;
-  gap:8px;
-  align-items:flex-start;
-  font-size:12px;
-}
-
-.delete-confirm-box{
-  text-align:center;
-  background:#fff5f4;
-  border:1px solid #e6b0aa;
-  border-radius:9px;
-  padding:15px;
-  margin-bottom:10px;
-}
-
-.delete-confirm-title{
-  font-size:18px;
-  font-weight:bold;
-  color:#922b21;
-  margin-bottom:8px;
-}
-
-.delete-confirm-name{
-  font-size:15px;
-  font-weight:bold;
-  margin-bottom:4px;
-}
-
-.delete-confirm-number{
-  color:#666;
-  font-size:12px;
-}
+/* =========================
+   ローディング
+========================= */
 
 .loading-screen{
-  position:fixed;
-  inset:0;
-  z-index:5000;
-  background:rgba(255,255,255,.97);
-  display:none;
   align-items:center;
   justify-content:center;
-  padding:20px;
+  background:#f4f5f7;
 }
 
-.loading-screen.active{
-  display:flex;
-}
-
-.loading-box{
-  width:min(400px,100%);
+.loading-card{
+  width:min(500px,90%);
+  background:#fff;
+  border-radius:20px;
+  padding:35px 25px;
   text-align:center;
+  box-shadow:0 5px 30px rgba(0,0,0,.1);
 }
 
-.loading-spinner{
-  width:55px;
-  height:55px;
-  margin:0 auto 18px;
-  border:6px solid #e5e7e9;
-  border-top:6px solid #17202a;
+.spinner{
+  width:58px;
+  height:58px;
+  margin:0 auto 20px;
+  border:6px solid #ddd;
+  border-top-color:#1769e0;
   border-radius:50%;
-  animation:loadingSpin .8s linear infinite;
+  animation:spin 1s linear infinite;
 }
 
-@keyframes loadingSpin{
-  from{
-    transform:rotate(0);
-  }
+@keyframes spin{
   to{
     transform:rotate(360deg);
   }
 }
 
-.loading-title{
+.loading-text{
   font-size:20px;
-  font-weight:bold;
-  margin-bottom:6px;
+  font-weight:700;
 }
 
-.loading-message{
-  color:#666;
-  font-size:13px;
-  min-height:20px;
-  margin-bottom:15px;
-}
-
-.progress-container{
+.progress{
   width:100%;
-  height:14px;
-  background:#e5e7e9;
-  border-radius:999px;
+  height:18px;
+  border-radius:20px;
+  background:#e5e7eb;
   overflow:hidden;
+  margin-top:20px;
 }
 
 .progress-bar{
   height:100%;
   width:0%;
-  background:#17202a;
-  border-radius:999px;
+  background:#1769e0;
   transition:width .12s linear;
 }
 
-.progress-percent{
-  margin-top:7px;
-  font-size:13px;
-  font-weight:bold;
+.percent{
+  margin-top:9px;
+  font-weight:700;
 }
 
-.fullscreen-button{
-  position:fixed;
-  right:9px;
-  bottom:9px;
-  z-index:1000;
-  width:42px;
-  height:42px;
-  border-radius:50%;
-  border:none;
-  background:#17202a;
-  color:white;
-  font-size:18px;
+/* =========================
+   管理画面
+========================= */
+
+.admin-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
 }
+
+.admin-header h2{
+  margin:0;
+}
+
+.stat-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:10px;
+  margin:18px 0;
+}
+
+.stat{
+  border:1px solid #ddd;
+  border-radius:12px;
+  padding:15px;
+  text-align:center;
+  background:#fafafa;
+}
+
+.stat-number{
+  font-size:28px;
+  font-weight:800;
+}
+
+.stat-label{
+  color:#666;
+  font-size:13px;
+}
+
+.search-sort{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:10px;
+  margin:15px 0;
+}
+
+@media(max-width:650px){
+  .search-sort{
+    grid-template-columns:1fr;
+  }
+}
+
+.user-list{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.user-item{
+  border:1px solid #ddd;
+  border-radius:12px;
+  padding:15px;
+  background:#fff;
+  cursor:pointer;
+}
+
+.user-item:hover{
+  background:#f8fafc;
+}
+
+.user-name{
+  font-size:18px;
+  font-weight:800;
+}
+
+.status{
+  display:inline-block;
+  padding:4px 8px;
+  border-radius:6px;
+  font-size:12px;
+  font-weight:800;
+  margin-top:6px;
+}
+
+.status.valid{
+  background:#dff5e7;
+  color:#08762f;
+}
+
+.status.soon{
+  background:#fff0a8;
+  color:#745500;
+}
+
+.status.expired{
+  background:#ffd9d9;
+  color:#b00000;
+}
+
+.status.reagree{
+  background:#ffe4c2;
+  color:#a34d00;
+}
+
+.detail{
+  border:1px solid #ddd;
+  border-radius:12px;
+  padding:15px;
+  margin-top:15px;
+}
+
+.detail pre{
+  white-space:pre-wrap;
+  word-break:break-all;
+}
+
+.log-list{
+  max-height:400px;
+  overflow:auto;
+  border:1px solid #ddd;
+  border-radius:10px;
+}
+
+.log{
+  padding:10px 12px;
+  border-bottom:1px solid #eee;
+  font-size:13px;
+}
+
+.log:last-child{
+  border-bottom:0;
+}
+
+.data-output{
+  width:100%;
+  min-height:160px;
+  resize:vertical;
+  font-family:monospace;
+  font-size:12px;
+}
+
+/* =========================
+   トースト
+========================= */
+
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:25px;
+  transform:translateX(-50%);
+  background:#222;
+  color:#fff;
+  padding:13px 20px;
+  border-radius:10px;
+  z-index:9999;
+  box-shadow:0 5px 20px rgba(0,0,0,.2);
+  max-width:90%;
+  text-align:center;
+}
+
+.toast.error{
+  background:#c62828;
+}
+
+.toast.success{
+  background:#15803d;
+}
+
+/* =========================
+   モーダル
+========================= */
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.45);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  z-index:5000;
+}
+
+.modal-card{
+  background:#fff;
+  border-radius:16px;
+  padding:24px;
+  width:min(600px,100%);
+  max-height:90vh;
+  overflow:auto;
+}
+
+.modal-title{
+  font-size:22px;
+  font-weight:800;
+  margin-bottom:15px;
+}
+
+/* =========================
+   再同意
+========================= */
+
+.reagree-box{
+  padding:15px;
+  border:2px solid #e6a700;
+  background:#fffbea;
+  color:#664d00;
+  border-radius:10px;
+  margin:15px 0;
+  font-weight:700;
+}
+
+/* =========================
+   フッター
+========================= */
 
 .footer{
   text-align:center;
-  color:#777;
-  font-size:10px;
-  padding:5px 5px calc(10px + env(safe-area-inset-bottom));
+  color:#888;
+  font-size:12px;
+  margin-top:30px;
 }
-
-@media(max-height:700px){
-
-  .header{
-    padding:
-      calc(8px + env(safe-area-inset-top))
-      10px
-      8px;
-  }
-
-  .header h1{
-    font-size:18px;
-  }
-
-  .card{
-    padding:10px;
-    margin-bottom:6px;
-  }
-
-  .title{
-    font-size:16px;
-    padding-bottom:4px;
-    margin-bottom:6px;
-  }
-
-  .rule{
-    padding:6px;
-    margin:4px 0;
-  }
-
-  .rule-title{
-    font-size:12px;
-  }
-
-  .rule-text{
-    font-size:11px;
-  }
-
-  .preface{
-    font-size:11px;
-  }
-
-  .important-notice{
-    font-size:13px;
-  }
-
-  .expiry-notice{
-    font-size:12px;
-  }
-
-  .field{
-    margin:5px 0;
-  }
-
-}
-
 </style>
 </head>
 
 <body>
 
+<!-- =========================================================
+     初期メニュー
+========================================================= -->
+<section id="screen-menu" class="screen">
+  <div class="card">
+    <div class="title">スマートフォン利用規約</div>
+    <div class="version">Ver.1</div>
 
-<header class="header">
-
-  <h1>
-    スマートフォン利用規約
-    <span id="versionText">
-      Ver.7
-    </span>
-  </h1>
-
-  <p>
-    利用に関する確認・同意書
-  </p>
-
-</header>
-
-
-<!-- =====================================
-     メニュー
-===================================== -->
-
-<div
-  id="menuScreen"
-  class="screen active"
->
-
-  <div class="container">
-
-    <div class="card menu-card">
-
-      <div class="menu-icon">
-        📱
-      </div>
-
-      <div class="title">
-        スマートフォン利用
-      </div>
-
-      <p class="menu-description">
-        利用方法を選択してください。
-      </p>
-
-      <button
-        class="menu-button new-button"
-        onclick="selectNewRegistration()"
-      >
-        新規登録
-      </button>
-
-      <button
-        class="menu-button continue-button"
-        onclick="selectContinuation()"
-      >
-        継続利用
-      </button>
-
-      <button
-        class="admin-button"
-        onclick="openAdminLogin()"
-      >
-        管理者用画面を開く
-      </button>
-
+    <div class="description">
+      利用方法を選択してください。
     </div>
 
+    <div class="button-area">
+      <button class="btn" onclick="startNew()">新規登録</button>
+      <button class="btn secondary" onclick="startContinue()">継続利用</button>
+      <button class="btn admin" onclick="openAdminLogin()">管理者用画面を開く</button>
+    </div>
+
+    <div class="footer">
+      スマートフォン利用管理システム
+    </div>
   </div>
+</section>
 
-</div>
+<!-- =========================================================
+     継続利用 ログイン
+========================================================= -->
+<section id="screen-continue-login" class="screen hidden">
+  <div class="card">
+    <div class="title">継続利用</div>
+    <div class="version">登録情報の確認</div>
 
+    <div class="field">
+      <label>氏名</label>
+      <input id="continue-name" type="text" autocomplete="name">
+    </div>
 
-<!-- =====================================
-     新規登録・更新入力
-===================================== -->
+    <div class="field">
+      <label>生年月日</label>
+      <input id="continue-birth" type="date">
+    </div>
 
-<div
-  id="inputScreen"
-  class="screen"
->
+    <div class="field">
+      <label>利用者パスワード</label>
+      <input id="continue-password" type="password">
+    </div>
 
-  <div class="container">
+    <div class="button-area">
+      <button class="btn" onclick="continueLogin()">継続利用する</button>
+      <button class="btn secondary" onclick="showScreen('screen-menu')">戻る</button>
+    </div>
+  </div>
+</section>
 
-    <div class="card">
+<!-- =========================================================
+     利用者情報
+========================================================= -->
+<section id="screen-user" class="screen hidden">
+  <div class="card">
+    <div class="title">スマートフォン利用規約</div>
+    <div class="version">Ver.1</div>
 
-      <div class="title">
-        <span id="inputTitle">
-          スマートフォン利用規約
+    <div class="warning">
+      本規約に同意いただけない場合、スマートフォンを利用することができません。
+    </div>
+
+    <div class="expiry">
+      有効期限：同意日から1ヶ月
+    </div>
+
+    <h2 class="subtitle">第1条　基本事項</h2>
+
+    <div class="rules">
+
+      <label class="rule">
+        <input type="checkbox" class="rule-check">
+        <span>
+          このスマートフォンは自分のものではないことを意識すること。
         </span>
-      </div>
+      </label>
 
+      <label class="rule">
+        <input type="checkbox" class="rule-check">
+        <span>
+          指定したアプリ、サイト、操作のみを行う。
+        </span>
+      </label>
 
-      <div class="preface">
-
-        <div class="important-notice">
-
-          本規約に同意いただけない場合、
-          スマートフォンを利用することができません。
-
-        </div>
-
-
-        <div class="expiry-notice">
-
-          本規約の有効期限：
-          同意日から1ヶ月
-
-        </div>
-
-
-        本規約は、貸し主から貸与されたスマートフォンの
-        利用に関し、利用者が遵守すべき事項を定めるものである。
-        利用者は、以下の各条項を確認し、その内容に同意した
-        うえで本スマートフォンを利用するものとする。
-
-      </div>
-
-
-      <div id="rules"></div>
+      <label class="rule">
+        <input type="checkbox" class="rule-check">
+        <span>
+          貸し主が返却などの操作を求めた場合、それに従うこと。
+        </span>
+      </label>
 
     </div>
 
+    <h2 class="subtitle">第2条　禁止事項</h2>
 
-    <div class="card">
+    <div class="rules">
 
-      <div class="title">
-        利用者情報
-      </div>
-
-
-      <div class="field">
-
-        <label>
-          氏名
-        </label>
-
-        <input
-          id="name"
-          type="text"
-          placeholder="氏名を入力"
-        >
-
-      </div>
-
-
-      <div class="field">
-
-        <label>
-          生年月日
-        </label>
-
-        <input
-          id="birth"
-          type="date"
-        >
-
-      </div>
-
-
-      <div class="field">
-
-        <label>
-          利用パスワード
-        </label>
-
-        <input
-          id="newPassword"
-          type="password"
-          placeholder="利用パスワードを設定"
-        >
-
-        <div class="password-note">
-          継続利用時に必要になります。
-        </div>
-
-      </div>
-
+      <label class="rule">
+        <input type="checkbox" class="rule-check">
+        <span>
+          このスマートフォンで何かを投稿する、パスワードを打ち込むなど、
+          個人情報やなにかトラブルになりかねない行為をすることを禁止する。
+        </span>
+      </label>
 
     </div>
 
+    <h2 class="subtitle">第3条　利用停止</h2>
 
-    <div class="card">
+    <div class="rules">
 
-      <div class="title">
-        署名
-      </div>
-
-
-      <div class="signature-box">
-
-        <canvas
-          id="signatureCanvas"
-        ></canvas>
-
-        <div class="signature-hint">
-          ここに手書きで署名してください
-        </div>
-
-      </div>
-
-
-      <button
-        class="clear-button"
-        onclick="clearSignature()"
-      >
-        署名を消去
-      </button>
+      <label class="rule">
+        <input type="checkbox" class="rule-check">
+        <span>
+          この規約に違反した場合、利用を2週間停止する。
+        </span>
+      </label>
 
     </div>
 
+    <h2 class="subtitle">第4条　例外</h2>
 
-    <div class="card">
+    <div class="rules">
 
-      <div class="title">
-        同意
-      </div>
+      <label class="rule">
+        <input type="checkbox" class="rule-check">
+        <span>
+          例外を設けることがある。
+        </span>
+      </label>
 
+      <label class="rule">
+        <input type="checkbox" class="rule-check">
+        <span>
+          貸し主が貸し出さないこともある。
+        </span>
+      </label>
 
-      <div
-        id="error"
-        class="error"
-      ></div>
+    </div>
 
+    <h2 class="subtitle">利用者情報</h2>
 
-      <button
-        id="agreeButton"
-        class="agree-button"
-        disabled
-        onclick="agree()"
-      >
+    <div class="field">
+      <label>氏名</label>
+      <input id="user-name" type="text" autocomplete="name">
+    </div>
+
+    <div class="field">
+      <label>生年月日</label>
+      <input id="user-birth" type="date">
+    </div>
+
+    <div class="field">
+      <label>利用者パスワード</label>
+      <input id="user-password" type="password">
+    </div>
+
+    <h2 class="subtitle">署名</h2>
+
+    <div class="signature-wrapper">
+      <canvas id="signature-canvas" class="signature"></canvas>
+    </div>
+
+    <div class="signature-label">
+      上の欄に手書きで署名してください。
+    </div>
+
+    <button class="clear-sign" onclick="clearSignature()">
+      署名を消す
+    </button>
+
+    <div class="button-area">
+      <button id="agree-button" class="btn" onclick="agreeRules()">
         以上の項目に同意する
       </button>
-
-
-      <button
-        class="back-button"
-        onclick="backToMenuFromInput()"
-      >
+      <button class="btn secondary" onclick="showScreen('screen-menu')">
         戻る
       </button>
-
     </div>
-
   </div>
+</section>
 
-</div>
-
-
-<!-- =====================================
-     継続利用ログイン
-===================================== -->
-
-<div
-  id="continueScreen"
-  class="screen"
->
-
-  <div class="container">
-
-    <div class="card">
-
-      <div class="title">
-        継続利用
-      </div>
-
-
-      <p class="preface">
-
-        登録時の氏名、生年月日、
-        利用パスワードを入力してください。
-
-      </p>
-
-
-      <div class="field">
-
-        <label>
-          氏名
-        </label>
-
-        <input
-          id="continueName"
-          type="text"
-          placeholder="氏名を入力"
-        >
-
-      </div>
-
-
-      <div class="field">
-
-        <label>
-          生年月日
-        </label>
-
-        <input
-          id="continueBirth"
-          type="date"
-        >
-
-      </div>
-
-
-      <div class="field">
-
-        <label>
-          利用パスワード
-        </label>
-
-        <input
-          id="continuePassword"
-          type="password"
-          placeholder="利用パスワードを入力"
-        >
-
-      </div>
-
-
-      <div
-        id="continueError"
-        class="error"
-      ></div>
-
-
-      <button
-        class="agree-button"
-        onclick="checkContinuation()"
-      >
-        継続して利用する
-      </button>
-
-
-      <button
-        class="back-button"
-        onclick="backToMenu()"
-      >
-        戻る
-      </button>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-<!-- =====================================
+<!-- =========================================================
      確認画面
-===================================== -->
+========================================================= -->
+<section id="screen-confirm" class="screen hidden">
+  <div class="card">
 
-<div
-  id="confirmationScreen"
-  class="screen"
->
+    <div id="confirm-title" class="title">同意内容確認</div>
 
-  <div class="confirmation-screen-container">
+    <div class="version">
+      スマートフォン利用規約 Ver.1
+    </div>
 
-    <div class="confirm-card">
-
-      <div class="confirmation-header">
-
-        <div class="checkmark">
-          ✓
-        </div>
-
-        <h2 id="confirmationTitle">
-          同意状況確認
-        </h2>
-
-        <p>
-          以下の内容を確認してください
-        </p>
-
+    <div class="confirm-box">
+      <div class="confirm-row">
+        <div class="confirm-label">氏名</div>
+        <div id="confirm-name" class="confirm-value"></div>
       </div>
 
-
-      <div class="number-label">
-        確認番号
+      <div class="confirm-row">
+        <div class="confirm-label">生年月日</div>
+        <div id="confirm-birth" class="confirm-value"></div>
       </div>
 
-
-      <div
-        id="confirmationNumber"
-        class="confirmation-number"
-      ></div>
-
-
-      <div class="info-grid">
-
-        <div class="info-box">
-
-          <span class="info-label">
-            氏名
-          </span>
-
-          <span
-            id="resultName"
-            class="info-value"
-          ></span>
-
-        </div>
-
-
-        <div class="info-box">
-
-          <span class="info-label">
-            生年月日
-          </span>
-
-          <span
-            id="resultBirth"
-            class="info-value"
-          ></span>
-
-        </div>
-
-
-        <div class="info-box">
-
-          <span class="info-label">
-            同意日
-          </span>
-
-          <span
-            id="resultAgreementDate"
-            class="info-value"
-          ></span>
-
-        </div>
-
-
-        <div class="info-box">
-
-          <span class="info-label">
-            有効期限
-          </span>
-
-          <span
-            id="resultExpiryDate"
-            class="info-value expiry-result"
-          ></span>
-
-        </div>
-
+      <div class="confirm-row">
+        <div class="confirm-label">同意日</div>
+        <div id="confirm-date" class="confirm-value"></div>
       </div>
 
-
-      <div class="rules-confirmed">
-
-        <div class="rules-confirmed-title">
-          規約確認状況
-        </div>
-
-        <div
-          id="rulesStatus"
-          class="rules-status"
-        ></div>
-
+      <div class="confirm-row">
+        <div class="confirm-label">有効期限</div>
+        <div id="confirm-expiry" class="confirm-value"></div>
       </div>
 
-
-      <div class="signature-section">
-
-        <div class="signature-section-title">
-          署名
-        </div>
-
-        <img
-          id="resultSignature"
-          class="signature-result"
-          alt="署名"
-        >
-
+      <div class="confirm-row">
+        <div class="confirm-label">署名</div>
+        <div class="confirm-value">署名済み</div>
       </div>
 
+      <div class="confirm-row">
+        <div class="confirm-label">規約</div>
+        <div class="confirm-value">Ver.1</div>
+      </div>
+    </div>
 
-      <p class="preface">
+    <div id="reagree-message" class="reagree-box hidden">
+      規約が変更されています。新しい規約への再同意が必要です。
+    </div>
 
-        上記の内容および各規約を確認し、
-        内容に誤りがないことを確認してください。
+    <div class="button-area">
 
-      </p>
-
-
-      <button
-        class="start-button"
-        onclick="startUse()"
-      >
-        以上を確認し利用を開始する
-      </button>
-
-
-      <button
-        id="editAgreementButton"
-        class="confirm-edit-button"
-        onclick="editAgreement()"
-      >
+      <button id="modify-button"
+              class="btn secondary"
+              onclick="modifyAgreement()">
         内容を修正する
       </button>
 
+      <button class="btn green" onclick="startUse()">
+        以上を確認し利用を開始する
+      </button>
+
     </div>
 
   </div>
+</section>
 
-</div>
+<!-- =========================================================
+     完了画面
+========================================================= -->
+<section id="screen-finished" class="screen hidden">
+  <div class="card">
+    <div class="title">完了しました。</div>
 
+    <div class="confirm-box">
+      <div class="confirm-row">
+        <div class="confirm-label">登録番号</div>
+        <div id="finished-id" class="confirm-value"></div>
+      </div>
 
-<!-- =====================================
+      <div class="confirm-row">
+        <div class="confirm-label">有効期限</div>
+        <div id="finished-expiry" class="confirm-value"></div>
+      </div>
+    </div>
+
+    <div class="button-area">
+      <button class="btn green" onclick="goToStartUrl()">
+        利用を開始する
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     ローディング
+========================================================= -->
+<section id="screen-loading" class="screen loading-screen hidden">
+  <div class="loading-card">
+    <div class="spinner"></div>
+    <div id="loading-text" class="loading-text">
+      読み込み中
+    </div>
+
+    <div class="progress">
+      <div id="progress-bar" class="progress-bar"></div>
+    </div>
+
+    <div id="progress-percent" class="percent">
+      0%
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
      管理者ログイン
-===================================== -->
+========================================================= -->
+<section id="screen-admin-login" class="screen hidden">
+  <div class="card">
 
-<div
-  id="adminLoginScreen"
-  class="screen"
->
+    <div class="title">管理者用画面</div>
 
-  <div class="container">
+    <div class="field">
+      <label>管理者パスワード</label>
+      <input id="admin-password" type="password">
+    </div>
 
-    <div class="card">
-
-      <div class="title">
-        管理者認証
-      </div>
-
-
-      <p class="preface">
-
-        管理者用画面を開くには
-        パスワードを入力してください。
-
-      </p>
-
-
-      <div class="field">
-
-        <label>
-          パスワード
-        </label>
-
-        <input
-          id="adminPassword"
-          type="password"
-          placeholder="パスワード"
-        >
-
-      </div>
-
-
-      <div
-        id="adminLoginError"
-        class="error"
-      ></div>
-
-
-      <button
-        class="agree-button"
-        onclick="checkAdminPassword()"
-      >
+    <div class="button-area">
+      <button class="btn" onclick="adminLogin()">
         管理者画面を開く
       </button>
 
-
-      <button
-        class="back-button"
-        onclick="backToMenuFromAdminLogin()"
-      >
+      <button class="btn secondary"
+              onclick="showScreen('screen-menu')">
         戻る
       </button>
-
     </div>
 
   </div>
+</section>
 
-</div>
+<!-- =========================================================
+     管理者画面
+========================================================= -->
+<section id="screen-admin" class="screen hidden">
+  <div class="card">
 
-
-<!-- =====================================
-     管理者一覧
-===================================== -->
-
-<div
-  id="adminListScreen"
-  class="screen"
->
-
-  <div class="container">
-
-    <div class="card">
-
-      <div class="title">
-        管理者画面
-      </div>
-
-
-      <p class="preface">
-
-        保存されている登録情報の一覧です。
-        情報を選択すると詳細を編集できます。
-
-      </p>
-
-
-      <div id="adminList"></div>
-
-
-      <button
-        class="back-button"
-        onclick="adminLogout()"
-      >
-        管理者画面を閉じる
+    <div class="admin-header">
+      <h2>管理者画面</h2>
+      <button class="btn secondary" onclick="adminLogout()">
+        ログアウト
       </button>
+    </div>
+
+    <div class="stat-grid">
+
+      <div class="stat">
+        <div id="stat-total" class="stat-number">0</div>
+        <div class="stat-label">登録人数</div>
+      </div>
+
+      <div class="stat">
+        <div id="stat-valid" class="stat-number">0</div>
+        <div class="stat-label">有効</div>
+      </div>
+
+      <div class="stat">
+        <div id="stat-soon" class="stat-number">0</div>
+        <div class="stat-label">5日以内</div>
+      </div>
+
+      <div class="stat">
+        <div id="stat-expired" class="stat-number">0</div>
+        <div class="stat-label">期限切れ</div>
+      </div>
 
     </div>
 
-  </div>
+    <h3>利用開始後のURL</h3>
 
-</div>
-
-
-<!-- =====================================
-     管理者編集
-===================================== -->
-
-<div
-  id="adminEditScreen"
-  class="screen"
->
-
-  <div class="container">
-
-    <div class="card">
-
-      <div class="title">
-        登録情報を編集
-      </div>
-
-
-      <div
-        id="adminEditError"
-        class="error"
-      ></div>
-
-
-      <div class="field">
-
-        <label>
-          確認番号
-        </label>
-
-        <input
-          id="adminNumber"
-          type="text"
-        >
-
-      </div>
-
-
-      <div class="field">
-
-        <label>
-          氏名
-        </label>
-
-        <input
-          id="adminName"
-          type="text"
-        >
-
-      </div>
-
-
-      <div class="field">
-
-        <label>
-          生年月日
-        </label>
-
-        <input
-          id="adminBirth"
-          type="date"
-        >
-
-      </div>
-
-
-      <div class="field">
-
-        <label>
-          同意日
-        </label>
-
-        <input
-          id="adminAgreementDate"
-          type="date"
-        >
-
-      </div>
-
-
-      <div class="field">
-
-        <label>
-          有効期限
-        </label>
-
-        <input
-          id="adminExpiryDate"
-          type="date"
-        >
-
-      </div>
-
-
-      <div class="field">
-
-        <label>
-          利用パスワード
-        </label>
-
-        <input
-          id="adminUserPassword"
-          type="text"
-        >
-
-      </div>
-
-
-      <div class="admin-section">
-
-        <div class="title">
-          規約同意状況
-        </div>
-
-        <div id="adminRules"></div>
-
-      </div>
-
-
-      <div class="admin-section">
-
-        <div class="title">
-          署名
-        </div>
-
-
-        <div class="signature-box">
-
-          <canvas
-            id="adminSignatureCanvas"
-          ></canvas>
-
-          <div class="signature-hint">
-            署名を編集できます
-          </div>
-
-        </div>
-
-
-        <button
-          class="clear-button"
-          onclick="clearAdminSignature()"
-        >
-          署名を消去
-        </button>
-
-      </div>
-
-
-      <button
-        class="save-button"
-        onclick="saveAdminEdit()"
-      >
-        編集内容を保存
-      </button>
-
-
-      <button
-        class="delete-button"
-        onclick="showDeleteConfirmation()"
-      >
-        この登録情報を削除
-      </button>
-
-
-      <button
-        class="back-button"
-        onclick="backToAdminList()"
-      >
-        一覧に戻る
-      </button>
-
+    <div class="field">
+      <input id="start-url-input" type="url">
     </div>
 
-  </div>
-
-</div>
-
-
-<!-- =====================================
-     削除確認
-===================================== -->
-
-<div
-  id="deleteConfirmScreen"
-  class="screen"
->
-
-  <div class="container">
-
-    <div class="card">
-
-      <div class="delete-confirm-box">
-
-        <div class="delete-confirm-title">
-          登録情報を削除しますか？
-        </div>
-
-
-        <div
-          id="deleteConfirmName"
-          class="delete-confirm-name"
-        ></div>
-
-
-        <div
-          id="deleteConfirmNumber"
-          class="delete-confirm-number"
-        ></div>
-
-      </div>
-
-
-      <button
-        class="delete-confirm-button"
-        onclick="executeDelete()"
-      >
-        この登録情報を削除する
-      </button>
-
-
-      <button
-        class="cancel-confirm-button"
-        onclick="cancelDelete()"
-      >
-        キャンセル
-      </button>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-<!-- =====================================
-     読み込み
-===================================== -->
-
-<div
-  id="loadingScreen"
-  class="loading-screen"
->
-
-  <div class="loading-box">
-
-    <div class="loading-spinner"></div>
-
-
-    <div class="loading-title">
-      読み込み中…
-    </div>
-
-
-    <div
-      id="loadingMessage"
-      class="loading-message"
-    ></div>
-
-
-    <div class="progress-container">
-
-      <div
-        id="progressBar"
-        class="progress-bar"
-      ></div>
-
-    </div>
-
-
-    <div
-      id="progressPercent"
-      class="progress-percent"
-    >
-      0%
-    </div>
-
-  </div>
-
-</div>
-
-
-<!-- =====================================
-     画面内通知
-===================================== -->
-
-<div
-  id="globalNotice"
-  class="loading-screen"
->
-
-  <div class="loading-box">
-
-    <div
-      style="
-        font-size:50px;
-        margin-bottom:12px;
-      "
-    >
-      ✓
-    </div>
-
-
-    <div
-      id="globalNoticeTitle"
-      class="loading-title"
-    ></div>
-
-
-    <div
-      id="globalNoticeText"
-      class="loading-message"
-    ></div>
-
-
-    <button
-      id="globalNoticeButton"
-      class="start-button"
-      style="display:none;"
-      onclick="closeGlobalNotice()"
-    >
-      OK
+    <button class="btn" onclick="saveStartUrl()">
+      URLを保存
     </button>
 
-  </div>
+    <h3>登録情報検索</h3>
 
+    <div class="search-sort">
+
+      <input id="search-input"
+             type="search"
+             placeholder="氏名・登録番号・生年月日など"
+             oninput="renderUsers()">
+
+      <select id="sort-select" onchange="renderUsers()">
+        <option value="new">新しい登録順</option>
+        <option value="old">古い登録順</option>
+        <option value="name">名前順</option>
+        <option value="expiry">有効期限順</option>
+      </select>
+
+    </div>
+
+    <div id="user-list" class="user-list"></div>
+
+    <h3>データ移行</h3>
+
+    <div class="button-area">
+
+      <button class="btn" onclick="exportSelected()">
+        選択中の利用者データを暗号化
+      </button>
+
+      <button class="btn" onclick="exportAll()">
+        全利用者データを暗号化
+      </button>
+
+      <button class="btn" onclick="exportStorage()">
+        LocalStorage全体を暗号化
+      </button>
+
+    </div>
+
+    <div class="field">
+      <label>暗号化データ</label>
+      <textarea id="data-output"
+                class="data-output"
+                placeholder="ここに暗号化データが表示されます。"></textarea>
+    </div>
+
+    <div class="row">
+      <button class="btn" onclick="copyData()">
+        コピー
+      </button>
+
+      <button class="btn green" onclick="importData()">
+        このデータを復元
+      </button>
+    </div>
+
+    <h3>操作履歴</h3>
+
+    <div id="log-list" class="log-list"></div>
+
+    <div class="button-area">
+      <button class="btn red" onclick="clearLogs()">
+        操作履歴を削除
+      </button>
+    </div>
+
+    <h3>規約設定</h3>
+
+    <div class="field">
+      <label>現在の規約バージョン</label>
+      <input id="version-input" type="number" min="1">
+    </div>
+
+    <button class="btn yellow" onclick="changeVersion()">
+      規約を変更する
+    </button>
+
+    <div class="footer">
+      ※規約Verを変更すると、以前のVerに同意した利用者は再同意が必要になります。
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================================================
+     利用者詳細モーダル
+========================================================= -->
+<div id="user-modal" class="modal hidden">
+
+  <div class="modal-card">
+
+    <div class="modal-title">
+      利用者データ編集
+    </div>
+
+    <input id="edit-id" type="hidden">
+
+    <div class="field">
+      <label>氏名</label>
+      <input id="edit-name" type="text">
+    </div>
+
+    <div class="field">
+      <label>生年月日</label>
+      <input id="edit-birth" type="date">
+    </div>
+
+    <div class="field">
+      <label>利用者パスワード</label>
+      <input id="edit-password" type="text">
+    </div>
+
+    <div class="field">
+      <label>有効期限</label>
+      <input id="edit-expiry" type="date">
+    </div>
+
+    <div class="field">
+      <label>規約バージョン</label>
+      <input id="edit-version" type="number" min="1">
+    </div>
+
+    <div class="confirm-box">
+
+      <div class="confirm-row">
+        <div class="confirm-label">登録番号</div>
+        <div id="edit-display-id" class="confirm-value"></div>
+      </div>
+
+      <div class="confirm-row">
+        <div class="confirm-label">登録日時</div>
+        <div id="edit-created" class="confirm-value"></div>
+      </div>
+
+      <div class="confirm-row">
+        <div class="confirm-label">同意日時</div>
+        <div id="edit-agreed" class="confirm-value"></div>
+      </div>
+
+      <div class="confirm-row">
+        <div class="confirm-label">署名</div>
+        <div id="edit-signature-status" class="confirm-value"></div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <button class="btn green" onclick="saveEditedUser()">
+        保存
+      </button>
+
+      <button class="btn red" onclick="deleteSelectedUser()">
+        削除
+      </button>
+
+      <button class="btn secondary" onclick="closeModal()">
+        閉じる
+      </button>
+    </div>
+
+  </div>
 </div>
 
-
-<button
-  class="fullscreen-button"
-  onclick="toggleFullscreen()"
->
-  ⛶
-</button>
-
-
-<footer class="footer">
-  スマートフォン利用規約
-</footer>
-
+<!-- =========================================================
+     トースト
+========================================================= -->
+<div id="toast" class="toast hidden"></div>
 
 <script>
-
-
-/* =========================================
-   バージョン
-========================================= */
-
-const VERSION="7";
-
-document.getElementById(
-  "versionText"
-).textContent=
-  "Ver."+VERSION;
-
-
-/* =========================================
-   基本設定
-========================================= */
-
-const ADMIN_PASSWORD=
-  "Tarakosama2525";
-
-const STORAGE_KEY=
-  "smartphoneAgreements";
-
-
-/* =========================================
-   規約
-========================================= */
-
-const rules=[
-
-  {
-    title:"貸与物であることの認識",
-
-    text:
-      "本スマートフォンは利用者自身の所有物ではなく、貸し主から貸与されたものであることを認識し、そのことを常に意識して利用するものとする。"
-  },
-
-  {
-    title:"利用範囲の制限",
-
-    text:
-      "本スマートフォンの利用にあたっては、貸し主が指定したアプリケーション、ウェブサイトおよび操作のみを行うものとする。"
-  },
-
-  {
-    title:"貸し主からの指示",
-
-    text:
-      "貸し主から本スマートフォンの返却その他の操作を求められた場合、利用者はこれに従うものとする。"
-  },
-
-  {
-    title:"禁止行為",
-
-    text:
-      "本スマートフォンを使用して、投稿を行うこと、パスワードを入力すること、その他の個人情報を取り扱う行為、または何らかのトラブルにつながるおそれのある行為を禁止する。"
-  },
-
-  {
-    title:"例外",
-
-    text:
-      "前各項の定めについて、貸し主が必要と認めた場合には、個別に例外を設けることがある。"
-  },
-
-  {
-    title:"貸し出しの停止等",
-
-    text:
-      "貸し主は、必要に応じて本スマートフォンを貸し出さないことがある。"
-  },
-
-  {
-    title:"規約違反時の措置",
-
-    text:
-      "本規約に違反した場合、利用者の本スマートフォンの利用を2週間停止するものとする。"
-  }
-
-];
-
-
-/* =========================================
-   規約生成
-========================================= */
-
-const rulesArea=
-  document.getElementById("rules");
-
-
-rules.forEach(
-  (rule,index)=>{
-
-    const div=
-      document.createElement("div");
-
-    div.className="rule";
-
-    div.innerHTML=`
-
-      <label>
-
-        <input
-          type="checkbox"
-          class="ruleCheck">
-
-        <span>
-
-          <span class="rule-title">
-
-            第${index+1}条　
-            ${escapeHTML(rule.title)}
-
-          </span>
-
-          <br>
-
-          <span class="rule-text">
-
-            ${escapeHTML(rule.text)}
-
-          </span>
-
-        </span>
-
-      </label>
-
-    `;
-
-    rulesArea.appendChild(div);
-
-  }
-);
-
-
-/* =========================================
-   LocalStorage
-========================================= */
-
-function getAllData(){
-
-  try{
-
-    const data=
-      localStorage.getItem(
-        STORAGE_KEY
-      );
-
-    if(!data)
-      return [];
-
-    const parsed=
-      JSON.parse(data);
-
-    return Array.isArray(parsed)
-      ?parsed
-      :[];
-
-  }
-  catch(e){
-
-    return [];
-
-  }
-
-}
-
-
-function saveAllData(data){
-
-  localStorage.setItem(
-    STORAGE_KEY,
-    JSON.stringify(data)
-  );
-
-}
-
-
-/* =========================================
-   日付
-========================================= */
-
-function dateToInput(date){
-
-  return date.getFullYear()+"-"+
-    String(
-      date.getMonth()+1
-    ).padStart(2,"0")+"-"+
-    String(
-      date.getDate()
-    ).padStart(2,"0");
-
-}
-
-
-function formatDateJP(date){
-
-  return date.getFullYear()+"年"+
-    (date.getMonth()+1)+"月"+
-    date.getDate()+"日";
-
-}
-
-
-function formatBirth(value){
-
-  const date=
-    new Date(
-      value+"T00:00:00"
-    );
-
-  if(isNaN(date.getTime()))
-    return value;
-
-  return date.toLocaleDateString(
-    "ja-JP",
-    {
-      year:"numeric",
-      month:"long",
-      day:"numeric"
-    }
-  );
-
-}
-
-
-function addOneMonth(date){
-
-  const result=
-    new Date(date);
-
-  const day=
-    result.getDate();
-
-  result.setMonth(
-    result.getMonth()+1
-  );
-
-  if(result.getDate()!==day)
-    result.setDate(0);
-
-  return result;
-
-}
-
-
-/* =========================================
-   確認番号
-========================================= */
-
-function generateNumber(){
-
-  const chars=
-    "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
-
-  let result="SP-";
-
-  for(let i=0;i<8;i++){
-
-    result+=
-      chars[
-        Math.floor(
-          Math.random()*
-          chars.length
-        )
-      ];
-
-  }
-
-  return result;
-
-}
-
-
-/* =========================================
-   画面
-========================================= */
+"use strict";
+
+/* =========================================================
+   設定
+========================================================= */
+
+const APP_VERSION = 1;
+
+/*
+  注意：
+  このパスワードはGitHub Pages上のJavaScriptに存在するため、
+  本格的なサーバー認証用の秘密鍵にはできません。
+
+  今回は個人用・家庭用の管理システムとして使用します。
+*/
+const ADMIN_PASSWORD = "Tarakosama2525";
+
+const STORAGE_USERS = "smartphone_users_v1";
+const STORAGE_CONFIG = "smartphone_config_v1";
+const STORAGE_LOGS = "smartphone_logs_v1";
+
+let currentMode = "new";
+let currentUser = null;
+let selectedUserId = null;
+let adminLoggedIn = false;
+
+let signatureCanvas;
+let signatureCtx;
+let drawing = false;
+let signatureHasInk = false;
+let lastX = 0;
+let lastY = 0;
+
+/* =========================================================
+   基本
+========================================================= */
 
 function showScreen(id){
+  document.querySelectorAll(".screen").forEach(el=>{
+    el.classList.add("hidden");
+  });
 
-  document
-    .querySelectorAll(".screen")
-    .forEach(
-      s=>
-        s.classList.remove(
-          "active"
-        )
-    );
+  const target = document.getElementById(id);
 
-  document
-    .getElementById(id)
-    .classList.add("active");
-
-  window.scrollTo(0,0);
-
+  if(target){
+    target.classList.remove("hidden");
+    window.scrollTo(0,0);
+  }
 }
 
+function getConfig(){
+  try{
+    const raw = localStorage.getItem(STORAGE_CONFIG);
+    if(!raw){
+      return {
+        startUrl:"https://www.google.com/",
+        version:APP_VERSION
+      };
+    }
 
-/* =========================================
+    return Object.assign({
+      startUrl:"https://www.google.com/",
+      version:APP_VERSION
+    }, JSON.parse(raw));
+
+  }catch(e){
+    return {
+      startUrl:"https://www.google.com/",
+      version:APP_VERSION
+    };
+  }
+}
+
+function saveConfig(config){
+  localStorage.setItem(
+    STORAGE_CONFIG,
+    JSON.stringify(config)
+  );
+}
+
+function getUsers(){
+  try{
+    const raw = localStorage.getItem(STORAGE_USERS);
+
+    if(!raw) return [];
+
+    return JSON.parse(raw);
+
+  }catch(e){
+    return [];
+  }
+}
+
+function saveUsers(users){
+  localStorage.setItem(
+    STORAGE_USERS,
+    JSON.stringify(users)
+  );
+}
+
+function getLogs(){
+  try{
+    return JSON.parse(
+      localStorage.getItem(STORAGE_LOGS) || "[]"
+    );
+  }catch(e){
+    return [];
+  }
+}
+
+function saveLogs(logs){
+  localStorage.setItem(
+    STORAGE_LOGS,
+    JSON.stringify(logs)
+  );
+}
+
+function addLog(message){
+  const logs = getLogs();
+
+  logs.unshift({
+    time:new Date().toISOString(),
+    message:message
+  });
+
+  if(logs.length > 500){
+    logs.length = 500;
+  }
+
+  saveLogs(logs);
+}
+
+/* =========================================================
+   通知
+========================================================= */
+
+function toast(message,type=""){
+  const el = document.getElementById("toast");
+
+  el.textContent = message;
+  el.className = "toast";
+
+  if(type){
+    el.classList.add(type);
+  }
+
+  el.classList.remove("hidden");
+
+  clearTimeout(toast.timer);
+
+  toast.timer = setTimeout(()=>{
+    el.classList.add("hidden");
+  },2500);
+}
+
+/* =========================================================
+   ローディング
+   普通：約2秒
+   長め：約3秒
+   100%到達後に完了表示
+========================================================= */
+
+function loading(message,duration=2000,after){
+  showScreen("screen-loading");
+
+  const text = document.getElementById("loading-text");
+  const bar = document.getElementById("progress-bar");
+  const percent = document.getElementById("progress-percent");
+
+  text.textContent = message;
+  bar.style.width = "0%";
+  percent.textContent = "0%";
+
+  const start = performance.now();
+
+  function frame(now){
+
+    const elapsed = now-start;
+    let p = Math.min(elapsed/duration,1);
+
+    /*
+      実際の読み込み処理ではなく、UI上で自然に見える
+      非線形の進行を作る。
+    */
+    let visual;
+
+    if(p < .72){
+      visual = p * .78;
+    }else{
+      visual = .5616 + (p-.72) / .28 * .4384;
+    }
+
+    if(p >= 1){
+      visual = 1;
+    }
+
+    const n = Math.round(visual*100);
+
+    bar.style.width = n+"%";
+    percent.textContent = n+"%";
+
+    if(p < 1){
+      requestAnimationFrame(frame);
+    }else{
+
+      /*
+        完全に100%になってから
+        「完了しました。」を少し表示する。
+      */
+      setTimeout(()=>{
+        text.textContent = "完了しました。";
+
+        setTimeout(()=>{
+          if(typeof after === "function"){
+            after();
+          }
+        },450);
+
+      },120);
+    }
+  }
+
+  requestAnimationFrame(frame);
+}
+
+/* =========================================================
+   日付
+========================================================= */
+
+function formatDate(date){
+  const y = date.getFullYear();
+  const m = String(date.getMonth()+1).padStart(2,"0");
+  const d = String(date.getDate()).padStart(2,"0");
+
+  return `${y}-${m}-${d}`;
+}
+
+function formatDateTime(value){
+  const d = new Date(value);
+
+  if(Number.isNaN(d.getTime())){
+    return value || "";
+  }
+
+  return d.toLocaleString("ja-JP");
+}
+
+function addOneMonth(date){
+  const d = new Date(date);
+  d.setMonth(d.getMonth()+1);
+  return d;
+}
+
+function daysUntil(dateString){
+  const now = new Date();
+
+  const today = new Date(
+    now.getFullYear(),
+    now.getMonth(),
+    now.getDate()
+  );
+
+  const target = new Date(
+    dateString+"T00:00:00"
+  );
+
+  return Math.ceil(
+    (target-today)/(1000*60*60*24)
+  );
+}
+
+/* =========================================================
    新規登録
-========================================= */
+========================================================= */
 
-let inputMode="new";
+function startNew(){
 
-let updatingId=null;
+  currentMode = "new";
+  currentUser = null;
 
-let updatingOldNumber=null;
+  clearUserForm();
 
+  showScreen("screen-user");
 
-function selectNewRegistration(){
-
-  inputMode="new";
-
-  updatingId=null;
-
-  updatingOldNumber=null;
-
-  resetInputForm();
-
-  document.getElementById(
-    "inputTitle"
-  ).textContent=
-    "スマートフォン利用規約";
-
-  showScreen(
-    "inputScreen"
-  );
-
-  setTimeout(
-    resizeSignatureCanvas,
-    50
-  );
-
+  requestAnimationFrame(()=>{
+    setupSignature();
+  });
 }
 
+/* =========================================================
+   継続利用
+========================================================= */
 
-function resetInputForm(){
+function startContinue(){
 
-  document.getElementById(
-    "name"
-  ).value="";
+  currentMode = "continue";
 
-  document.getElementById(
-    "birth"
-  ).value="";
+  document.getElementById("continue-name").value="";
+  document.getElementById("continue-birth").value="";
+  document.getElementById("continue-password").value="";
 
-  document.getElementById(
-    "newPassword"
-  ).value="";
+  showScreen("screen-continue-login");
+}
 
+function continueLogin(){
 
-  document
-    .querySelectorAll(".ruleCheck")
-    .forEach(
-      c=>
-        c.checked=false
+  const name =
+    document.getElementById("continue-name").value.trim();
+
+  const birth =
+    document.getElementById("continue-birth").value;
+
+  const password =
+    document.getElementById("continue-password").value;
+
+  if(!name || !birth || !password){
+    toast("すべて入力してください","error");
+    return;
+  }
+
+  const users = getUsers();
+
+  const user = users.find(u =>
+    u.name === name &&
+    u.birth === birth &&
+    u.password === password
+  );
+
+  if(!user){
+    toast("登録情報が見つかりません","error");
+    return;
+  }
+
+  const config = getConfig();
+
+  const remaining = daysUntil(user.expiry);
+
+  /*
+    有効期限内かつ規約Verが同じなら、
+    規約への再同意なしで利用開始可能。
+  */
+  if(
+    remaining >= 0 &&
+    Number(user.version) === Number(config.version)
+  ){
+
+    currentUser = user;
+
+    loading(
+      "利用者情報を確認しています。",
+      3000,
+      ()=>{
+        showScreen("screen-confirm");
+
+        document.getElementById("confirm-title")
+          .textContent="同意状況確認";
+
+        document.getElementById("modify-button")
+          .classList.add("hidden");
+
+        fillConfirm(user,false);
+      }
     );
 
+    return;
+  }
+
+  /*
+    期限切れまたは規約変更の場合は再同意。
+    利用者情報はあらかじめ入力する。
+  */
+
+  currentUser = user;
+
+  fillExistingUserForm(user);
+
+  document.querySelectorAll(".rule-check")
+    .forEach(c=>c.checked=false);
 
   clearSignature();
 
-  hideError();
+  showScreen("screen-user");
 
-  updateButton();
-
+  requestAnimationFrame(()=>{
+    setupSignature();
+  });
 }
 
+/* =========================================================
+   フォーム
+========================================================= */
 
-function backToMenuFromInput(){
+function clearUserForm(){
 
-  inputMode="new";
+  document.getElementById("user-name").value="";
+  document.getElementById("user-birth").value="";
+  document.getElementById("user-password").value="";
 
-  updatingId=null;
+  document.querySelectorAll(".rule-check")
+    .forEach(c=>c.checked=false);
 
-  showScreen(
-    "menuScreen"
-  );
-
+  signatureHasInk=false;
 }
 
+function fillExistingUserForm(user){
 
-function backToMenu(){
+  document.getElementById("user-name").value =
+    user.name || "";
 
-  showScreen(
-    "menuScreen"
-  );
+  document.getElementById("user-birth").value =
+    user.birth || "";
 
+  document.getElementById("user-password").value =
+    user.password || "";
 }
 
+/* =========================================================
+   署名
+========================================================= */
 
-/* =========================================
-   新規署名
-========================================= */
+function setupSignature(){
 
-const canvas=
-  document.getElementById(
-    "signatureCanvas"
+  signatureCanvas =
+    document.getElementById("signature-canvas");
+
+  if(!signatureCanvas) return;
+
+  const rect =
+    signatureCanvas.getBoundingClientRect();
+
+  const ratio =
+    Math.max(window.devicePixelRatio || 1,1);
+
+  signatureCanvas.width =
+    Math.round(rect.width*ratio);
+
+  signatureCanvas.height =
+    Math.round(rect.height*ratio);
+
+  signatureCtx =
+    signatureCanvas.getContext("2d");
+
+  signatureCtx.setTransform(
+    ratio,0,0,ratio,0,0
   );
 
-const ctx=
-  canvas.getContext("2d");
+  signatureCtx.lineWidth=2.5;
+  signatureCtx.lineCap="round";
+  signatureCtx.lineJoin="round";
+  signatureCtx.strokeStyle="#111";
 
-let drawing=false;
+  /*
+    黒い丸が出る原因を防ぐため、
+    pointerdownでは点を描画しない。
+  */
 
-let signed=false;
-
-
-function resizeSignatureCanvas(){
-
-  const rect=
-    canvas.getBoundingClientRect();
-
-  if(
-    rect.width<=0||
-    rect.height<=0
-  )
-    return;
-
-
-  const ratio=
-    Math.max(
-      window.devicePixelRatio||1,
-      1
-    );
-
-
-  canvas.width=
-    Math.round(
-      rect.width*ratio
-    );
-
-  canvas.height=
-    Math.round(
-      rect.height*ratio
-    );
-
-
-  ctx.setTransform(
-    ratio,
-    0,
-    0,
-    ratio,
-    0,
-    0
-  );
-
-
-  ctx.strokeStyle="#111";
-
-  ctx.fillStyle="#111";
-
-  ctx.lineWidth=2.5;
-
-  ctx.lineCap="round";
-
-  ctx.lineJoin="round";
-
+  signatureCanvas.onpointerdown = startDrawing;
+  signatureCanvas.onpointermove = drawSignature;
+  signatureCanvas.onpointerup = stopDrawing;
+  signatureCanvas.onpointercancel = stopDrawing;
+  signatureCanvas.onpointerleave = stopDrawing;
 }
 
+function getPointerPosition(e){
 
-window.addEventListener(
-  "resize",
-  resizeSignatureCanvas
-);
+  const rect =
+    signatureCanvas.getBoundingClientRect();
 
-
-setTimeout(
-  resizeSignatureCanvas,
-  100
-);
-
-
-function getCanvasPosition(e){
-
-  const rect=
-    canvas.getBoundingClientRect();
-
-  return{
-
-    x:e.clientX-
-      rect.left,
-
-    y:e.clientY-
-      rect.top
-
+  return {
+    x:e.clientX-rect.left,
+    y:e.clientY-rect.top
   };
-
 }
-
 
 function startDrawing(e){
 
@@ -2214,2328 +1611,1571 @@ function startDrawing(e){
 
   drawing=true;
 
-  signed=true;
+  const p =
+    getPointerPosition(e);
 
+  lastX=p.x;
+  lastY=p.y;
 
-  if(e.pointerId!==undefined){
+  /*
+    ここでは絶対に線や円を描かない。
+    これが書き始めの黒丸対策。
+  */
 
-    try{
-
-      canvas.setPointerCapture(
-        e.pointerId
-      );
-
-    }
-    catch(error){}
-
-  }
-
-
-  const p=
-    getCanvasPosition(e);
-
-
-  ctx.beginPath();
-
-  ctx.moveTo(
-    p.x,
-    p.y
-  );
-
-
-  ctx.arc(
-    p.x,
-    p.y,
-    1.25,
-    0,
-    Math.PI*2
-  );
-
-
-  ctx.fill();
-
+  try{
+    signatureCanvas.setPointerCapture(e.pointerId);
+  }catch(_){}
 }
 
+function drawSignature(e){
 
-function draw(e){
-
-  if(!drawing)
-    return;
+  if(!drawing) return;
 
   e.preventDefault();
 
-  const p=
-    getCanvasPosition(e);
+  const p =
+    getPointerPosition(e);
 
+  signatureCtx.beginPath();
 
-  ctx.lineTo(
-    p.x,
-    p.y
-  );
+  signatureCtx.moveTo(lastX,lastY);
+  signatureCtx.lineTo(p.x,p.y);
 
-  ctx.stroke();
+  signatureCtx.stroke();
 
+  lastX=p.x;
+  lastY=p.y;
 
-  ctx.beginPath();
-
-  ctx.moveTo(
-    p.x,
-    p.y
-  );
-
+  signatureHasInk=true;
 }
-
 
 function stopDrawing(){
 
-  if(!drawing)
-    return;
-
   drawing=false;
-
-  ctx.closePath();
-
 }
-
-
-canvas.addEventListener(
-  "pointerdown",
-  startDrawing,
-  {passive:false}
-);
-
-canvas.addEventListener(
-  "pointermove",
-  draw,
-  {passive:false}
-);
-
-canvas.addEventListener(
-  "pointerup",
-  stopDrawing,
-  {passive:false}
-);
-
-canvas.addEventListener(
-  "pointercancel",
-  stopDrawing,
-  {passive:false}
-);
-
 
 function clearSignature(){
 
-  ctx.clearRect(
+  if(!signatureCanvas || !signatureCtx) return;
+
+  const rect =
+    signatureCanvas.getBoundingClientRect();
+
+  signatureCtx.clearRect(
     0,
     0,
-    canvas.width,
-    canvas.height
+    rect.width,
+    rect.height
   );
 
-  signed=false;
-
-  updateButton();
-
+  signatureHasInk=false;
 }
 
+/* =========================================================
+   署名画像
+========================================================= */
 
-/* =========================================
-   入力チェック
-========================================= */
+function getSignatureData(){
 
-const checkboxes=
-  document.querySelectorAll(
-    ".ruleCheck"
-  );
+  if(!signatureCanvas) return "";
 
-
-checkboxes.forEach(
-  checkbox=>{
-
-    checkbox.addEventListener(
-      "change",
-      updateButton
-    );
-
-  }
-);
-
-
-document
-  .getElementById("name")
-  .addEventListener(
-    "input",
-    updateButton
-  );
-
-
-document
-  .getElementById("birth")
-  .addEventListener(
-    "change",
-    updateButton
-  );
-
-
-document
-  .getElementById("newPassword")
-  .addEventListener(
-    "input",
-    updateButton
-  );
-
-
-function updateButton(){
-
-  const checked=
-    [...checkboxes]
-      .every(
-        c=>c.checked
-      );
-
-  const name=
-    document
-      .getElementById("name")
-      .value
-      .trim();
-
-  const birth=
-    document
-      .getElementById("birth")
-      .value;
-
-  const password=
-    document
-      .getElementById("newPassword")
-      .value;
-
-
-  document
-    .getElementById("agreeButton")
-    .disabled=
-      !(
-        checked&&
-        name&&
-        birth&&
-        password&&
-        signed
-      );
-
+  return signatureCanvas.toDataURL("image/png");
 }
 
+/* =========================================================
+   同意
+========================================================= */
 
-/* =========================================
-   エラー
-========================================= */
+function agreeRules(){
 
-function showError(text){
+  const checks =
+    [...document.querySelectorAll(".rule-check")];
 
-  const error=
-    document.getElementById(
+  const allChecked =
+    checks.every(c=>c.checked);
+
+  if(!allChecked){
+    toast(
+      "すべての項目にチェックしてください。",
       "error"
     );
+    return;
+  }
 
-  error.textContent=text;
+  if(!signatureHasInk){
+    toast(
+      "署名をしてください。",
+      "error"
+    );
+    return;
+  }
 
-  error.style.display="block";
+  const name =
+    document.getElementById("user-name")
+      .value.trim();
 
-  error.scrollIntoView({
-    behavior:"smooth",
-    block:"center"
-  });
-
-}
-
-
-function hideError(){
-
-  document
-    .getElementById("error")
-    .style.display="none";
-
-}
-
-
-/* =========================================
-   新規登録・更新確定
-========================================= */
-
-function agree(){
-
-  hideError();
-
-
-  const name=
-    document
-      .getElementById("name")
-      .value
-      .trim();
-
-  const birth=
-    document
-      .getElementById("birth")
+  const birth =
+    document.getElementById("user-birth")
       .value;
 
-  const password=
-    document
-      .getElementById("newPassword")
+  const password =
+    document.getElementById("user-password")
       .value;
 
-
-  const checked=
-    [...checkboxes]
-      .every(
-        c=>c.checked
-      );
-
-
-  if(
-    !name||
-    !birth||
-    !password||
-    !checked||
-    !signed
-  ){
-
-    showError(
-      "すべての項目を入力・確認してください。"
+  if(!name || !birth || !password){
+    toast(
+      "氏名・生年月日・パスワードを入力してください。",
+      "error"
     );
-
     return;
-
   }
 
+  const now = new Date();
+  const expiry = addOneMonth(now);
 
-  if(password.length<4){
-
-    showError(
-      "利用パスワードは4文字以上にしてください。"
-    );
-
-    return;
-
-  }
-
-
-  const agreementDate=
-    new Date();
-
-  agreementDate.setHours(
-    0,0,0,0
-  );
-
-
-  const expiryDate=
-    addOneMonth(
-      agreementDate
-    );
-
-
-  if(inputMode==="update"){
-
-    updateExistingRegistration(
-      name,
-      birth,
-      password,
-      agreementDate,
-      expiryDate
-    );
-
-    return;
-
-  }
-
-
-  const data={
-
-    id:
-      Date.now()+"-"+
-      Math.random()
-        .toString(36)
-        .slice(2),
-
-    number:
-      generateNumber(),
-
+  const user = {
+    id:currentUser?.id || generateId(),
     name:name,
-
     birth:birth,
-
     password:password,
-
-    agreementDate:
-      dateToInput(
-        agreementDate
-      ),
-
-    agreementDateText:
-      formatDateJP(
-        agreementDate
-      ),
-
-    expiryDate:
-      dateToInput(
-        expiryDate
-      ),
-
-    expiryDateText:
-      formatDateJP(
-        expiryDate
-      ),
-
-    rules:
-      rules.map(
-        ()=>true
-      ),
-
-    signature:
-      canvas.toDataURL(
-        "image/png"
-      )
-
+    agreedAt:now.toISOString(),
+    createdAt:currentUser?.createdAt || now.toISOString(),
+    expiry:formatDate(expiry),
+    version:getConfig().version,
+    signature:getSignatureData(),
+    rulesChecked:true
   };
 
-
-  const allData=
-    getAllData();
-
-  allData.push(data);
-
-  saveAllData(
-    allData
-  );
-
-
-  setConfirmation(
-    data,
-    true
-  );
-
-
-  showLoading(
-
-    [
-      "規約を確認しています.",
-      "利用者情報を確認しています。",
-      "署名を確認しています。",
-      "完了しました。"
-    ],
-
-    2000,
-
-    function(){
-
-      showScreen(
-        "confirmationScreen"
-      );
-
-    }
-
-  );
-
-}
-
-
-/* =========================================
-   更新
-========================================= */
-
-function updateExistingRegistration(
-  name,
-  birth,
-  password,
-  agreementDate,
-  expiryDate
-){
-
-  const allData=
-    getAllData();
-
-
-  const index=
-    allData.findIndex(
-      item=>
-        item.id===
-        updatingId
-    );
-
-
-  if(index===-1){
-
-    showError(
-      "更新対象の登録情報が見つかりません。"
-    );
-
-    return;
-
-  }
-
-
-  const old=
-    allData[index];
-
-
-  const updated={
-
-    ...old,
-
-    name:name,
-
-    birth:birth,
-
-    password:password,
-
-    agreementDate:
-      dateToInput(
-        agreementDate
-      ),
-
-    agreementDateText:
-      formatDateJP(
-        agreementDate
-      ),
-
-    expiryDate:
-      dateToInput(
-        expiryDate
-      ),
-
-    expiryDateText:
-      formatDateJP(
-        expiryDate
-      ),
-
-    rules:
-      rules.map(
-        ()=>true
-      ),
-
-    signature:
-      canvas.toDataURL(
-        "image/png"
-      )
-
-  };
-
+  currentUser=user;
 
   /*
-   * 重要：
-   * 古いデータを残さず、
-   * 同じ位置のデータを新しい内容で
-   * 完全に置き換える。
-   */
-
-  allData[index]=updated;
-
-  saveAllData(
-    allData
-  );
-
-
-  setConfirmation(
-    updated,
-    true
-  );
-
-
-  showLoading(
-
-    [
-      "規約を確認しています。",
-      "利用者情報を確認しています。",
-      "署名を確認しています。",
-      "完了しました。"
-    ],
-
-    2000,
-
-    function(){
-
-      showScreen(
-        "confirmationScreen"
-      );
-
-    }
-
-  );
-
-}
-
-
-/* =========================================
-   継続利用
-========================================= */
-
-function selectContinuation(){
-
-  document.getElementById(
-    "continueName"
-  ).value="";
-
-  document.getElementById(
-    "continueBirth"
-  ).value="";
-
-  document.getElementById(
-    "continuePassword"
-  ).value="";
-
-  document.getElementById(
-    "continueError"
-  ).style.display="none";
-
-  showScreen(
-    "continueScreen"
-  );
-
-}
-
-
-function checkContinuation(){
-
-  const name=
-    document
-      .getElementById(
-        "continueName"
-      )
-      .value
-      .trim();
-
-  const birth=
-    document
-      .getElementById(
-        "continueBirth"
-      )
-      .value;
-
-  const password=
-    document
-      .getElementById(
-        "continuePassword"
-      )
-      .value;
-
-
-  const error=
-    document.getElementById(
-      "continueError"
-    );
-
-
-  error.style.display="none";
-
-
-  if(
-    !name||
-    !birth||
-    !password
-  ){
-
-    error.textContent=
-      "氏名、生年月日、利用パスワードをすべて入力してください。";
-
-    error.style.display=
-      "block";
-
-    return;
-
-  }
-
-
-  const allData=
-    getAllData();
-
-
-  const data=
-    allData.find(
-      item=>
-        item.name===name&&
-        item.birth===birth&&
-        item.password===password
-    );
-
-
-  if(!data){
-
-    error.textContent=
-      "入力された情報に一致する登録情報がありません。";
-
-    error.style.display=
-      "block";
-
-    return;
-
-  }
-
-
-  const today=
-    new Date();
-
-  today.setHours(
-    0,0,0,0
-  );
-
-
-  const expiry=
-    new Date(
-      data.expiryDate+
-      "T00:00:00"
-    );
-
-
-  if(today<=expiry){
-
-    setConfirmation(
-      data,
-      false
-    );
-
-    showScreen(
-      "confirmationScreen"
-    );
-
-    return;
-
-  }
-
-
-  /*
-   * 期限切れの場合
-   * 元の利用者情報を入力済みにして
-   * 規約確認画面へ移動する。
-   */
-
-  beginUpdate(data);
-
-}
-
-
-/* =========================================
-   更新画面を準備
-========================================= */
-
-function beginUpdate(data){
-
-  inputMode="update";
-
-  updatingId=data.id;
-
-  updatingOldNumber=data.number;
-
-
-  document.getElementById(
-    "inputTitle"
-  ).textContent=
-    "スマートフォン利用規約・更新";
-
-
-  document.getElementById(
-    "name"
-  ).value=
-    data.name;
-
-
-  document.getElementById(
-    "birth"
-  ).value=
-    data.birth;
-
-
-  /*
-   * セキュリティ上、
-   * 旧パスワードを入力欄に表示せず、
-   * 更新時に新しいパスワードを設定する。
-   */
-
-  document.getElementById(
-    "newPassword"
-  ).value="";
-
-
-  document
-    .querySelectorAll(".ruleCheck")
-    .forEach(
-      c=>
-        c.checked=false
-    );
-
-
-  clearSignature();
-
-
-  /*
-   * 元の署名を表示
-   */
-
-  showScreen(
-    "inputScreen"
-  );
-
-
-  setTimeout(
-    function(){
-
-      resizeSignatureCanvas();
-
-      if(data.signature){
-
-        const image=
-          new Image();
-
-
-        image.onload=function(){
-
-          const rect=
-            canvas.getBoundingClientRect();
-
-
-          ctx.drawImage(
-            image,
-            0,
-            0,
-            rect.width,
-            rect.height
+    新規登録と再同意の両方で
+    規約 → 利用者 → 署名
+    の順に確認しているように表示。
+  */
+
+  loading(
+    "規約を確認しています。",
+    1000,
+    ()=>{
+      loading(
+        "利用者情報を確認しています。",
+        1000,
+        ()=>{
+          loading(
+            "署名を確認しています。",
+            1000,
+            ()=>{
+              showConfirm(user);
+            }
           );
-
-
-          signed=true;
-
-          updateButton();
-
-        };
-
-
-        image.src=
-          data.signature;
-
-      }
-
-    },
-    100
-  );
-
-}
-
-
-/* =========================================
-   確認画面
-========================================= */
-
-let confirmationFromNew=false;
-
-let currentConfirmationData=null;
-
-
-function setConfirmation(
-  data,
-  fromNew
-){
-
-  currentConfirmationData=
-    data;
-
-  confirmationFromNew=
-    !!fromNew;
-
-
-  document.getElementById(
-    "confirmationTitle"
-  ).textContent=
-    confirmationFromNew
-      ?"同意内容確認"
-      :"同意状況確認";
-
-
-  document.getElementById(
-    "editAgreementButton"
-  ).style.display=
-    confirmationFromNew
-      ?"block"
-      :"none";
-
-
-  document.getElementById(
-    "confirmationNumber"
-  ).textContent=
-    data.number;
-
-
-  document.getElementById(
-    "resultName"
-  ).textContent=
-    data.name;
-
-
-  document.getElementById(
-    "resultBirth"
-  ).textContent=
-    formatBirth(data.birth);
-
-
-  document.getElementById(
-    "resultAgreementDate"
-  ).textContent=
-    data.agreementDateText;
-
-
-  document.getElementById(
-    "resultExpiryDate"
-  ).textContent=
-    data.expiryDateText;
-
-
-  document.getElementById(
-    "resultSignature"
-  ).src=
-    data.signature;
-
-
-  createRulesStatus(
-    data.rules
-  );
-
-}
-
-
-function editAgreement(){
-
-  if(!confirmationFromNew)
-    return;
-
-
-  showScreen(
-    "inputScreen"
-  );
-
-
-  setTimeout(
-    resizeSignatureCanvas,
-    50
-  );
-
-}
-
-
-/* =========================================
-   規約確認状況
-========================================= */
-
-function createRulesStatus(states){
-
-  const area=
-    document.getElementById(
-      "rulesStatus"
-    );
-
-
-  area.innerHTML="";
-
-
-  rules.forEach(
-    (rule,index)=>{
-
-      const item=
-        document.createElement(
-          "div"
-        );
-
-
-      item.className=
-        "rules-status-item";
-
-
-      const checked=
-        !states||
-        states[index]!==false;
-
-
-      item.innerHTML=`
-
-        <span>
-          ${checked?"✓":"－"}
-        </span>
-
-        第${index+1}条
-        ${escapeHTML(
-          rule.title
-        )}
-
-      `;
-
-
-      area.appendChild(item);
-
+        }
+      );
     }
   );
-
 }
 
+/* =========================================================
+   確認画面
+========================================================= */
 
-/* =========================================
+function showConfirm(user){
+
+  showScreen("screen-confirm");
+
+  const isContinue =
+    currentMode==="continue";
+
+  document.getElementById("confirm-title")
+    .textContent =
+      isContinue
+      ? "同意状況確認"
+      : "同意内容確認";
+
+  document.getElementById("modify-button")
+    .classList.toggle("hidden",isContinue);
+
+  fillConfirm(user,true);
+}
+
+function fillConfirm(user,isNewAgreement){
+
+  const config=getConfig();
+
+  document.getElementById("confirm-name")
+    .textContent=user.name;
+
+  document.getElementById("confirm-birth")
+    .textContent=user.birth;
+
+  document.getElementById("confirm-date")
+    .textContent=
+      formatDateTime(user.agreedAt);
+
+  document.getElementById("confirm-expiry")
+    .textContent=user.expiry;
+
+  document.querySelector(
+    "#screen-confirm .version"
+  ).textContent =
+    `スマートフォン利用規約 Ver.${config.version}`;
+
+  document.getElementById("reagree-message")
+    .classList.toggle(
+      "hidden",
+      Number(user.version) === Number(config.version)
+    );
+}
+
+function modifyAgreement(){
+
+  if(currentMode==="continue"){
+    return;
+  }
+
+  showScreen("screen-user");
+
+  requestAnimationFrame(()=>{
+    setupSignature();
+  });
+}
+
+/* =========================================================
    利用開始
-========================================= */
+========================================================= */
 
 function startUse(){
 
-  showLoading(
+  if(!currentUser){
+    toast("利用者情報がありません","error");
+    return;
+  }
 
-    [
-      "情報を保存しています。"
-    ],
-
+  loading(
+    "情報を保存しています。",
     3000,
+    ()=>{
+      saveCurrentUser();
 
-    function(){
+      addLog(
+        `利用開始：${currentUser.name}（${currentUser.id}）`
+      );
 
-      window.location.href=
-        "https://www.google.com/";
+      document.getElementById("finished-id")
+        .textContent=currentUser.id;
 
+      document.getElementById("finished-expiry")
+        .textContent=currentUser.expiry;
+
+      showScreen("screen-finished");
     }
-
   );
-
 }
 
+function saveCurrentUser(){
 
-/* =========================================
-   読み込み
-========================================= */
+  const users=getUsers();
 
-function showLoading(
-  messages,
-  duration,
-  callback
-){
+  const index =
+    users.findIndex(u=>u.id===currentUser.id);
 
-  const screen=
-    document.getElementById(
-      "loadingScreen"
-    );
+  if(index>=0){
 
-  const bar=
-    document.getElementById(
-      "progressBar"
-    );
+    /*
+      継続利用では古いデータを上書きする。
+      古いデータと新しいデータの2件を残さない。
+    */
 
-  const percent=
-    document.getElementById(
-      "progressPercent"
-    );
+    users[index]=currentUser;
 
-  const message=
-    document.getElementById(
-      "loadingMessage"
-    );
+  }else{
 
-
-  screen.classList.add(
-    "active"
-  );
-
-
-  bar.style.width="0%";
-
-  percent.textContent="0%";
-
-  message.textContent=
-    messages[0];
-
-
-  const startTime=
-    performance.now();
-
-
-  let progress=0;
-
-
-  function tick(){
-
-    const elapsed=
-      performance.now()-
-      startTime;
-
-
-    const ratio=
-      Math.min(
-        elapsed/duration,
-        1
-      );
-
-
-    const messageIndex=
-      Math.min(
-        messages.length-1,
-        Math.floor(
-          ratio*
-          messages.length
-        )
-      );
-
-
-    message.textContent=
-      messages[
-        messageIndex
-      ];
-
-
-    let target;
-
-
-    if(ratio<0.18){
-
-      target=
-        ratio/
-        0.18*
-        14;
-
-    }
-
-    else if(ratio<0.50){
-
-      target=
-        14+
-        (
-          (ratio-0.18)/
-          0.32
-        )*
-        35;
-
-    }
-
-    else if(ratio<0.78){
-
-      target=
-        49+
-        (
-          (ratio-0.50)/
-          0.28
-        )*
-        33;
-
-    }
-
-    else{
-
-      target=
-        82+
-        (
-          (ratio-0.78)/
-          0.22
-        )*
-        18;
-
-    }
-
-
-    if(progress<target){
-
-      progress+=
-        Math.min(
-          target-progress,
-          .2+
-          Math.random()*1.2
-        );
-
-    }
-
-
-    if(ratio<1){
-
-      progress=
-        Math.min(
-          progress,
-          99
-        );
-
-    }
-
-    else{
-
-      progress=100;
-
-    }
-
-
-    const display=
-      Math.floor(progress);
-
-
-    bar.style.width=
-      display+"%";
-
-
-    percent.textContent=
-      display+"%";
-
-
-    if(ratio<1){
-
-      setTimeout(
-        tick,
-        50+
-        Math.random()*70
-      );
-
-      return;
-
-    }
-
-
-    bar.style.width=
-      "100%";
-
-    percent.textContent=
-      "100%";
-
-    message.textContent=
-      "完了しました。";
-
-
-    setTimeout(
-      function(){
-
-        screen.classList.remove(
-          "active"
-        );
-
-        callback();
-
-      },
-      700
-    );
+    users.push(currentUser);
 
   }
 
-
-  tick();
-
+  saveUsers(users);
 }
 
+/* =========================================================
+   利用開始URL
+========================================================= */
 
-/* =========================================
-   管理者ログイン
-========================================= */
+function goToStartUrl(){
+
+  const config=getConfig();
+
+  let url=config.startUrl;
+
+  if(!/^https?:\/\//i.test(url)){
+    url="https://www.google.com/";
+  }
+
+  window.location.href=url;
+}
+
+/* =========================================================
+   ID
+========================================================= */
+
+function generateId(){
+
+  const chars=
+    "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+
+  let result="";
+
+  for(let i=0;i<8;i++){
+    result += chars[
+      Math.floor(Math.random()*chars.length)
+    ];
+  }
+
+  return result;
+}
+
+/* =========================================================
+   管理者
+========================================================= */
 
 function openAdminLogin(){
 
-  document.getElementById(
-    "adminPassword"
-  ).value="";
+  document.getElementById("admin-password").value="";
 
-
-  document.getElementById(
-    "adminLoginError"
-  ).style.display=
-    "none";
-
-
-  showScreen(
-    "adminLoginScreen"
-  );
-
+  showScreen("screen-admin-login");
 }
 
+function adminLogin(){
 
-function backToMenuFromAdminLogin(){
+  const password =
+    document.getElementById("admin-password").value;
 
-  showScreen(
-    "menuScreen"
-  );
+  if(password !== ADMIN_PASSWORD){
 
-}
-
-
-function checkAdminPassword(){
-
-  const password=
-    document.getElementById(
-      "adminPassword"
-    ).value;
-
-
-  const error=
-    document.getElementById(
-      "adminLoginError"
+    toast(
+      "管理者パスワードが違います。",
+      "error"
     );
 
-
-  if(password!==ADMIN_PASSWORD){
-
-    error.textContent=
-      "パスワードが正しくありません。";
-
-    error.style.display=
-      "block";
-
     return;
-
   }
 
+  adminLoggedIn=true;
 
-  showLoading(
+  /*
+    管理情報取得は約3秒。
+  */
 
-    [
-      "登録情報を取得しています。"
-    ],
-
+  loading(
+    "登録情報を取得しています。",
     3000,
-
-    function(){
-
-      renderAdminList();
-
-      showScreen(
-        "adminListScreen"
-      );
-
-    }
-
-  );
-
-}
-
-
-/* =========================================
-   管理者一覧
-========================================= */
-
-function renderAdminList(){
-
-  const area=
-    document.getElementById(
-      "adminList"
-    );
-
-
-  const allData=
-    getAllData();
-
-
-  area.innerHTML="";
-
-
-  if(allData.length===0){
-
-    area.innerHTML=`
-
-      <div class="admin-empty">
-
-        保存されている登録情報はありません。
-
-      </div>
-
-    `;
-
-    return;
-
-  }
-
-
-  [...allData]
-    .reverse()
-    .forEach(
-      data=>{
-
-        const item=
-          document.createElement(
-            "div"
-          );
-
-
-        item.className=
-          "admin-list-item";
-
-
-        item.innerHTML=`
-
-          <div class="admin-list-name">
-
-            ${escapeHTML(
-              data.name
-            )}
-
-          </div>
-
-
-          <div class="admin-list-number">
-
-            確認番号：
-            ${escapeHTML(
-              data.number
-            )}
-
-          </div>
-
-
-          <div class="admin-list-expiry">
-
-            有効期限：
-            ${escapeHTML(
-              data.expiryDateText
-            )}
-
-          </div>
-
-
-          <div class="admin-list-password">
-
-            利用パスワード：
-            ${escapeHTML(
-              data.password
-            )}
-
-          </div>
-
-        `;
-
-
-        item.onclick=
-          function(){
-
-            openAdminEdit(
-              data.id
-            );
-
-          };
-
-
-        area.appendChild(
-          item
-        );
-
-      }
-    );
-
-}
-
-
-/* =========================================
-   管理者編集
-========================================= */
-
-let currentAdminId=null;
-
-const adminSignatureCanvas=
-  document.getElementById(
-    "adminSignatureCanvas"
-  );
-
-const adminSignatureCtx=
-  adminSignatureCanvas
-    .getContext("2d");
-
-let adminDrawing=false;
-
-let adminSignatureEdited=false;
-
-
-function setupAdminCanvas(){
-
-  const rect=
-    adminSignatureCanvas
-      .getBoundingClientRect();
-
-
-  if(
-    rect.width<=0||
-    rect.height<=0
-  )
-    return;
-
-
-  const ratio=
-    Math.max(
-      window.devicePixelRatio||1,
-      1
-    );
-
-
-  adminSignatureCanvas.width=
-    Math.round(
-      rect.width*ratio
-    );
-
-
-  adminSignatureCanvas.height=
-    Math.round(
-      rect.height*ratio
-    );
-
-
-  adminSignatureCtx.setTransform(
-    ratio,
-    0,
-    0,
-    ratio,
-    0,
-    0
-  );
-
-
-  adminSignatureCtx.strokeStyle=
-    "#111";
-
-  adminSignatureCtx.fillStyle=
-    "#111";
-
-  adminSignatureCtx.lineWidth=
-    2.5;
-
-  adminSignatureCtx.lineCap=
-    "round";
-
-  adminSignatureCtx.lineJoin=
-    "round";
-
-}
-
-
-function adminGetPosition(e){
-
-  const rect=
-    adminSignatureCanvas
-      .getBoundingClientRect();
-
-
-  return{
-
-    x:
-      e.clientX-
-      rect.left,
-
-    y:
-      e.clientY-
-      rect.top
-
-  };
-
-}
-
-
-function adminStartDrawing(e){
-
-  e.preventDefault();
-
-  adminDrawing=true;
-
-  adminSignatureEdited=true;
-
-
-  if(e.pointerId!==undefined){
-
-    try{
-
-      adminSignatureCanvas
-        .setPointerCapture(
-          e.pointerId
-        );
-
-    }
-    catch(error){}
-
-  }
-
-
-  const p=
-    adminGetPosition(e);
-
-
-  adminSignatureCtx.beginPath();
-
-  adminSignatureCtx.moveTo(
-    p.x,
-    p.y
-  );
-
-
-  adminSignatureCtx.arc(
-    p.x,
-    p.y,
-    1.25,
-    0,
-    Math.PI*2
-  );
-
-
-  adminSignatureCtx.fill();
-
-}
-
-
-function adminDraw(e){
-
-  if(!adminDrawing)
-    return;
-
-
-  e.preventDefault();
-
-
-  const p=
-    adminGetPosition(e);
-
-
-  adminSignatureCtx.lineTo(
-    p.x,
-    p.y
-  );
-
-
-  adminSignatureCtx.stroke();
-
-
-  adminSignatureCtx.beginPath();
-
-  adminSignatureCtx.moveTo(
-    p.x,
-    p.y
-  );
-
-}
-
-
-function adminStopDrawing(){
-
-  if(!adminDrawing)
-    return;
-
-
-  adminDrawing=false;
-
-  adminSignatureCtx.closePath();
-
-}
-
-
-adminSignatureCanvas.addEventListener(
-  "pointerdown",
-  adminStartDrawing,
-  {passive:false}
-);
-
-adminSignatureCanvas.addEventListener(
-  "pointermove",
-  adminDraw,
-  {passive:false}
-);
-
-adminSignatureCanvas.addEventListener(
-  "pointerup",
-  adminStopDrawing,
-  {passive:false}
-);
-
-adminSignatureCanvas.addEventListener(
-  "pointercancel",
-  adminStopDrawing,
-  {passive:false}
-);
-
-
-function clearAdminSignature(){
-
-  adminSignatureCtx.clearRect(
-    0,
-    0,
-    adminSignatureCanvas.width,
-    adminSignatureCanvas.height
-  );
-
-
-  adminSignatureEdited=true;
-
-}
-
-
-/* =========================================
-   管理者編集画面
-========================================= */
-
-function openAdminEdit(id){
-
-  const allData=
-    getAllData();
-
-
-  const data=
-    allData.find(
-      item=>
-        item.id===id
-    );
-
-
-  if(!data)
-    return;
-
-
-  currentAdminId=id;
-
-
-  document.getElementById(
-    "adminNumber"
-  ).value=
-    data.number;
-
-
-  document.getElementById(
-    "adminName"
-  ).value=
-    data.name;
-
-
-  document.getElementById(
-    "adminBirth"
-  ).value=
-    data.birth;
-
-
-  document.getElementById(
-    "adminAgreementDate"
-  ).value=
-    data.agreementDate;
-
-
-  document.getElementById(
-    "adminExpiryDate"
-  ).value=
-    data.expiryDate;
-
-
-  document.getElementById(
-    "adminUserPassword"
-  ).value=
-    data.password;
-
-
-  renderAdminRules(
-    data.rules
-  );
-
-
-  showScreen(
-    "adminEditScreen"
-  );
-
-
-  setTimeout(
-    function(){
-
-      setupAdminCanvas();
-
-      adminSignatureEdited=false;
-
-
-      adminSignatureCtx.clearRect(
-        0,
-        0,
-        adminSignatureCanvas.width,
-        adminSignatureCanvas.height
-      );
-
-
-      if(data.signature){
-
-        const image=
-          new Image();
-
-
-        image.onload=
-          function(){
-
-            const rect=
-              adminSignatureCanvas
-                .getBoundingClientRect();
-
-
-            adminSignatureCtx.drawImage(
-              image,
-              0,
-              0,
-              rect.width,
-              rect.height
-            );
-
-          };
-
-
-        image.src=
-          data.signature;
-
-      }
-
-    },
-    50
-  );
-
-}
-
-
-/* =========================================
-   管理者規約
-========================================= */
-
-function renderAdminRules(states){
-
-  const area=
-    document.getElementById(
-      "adminRules"
-    );
-
-
-  area.innerHTML="";
-
-
-  rules.forEach(
-    (rule,index)=>{
-
-      const div=
-        document.createElement(
-          "div"
-        );
-
-
-      div.className=
-        "admin-rule-edit";
-
-
-      const checked=
-        !states||
-        states[index]!==false;
-
-
-      div.innerHTML=`
-
-        <label>
-
-          <input
-            type="checkbox"
-            class="adminRuleCheck"
-            data-index="${index}"
-            ${checked?"checked":""}
-          >
-
-          <span>
-
-            第${index+1}条　
-            ${escapeHTML(
-              rule.title
-            )}
-
-          </span>
-
-        </label>
-
-      `;
-
-
-      area.appendChild(
-        div
-      );
-
+    ()=>{
+      showAdmin();
     }
   );
-
 }
-
-
-/* =========================================
-   管理者保存
-========================================= */
-
-function saveAdminEdit(){
-
-  if(!currentAdminId)
-    return;
-
-
-  const allData=
-    getAllData();
-
-
-  const index=
-    allData.findIndex(
-      item=>
-        item.id===
-        currentAdminId
-    );
-
-
-  if(index===-1)
-    return;
-
-
-  const data=
-    allData[index];
-
-
-  const number=
-    document.getElementById(
-      "adminNumber"
-    ).value.trim();
-
-
-  const name=
-    document.getElementById(
-      "adminName"
-    ).value.trim();
-
-
-  const birth=
-    document.getElementById(
-      "adminBirth"
-    ).value;
-
-
-  const agreement=
-    document.getElementById(
-      "adminAgreementDate"
-    ).value;
-
-
-  const expiry=
-    document.getElementById(
-      "adminExpiryDate"
-    ).value;
-
-
-  const password=
-    document.getElementById(
-      "adminUserPassword"
-    ).value;
-
-
-  const error=
-    document.getElementById(
-      "adminEditError"
-    );
-
-
-  error.style.display="none";
-
-
-  if(
-    !number||
-    !name||
-    !birth||
-    !agreement||
-    !expiry||
-    !password
-  ){
-
-    error.textContent=
-      "必要な項目をすべて入力してください。";
-
-    error.style.display=
-      "block";
-
-    return;
-
-  }
-
-
-  if(password.length<4){
-
-    error.textContent=
-      "利用パスワードは4文字以上にしてください。";
-
-    error.style.display=
-      "block";
-
-    return;
-
-  }
-
-
-  data.number=
-    number;
-
-
-  data.name=
-    name;
-
-
-  data.birth=
-    birth;
-
-
-  data.password=
-    password;
-
-
-  data.agreementDate=
-    agreement;
-
-
-  data.expiryDate=
-    expiry;
-
-
-  const agreementDate=
-    new Date(
-      agreement+
-      "T00:00:00"
-    );
-
-
-  const expiryDate=
-    new Date(
-      expiry+
-      "T00:00:00"
-    );
-
-
-  if(!isNaN(
-    agreementDate.getTime()
-  )){
-
-    data.agreementDateText=
-      formatDateJP(
-        agreementDate
-      );
-
-  }
-
-
-  if(!isNaN(
-    expiryDate.getTime()
-  )){
-
-    data.expiryDateText=
-      formatDateJP(
-        expiryDate
-      );
-
-  }
-
-
-  data.rules=
-    [
-      ...document.querySelectorAll(
-        ".adminRuleCheck"
-      )
-    ].map(
-      checkbox=>
-        checkbox.checked
-    );
-
-
-  if(adminSignatureEdited){
-
-    data.signature=
-      adminSignatureCanvas
-        .toDataURL(
-          "image/png"
-        );
-
-  }
-
-
-  allData[index]=data;
-
-
-  saveAllData(
-    allData
-  );
-
-
-  showLoading(
-
-    [
-      "情報を保存しています。"
-    ],
-
-    3000,
-
-    function(){
-
-      renderAdminList();
-
-      showScreen(
-        "adminListScreen"
-      );
-
-    }
-
-  );
-
-}
-
-
-/* =========================================
-   削除
-========================================= */
-
-function showDeleteConfirmation(){
-
-  if(!currentAdminId)
-    return;
-
-
-  const allData=
-    getAllData();
-
-
-  const data=
-    allData.find(
-      item=>
-        item.id===
-        currentAdminId
-    );
-
-
-  if(!data)
-    return;
-
-
-  document.getElementById(
-    "deleteConfirmName"
-  ).textContent=
-    data.name;
-
-
-  document.getElementById(
-    "deleteConfirmNumber"
-  ).textContent=
-    "確認番号："+data.number;
-
-
-  showScreen(
-    "deleteConfirmScreen"
-  );
-
-}
-
-
-function cancelDelete(){
-
-  showScreen(
-    "adminEditScreen"
-  );
-
-}
-
-
-function executeDelete(){
-
-  if(!currentAdminId)
-    return;
-
-
-  const allData=
-    getAllData();
-
-
-  const newData=
-    allData.filter(
-      item=>
-        item.id!==
-        currentAdminId
-    );
-
-
-  saveAllData(
-    newData
-  );
-
-
-  currentAdminId=null;
-
-
-  showLoading(
-
-    [
-      "登録情報を削除しています。"
-    ],
-
-    3000,
-
-    function(){
-
-      renderAdminList();
-
-      showScreen(
-        "adminListScreen"
-      );
-
-    }
-
-  );
-
-}
-
-
-/* =========================================
-   管理者戻る
-========================================= */
-
-function backToAdminList(){
-
-  currentAdminId=null;
-
-  renderAdminList();
-
-  showScreen(
-    "adminListScreen"
-  );
-
-}
-
 
 function adminLogout(){
 
-  currentAdminId=null;
+  adminLoggedIn=false;
+  selectedUserId=null;
 
-  document.getElementById(
-    "adminPassword"
-  ).value="";
-
-
-  showScreen(
-    "menuScreen"
-  );
-
+  showScreen("screen-menu");
 }
 
+function showAdmin(){
 
-/* =========================================
-   全画面
-========================================= */
+  if(!adminLoggedIn){
+    showScreen("screen-admin-login");
+    return;
+  }
 
-function toggleFullscreen(){
+  const config=getConfig();
 
-  if(document.fullscreenElement){
+  document.getElementById("start-url-input")
+    .value=config.startUrl;
 
-    document
-      .exitFullscreen()
-      .catch(
-        function(){
+  document.getElementById("version-input")
+    .value=config.version;
 
-          showGlobalNotice(
-            "全画面表示",
-            "全画面表示を終了できませんでした。"
+  renderUsers();
+  renderLogs();
+
+  showScreen("screen-admin");
+}
+
+/* =========================================================
+   URL
+========================================================= */
+
+function saveStartUrl(){
+
+  const input =
+    document.getElementById("start-url-input");
+
+  let url=input.value.trim();
+
+  if(!/^https?:\/\//i.test(url)){
+
+    toast(
+      "http:// または https:// から始まるURLを入力してください。",
+      "error"
+    );
+
+    return;
+  }
+
+  const config=getConfig();
+
+  config.startUrl=url;
+
+  loading(
+    "設定を保存しています。",
+    2000,
+    ()=>{
+      saveConfig(config);
+
+      addLog(
+        "利用開始後URLを変更"
+      );
+
+      showAdmin();
+
+      toast(
+        "URLを保存しました。",
+        "success"
+      );
+    }
+  );
+}
+
+/* =========================================================
+   一覧
+========================================================= */
+
+function renderUsers(){
+
+  const list=
+    document.getElementById("user-list");
+
+  if(!list) return;
+
+  let users=getUsers();
+
+  const search=
+    document.getElementById("search-input")
+      ?.value.trim()
+      .toLowerCase() || "";
+
+  if(search){
+
+    users=users.filter(u=>{
+
+      const text=[
+        u.name,
+        u.birth,
+        u.id,
+        u.expiry,
+        u.version
+      ].join(" ").toLowerCase();
+
+      return text.includes(search);
+    });
+  }
+
+  const sort=
+    document.getElementById("sort-select")
+      ?.value || "new";
+
+  users.sort((a,b)=>{
+
+    if(sort==="name"){
+      return a.name.localeCompare(
+        b.name,
+        "ja"
+      );
+    }
+
+    if(sort==="expiry"){
+      return a.expiry.localeCompare(
+        b.expiry
+      );
+    }
+
+    if(sort==="old"){
+      return new Date(a.createdAt) -
+             new Date(b.createdAt);
+    }
+
+    return new Date(b.createdAt) -
+           new Date(a.createdAt);
+  });
+
+  list.innerHTML="";
+
+  if(users.length===0){
+
+    list.innerHTML=
+      "<div class='confirm-box'>該当する登録情報はありません。</div>";
+
+  }else{
+
+    users.forEach(user=>{
+
+      const item=
+        document.createElement("div");
+
+      item.className="user-item";
+
+      const days=
+        daysUntil(user.expiry);
+
+      let statusClass="valid";
+      let statusText="有効";
+
+      if(Number(user.version)!==
+         Number(getConfig().version)){
+
+        statusClass="reagree";
+        statusText="再同意必要";
+
+      }else if(days<0){
+
+        statusClass="expired";
+        statusText="期限切れ";
+
+      }else if(days<=5){
+
+        statusClass="soon";
+        statusText=`期限まで${days}日`;
+
+      }
+
+      item.innerHTML=`
+        <div class="user-name">
+          ${escapeHtml(user.name)}
+        </div>
+
+        <div>
+          登録番号：
+          ${escapeHtml(user.id)}
+        </div>
+
+        <div>
+          有効期限：
+          ${escapeHtml(user.expiry)}
+        </div>
+
+        <span class="status ${statusClass}">
+          ${statusText}
+        </span>
+      `;
+
+      item.onclick=()=>{
+        openUserEditor(user.id);
+      };
+
+      list.appendChild(item);
+    });
+  }
+
+  updateStats();
+}
+
+/* =========================================================
+   統計
+========================================================= */
+
+function updateStats(){
+
+  const users=getUsers();
+
+  let valid=0;
+  let soon=0;
+  let expired=0;
+
+  const config=getConfig();
+
+  users.forEach(u=>{
+
+    const days=daysUntil(u.expiry);
+
+    if(
+      Number(u.version)!==
+      Number(config.version)
+    ){
+      return;
+    }
+
+    if(days<0){
+      expired++;
+    }else if(days<=5){
+      soon++;
+    }else{
+      valid++;
+    }
+  });
+
+  document.getElementById("stat-total")
+    .textContent=users.length;
+
+  document.getElementById("stat-valid")
+    .textContent=valid;
+
+  document.getElementById("stat-soon")
+    .textContent=soon;
+
+  document.getElementById("stat-expired")
+    .textContent=expired;
+}
+
+/* =========================================================
+   HTMLエスケープ
+========================================================= */
+
+function escapeHtml(value){
+
+  return String(value ?? "")
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+}
+
+/* =========================================================
+   編集
+========================================================= */
+
+function openUserEditor(id){
+
+  if(!adminLoggedIn) return;
+
+  const user=
+    getUsers().find(u=>u.id===id);
+
+  if(!user) return;
+
+  selectedUserId=id;
+
+  document.getElementById("edit-id").value=id;
+  document.getElementById("edit-display-id")
+    .textContent=id;
+
+  document.getElementById("edit-name")
+    .value=user.name || "";
+
+  document.getElementById("edit-birth")
+    .value=user.birth || "";
+
+  document.getElementById("edit-password")
+    .value=user.password || "";
+
+  document.getElementById("edit-expiry")
+    .value=user.expiry || "";
+
+  document.getElementById("edit-version")
+    .value=user.version || 1;
+
+  document.getElementById("edit-created")
+    .textContent=formatDateTime(
+      user.createdAt
+    );
+
+  document.getElementById("edit-agreed")
+    .textContent=formatDateTime(
+      user.agreedAt
+    );
+
+  document.getElementById("edit-signature-status")
+    .textContent=
+      user.signature
+      ? "署名済み"
+      : "未署名";
+
+  document.getElementById("user-modal")
+    .classList.remove("hidden");
+}
+
+function closeModal(){
+
+  document.getElementById("user-modal")
+    .classList.add("hidden");
+
+  selectedUserId=null;
+}
+
+function saveEditedUser(){
+
+  const id=selectedUserId;
+
+  if(!id) return;
+
+  const users=getUsers();
+
+  const index=
+    users.findIndex(u=>u.id===id);
+
+  if(index<0){
+    closeModal();
+    return;
+  }
+
+  const old=users[index];
+
+  const updated={
+    ...old,
+    name:
+      document.getElementById("edit-name")
+        .value.trim(),
+
+    birth:
+      document.getElementById("edit-birth")
+        .value,
+
+    password:
+      document.getElementById("edit-password")
+        .value,
+
+    expiry:
+      document.getElementById("edit-expiry")
+        .value,
+
+    version:
+      Number(
+        document.getElementById("edit-version")
+          .value
+      )
+  };
+
+  if(
+    !updated.name ||
+    !updated.birth ||
+    !updated.password ||
+    !updated.expiry
+  ){
+
+    toast(
+      "必要な項目を入力してください。",
+      "error"
+    );
+
+    return;
+  }
+
+  users[index]=updated;
+
+  /*
+    HTML alertは使用しない。
+    新規登録と同じ読み込み画面を使用。
+  */
+
+  loading(
+    "情報を保存しています。",
+    2000,
+    ()=>{
+      saveUsers(users);
+
+      addLog(
+        `利用者データを変更：${updated.name}（${id}）`
+      );
+
+      closeModal();
+      showAdmin();
+
+      toast(
+        "変更しました。",
+        "success"
+      );
+    }
+  );
+}
+
+/* =========================================================
+   削除
+========================================================= */
+
+function deleteSelectedUser(){
+
+  const id=selectedUserId;
+
+  if(!id) return;
+
+  const users=getUsers();
+
+  const user=
+    users.find(u=>u.id===id);
+
+  if(!user) return;
+
+  /*
+    確認画面をHTMLで表示。
+    window.alertは使用しない。
+  */
+
+  showDeleteConfirm(user);
+}
+
+function showDeleteConfirm(user){
+
+  const modal=
+    document.getElementById("user-modal");
+
+  const card=
+    modal.querySelector(".modal-card");
+
+  card.dataset.original=card.innerHTML;
+
+  card.innerHTML=`
+    <div class="modal-title">
+      データ削除確認
+    </div>
+
+    <div class="warning">
+      ${escapeHtml(user.name)} の登録情報を削除します。
+      この操作は元に戻せません。
+    </div>
+
+    <div class="row">
+      <button class="btn red"
+              onclick="reallyDeleteUser('${escapeHtml(user.id)}')">
+        削除する
+      </button>
+
+      <button class="btn secondary"
+              onclick="restoreEditModal()">
+        戻る
+      </button>
+    </div>
+  `;
+}
+
+function restoreEditModal(){
+
+  closeModal();
+
+  if(selectedUserId){
+    openUserEditor(selectedUserId);
+  }
+}
+
+function reallyDeleteUser(id){
+
+  let users=getUsers();
+
+  const user=
+    users.find(u=>u.id===id);
+
+  users=
+    users.filter(u=>u.id!==id);
+
+  loading(
+    "情報を削除しています。",
+    2000,
+    ()=>{
+      saveUsers(users);
+
+      addLog(
+        `利用者データを削除：${user?.name || id}（${id}）`
+      );
+
+      closeModal();
+      showAdmin();
+
+      toast(
+        "削除しました。",
+        "success"
+      );
+    }
+  );
+}
+
+/* =========================================================
+   規約Ver変更
+========================================================= */
+
+function changeVersion(){
+
+  const input=
+    document.getElementById("version-input");
+
+  const newVersion=
+    Number(input.value);
+
+  if(
+    !Number.isInteger(newVersion) ||
+    newVersion<1
+  ){
+
+    toast(
+      "正しいVer番号を入力してください。",
+      "error"
+    );
+
+    return;
+  }
+
+  const config=getConfig();
+
+  if(newVersion===Number(config.version)){
+
+    toast(
+      "現在と同じVerです。",
+      "error"
+    );
+
+    return;
+  }
+
+  /*
+    規約Verを上げるだけで、過去の同意を消さない。
+    一覧側で「再同意必要」と判断する。
+  */
+
+  loading(
+    "規約を更新しています。",
+    2000,
+    ()=>{
+
+      config.version=newVersion;
+
+      saveConfig(config);
+
+      addLog(
+        `規約バージョン変更：Ver.${newVersion}`
+      );
+
+      showAdmin();
+
+      toast(
+        `Ver.${newVersion}に変更しました。`,
+        "success"
+      );
+    }
+  );
+}
+
+/* =========================================================
+   操作履歴
+========================================================= */
+
+function renderLogs(){
+
+  const list=
+    document.getElementById("log-list");
+
+  if(!list) return;
+
+  const logs=getLogs();
+
+  list.innerHTML="";
+
+  if(logs.length===0){
+
+    list.innerHTML=
+      "<div class='log'>操作履歴はありません。</div>";
+
+    return;
+  }
+
+  logs.forEach(log=>{
+
+    const div=
+      document.createElement("div");
+
+    div.className="log";
+
+    div.textContent=
+      `${formatDateTime(log.time)}　${log.message}`;
+
+    list.appendChild(div);
+  });
+}
+
+function clearLogs(){
+
+  loading(
+    "操作履歴を削除しています。",
+    2000,
+    ()=>{
+      saveLogs([]);
+
+      addLog(
+        "操作履歴を削除"
+      );
+
+      renderLogs();
+
+      toast(
+        "操作履歴を削除しました。",
+        "success"
+      );
+    }
+  );
+}
+
+/* =========================================================
+   Web Crypto API
+   AES-GCM + PBKDF2
+========================================================= */
+
+const CRYPTO_PREFIX="SFD1:";
+
+function textToBytes(text){
+  return new TextEncoder().encode(text);
+}
+
+function bytesToBase64(bytes){
+
+  let binary="";
+
+  const chunk=0x8000;
+
+  for(
+    let i=0;
+    i<bytes.length;
+    i+=chunk
+  ){
+
+    binary += String.fromCharCode(
+      ...bytes.subarray(
+        i,
+        Math.min(i+chunk,bytes.length)
+      )
+    );
+  }
+
+  return btoa(binary);
+}
+
+function base64ToBytes(base64){
+
+  const binary=atob(base64);
+
+  const bytes=
+    new Uint8Array(binary.length);
+
+  for(let i=0;i<binary.length;i++){
+    bytes[i]=binary.charCodeAt(i);
+  }
+
+  return bytes;
+}
+
+async function deriveKey(password,salt){
+
+  const material=
+    await crypto.subtle.importKey(
+      "raw",
+      textToBytes(password),
+      "PBKDF2",
+      false,
+      ["deriveKey"]
+    );
+
+  return crypto.subtle.deriveKey(
+    {
+      name:"PBKDF2",
+      salt:salt,
+      iterations:250000,
+      hash:"SHA-256"
+    },
+    material,
+    {
+      name:"AES-GCM",
+      length:256
+    },
+    false,
+    ["encrypt","decrypt"]
+  );
+}
+
+async function encryptString(plain,password){
+
+  const salt=
+    crypto.getRandomValues(
+      new Uint8Array(16)
+    );
+
+  const iv=
+    crypto.getRandomValues(
+      new Uint8Array(12)
+    );
+
+  const key=
+    await deriveKey(
+      password,
+      salt
+    );
+
+  const encrypted=
+    await crypto.subtle.encrypt(
+      {
+        name:"AES-GCM",
+        iv:iv
+      },
+      key,
+      textToBytes(plain)
+    );
+
+  const encryptedBytes=
+    new Uint8Array(encrypted);
+
+  return [
+    CRYPTO_PREFIX,
+    bytesToBase64(salt),
+    ".",
+    bytesToBase64(iv),
+    ".",
+    bytesToBase64(encryptedBytes)
+  ].join("");
+}
+
+async function decryptString(cipher,password){
+
+  if(!cipher.startsWith(CRYPTO_PREFIX)){
+    throw new Error("形式が違います");
+  }
+
+  const body=
+    cipher.slice(CRYPTO_PREFIX.length);
+
+  const parts=body.split(".");
+
+  if(parts.length!==3){
+    throw new Error("暗号データが壊れています");
+  }
+
+  const salt=
+    base64ToBytes(parts[0]);
+
+  const iv=
+    base64ToBytes(parts[1]);
+
+  const encrypted=
+    base64ToBytes(parts[2]);
+
+  const key=
+    await deriveKey(
+      password,
+      salt
+    );
+
+  const decrypted=
+    await crypto.subtle.decrypt(
+      {
+        name:"AES-GCM",
+        iv:iv
+      },
+      key,
+      encrypted
+    );
+
+  return new TextDecoder().decode(decrypted);
+}
+
+/* =========================================================
+   データ移行
+========================================================= */
+
+function getExportPassword(){
+
+  /*
+    今回は管理者パスワードを暗号化キーの元にする。
+    本格運用ではユーザーが別途入力する移行用パスワード
+    に変更することを推奨。
+  */
+
+  return ADMIN_PASSWORD;
+}
+
+async function exportSelected(){
+
+  if(!selectedUserId){
+
+    /*
+      選択中がなければ一覧から選ぶよう案内。
+    */
+
+    toast(
+      "先に一覧から利用者を選択してください。",
+      "error"
+    );
+
+    return;
+  }
+
+  const user=
+    getUsers().find(
+      u=>u.id===selectedUserId
+    );
+
+  if(!user) return;
+
+  const payload={
+    type:"single-user",
+    version:1,
+    exportedAt:new Date().toISOString(),
+    data:user
+  };
+
+  try{
+
+    const encrypted=
+      await encryptString(
+        JSON.stringify(payload),
+        getExportPassword()
+      );
+
+    document.getElementById("data-output")
+      .value=encrypted;
+
+    addLog(
+      `利用者データを暗号化出力：${user.id}`
+    );
+
+    toast(
+      "暗号化しました。",
+      "success"
+    );
+
+  }catch(e){
+
+    toast(
+      "暗号化に失敗しました。",
+      "error"
+    );
+  }
+}
+
+async function exportAll(){
+
+  const payload={
+    type:"all-users",
+    version:1,
+    exportedAt:new Date().toISOString(),
+    data:getUsers()
+  };
+
+  try{
+
+    const encrypted=
+      await encryptString(
+        JSON.stringify(payload),
+        getExportPassword()
+      );
+
+    document.getElementById("data-output")
+      .value=encrypted;
+
+    addLog(
+      "全利用者データを暗号化出力"
+    );
+
+    toast(
+      "全利用者データを暗号化しました。",
+      "success"
+    );
+
+  }catch(e){
+
+    toast(
+      "暗号化に失敗しました。",
+      "error"
+    );
+  }
+}
+
+async function exportStorage(){
+
+  const data={};
+
+  for(let i=0;i<localStorage.length;i++){
+
+    const key=
+      localStorage.key(i);
+
+    data[key]=
+      localStorage.getItem(key);
+  }
+
+  const payload={
+    type:"local-storage",
+    version:1,
+    exportedAt:new Date().toISOString(),
+    data:data
+  };
+
+  try{
+
+    const encrypted=
+      await encryptString(
+        JSON.stringify(payload),
+        getExportPassword()
+      );
+
+    document.getElementById("data-output")
+      .value=encrypted;
+
+    addLog(
+      "LocalStorage全体を暗号化出力"
+    );
+
+    toast(
+      "LocalStorageを暗号化しました。",
+      "success"
+    );
+
+  }catch(e){
+
+    toast(
+      "暗号化に失敗しました。",
+      "error"
+    );
+  }
+}
+
+async function copyData(){
+
+  const text=
+    document.getElementById("data-output")
+      .value;
+
+  if(!text){
+
+    toast(
+      "コピーするデータがありません。",
+      "error"
+    );
+
+    return;
+  }
+
+  try{
+
+    await navigator.clipboard.writeText(text);
+
+    toast(
+      "暗号化データをコピーしました。",
+      "success"
+    );
+
+  }catch(e){
+
+    /*
+      Clipboard APIが使えない場合の代替。
+    */
+
+    const textarea=
+      document.getElementById("data-output");
+
+    textarea.focus();
+    textarea.select();
+
+    document.execCommand("copy");
+
+    toast(
+      "暗号化データをコピーしました。",
+      "success"
+    );
+  }
+}
+
+async function importData(){
+
+  const text=
+    document.getElementById("data-output")
+      .value.trim();
+
+  if(!text){
+
+    toast(
+      "復元するデータを入力してください。",
+      "error"
+    );
+
+    return;
+  }
+
+  try{
+
+    const decrypted=
+      await decryptString(
+        text,
+        getExportPassword()
+      );
+
+    const payload=
+      JSON.parse(decrypted);
+
+    if(payload.type==="single-user"){
+
+      const users=getUsers();
+
+      const index=
+        users.findIndex(
+          u=>u.id===payload.data.id
+        );
+
+      if(index>=0){
+        users[index]=payload.data;
+      }else{
+        users.push(payload.data);
+      }
+
+      loading(
+        "データを復元しています。",
+        2000,
+        ()=>{
+          saveUsers(users);
+
+          addLog(
+            `利用者データを復元：${payload.data.id}`
           );
 
+          showAdmin();
+
+          toast(
+            "復元しました。",
+            "success"
+          );
         }
       );
 
-    return;
+      return;
+    }
 
-  }
+    if(payload.type==="all-users"){
 
-
-  if(
-    !document.documentElement
-      .requestFullscreen
-  ){
-
-    showGlobalNotice(
-      "全画面表示",
-      "このブラウザでは全画面表示に対応していません。"
-    );
-
-    return;
-
-  }
-
-
-  document
-    .documentElement
-    .requestFullscreen()
-    .catch(
-      function(){
-
-        showGlobalNotice(
-          "全画面表示",
-          "ブラウザの設定により全画面表示を開始できませんでした。"
-        );
-
+      if(!Array.isArray(payload.data)){
+        throw new Error("不正なデータ");
       }
+
+      loading(
+        "データを復元しています。",
+        2000,
+        ()=>{
+          saveUsers(payload.data);
+
+          addLog(
+            "全利用者データを復元"
+          );
+
+          showAdmin();
+
+          toast(
+            "全データを復元しました。",
+            "success"
+          );
+        }
+      );
+
+      return;
+    }
+
+    if(payload.type==="local-storage"){
+
+      if(
+        !payload.data ||
+        typeof payload.data!=="object"
+      ){
+        throw new Error("不正なデータ");
+      }
+
+      loading(
+        "LocalStorageを復元しています。",
+        2000,
+        ()=>{
+
+          /*
+            アプリのデータを復元。
+          */
+
+          Object.entries(
+            payload.data
+          ).forEach(([key,value])=>{
+            localStorage.setItem(
+              key,
+              value
+            );
+          });
+
+          addLog(
+            "LocalStorage全体を復元"
+          );
+
+          showAdmin();
+
+          toast(
+            "LocalStorageを復元しました。",
+            "success"
+          );
+        }
+      );
+
+      return;
+    }
+
+    throw new Error(
+      "対応していないデータ形式です"
     );
 
-}
+  }catch(e){
 
-
-/* =========================================
-   画面内通知
-========================================= */
-
-function showGlobalNotice(
-  title,
-  text
-){
-
-  document.getElementById(
-    "globalNoticeTitle"
-  ).textContent=
-    title;
-
-
-  document.getElementById(
-    "globalNoticeText"
-  ).textContent=
-    text;
-
-
-  document.getElementById(
-    "globalNoticeButton"
-  ).style.display=
-    "block";
-
-
-  document.getElementById(
-    "globalNotice"
-  ).classList.add(
-    "active"
-  );
-
-}
-
-
-function closeGlobalNotice(){
-
-  document.getElementById(
-    "globalNotice"
-  ).classList.remove(
-    "active"
-  );
-
-}
-
-
-/* =========================================
-   HTMLエスケープ
-========================================= */
-
-function escapeHTML(value){
-
-  return String(value)
-
-    .replaceAll(
-      "&",
-      "&amp;"
-    )
-
-    .replaceAll(
-      "<",
-      "&lt;"
-    )
-
-    .replaceAll(
-      ">",
-      "&gt;"
-    )
-
-    .replaceAll(
-      '"',
-      "&quot;"
-    )
-
-    .replaceAll(
-      "'",
-      "&#039;"
+    toast(
+      "復元できません。暗号化データまたは鍵が正しいか確認してください。",
+      "error"
     );
-
+  }
 }
+
+/* =========================================================
+   起動
+========================================================= */
+
+function initialize(){
+
+  /*
+    初期設定
+  */
+
+  if(!localStorage.getItem(STORAGE_CONFIG)){
+
+    saveConfig({
+      startUrl:"https://www.google.com/",
+      version:APP_VERSION
+    });
+  }
+
+  if(!localStorage.getItem(STORAGE_USERS)){
+    saveUsers([]);
+  }
+
+  if(!localStorage.getItem(STORAGE_LOGS)){
+    saveLogs([]);
+  }
+
+  showScreen("screen-menu");
+}
+
+window.addEventListener(
+  "resize",
+  ()=>{
+    if(
+      !document
+        .getElementById("screen-user")
+        .classList.contains("hidden")
+    ){
+      /*
+        署名Canvasのリサイズ時に
+        既存の署名を不用意に消さないため、
+        ここでは再生成しない。
+      */
+    }
+  }
+);
+
+initialize();
 
 </script>
 
