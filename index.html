@@ -2,10 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width,initial-scale=1,viewport-fit=cover">
-
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#17202a">
@@ -13,13 +10,9 @@
 <title>スマートフォン利用規約</title>
 
 <style>
+*{box-sizing:border-box}
 
-*{
-  box-sizing:border-box;
-}
-
-html,
-body{
+html,body{
   margin:0;
   padding:0;
   min-height:100%;
@@ -28,22 +21,14 @@ body{
 body{
   background:#eef0f3;
   color:#202124;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Noto Sans JP",
-    "Yu Gothic",
-    sans-serif;
+  font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Yu Gothic",sans-serif;
 }
 
 .header{
   background:#17202a;
   color:white;
   text-align:center;
-  padding:
-    calc(12px + env(safe-area-inset-top))
-    14px
-    12px;
+  padding:calc(12px + env(safe-area-inset-top)) 14px 12px;
 }
 
 .header h1{
@@ -62,9 +47,7 @@ body{
   min-height:calc(100vh - 80px);
 }
 
-.screen.active{
-  display:block;
-}
+.screen.active{display:block}
 
 .container{
   width:min(850px,calc(100% - 14px));
@@ -213,9 +196,27 @@ textarea{
 }
 
 textarea{
+  min-height:90px;
   resize:vertical;
-  min-height:80px;
-  font-family:inherit;
+}
+
+.birth-row{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:6px;
+}
+
+.birth-labels{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:6px;
+  margin-bottom:3px;
+}
+
+.birth-labels span{
+  font-size:11px;
+  color:#666;
+  text-align:center;
 }
 
 .password-note{
@@ -223,16 +224,6 @@ textarea{
   font-size:11px;
   line-height:1.4;
   margin-top:4px;
-}
-
-.birth-selects{
-  display:grid;
-  grid-template-columns:1.4fr 1fr 1fr;
-  gap:6px;
-}
-
-.birth-selects select{
-  min-width:0;
 }
 
 .signature-box{
@@ -293,19 +284,9 @@ textarea{
   font-size:15px;
 }
 
-.agree-button{
-  background:#17202a;
-}
-
-.agree-button:disabled{
-  background:#aaa;
-}
-
-.start-button{
-  background:#1f618d;
-  font-size:16px;
-}
-
+.agree-button{background:#17202a}
+.agree-button:disabled{background:#aaa}
+.start-button{background:#1f618d;font-size:16px}
 .confirm-edit-button{
   width:100%;
   margin-top:7px;
@@ -316,9 +297,7 @@ textarea{
   padding:10px;
 }
 
-.save-button{
-  background:#1e8449;
-}
+.save-button{background:#1e8449}
 
 .back-button{
   width:100%;
@@ -341,9 +320,7 @@ textarea{
   font-weight:bold;
 }
 
-.delete-confirm-button{
-  background:#c0392b;
-}
+.delete-confirm-button{background:#c0392b}
 
 .cancel-confirm-button{
   width:100%;
@@ -376,6 +353,182 @@ textarea{
   margin-bottom:9px;
   font-size:13px;
   line-height:1.5;
+}
+
+.user-message{
+  display:none;
+  margin:8px 0 10px;
+  padding:10px 12px;
+  border-radius:7px;
+  background:#fff;
+  border:1px solid #ddd;
+  font-size:14px;
+  line-height:1.55;
+  white-space:pre-wrap;
+  word-break:break-word;
+}
+
+.message-admin-card{
+  border:1px solid #ddd;
+  border-radius:8px;
+  padding:10px;
+  margin:8px 0;
+  background:#fafafa;
+}
+
+.message-preview{
+  padding:9px;
+  background:white;
+  border:1px solid #ddd;
+  border-radius:7px;
+  margin:7px 0;
+  white-space:pre-wrap;
+  word-break:break-word;
+}
+
+.target-list{
+  max-height:230px;
+  overflow:auto;
+  border:1px solid #ddd;
+  border-radius:7px;
+  padding:5px;
+  background:white;
+}
+
+.target-item{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  padding:6px;
+  border-bottom:1px solid #eee;
+  font-size:13px;
+}
+
+.target-item:last-child{border-bottom:none}
+
+.small-button{
+  padding:7px 10px;
+  border:none;
+  border-radius:7px;
+  background:#e5e7e9;
+  font-size:12px;
+  margin:3px;
+}
+
+.red-button{
+  background:#c0392b;
+  color:white;
+}
+
+.blue-button{
+  background:#1f618d;
+  color:white;
+}
+
+.green-button{
+  background:#1e8449;
+  color:white;
+}
+
+.button-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:4px;
+}
+
+.admin-list-item{
+  background:#f7f8f9;
+  border:1px solid #ddd;
+  border-radius:8px;
+  padding:10px;
+  margin:7px 0;
+  cursor:pointer;
+}
+
+.admin-list-name{
+  font-size:15px;
+  font-weight:bold;
+}
+
+.admin-list-number{
+  font-size:12px;
+  color:#555;
+  margin-top:3px;
+}
+
+.admin-list-expiry{
+  font-size:12px;
+  margin-top:3px;
+}
+
+.expiry-normal{color:#555}
+.expiry-warning{
+  color:#b7950b;
+  font-weight:bold;
+}
+.expiry-expired{
+  color:red;
+  font-weight:bold;
+}
+
+.admin-list-password{
+  font-size:12px;
+  color:#555;
+  margin-top:3px;
+}
+
+.admin-empty{
+  text-align:center;
+  color:#777;
+  padding:25px 5px;
+  font-size:13px;
+}
+
+.admin-section{
+  margin-top:12px;
+  padding-top:10px;
+  border-top:1px solid #ddd;
+}
+
+.admin-rule-edit{
+  border:1px solid #ddd;
+  border-radius:7px;
+  padding:8px;
+  margin:5px 0;
+  background:#fafafa;
+}
+
+.admin-rule-edit label{
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+  font-size:12px;
+}
+
+.info-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:5px;
+  margin-bottom:7px;
+}
+
+.info-box{
+  background:#f7f8f9;
+  border-radius:6px;
+  padding:6px 8px;
+}
+
+.info-label{
+  display:block;
+  font-size:10px;
+  color:#777;
+}
+
+.info-value{
+  display:block;
+  font-size:13px;
+  font-weight:bold;
+  word-break:break-word;
 }
 
 .confirmation-screen-container{
@@ -437,35 +590,7 @@ textarea{
   letter-spacing:3px;
 }
 
-.info-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:5px;
-  margin-bottom:7px;
-}
-
-.info-box{
-  background:#f7f8f9;
-  border-radius:6px;
-  padding:6px 8px;
-}
-
-.info-label{
-  display:block;
-  font-size:10px;
-  color:#777;
-}
-
-.info-value{
-  display:block;
-  font-size:13px;
-  font-weight:bold;
-  word-break:break-word;
-}
-
-.expiry-result{
-  color:red;
-}
+.expiry-result{color:red}
 
 .rules-confirmed{
   background:#f7f8f9;
@@ -521,79 +646,6 @@ textarea{
   background:white;
 }
 
-.admin-list-item{
-  background:#f7f8f9;
-  border:1px solid #ddd;
-  border-radius:8px;
-  padding:10px;
-  margin:7px 0;
-  cursor:pointer;
-}
-
-.admin-list-name{
-  font-size:15px;
-  font-weight:bold;
-}
-
-.admin-list-number{
-  font-size:12px;
-  color:#555;
-  margin-top:3px;
-}
-
-.admin-list-expiry{
-  font-size:12px;
-  margin-top:3px;
-}
-
-.admin-list-password{
-  font-size:12px;
-  color:#555;
-  margin-top:3px;
-}
-
-.expiry-normal{
-  color:#555;
-}
-
-.expiry-warning{
-  color:#b7950b;
-  font-weight:bold;
-}
-
-.expiry-expired{
-  color:red;
-  font-weight:bold;
-}
-
-.admin-empty{
-  text-align:center;
-  color:#777;
-  padding:25px 5px;
-  font-size:13px;
-}
-
-.admin-section{
-  margin-top:12px;
-  padding-top:10px;
-  border-top:1px solid #ddd;
-}
-
-.admin-rule-edit{
-  border:1px solid #ddd;
-  border-radius:7px;
-  padding:8px;
-  margin:5px 0;
-  background:#fafafa;
-}
-
-.admin-rule-edit label{
-  display:flex;
-  gap:8px;
-  align-items:flex-start;
-  font-size:12px;
-}
-
 .delete-confirm-box{
   text-align:center;
   background:#fff5f4;
@@ -632,9 +684,7 @@ textarea{
   padding:20px;
 }
 
-.loading-screen.active{
-  display:flex;
-}
+.loading-screen.active{display:flex}
 
 .loading-box{
   width:min(400px,100%);
@@ -652,8 +702,8 @@ textarea{
 }
 
 @keyframes loadingSpin{
-  from{transform:rotate(0);}
-  to{transform:rotate(360deg);}
+  from{transform:rotate(0)}
+  to{transform:rotate(360deg)}
 }
 
 .loading-title{
@@ -712,131 +762,12 @@ textarea{
   padding:5px 5px calc(10px + env(safe-area-inset-bottom));
 }
 
-.message-box{
-  display:none;
-  margin:8px 0 10px;
-  padding:10px;
-  border-radius:7px;
-  border:1px solid #ddd;
-  background:#fafafa;
-  font-size:13px;
-  line-height:1.5;
-}
-
-.message-item{
-  position:relative;
-  padding:9px;
-  border:1px solid #ddd;
-  border-radius:7px;
-  background:white;
-  margin:6px 0;
-}
-
-.message-item-text{
-  white-space:pre-wrap;
-  word-break:break-word;
-}
-
-.message-item-meta{
-  font-size:10px;
-  color:#777;
-  margin-top:5px;
-}
-
-.admin-message-box{
-  background:#f7f8f9;
-  border:1px solid #ddd;
-  border-radius:8px;
-  padding:10px;
-  margin:7px 0;
-}
-
-.admin-message-row{
-  display:grid;
-  grid-template-columns:1fr 110px;
-  gap:6px;
-}
-
-.message-color-buttons{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:6px;
-  margin-top:6px;
-}
-
-.message-color-button{
-  padding:9px;
-  border:1px solid #aaa;
-  border-radius:7px;
-  background:white;
-  font-weight:bold;
-}
-
-.message-add-button{
-  width:100%;
-  margin-top:7px;
-  padding:10px;
-  border:none;
-  border-radius:8px;
-  background:#17202a;
-  color:white;
-  font-weight:bold;
-}
-
-.message-delete-button{
-  width:100%;
-  margin-top:6px;
-  padding:8px;
-  border:none;
-  border-radius:7px;
-  background:#c0392b;
-  color:white;
-  font-size:12px;
-}
-
-.admin-tools{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:7px;
-  margin-bottom:8px;
-}
-
-.admin-tool-button{
-  border:none;
-  border-radius:7px;
-  padding:9px;
-  background:#e5e7e9;
-  font-size:13px;
-  font-weight:bold;
-}
-
-.data-output{
-  width:100%;
-  min-height:130px;
-  font-family:monospace;
-  font-size:11px;
-}
-
-@media(max-width:600px){
-
-  .admin-message-row{
-    grid-template-columns:1fr;
-  }
-
-}
-
 @media(max-height:700px){
-
   .header{
-    padding:
-      calc(8px + env(safe-area-inset-top))
-      10px
-      8px;
+    padding:calc(8px + env(safe-area-inset-top)) 10px 8px;
   }
 
-  .header h1{
-    font-size:18px;
-  }
+  .header h1{font-size:18px}
 
   .card{
     padding:10px;
@@ -854,98 +785,59 @@ textarea{
     margin:4px 0;
   }
 
-  .rule-title{
-    font-size:12px;
-  }
-
-  .rule-text{
-    font-size:11px;
-  }
-
-  .preface{
-    font-size:11px;
-  }
-
-  .important-notice{
-    font-size:13px;
-  }
-
-  .expiry-notice{
-    font-size:12px;
-  }
-
-  .field{
-    margin:5px 0;
-  }
-
+  .rule-title{font-size:12px}
+  .rule-text{font-size:11px}
+  .preface{font-size:11px}
+  .important-notice{font-size:13px}
+  .expiry-notice{font-size:12px}
+  .field{margin:5px 0}
 }
-
 </style>
 </head>
 
 <body>
 
 <header class="header">
-
   <h1>
     スマートフォン利用規約
-    <span id="versionText">Ver.10</span>
+    <span id="versionText">Ver.11</span>
   </h1>
-
-  <p>
-    利用に関する確認・同意書
-  </p>
-
+  <p>利用に関する確認・同意書</p>
 </header>
 
-
 <!-- メニュー -->
-
 <div id="menuScreen" class="screen active">
-
   <div class="container">
-
     <div class="card menu-card">
 
-      <div class="menu-icon">
-        📱
-      </div>
+      <div class="menu-icon">📱</div>
 
-      <div class="title">
-        スマートフォン利用
-      </div>
+      <div class="title">スマートフォン利用</div>
 
       <p class="menu-description">
         利用方法を選択してください。
       </p>
 
-      <button
-        class="menu-button new-button"
+      <button class="menu-button new-button"
         onclick="selectNewRegistration()">
         新規登録
       </button>
 
-      <button
-        class="menu-button continue-button"
+      <button class="menu-button continue-button"
         onclick="selectContinuation()">
         継続利用
       </button>
 
-      <button
-        class="admin-button"
+      <button class="admin-button"
         onclick="openAdminLogin()">
         管理者用画面を開く
       </button>
 
     </div>
-
   </div>
-
 </div>
 
-
-<!-- 入力 -->
-
+<!-- 新規登録・更新 -->
 <div id="inputScreen" class="screen">
 
   <div class="container">
@@ -953,9 +845,7 @@ textarea{
     <div class="card">
 
       <div class="title">
-        <span id="inputTitle">
-          スマートフォン利用規約
-        </span>
+        <span id="inputTitle">スマートフォン利用規約</span>
       </div>
 
       <div class="preface">
@@ -965,8 +855,8 @@ textarea{
           スマートフォンを利用することができません。
         </div>
 
-        <!-- メッセージはここ -->
-        <div id="userMessageArea"></div>
+        <!-- メッセージはここに表示 -->
+        <div id="userMessagesInput"></div>
 
         <div class="expiry-notice">
           本規約の有効期限：
@@ -984,102 +874,68 @@ textarea{
 
     </div>
 
-
     <div class="card">
 
-      <div class="title">
-        利用者情報
+      <div class="title">利用者情報</div>
+
+      <div class="field">
+        <label>氏名</label>
+        <input id="name" type="text" placeholder="氏名を入力">
       </div>
 
       <div class="field">
+        <label>生年月日</label>
 
-        <label>
-          氏名
-        </label>
-
-        <input
-          id="name"
-          type="text"
-          placeholder="氏名を入力">
-
-      </div>
-
-
-      <div class="field">
-
-        <label>
-          生年月日
-        </label>
-
-        <div class="birth-selects">
-
-          <select id="birthYear">
-            <option value="">年</option>
-          </select>
-
-          <select id="birthMonth">
-            <option value="">月</option>
-          </select>
-
-          <select id="birthDay">
-            <option value="">日</option>
-          </select>
-
+        <div class="birth-labels">
+          <span>年</span>
+          <span>月</span>
+          <span>日</span>
         </div>
 
+        <div class="birth-row">
+          <select id="birthYear"></select>
+          <select id="birthMonth"></select>
+          <select id="birthDay"></select>
+        </div>
       </div>
 
-
       <div class="field">
-
-        <label>
-          利用パスワード
-        </label>
+        <label>利用パスワード</label>
 
         <input
           id="newPassword"
           type="password"
-          placeholder="利用パスワードを設定">
+          placeholder="利用パスワードを設定"
+        >
 
         <div class="password-note">
           継続利用時に必要になります。
         </div>
-
       </div>
 
     </div>
 
-
     <div class="card">
 
-      <div class="title">
-        署名
-      </div>
+      <div class="title">署名</div>
 
       <div class="signature-box">
-
         <canvas id="signatureCanvas"></canvas>
-
         <div class="signature-hint">
           ここに手書きで署名してください
         </div>
-
       </div>
 
-      <button
-        class="clear-button"
+      <button class="clear-button"
         onclick="clearSignature()">
         署名を消去
       </button>
 
     </div>
 
-
     <div class="card">
 
-      <div class="title">
-        同意
-      </div>
+      <div class="title">同意</div>
 
       <div id="error" class="error"></div>
 
@@ -1091,8 +947,7 @@ textarea{
         以上の項目に同意する
       </button>
 
-      <button
-        class="back-button"
+      <button class="back-button"
         onclick="backToMenuFromInput()">
         戻る
       </button>
@@ -1100,21 +955,16 @@ textarea{
     </div>
 
   </div>
-
 </div>
 
-
 <!-- 継続利用 -->
-
 <div id="continueScreen" class="screen">
 
   <div class="container">
 
     <div class="card">
 
-      <div class="title">
-        継続利用
-      </div>
+      <div class="title">継続利用</div>
 
       <p class="preface">
         登録時の氏名、生年月日、
@@ -1122,59 +972,41 @@ textarea{
       </p>
 
       <div class="field">
-
         <label>氏名</label>
-
-        <input
-          id="continueName"
-          type="text"
+        <input id="continueName" type="text"
           placeholder="氏名を入力">
-
       </div>
 
       <div class="field">
-
         <label>生年月日</label>
 
-        <div class="birth-selects">
-
-          <select id="continueBirthYear">
-            <option value="">年</option>
-          </select>
-
-          <select id="continueBirthMonth">
-            <option value="">月</option>
-          </select>
-
-          <select id="continueBirthDay">
-            <option value="">日</option>
-          </select>
-
+        <div class="birth-labels">
+          <span>年</span>
+          <span>月</span>
+          <span>日</span>
         </div>
 
+        <div class="birth-row">
+          <select id="continueBirthYear"></select>
+          <select id="continueBirthMonth"></select>
+          <select id="continueBirthDay"></select>
+        </div>
       </div>
 
       <div class="field">
-
         <label>利用パスワード</label>
-
-        <input
-          id="continuePassword"
-          type="password"
+        <input id="continuePassword" type="password"
           placeholder="利用パスワードを入力">
-
       </div>
 
       <div id="continueError" class="error"></div>
 
-      <button
-        class="agree-button"
+      <button class="agree-button"
         onclick="checkContinuation()">
         継続して利用する
       </button>
 
-      <button
-        class="back-button"
+      <button class="back-button"
         onclick="backToMenu()">
         戻る
       </button>
@@ -1182,12 +1014,9 @@ textarea{
     </div>
 
   </div>
-
 </div>
 
-
 <!-- 確認 -->
-
 <div id="confirmationScreen" class="screen">
 
   <div class="confirmation-screen-container">
@@ -1196,28 +1025,20 @@ textarea{
 
       <div class="confirmation-header">
 
-        <div class="checkmark">
-          ✓
-        </div>
+        <div class="checkmark">✓</div>
 
-        <h2 id="confirmationTitle">
-          同意状況確認
-        </h2>
+        <h2 id="confirmationTitle">同意内容確認</h2>
 
-        <p>
-          以下の内容を確認してください
-        </p>
+        <p>以下の内容を確認してください</p>
 
       </div>
 
-      <div class="number-label">
-        確認番号
-      </div>
+      <div class="number-label">確認番号</div>
 
-      <div
-        id="confirmationNumber"
-        class="confirmation-number">
-      </div>
+      <div id="confirmationNumber"
+        class="confirmation-number"></div>
+
+      <div id="userMessagesConfirm"></div>
 
       <div class="info-grid">
 
@@ -1239,7 +1060,7 @@ textarea{
         <div class="info-box">
           <span class="info-label">有効期限</span>
           <span id="resultExpiryDate"
-                class="info-value expiry-result"></span>
+            class="info-value expiry-result"></span>
         </div>
 
       </div>
@@ -1250,21 +1071,15 @@ textarea{
           規約確認状況
         </div>
 
-        <div
-          id="rulesStatus"
-          class="rules-status">
-        </div>
+        <div id="rulesStatus" class="rules-status"></div>
 
       </div>
 
       <div class="signature-section">
 
-        <div class="signature-section-title">
-          署名
-        </div>
+        <div class="signature-section-title">署名</div>
 
-        <img
-          id="resultSignature"
+        <img id="resultSignature"
           class="signature-result"
           alt="署名">
 
@@ -1275,41 +1090,31 @@ textarea{
         内容に誤りがないことを確認してください。
       </p>
 
-      <button
-        class="start-button"
+      <button class="start-button"
         onclick="startUse()">
         以上を確認し利用を開始する
       </button>
 
-      <!-- 新規登録では非表示。
-           更新時だけ表示。 -->
-
+      <!-- 新規登録・更新では表示 -->
       <button
         id="editAgreementButton"
         class="confirm-edit-button"
-        onclick="editAgreement()"
-        style="display:none;">
+        onclick="editAgreement()">
         内容を修正する
       </button>
 
     </div>
-
   </div>
-
 </div>
 
-
 <!-- 管理者ログイン -->
-
 <div id="adminLoginScreen" class="screen">
 
   <div class="container">
 
     <div class="card">
 
-      <div class="title">
-        管理者認証
-      </div>
+      <div class="title">管理者認証</div>
 
       <p class="preface">
         管理者用画面を開くには
@@ -1317,364 +1122,344 @@ textarea{
       </p>
 
       <div class="field">
-
         <label>パスワード</label>
-
-        <input
-          id="adminPassword"
-          type="password"
+        <input id="adminPassword" type="password"
           placeholder="パスワード">
-
       </div>
 
       <div id="adminLoginError" class="error"></div>
 
-      <button
-        class="agree-button"
+      <button class="agree-button"
         onclick="checkAdminPassword()">
         管理者画面を開く
       </button>
 
-      <button
-        class="back-button"
+      <button class="back-button"
         onclick="backToMenuFromAdminLogin()">
         戻る
       </button>
 
     </div>
-
   </div>
-
 </div>
 
-
-<!-- 管理者一覧 -->
-
+<!-- 管理者画面 -->
 <div id="adminListScreen" class="screen">
 
   <div class="container">
 
     <div class="card">
 
-      <div class="title">
-        管理者画面
-      </div>
+      <div class="title">管理者画面</div>
 
-      <div class="admin-tools">
+      <div id="adminNotice" class="notice"></div>
 
-        <button
-          class="admin-tool-button"
-          onclick="sortAdminList('new')">
-          新しい順
-        </button>
+      <div class="admin-section">
 
-        <button
-          class="admin-tool-button"
-          onclick="sortAdminList('old')">
-          古い順
-        </button>
+        <div class="title">登録情報検索・並べ替え</div>
 
-        <button
-          class="admin-tool-button"
-          onclick="sortAdminList('name')">
-          氏名順
-        </button>
+        <div class="field">
+          <label>検索</label>
+          <input id="adminSearch" type="text"
+            placeholder="氏名・確認番号などを検索"
+            oninput="renderAdminList()">
+        </div>
 
-        <button
-          class="admin-tool-button"
-          onclick="sortAdminList('expiry')">
-          有効期限順
-        </button>
+        <div class="field">
+          <label>並べ替え</label>
 
-      </div>
+          <select id="adminSort"
+            onchange="renderAdminList()">
 
-      <div class="field">
+            <option value="newest">
+              登録が新しい順
+            </option>
 
-        <label>
-          登録情報検索
-        </label>
+            <option value="oldest">
+              登録が古い順
+            </option>
 
-        <input
-          id="adminSearch"
-          type="text"
-          placeholder="氏名・確認番号などで検索"
-          oninput="renderAdminList()">
+            <option value="name">
+              氏名順
+            </option>
+
+            <option value="expiry">
+              有効期限が近い順
+            </option>
+
+          </select>
+        </div>
 
       </div>
-
-      <p class="preface">
-        保存されている登録情報の一覧です。
-        情報を選択すると詳細を編集できます。
-      </p>
 
       <div id="adminList"></div>
 
     </div>
 
-
     <!-- メッセージ管理 -->
-
     <div class="card">
 
-      <div class="title">
-        メッセージ管理
-      </div>
+      <div class="title">メッセージ管理</div>
 
       <p class="preface">
-        利用者画面の注意事項の真下に表示されます。
+        メッセージを作成し、表示する利用者を選択してください。
+        対象者がいないメッセージは利用者側には表示されません。
       </p>
 
+      <button class="blue-button small-button"
+        onclick="showMessageEditor()">
+        メッセージを追加
+      </button>
 
-      <div class="admin-section">
+      <div id="messageEditor" style="display:none">
 
-        <div class="title">
-          全利用者向けメッセージ
+        <div class="field">
+          <label>メッセージ</label>
+
+          <textarea id="messageText"
+            placeholder="利用者に表示するメッセージ"></textarea>
         </div>
 
-        <div id="globalMessages"></div>
+        <div class="field">
 
-        <button
-          class="message-add-button"
-          onclick="addGlobalMessage()">
-          メッセージを追加
+          <label>文字色</label>
+
+          <select id="messageColor">
+
+            <option value="#000000">黒</option>
+            <option value="#ff0000">赤</option>
+            <option value="#0000ff">青</option>
+
+          </select>
+
+        </div>
+
+        <div class="field">
+
+          <label>表示対象者</label>
+
+          <div class="button-row">
+
+            <button class="small-button"
+              onclick="selectAllTargets()">
+              全て選択
+            </button>
+
+            <button class="small-button"
+              onclick="clearAllTargets()">
+              全て選択解除
+            </button>
+
+          </div>
+
+          <div id="messageTargets"
+            class="target-list"></div>
+
+        </div>
+
+        <div class="message-preview"
+          id="messagePreview">
+          メッセージプレビュー
+        </div>
+
+        <button class="save-button"
+          onclick="saveMessage()">
+          メッセージを保存
+        </button>
+
+        <button class="back-button"
+          onclick="hideMessageEditor()">
+          キャンセル
         </button>
 
       </div>
 
-
-      <div class="admin-section">
-
-        <div class="title">
-          個人向けメッセージ
-        </div>
-
-        <div id="personalMessages"></div>
-
-        <button
-          class="message-add-button"
-          onclick="addPersonalMessage()">
-          メッセージを追加
-        </button>
-
-      </div>
+      <div id="messageList"></div>
 
     </div>
 
-
-    <!-- 設定 -->
-
+    <!-- システム設定 -->
     <div class="card">
 
-      <div class="title">
-        システム設定
-      </div>
+      <div class="title">システム設定</div>
 
       <div class="field">
 
-        <label>
-          利用開始後URL
-        </label>
+        <label>利用開始後URL</label>
 
-        <input
-          id="startURL"
-          type="text"
+        <input id="startUrl" type="text"
           placeholder="https://example.com/">
 
-      </div>
+        <div class="password-note">
+          利用開始ボタンを押した後、このURLへ移動します。
+        </div>
 
+      </div>
 
       <div class="field">
 
-        <label>
-          規約バージョン
-        </label>
+        <label>規約バージョン</label>
 
-        <input
-          id="adminVersion"
-          type="text">
+        <input id="ruleVersion" type="text">
+
+        <div class="password-note">
+          変更すると、登録済み利用者は次回利用時に
+          新しい規約への再同意が必要になります。
+        </div>
 
       </div>
 
-
-      <button
-        class="save-button"
+      <button class="save-button"
         onclick="saveSystemSettings()">
         設定を保存
       </button>
 
     </div>
 
-
-    <!-- 操作履歴 -->
-
+    <!-- データ出力 -->
     <div class="card">
 
-      <div class="title">
-        操作履歴
-      </div>
-
-      <div id="operationHistory"></div>
-
-    </div>
-
-
-    <!-- データ -->
-
-    <div class="card">
-
-      <div class="title">
-        データ出力・移行
-      </div>
+      <div class="title">データ出力</div>
 
       <p class="preface">
-        データは暗号化形式で出力されます。
+        登録情報や設定を文字列として出力します。
+        必要に応じてコピーして保存できます。
       </p>
 
-      <button
-        class="admin-tool-button"
-        style="width:100%;margin-bottom:7px;"
-        onclick="exportAllEncrypted()">
-        全体データを出力
-      </button>
+      <div class="button-row">
 
-      <button
-        class="admin-tool-button"
-        style="width:100%;"
-        onclick="exportStorageEncrypted()">
-        ローカルストレージデータを出力
-      </button>
+        <button class="small-button"
+          onclick="exportOneData()">
+          選択中の利用者
+        </button>
 
-      <textarea
-        id="dataOutput"
-        class="data-output"
+        <button class="small-button"
+          onclick="exportAllData()">
+          全体データ
+        </button>
+
+        <button class="small-button"
+          onclick="exportLocalStorage()">
+          ローカルストレージ
+        </button>
+
+      </div>
+
+      <textarea id="exportArea"
         readonly
-        placeholder="出力結果がここに表示されます。">
-      </textarea>
+        placeholder="出力結果"></textarea>
 
-      <button
-        class="admin-tool-button"
-        style="width:100%;margin-top:7px;"
-        onclick="copyDataOutput()">
+      <button class="blue-button small-button"
+        onclick="copyExport()">
         コピー
       </button>
 
     </div>
 
+    <!-- 操作履歴 -->
+    <div class="card">
 
-    <button
-      class="back-button"
+      <div class="title">操作履歴</div>
+
+      <div id="operationHistory"></div>
+
+    </div>
+
+    <!-- 管理者設定 -->
+    <div class="card">
+
+      <div class="title">管理者設定</div>
+
+      <div class="field">
+
+        <label>管理者パスワード</label>
+
+        <input id="newAdminPassword"
+          type="password"
+          placeholder="新しい管理者パスワード">
+
+      </div>
+
+      <button class="save-button"
+        onclick="changeAdminPassword()">
+        管理者パスワードを変更
+      </button>
+
+    </div>
+
+    <button class="back-button"
       onclick="adminLogout()">
       管理者画面を閉じる
     </button>
 
   </div>
-
 </div>
 
-
 <!-- 管理者編集 -->
-
 <div id="adminEditScreen" class="screen">
 
   <div class="container">
 
     <div class="card">
 
-      <div class="title">
-        登録情報を編集
-      </div>
+      <div class="title">登録情報を編集</div>
 
       <div id="adminEditError" class="error"></div>
 
       <div class="field">
-
         <label>確認番号</label>
-
-        <input
-          id="adminNumber"
-          type="text">
-
+        <input id="adminNumber" type="text">
       </div>
 
       <div class="field">
-
         <label>氏名</label>
-
-        <input
-          id="adminName"
-          type="text">
-
+        <input id="adminName" type="text">
       </div>
 
       <div class="field">
 
         <label>生年月日</label>
 
-        <div class="birth-selects">
+        <div class="birth-labels">
+          <span>年</span>
+          <span>月</span>
+          <span>日</span>
+        </div>
 
-          <select id="adminBirthYear">
-            <option value="">年</option>
-          </select>
-
-          <select id="adminBirthMonth">
-            <option value="">月</option>
-          </select>
-
-          <select id="adminBirthDay">
-            <option value="">日</option>
-          </select>
-
+        <div class="birth-row">
+          <select id="adminBirthYear"></select>
+          <select id="adminBirthMonth"></select>
+          <select id="adminBirthDay"></select>
         </div>
 
       </div>
 
       <div class="field">
-
         <label>同意日</label>
-
-        <input
-          id="adminAgreementDate"
-          type="date">
-
+        <input id="adminAgreementDate" type="date">
       </div>
 
       <div class="field">
-
         <label>有効期限</label>
-
-        <input
-          id="adminExpiryDate"
-          type="date">
-
+        <input id="adminExpiryDate" type="date">
       </div>
 
       <div class="field">
-
         <label>利用パスワード</label>
-
-        <input
-          id="adminUserPassword"
-          type="text">
-
+        <input id="adminUserPassword" type="text">
       </div>
-
 
       <div class="admin-section">
 
-        <div class="title">
-          規約同意状況
-        </div>
+        <div class="title">規約同意状況</div>
 
         <div id="adminRules"></div>
 
       </div>
 
-
       <div class="admin-section">
 
-        <div class="title">
-          署名
-        </div>
+        <div class="title">署名</div>
 
         <div class="signature-box">
 
@@ -1686,29 +1471,24 @@ textarea{
 
         </div>
 
-        <button
-          class="clear-button"
+        <button class="clear-button"
           onclick="clearAdminSignature()">
           署名を消去
         </button>
 
       </div>
 
-
-      <button
-        class="save-button"
+      <button class="save-button"
         onclick="saveAdminEdit()">
         編集内容を保存
       </button>
 
-      <button
-        class="delete-button"
+      <button class="delete-button"
         onclick="showDeleteConfirmation()">
         この登録情報を削除
       </button>
 
-      <button
-        class="back-button"
+      <button class="back-button"
         onclick="backToAdminList()">
         一覧に戻る
       </button>
@@ -1716,12 +1496,9 @@ textarea{
     </div>
 
   </div>
-
 </div>
 
-
 <!-- 削除確認 -->
-
 <div id="deleteConfirmScreen" class="screen">
 
   <div class="container">
@@ -1734,39 +1511,29 @@ textarea{
           登録情報を削除しますか？
         </div>
 
-        <div
-          id="deleteConfirmName"
-          class="delete-confirm-name">
-        </div>
+        <div id="deleteConfirmName"
+          class="delete-confirm-name"></div>
 
-        <div
-          id="deleteConfirmNumber"
-          class="delete-confirm-number">
-        </div>
+        <div id="deleteConfirmNumber"
+          class="delete-confirm-number"></div>
 
       </div>
 
-      <button
-        class="delete-confirm-button"
+      <button class="delete-confirm-button"
         onclick="executeDelete()">
         この登録情報を削除する
       </button>
 
-      <button
-        class="cancel-confirm-button"
+      <button class="cancel-confirm-button"
         onclick="cancelDelete()">
         キャンセル
       </button>
 
     </div>
-
   </div>
-
 </div>
 
-
 <!-- 読み込み -->
-
 <div id="loadingScreen" class="loading-screen">
 
   <div class="loading-box">
@@ -1777,109 +1544,96 @@ textarea{
       読み込み中…
     </div>
 
-    <div
-      id="loadingMessage"
-      class="loading-message">
-    </div>
+    <div id="loadingMessage"
+      class="loading-message"></div>
 
     <div class="progress-container">
-
-      <div
-        id="progressBar"
-        class="progress-bar">
-      </div>
-
+      <div id="progressBar" class="progress-bar"></div>
     </div>
 
-    <div
-      id="progressPercent"
+    <div id="progressPercent"
       class="progress-percent">
       0%
     </div>
 
   </div>
-
 </div>
 
-
-<!-- 画面内通知 -->
-
+<!-- 通知 -->
 <div id="globalNotice" class="loading-screen">
 
   <div class="loading-box">
 
-    <div style="font-size:50px;margin-bottom:12px;">
+    <div style="font-size:50px;margin-bottom:12px">
       ✓
     </div>
 
-    <div
-      id="globalNoticeTitle"
-      class="loading-title">
-    </div>
+    <div id="globalNoticeTitle"
+      class="loading-title"></div>
 
-    <div
-      id="globalNoticeText"
-      class="loading-message">
-    </div>
+    <div id="globalNoticeText"
+      class="loading-message"></div>
 
-    <button
-      id="globalNoticeButton"
+    <button id="globalNoticeButton"
       class="start-button"
-      style="display:none;"
+      style="display:none"
       onclick="closeGlobalNotice()">
       OK
     </button>
 
   </div>
-
 </div>
 
-
-<button
-  class="fullscreen-button"
+<button class="fullscreen-button"
   onclick="toggleFullscreen()">
   ⛶
 </button>
-
 
 <footer class="footer">
   スマートフォン利用規約
 </footer>
 
-
 <script>
+
+/* =========================================
+   バージョン
+========================================= */
+
+const VERSION="11";
+
+document.getElementById("versionText").textContent=
+  "Ver."+VERSION;
+
 
 /* =========================================
    基本設定
 ========================================= */
 
-const VERSION = "10";
+const DEFAULT_ADMIN_PASSWORD="Tarakosama2525";
 
-const ADMIN_PASSWORD =
-  "Tarakosama2525";
+const STORAGE_KEY="smartphoneAgreements";
+const SETTINGS_KEY="smartphoneSettings";
+const MESSAGES_KEY="smartphoneMessages";
+const HISTORY_KEY="smartphoneOperationHistory";
 
-const STORAGE_KEY =
-  "smartphoneAgreements_v10";
+let adminPassword=
+  localStorage.getItem("smartphoneAdminPassword") ||
+  DEFAULT_ADMIN_PASSWORD;
 
-const SETTINGS_KEY =
-  "smartphoneSettings_v10";
+let currentAdminId=null;
 
-const MESSAGE_KEY =
-  "smartphoneMessages_v10";
+let inputMode="new";
+let updatingId=null;
 
-const HISTORY_KEY =
-  "smartphoneHistory_v10";
-
-
-document.getElementById("versionText").textContent =
-  "Ver." + VERSION;
+let confirmationFromNew=false;
+let currentConfirmationData=null;
 
 
 /* =========================================
    規約
 ========================================= */
 
-const rules = [
+const rules=[
 
   {
     title:"貸与物であることの認識",
@@ -1930,39 +1684,27 @@ const rules = [
    規約表示
 ========================================= */
 
-const rulesArea =
-  document.getElementById("rules");
+const rulesArea=document.getElementById("rules");
 
 rules.forEach((rule,index)=>{
 
-  const div =
-    document.createElement("div");
+  const div=document.createElement("div");
 
-  div.className = "rule";
+  div.className="rule";
 
-  div.innerHTML = `
-
+  div.innerHTML=`
     <label>
-
-      <input
-        type="checkbox"
-        class="ruleCheck">
-
+      <input type="checkbox" class="ruleCheck">
       <span>
-
         <span class="rule-title">
           第${index+1}条　
           ${escapeHTML(rule.title)}
         </span>
-
         <br>
-
         <span class="rule-text">
           ${escapeHTML(rule.text)}
         </span>
-
       </span>
-
     </label>
   `;
 
@@ -1975,258 +1717,127 @@ rules.forEach((rule,index)=>{
    生年月日セレクト
 ========================================= */
 
-function setupBirthSelects(){
+function createBirthSelects(
+  yearId,
+  monthId,
+  dayId
+){
 
-  const currentYear =
-    new Date().getFullYear();
+  const year=document.getElementById(yearId);
+  const month=document.getElementById(monthId);
+  const day=document.getElementById(dayId);
 
-  const yearIds = [
-    "birthYear",
-    "continueBirthYear",
-    "adminBirthYear"
-  ];
+  year.innerHTML='<option value="">年</option>';
+  month.innerHTML='<option value="">月</option>';
+  day.innerHTML='<option value="">日</option>';
 
-  yearIds.forEach(id=>{
+  const currentYear=new Date().getFullYear();
 
-    const select =
-      document.getElementById(id);
+  for(let y=currentYear;y>=1900;y--){
 
-    if(!select) return;
+    const option=document.createElement("option");
 
-    select.innerHTML =
-      '<option value="">年</option>';
+    option.value=String(y);
 
-    for(let y=currentYear;y>=1900;y--){
+    option.textContent=y+"年";
 
-      const option =
-        document.createElement("option");
-
-      option.value = String(y);
-      option.textContent = y + "年";
-
-      select.appendChild(option);
-
-    }
-
-  });
-
-
-  const monthIds = [
-    "birthMonth",
-    "continueBirthMonth",
-    "adminBirthMonth"
-  ];
-
-  monthIds.forEach(id=>{
-
-    const select =
-      document.getElementById(id);
-
-    if(!select) return;
-
-    select.innerHTML =
-      '<option value="">月</option>';
-
-    for(let m=1;m<=12;m++){
-
-      const option =
-        document.createElement("option");
-
-      option.value =
-        String(m).padStart(2,"0");
-
-      option.textContent =
-        m + "月";
-
-      select.appendChild(option);
-
-    }
-
-  });
-
-
-  const dayIds = [
-    "birthDay",
-    "continueBirthDay",
-    "adminBirthDay"
-  ];
-
-  dayIds.forEach(id=>{
-
-    const select =
-      document.getElementById(id);
-
-    if(!select) return;
-
-    select.innerHTML =
-      '<option value="">日</option>';
-
-    for(let d=1;d<=31;d++){
-
-      const option =
-        document.createElement("option");
-
-      option.value =
-        String(d).padStart(2,"0");
-
-      option.textContent =
-        d + "日";
-
-      select.appendChild(option);
-
-    }
-
-  });
-
-}
-
-setupBirthSelects();
-
-
-function getBirthValue(prefix){
-
-  let y;
-  let m;
-  let d;
-
-  if(prefix==="new"){
-
-    y =
-      document.getElementById(
-        "birthYear"
-      ).value;
-
-    m =
-      document.getElementById(
-        "birthMonth"
-      ).value;
-
-    d =
-      document.getElementById(
-        "birthDay"
-      ).value;
-
-  }
-  else if(prefix==="continue"){
-
-    y =
-      document.getElementById(
-        "continueBirthYear"
-      ).value;
-
-    m =
-      document.getElementById(
-        "continueBirthMonth"
-      ).value;
-
-    d =
-      document.getElementById(
-        "continueBirthDay"
-      ).value;
-
-  }
-  else if(prefix==="admin"){
-
-    y =
-      document.getElementById(
-        "adminBirthYear"
-      ).value;
-
-    m =
-      document.getElementById(
-        "adminBirthMonth"
-      ).value;
-
-    d =
-      document.getElementById(
-        "adminBirthDay"
-      ).value;
+    year.appendChild(option);
 
   }
 
-  if(!y || !m || !d)
-    return "";
+  for(let m=1;m<=12;m++){
 
-  const date =
-    new Date(
-      Number(y),
-      Number(m)-1,
-      Number(d)
-    );
+    const option=document.createElement("option");
 
-  if(
-    date.getFullYear() !== Number(y) ||
-    date.getMonth() !== Number(m)-1 ||
-    date.getDate() !== Number(d)
-  ){
+    option.value=String(m).padStart(2,"0");
 
-    return "";
+    option.textContent=m+"月";
+
+    month.appendChild(option);
 
   }
 
-  return (
-    y + "-" +
-    m + "-" +
-    d
-  );
+  for(let d=1;d<=31;d++){
+
+    const option=document.createElement("option");
+
+    option.value=String(d).padStart(2,"0");
+
+    option.textContent=d+"日";
+
+    day.appendChild(option);
+
+  }
 
 }
 
 
-function setBirthValue(prefix,value){
+createBirthSelects(
+  "birthYear",
+  "birthMonth",
+  "birthDay"
+);
 
-  if(!value) return;
+createBirthSelects(
+  "continueBirthYear",
+  "continueBirthMonth",
+  "continueBirthDay"
+);
 
-  const parts =
-    String(value).split("-");
+createBirthSelects(
+  "adminBirthYear",
+  "adminBirthMonth",
+  "adminBirthDay"
+);
 
-  if(parts.length!==3) return;
 
-  if(prefix==="new"){
+/* =========================================
+   生年月日
+========================================= */
 
-    document.getElementById(
-      "birthYear"
-    ).value = parts[0];
+function getBirthValue(
+  yearId,
+  monthId,
+  dayId
+){
 
-    document.getElementById(
-      "birthMonth"
-    ).value = parts[1];
+  const y=document.getElementById(yearId).value;
+  const m=document.getElementById(monthId).value;
+  const d=document.getElementById(dayId).value;
 
-    document.getElementById(
-      "birthDay"
-    ).value = parts[2];
+  /*
+   * 「最初の選択肢ではない」
+   * ＝ value が空文字ではない
+   */
 
-  }
-  else if(prefix==="continue"){
+  if(!y||!m||!d)
+    return "";
 
-    document.getElementById(
-      "continueBirthYear"
-    ).value = parts[0];
+  return y+"-"+m+"-"+d;
 
-    document.getElementById(
-      "continueBirthMonth"
-    ).value = parts[1];
+}
 
-    document.getElementById(
-      "continueBirthDay"
-    ).value = parts[2];
 
-  }
-  else if(prefix==="admin"){
+function setBirthValue(
+  value,
+  yearId,
+  monthId,
+  dayId
+){
 
-    document.getElementById(
-      "adminBirthYear"
-    ).value = parts[0];
+  if(!value)
+    return;
 
-    document.getElementById(
-      "adminBirthMonth"
-    ).value = parts[1];
+  const parts=value.split("-");
 
-    document.getElementById(
-      "adminBirthDay"
-    ).value = parts[2];
+  if(parts.length!==3)
+    return;
 
-  }
+  document.getElementById(yearId).value=parts[0];
+
+  document.getElementById(monthId).value=parts[1];
+
+  document.getElementById(dayId).value=parts[2];
 
 }
 
@@ -2239,23 +1850,16 @@ function getAllData(){
 
   try{
 
-    const raw =
-      localStorage.getItem(
-        STORAGE_KEY
-      );
+    const raw=localStorage.getItem(STORAGE_KEY);
 
     if(!raw)
       return [];
 
-    const data =
-      JSON.parse(raw);
+    const parsed=JSON.parse(raw);
 
-    return Array.isArray(data)
-      ? data
-      : [];
+    return Array.isArray(parsed)?parsed:[];
 
-  }
-  catch(e){
+  }catch(e){
 
     return [];
 
@@ -2274,41 +1878,28 @@ function saveAllData(data){
 }
 
 
-/* =========================================
-   設定
-========================================= */
-
 function getSettings(){
 
   try{
 
-    const raw =
-      localStorage.getItem(
-        SETTINGS_KEY
-      );
+    const raw=localStorage.getItem(SETTINGS_KEY);
 
     if(!raw){
 
       return {
-        startURL:"https://www.google.com/",
-        version:VERSION
+        startUrl:"https://www.google.com/",
+        ruleVersion:VERSION
       };
 
     }
 
-    return {
-      startURL:
-        raw ? JSON.parse(raw).startURL : "",
-      version:
-        raw ? JSON.parse(raw).version : VERSION
-    };
+    return JSON.parse(raw);
 
-  }
-  catch(e){
+  }catch(e){
 
     return {
-      startURL:"https://www.google.com/",
-      version:VERSION
+      startUrl:"https://www.google.com/",
+      ruleVersion:VERSION
     };
 
   }
@@ -2326,289 +1917,100 @@ function saveSettings(settings){
 }
 
 
-/* =========================================
-   メッセージ
-========================================= */
-
 function getMessages(){
 
   try{
 
-    const raw =
-      localStorage.getItem(
-        MESSAGE_KEY
-      );
+    const raw=localStorage.getItem(MESSAGES_KEY);
 
-    if(!raw){
+    if(!raw)
+      return [];
 
-      return {
-        global:[],
-        personal:[]
-      };
+    const parsed=JSON.parse(raw);
 
-    }
+    return Array.isArray(parsed)?parsed:[];
 
-    const data =
-      JSON.parse(raw);
+  }catch(e){
 
-    return {
-
-      global:
-        Array.isArray(data.global)
-          ? data.global
-          : [],
-
-      personal:
-        Array.isArray(data.personal)
-          ? data.personal
-          : []
-
-    };
-
-  }
-  catch(e){
-
-    return {
-      global:[],
-      personal:[]
-    };
+    return [];
 
   }
 
 }
 
 
-function saveMessages(data){
+function saveMessages(messages){
 
   localStorage.setItem(
-    MESSAGE_KEY,
-    JSON.stringify(data)
+    MESSAGES_KEY,
+    JSON.stringify(messages)
   );
 
 }
 
 
-function addGlobalMessage(){
+function getHistory(){
 
-  const messages =
-    getMessages();
+  try{
 
-  messages.global.push({
+    const raw=localStorage.getItem(HISTORY_KEY);
 
-    id:
-      Date.now()+"-"+Math.random(),
+    if(!raw)
+      return [];
 
-    text:"",
+    const parsed=JSON.parse(raw);
 
-    color:"#000000",
+    return Array.isArray(parsed)?parsed:[];
 
-    createdAt:
-      new Date().toISOString()
+  }catch(e){
 
-  });
-
-  saveMessages(messages);
-
-  logOperation(
-    "全利用者向けメッセージを追加"
-  );
-
-  renderMessagesAdmin();
-
-}
-
-
-function addPersonalMessage(){
-
-  const data =
-    getAllData();
-
-  if(data.length===0){
-
-    showGlobalNotice(
-      "メッセージ",
-      "先に利用者を登録してください。"
-    );
-
-    return;
+    return [];
 
   }
 
-  const messages =
-    getMessages();
+}
 
-  messages.personal.push({
+
+function saveHistory(history){
+
+  localStorage.setItem(
+    HISTORY_KEY,
+    JSON.stringify(history)
+  );
+
+}
+
+
+/* =========================================
+   操作履歴
+========================================= */
+
+function addHistory(action,detail){
+
+  const history=getHistory();
+
+  history.push({
 
     id:
-      Date.now()+"-"+Math.random(),
+      Date.now()+"-"+Math.random()
+      .toString(36)
+      .slice(2),
 
-    userId:
-      data[0].id,
+    date:new Date().toISOString(),
 
-    text:"",
+    action:action,
 
-    color:"#000000",
-
-    createdAt:
-      new Date().toISOString()
+    detail:detail||""
 
   });
 
-  saveMessages(messages);
-
-  logOperation(
-    "個人向けメッセージを追加"
-  );
-
-  renderMessagesAdmin();
-
-}
-
-
-function deleteGlobalMessage(id){
-
-  const messages =
-    getMessages();
-
-  messages.global =
-    messages.global.filter(
-      m=>m.id!==id
+  if(history.length>1000)
+    history.splice(
+      0,
+      history.length-1000
     );
 
-  saveMessages(messages);
-
-  logOperation(
-    "全利用者向けメッセージを削除"
-  );
-
-  renderMessagesAdmin();
-
-}
-
-
-function deletePersonalMessage(id){
-
-  const messages =
-    getMessages();
-
-  messages.personal =
-    messages.personal.filter(
-      m=>m.id!==id
-    );
-
-  saveMessages(messages);
-
-  logOperation(
-    "個人向けメッセージを削除"
-  );
-
-  renderMessagesAdmin();
-
-}
-
-
-function updateGlobalMessage(
-  id,
-  text,
-  color
-){
-
-  const messages =
-    getMessages();
-
-  const item =
-    messages.global.find(
-      m=>m.id===id
-    );
-
-  if(!item) return;
-
-  item.text=text;
-  item.color=color;
-
-  saveMessages(messages);
-
-}
-
-
-function updatePersonalMessage(
-  id,
-  userId,
-  text,
-  color
-){
-
-  const messages =
-    getMessages();
-
-  const item =
-    messages.personal.find(
-      m=>m.id===id
-    );
-
-  if(!item) return;
-
-  item.userId=userId;
-  item.text=text;
-  item.color=color;
-
-  saveMessages(messages);
-
-}
-
-
-function renderUserMessages(userId){
-
-  const area =
-    document.getElementById(
-      "userMessageArea"
-    );
-
-  const messages =
-    getMessages();
-
-  const selected =
-    [
-      ...messages.global,
-
-      ...messages.personal.filter(
-        m=>m.userId===userId
-      )
-
-    ].filter(
-      m=>m.text && m.text.trim()
-    );
-
-  area.innerHTML="";
-
-  if(selected.length===0){
-
-    area.style.display="none";
-
-    return;
-
-  }
-
-  area.style.display="block";
-
-  selected.forEach(message=>{
-
-    const box =
-      document.createElement("div");
-
-    box.className =
-      "message-box";
-
-    box.style.display="block";
-    box.style.color =
-      message.color || "#000000";
-
-    box.textContent =
-      message.text;
-
-    area.appendChild(box);
-
-  });
+  saveHistory(history);
 
 }
 
@@ -2637,42 +2039,71 @@ function formatDateJP(date){
 
 function formatBirth(value){
 
-  const date =
-    new Date(
-      value+"T00:00:00"
-    );
+  if(!value)
+    return "";
 
-  if(isNaN(date.getTime()))
+  const parts=value.split("-");
+
+  if(parts.length!==3)
     return value;
 
-  return date.toLocaleDateString(
-    "ja-JP",
-    {
-      year:"numeric",
-      month:"long",
-      day:"numeric"
-    }
-  );
+  return Number(parts[0])+"年"+
+    Number(parts[1])+"月"+
+    Number(parts[2])+"日";
 
 }
 
 
 function addOneMonth(date){
 
-  const result =
-    new Date(date);
+  const result=new Date(date);
 
-  const day =
-    result.getDate();
+  const day=result.getDate();
 
-  result.setMonth(
-    result.getMonth()+1
-  );
+  result.setMonth(result.getMonth()+1);
 
   if(result.getDate()!==day)
     result.setDate(0);
 
   return result;
+
+}
+
+
+function daysUntilExpiry(value){
+
+  const today=new Date();
+
+  today.setHours(0,0,0,0);
+
+  const expiry=new Date(
+    value+"T00:00:00"
+  );
+
+  if(isNaN(expiry.getTime()))
+    return null;
+
+  return Math.ceil(
+    (expiry-today)/(1000*60*60*24)
+  );
+
+}
+
+
+function expiryClass(value){
+
+  const days=daysUntilExpiry(value);
+
+  if(days===null)
+    return "expiry-normal";
+
+  if(days<0)
+    return "expiry-expired";
+
+  if(days<=5)
+    return "expiry-warning";
+
+  return "expiry-normal";
 
 }
 
@@ -2683,19 +2114,18 @@ function addOneMonth(date){
 
 function generateNumber(){
 
-  const chars =
+  const chars=
     "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
 
   let result="SP-";
 
   for(let i=0;i<8;i++){
 
-    result +=
-      chars[
-        Math.floor(
-          Math.random()*chars.length
-        )
-      ];
+    result+=chars[
+      Math.floor(
+        Math.random()*chars.length
+      )
+    ];
 
   }
 
@@ -2726,19 +2156,70 @@ function showScreen(id){
 
 
 /* =========================================
-   新規登録
+   メッセージ表示
 ========================================= */
 
-let inputMode="new";
+function getMessagesForUser(data){
 
-let updatingId=null;
+  return getMessages().filter(message=>
+    Array.isArray(message.targets) &&
+    message.targets.includes(data.id)
+  );
 
-let currentConfirmationData=null;
+}
 
-let confirmationFromNew=false;
 
-let updatingOldNumber=null;
+function renderUserMessages(data){
 
+  const areas=[
+    document.getElementById("userMessagesInput"),
+    document.getElementById("userMessagesConfirm")
+  ];
+
+  areas.forEach(area=>{
+
+    if(!area)
+      return;
+
+    area.innerHTML="";
+
+    const messages=getMessagesForUser(data);
+
+    if(messages.length===0){
+
+      area.style.display="none";
+
+      return;
+
+    }
+
+    area.style.display="block";
+
+    messages.forEach(message=>{
+
+      const div=document.createElement("div");
+
+      div.className="user-message";
+
+      div.style.display="block";
+
+      div.style.color=
+        message.color||"#000000";
+
+      div.textContent=message.text;
+
+      area.appendChild(div);
+
+    });
+
+  });
+
+}
+
+
+/* =========================================
+   新規登録
+========================================= */
 
 function selectNewRegistration(){
 
@@ -2746,23 +2227,16 @@ function selectNewRegistration(){
 
   updatingId=null;
 
-  updatingOldNumber=null;
-
   resetInputForm();
 
-  document.getElementById(
-    "inputTitle"
-  ).textContent =
+  document.getElementById("inputTitle").textContent=
     "スマートフォン利用規約";
 
-  renderUserMessages(null);
+  renderMessagesWithoutUser();
 
   showScreen("inputScreen");
 
-  setTimeout(
-    resizeSignatureCanvas,
-    50
-  );
+  setTimeout(resizeSignatureCanvas,50);
 
 }
 
@@ -2778,9 +2252,7 @@ function resetInputForm(){
 
   document
     .querySelectorAll(".ruleCheck")
-    .forEach(
-      c=>c.checked=false
-    );
+    .forEach(c=>c.checked=false);
 
   clearSignature();
 
@@ -2794,7 +2266,6 @@ function resetInputForm(){
 function backToMenuFromInput(){
 
   inputMode="new";
-
   updatingId=null;
 
   showScreen("menuScreen");
@@ -2803,55 +2274,40 @@ function backToMenuFromInput(){
 
 
 /* =========================================
-   署名
-   黒い丸を出さない
+   新規署名
 ========================================= */
 
-const canvas =
-  document.getElementById(
-    "signatureCanvas"
-  );
+const canvas=document.getElementById(
+  "signatureCanvas"
+);
 
-const ctx =
-  canvas.getContext("2d");
+const ctx=canvas.getContext("2d");
 
 let drawing=false;
-
 let signed=false;
 
 
 function resizeSignatureCanvas(){
 
-  const rect =
-    canvas.getBoundingClientRect();
+  const rect=canvas.getBoundingClientRect();
 
-  if(
-    rect.width<=0 ||
-    rect.height<=0
-  ) return;
+  if(rect.width<=0||rect.height<=0)
+    return;
 
-  const ratio =
-    Math.max(
-      window.devicePixelRatio || 1,
-      1
-    );
+  const ratio=Math.max(
+    window.devicePixelRatio||1,
+    1
+  );
 
-  canvas.width =
-    Math.round(rect.width*ratio);
-
-  canvas.height =
-    Math.round(rect.height*ratio);
+  canvas.width=Math.round(rect.width*ratio);
+  canvas.height=Math.round(rect.height*ratio);
 
   ctx.setTransform(
-    ratio,
-    0,
-    0,
-    ratio,
-    0,
-    0
+    ratio,0,0,ratio,0,0
   );
 
   ctx.strokeStyle="#111";
+  ctx.fillStyle="#111";
   ctx.lineWidth=2.5;
   ctx.lineCap="round";
   ctx.lineJoin="round";
@@ -2867,14 +2323,11 @@ window.addEventListener(
 
 function getCanvasPosition(e){
 
-  const rect =
-    canvas.getBoundingClientRect();
+  const rect=canvas.getBoundingClientRect();
 
   return {
-
     x:e.clientX-rect.left,
     y:e.clientY-rect.top
-
   };
 
 }
@@ -2885,34 +2338,25 @@ function startDrawing(e){
   e.preventDefault();
 
   drawing=true;
-
   signed=true;
 
   if(e.pointerId!==undefined){
 
     try{
-      canvas.setPointerCapture(
-        e.pointerId
-      );
-    }
-    catch(error){}
+      canvas.setPointerCapture(e.pointerId);
+    }catch(error){}
 
   }
 
-  const p =
-    getCanvasPosition(e);
+  const p=getCanvasPosition(e);
 
   /*
-   * 以前の arc() による黒い丸を廃止。
-   * 点ではなく線の開始だけを行う。
+   * 点を描かない。
+   * これにより書き始めの黒い丸を防止。
    */
 
   ctx.beginPath();
-
-  ctx.moveTo(
-    p.x,
-    p.y
-  );
+  ctx.moveTo(p.x,p.y);
 
 }
 
@@ -2924,22 +2368,13 @@ function draw(e){
 
   e.preventDefault();
 
-  const p =
-    getCanvasPosition(e);
+  const p=getCanvasPosition(e);
 
-  ctx.lineTo(
-    p.x,
-    p.y
-  );
-
+  ctx.lineTo(p.x,p.y);
   ctx.stroke();
 
   ctx.beginPath();
-
-  ctx.moveTo(
-    p.x,
-    p.y
-  );
+  ctx.moveTo(p.x,p.y);
 
 }
 
@@ -2950,7 +2385,6 @@ function stopDrawing(){
     return;
 
   drawing=false;
-
   ctx.closePath();
 
 }
@@ -3001,100 +2435,70 @@ function clearSignature(){
    入力チェック
 ========================================= */
 
-const checkboxes =
-  document.querySelectorAll(
-    ".ruleCheck"
-  );
+const checkboxes=
+  document.querySelectorAll(".ruleCheck");
 
 
-checkboxes.forEach(
-  checkbox=>{
-
-    checkbox.addEventListener(
-      "change",
-      updateButton
-    );
-
-  }
-);
-
-
-document.getElementById("name")
-  .addEventListener(
-    "input",
+checkboxes.forEach(checkbox=>{
+  checkbox.addEventListener(
+    "change",
     updateButton
   );
+});
 
-document.getElementById("newPassword")
-  .addEventListener(
-    "input",
-    updateButton
-  );
-
-
-/*
- * 年・月・日の3つすべてにchange/inputを登録。
- * これで「生年月日を選んだのにボタンが灰色」
- * になる問題を防ぐ。
- */
 
 [
+  "name",
+  "newPassword",
   "birthYear",
   "birthMonth",
   "birthDay"
 ].forEach(id=>{
 
-  const el =
-    document.getElementById(id);
+  document.getElementById(id)
+    .addEventListener(
+      "input",
+      updateButton
+    );
 
-  el.addEventListener(
-    "change",
-    updateButton
-  );
-
-  el.addEventListener(
-    "input",
-    updateButton
-  );
+  document.getElementById(id)
+    .addEventListener(
+      "change",
+      updateButton
+    );
 
 });
 
 
 function updateButton(){
 
-  const checked =
-    [...checkboxes].every(
-      c=>c.checked
-    );
+  const checked=[...checkboxes].every(
+    c=>c.checked
+  );
 
-  const name =
-    document
-      .getElementById("name")
-      .value
-      .trim();
+  const name=document.getElementById(
+    "name"
+  ).value.trim();
 
-  const birth =
-    getBirthValue("new");
+  const birth=getBirthValue(
+    "birthYear",
+    "birthMonth",
+    "birthDay"
+  );
 
-  const password =
-    document
-      .getElementById("newPassword")
-      .value;
-
-  const validBirth =
-    birth !== "";
-
+  const password=document.getElementById(
+    "newPassword"
+  ).value;
 
   document.getElementById(
     "agreeButton"
-  ).disabled =
-    !(
-      checked &&
-      name &&
-      validBirth &&
-      password &&
-      signed
-    );
+  ).disabled=!(
+    checked &&
+    name &&
+    birth &&
+    password &&
+    signed
+  );
 
 }
 
@@ -3105,8 +2509,7 @@ function updateButton(){
 
 function showError(text){
 
-  const error =
-    document.getElementById("error");
+  const error=document.getElementById("error");
 
   error.textContent=text;
 
@@ -3122,48 +2525,39 @@ function showError(text){
 
 function hideError(){
 
-  document.getElementById(
-    "error"
-  ).style.display="none";
+  document.getElementById("error")
+    .style.display="none";
 
 }
 
 
 /* =========================================
-   新規登録・更新
+   新規・更新確定
 ========================================= */
 
 function agree(){
 
   hideError();
 
-  const name =
-    document
-      .getElementById("name")
-      .value
-      .trim();
+  const name=document.getElementById(
+    "name"
+  ).value.trim();
 
-  const birth =
-    getBirthValue("new");
+  const birth=getBirthValue(
+    "birthYear",
+    "birthMonth",
+    "birthDay"
+  );
 
-  const password =
-    document
-      .getElementById("newPassword")
-      .value;
+  const password=document.getElementById(
+    "newPassword"
+  ).value;
 
-  const checked =
-    [...checkboxes].every(
-      c=>c.checked
-    );
+  const checked=[...checkboxes].every(
+    c=>c.checked
+  );
 
-
-  if(
-    !name ||
-    !birth ||
-    !password ||
-    !checked ||
-    !signed
-  ){
+  if(!name||!birth||!password||!checked||!signed){
 
     showError(
       "すべての項目を入力・確認してください。"
@@ -3172,7 +2566,6 @@ function agree(){
     return;
 
   }
-
 
   if(password.length<4){
 
@@ -3184,19 +2577,13 @@ function agree(){
 
   }
 
+  const agreementDate=new Date();
 
-  const agreementDate =
-    new Date();
+  agreementDate.setHours(0,0,0,0);
 
-  agreementDate.setHours(
-    0,0,0,0
+  const expiryDate=addOneMonth(
+    agreementDate
   );
-
-  const expiryDate =
-    addOneMonth(
-      agreementDate
-    );
-
 
   if(inputMode==="update"){
 
@@ -3212,8 +2599,9 @@ function agree(){
 
   }
 
+  const settings=getSettings();
 
-  const data = {
+  const data={
 
     id:
       Date.now()+"-"+
@@ -3221,8 +2609,7 @@ function agree(){
         .toString(36)
         .slice(2),
 
-    number:
-      generateNumber(),
+    number:generateNumber(),
 
     name:name,
 
@@ -3230,77 +2617,58 @@ function agree(){
 
     password:password,
 
-    agreementDate:
-      dateToInput(
-        agreementDate
-      ),
+    agreementDate:dateToInput(
+      agreementDate
+    ),
 
-    agreementDateText:
-      formatDateJP(
-        agreementDate
-      ),
+    agreementDateText:formatDateJP(
+      agreementDate
+    ),
 
-    expiryDate:
-      dateToInput(
-        expiryDate
-      ),
+    expiryDate:dateToInput(
+      expiryDate
+    ),
 
-    expiryDateText:
-      formatDateJP(
-        expiryDate
-      ),
+    expiryDateText:formatDateJP(
+      expiryDate
+    ),
 
-    rules:
-      rules.map(()=>true),
+    rules:rules.map(()=>true),
 
-    ruleVersion:
-      VERSION,
+    signature:canvas.toDataURL("image/png"),
 
-    signature:
-      canvas.toDataURL("image/png"),
+    ruleVersion:settings.ruleVersion,
 
-    startURL:
-      getSettings().startURL
+    createdAt:new Date().toISOString(),
+
+    updatedAt:new Date().toISOString()
 
   };
 
-
-  const allData =
-    getAllData();
+  const allData=getAllData();
 
   allData.push(data);
 
   saveAllData(allData);
 
-  logOperation(
-    "新規登録："+data.name
+  addHistory(
+    "新規登録",
+    data.name+" / "+data.number
   );
 
-  setConfirmation(
-    data,
-    true
-  );
-
+  setConfirmation(data,true);
 
   showLoading(
-
     [
       "規約を確認しています。",
       "利用者情報を確認しています。",
       "署名を確認しています。",
       "完了しました。"
     ],
-
     2000,
-
     function(){
-
-      showScreen(
-        "confirmationScreen"
-      );
-
+      showScreen("confirmationScreen");
     }
-
   );
 
 }
@@ -3318,14 +2686,11 @@ function updateExistingRegistration(
   expiryDate
 ){
 
-  const allData =
-    getAllData();
+  const allData=getAllData();
 
-  const index =
-    allData.findIndex(
-      item=>item.id===updatingId
-    );
-
+  const index=allData.findIndex(
+    item=>item.id===updatingId
+  );
 
   if(index===-1){
 
@@ -3337,13 +2702,9 @@ function updateExistingRegistration(
 
   }
 
+  const old=allData[index];
 
-  const old =
-    allData[index];
-
-
-  const updated = {
-
+  const updated={
     ...old,
 
     name:name,
@@ -3352,92 +2713,61 @@ function updateExistingRegistration(
 
     password:password,
 
-    agreementDate:
-      dateToInput(
-        agreementDate
-      ),
+    agreementDate:dateToInput(
+      agreementDate
+    ),
 
-    agreementDateText:
-      formatDateJP(
-        agreementDate
-      ),
+    agreementDateText:formatDateJP(
+      agreementDate
+    ),
 
-    expiryDate:
-      dateToInput(
-        expiryDate
-      ),
+    expiryDate:dateToInput(
+      expiryDate
+    ),
 
-    expiryDateText:
-      formatDateJP(
-        expiryDate
-      ),
+    expiryDateText:formatDateJP(
+      expiryDate
+    ),
 
-    rules:
-      rules.map(()=>true),
+    rules:rules.map(()=>true),
 
-    ruleVersion:
-      VERSION,
+    signature:canvas.toDataURL(
+      "image/png"
+    ),
 
-    signature:
-      canvas.toDataURL(
-        "image/png"
-      ),
+    ruleVersion:getSettings().ruleVersion,
 
-    startURL:
-      getSettings().startURL
+    updatedAt:new Date().toISOString()
 
   };
 
-
   /*
    * 古いデータを残さず、
-   * 同じIDのデータを完全に置き換える。
+   * 同じIDのデータを完全に上書き。
    */
 
   allData[index]=updated;
 
   saveAllData(allData);
 
-  logOperation(
-    "利用期限更新："+updated.name
+  addHistory(
+    "利用者情報更新",
+    updated.name+" / "+updated.number
   );
 
-  setConfirmation(
-    updated,
-    false
-  );
-
-  /*
-   * 更新完了後は確認画面で
-   * 「内容を修正する」を表示する。
-   */
-
-  confirmationFromNew=false;
-
-  document.getElementById(
-    "editAgreementButton"
-  ).style.display="block";
-
+  setConfirmation(updated,true);
 
   showLoading(
-
     [
       "規約を確認しています。",
       "利用者情報を確認しています。",
       "署名を確認しています。",
       "完了しました。"
     ],
-
     2000,
-
     function(){
-
-      showScreen(
-        "confirmationScreen"
-      );
-
+      showScreen("confirmationScreen");
     }
-
   );
 
 }
@@ -3473,44 +2803,36 @@ function selectContinuation(){
     "continueError"
   ).style.display="none";
 
-  showScreen(
-    "continueScreen"
-  );
+  showScreen("continueScreen");
 
 }
 
 
 function checkContinuation(){
 
-  const name =
-    document
-      .getElementById("continueName")
-      .value
-      .trim();
+  const name=document.getElementById(
+    "continueName"
+  ).value.trim();
 
-  const birth =
-    getBirthValue("continue");
+  const birth=getBirthValue(
+    "continueBirthYear",
+    "continueBirthMonth",
+    "continueBirthDay"
+  );
 
-  const password =
-    document
-      .getElementById("continuePassword")
-      .value;
+  const password=document.getElementById(
+    "continuePassword"
+  ).value;
 
-  const error =
-    document.getElementById(
-      "continueError"
-    );
+  const error=document.getElementById(
+    "continueError"
+  );
 
   error.style.display="none";
 
+  if(!name||!birth||!password){
 
-  if(
-    !name ||
-    !birth ||
-    !password
-  ){
-
-    error.textContent =
+    error.textContent=
       "氏名、生年月日、利用パスワードをすべて入力してください。";
 
     error.style.display="block";
@@ -3519,23 +2841,18 @@ function checkContinuation(){
 
   }
 
+  const allData=getAllData();
 
-  const allData =
-    getAllData();
-
-
-  const data =
-    allData.find(
-      item=>
-        item.name===name &&
-        item.birth===birth &&
-        item.password===password
-    );
-
+  const data=allData.find(
+    item=>
+      item.name===name &&
+      item.birth===birth &&
+      item.password===password
+  );
 
   if(!data){
 
-    error.textContent =
+    error.textContent=
       "入力された情報に一致する登録情報がありません。";
 
     error.style.display="block";
@@ -3544,30 +2861,14 @@ function checkContinuation(){
 
   }
 
-
-  const today =
-    new Date();
-
-  today.setHours(
-    0,0,0,0
-  );
-
-
-  const expiry =
-    new Date(
-      data.expiryDate+
-      "T00:00:00"
-    );
-
+  const settings=getSettings();
 
   /*
-   * 規約バージョンが古い場合も
-   * 再同意が必要。
+   * 規約バージョンが違えば再同意。
    */
 
   if(
-    data.ruleVersion &&
-    String(data.ruleVersion)!==VERSION
+    data.ruleVersion!==settings.ruleVersion
   ){
 
     beginUpdate(data);
@@ -3576,22 +2877,32 @@ function checkContinuation(){
 
   }
 
+  const today=new Date();
+
+  today.setHours(0,0,0,0);
+
+  const expiry=new Date(
+    data.expiryDate+"T00:00:00"
+  );
 
   if(today<=expiry){
 
-    setConfirmation(
-      data,
-      false
-    );
+    /*
+     * 期限内の継続利用では
+     * 修正ボタンを表示しない。
+     */
 
-    showScreen(
-      "confirmationScreen"
-    );
+    setConfirmation(data,false);
+
+    showScreen("confirmationScreen");
 
     return;
 
   }
 
+  /*
+   * 期限切れなら更新画面。
+   */
 
   beginUpdate(data);
 
@@ -3599,7 +2910,7 @@ function checkContinuation(){
 
 
 /* =========================================
-   更新画面
+   更新画面準備
 ========================================= */
 
 function beginUpdate(data){
@@ -3608,100 +2919,100 @@ function beginUpdate(data){
 
   updatingId=data.id;
 
-  updatingOldNumber=data.number;
-
-
   document.getElementById(
     "inputTitle"
-  ).textContent =
+  ).textContent=
     "スマートフォン利用規約・更新";
 
+  /*
+   * 氏名・生年月日を自動入力
+   */
 
   document.getElementById(
     "name"
-  ).value =
-    data.name;
-
+  ).value=data.name;
 
   setBirthValue(
-    "new",
-    data.birth
+    data.birth,
+    "birthYear",
+    "birthMonth",
+    "birthDay"
   );
 
-
   /*
-   * 旧パスワードをそのまま入力欄には入れず、
-   * 新しいパスワードを再設定する。
+   * パスワードは自動表示しない。
+   * 更新時は新しいパスワードを設定。
    */
 
   document.getElementById(
     "newPassword"
   ).value="";
 
-
   document
     .querySelectorAll(".ruleCheck")
-    .forEach(
-      c=>c.checked=false
-    );
-
+    .forEach(c=>c.checked=false);
 
   clearSignature();
 
+  renderUserMessages(data);
 
-  renderUserMessages(
-    data.id
-  );
+  showScreen("inputScreen");
 
+  setTimeout(function(){
 
-  showScreen(
-    "inputScreen"
-  );
+    resizeSignatureCanvas();
 
+    if(data.signature){
 
-  setTimeout(
-    function(){
+      const image=new Image();
 
-      resizeSignatureCanvas();
+      image.onload=function(){
 
-      if(data.signature){
+        const rect=
+          canvas.getBoundingClientRect();
 
-        const image =
-          new Image();
+        ctx.drawImage(
+          image,
+          0,
+          0,
+          rect.width,
+          rect.height
+        );
 
-        image.onload=function(){
+        signed=true;
 
-          const rect =
-            canvas.getBoundingClientRect();
+        updateButton();
 
-          ctx.drawImage(
-            image,
-            0,
-            0,
-            rect.width,
-            rect.height
-          );
+      };
 
-          signed=true;
+      image.src=data.signature;
 
-          updateButton();
+    }
 
-        };
-
-        image.src =
-          data.signature;
-
-      }
-
-    },
-    100
-  );
+  },100);
 
 }
 
 
 /* =========================================
-   確認
+   新規時メッセージ
+========================================= */
+
+function renderMessagesWithoutUser(){
+
+  document.getElementById(
+    "userMessagesInput"
+  ).style.display="none";
+
+  document.getElementById(
+    "userMessagesInput"
+  ).innerHTML="";
+
+}
+
+
+/* =========================================
+   確認画面
 ========================================= */
 
 function setConfirmation(
@@ -3713,79 +3024,68 @@ function setConfirmation(
 
   confirmationFromNew=!!fromNew;
 
-
   document.getElementById(
     "confirmationTitle"
-  ).textContent =
+  ).textContent=
     confirmationFromNew
-      ? "同意内容確認"
-      : "同意状況確認";
-
+      ?"同意内容確認"
+      :"同意状況確認";
 
   /*
-   * 継続利用時は修正なし。
-   * 更新時のみ修正あり。
+   * 新規登録と更新では修正可能。
+   * 通常の期限内継続利用では不可。
    */
 
   document.getElementById(
     "editAgreementButton"
-  ).style.display =
-    inputMode==="update"
-      ? "block"
-      : "none";
-
+  ).style.display=
+    confirmationFromNew
+      ?"block"
+      :"none";
 
   document.getElementById(
     "confirmationNumber"
-  ).textContent =
-    data.number;
-
+  ).textContent=data.number;
 
   document.getElementById(
     "resultName"
-  ).textContent =
-    data.name;
-
+  ).textContent=data.name;
 
   document.getElementById(
     "resultBirth"
-  ).textContent =
-    formatBirth(data.birth);
-
+  ).textContent=formatBirth(data.birth);
 
   document.getElementById(
     "resultAgreementDate"
-  ).textContent =
+  ).textContent=
     data.agreementDateText;
-
 
   document.getElementById(
     "resultExpiryDate"
-  ).textContent =
+  ).textContent=
     data.expiryDateText;
-
 
   document.getElementById(
     "resultSignature"
-  ).src =
-    data.signature;
+  ).src=data.signature||"";
 
+  createRulesStatus(data.rules);
 
-  createRulesStatus(
-    data.rules
-  );
+  renderUserMessages(data);
 
 }
 
 
 function editAgreement(){
 
-  if(inputMode!=="update")
+  if(!confirmationFromNew)
     return;
 
-  showScreen(
-    "inputScreen"
-  );
+  /*
+   * 新規登録・更新の両方で修正可能。
+   */
+
+  showScreen("inputScreen");
 
   setTimeout(
     resizeSignatureCanvas,
@@ -3796,49 +3096,38 @@ function editAgreement(){
 
 
 /* =========================================
-   規約状態
+   規約確認
 ========================================= */
 
 function createRulesStatus(states){
 
-  const area =
-    document.getElementById(
-      "rulesStatus"
-    );
+  const area=document.getElementById(
+    "rulesStatus"
+  );
 
   area.innerHTML="";
 
+  rules.forEach((rule,index)=>{
 
-  rules.forEach(
-    (rule,index)=>{
+    const item=document.createElement("div");
 
-      const item =
-        document.createElement(
-          "div"
-        );
+    item.className="rules-status-item";
 
-      item.className =
-        "rules-status-item";
+    const checked=
+      !states ||
+      states[index]!==false;
 
-      const checked =
-        !states ||
-        states[index]!==false;
+    item.innerHTML=`
+      <span>
+        ${checked?"✓":"－"}
+      </span>
+      第${index+1}条
+      ${escapeHTML(rule.title)}
+    `;
 
-      item.innerHTML = `
+    area.appendChild(item);
 
-        <span>
-          ${checked?"✓":"－"}
-        </span>
-
-        第${index+1}条
-        ${escapeHTML(rule.title)}
-
-      `;
-
-      area.appendChild(item);
-
-    }
-  );
+  });
 
 }
 
@@ -3849,52 +3138,30 @@ function createRulesStatus(states){
 
 function startUse(){
 
-  const settings =
-    getSettings();
-
   showLoading(
-
     [
-      "情報を保存しています。",
-      "利用開始を準備しています。",
-      "完了しました。"
+      "情報を保存しています。"
     ],
-
-    3000,
-
+    2000,
     function(){
 
-      let url =
-        settings.startURL ||
-        "https://www.google.com/";
+      const settings=getSettings();
 
-      try{
+      addHistory(
+        "利用開始",
+        currentConfirmationData
+          ?currentConfirmationData.name
+          :""
+      );
 
-        const parsed =
-          new URL(url);
+      let url=settings.startUrl;
 
-        if(
-          parsed.protocol!=="http:" &&
-          parsed.protocol!=="https:"
-        ){
-
-          url =
-            "https://www.google.com/";
-
-        }
-
-      }
-      catch(e){
-
-        url =
-          "https://www.google.com/";
-
-      }
+      if(!/^https?:\/\//i.test(url))
+        url="https://www.google.com/";
 
       window.location.href=url;
 
     }
-
   );
 
 }
@@ -3902,7 +3169,6 @@ function startUse(){
 
 /* =========================================
    読み込み
-   100%になってから完了表示
 ========================================= */
 
 function showLoading(
@@ -3911,137 +3177,101 @@ function showLoading(
   callback
 ){
 
-  const screen =
-    document.getElementById(
-      "loadingScreen"
-    );
+  const screen=document.getElementById(
+    "loadingScreen"
+  );
 
-  const bar =
-    document.getElementById(
-      "progressBar"
-    );
+  const bar=document.getElementById(
+    "progressBar"
+  );
 
-  const percent =
-    document.getElementById(
-      "progressPercent"
-    );
+  const percent=document.getElementById(
+    "progressPercent"
+  );
 
-  const message =
-    document.getElementById(
-      "loadingMessage"
-    );
-
+  const message=document.getElementById(
+    "loadingMessage"
+  );
 
   screen.classList.add("active");
 
   bar.style.width="0%";
-
   percent.textContent="0%";
+  message.textContent=messages[0];
 
-  message.textContent =
-    messages[0];
-
-
-  const startTime =
-    performance.now();
+  const startTime=performance.now();
 
   let progress=0;
 
-
   function tick(){
 
-    const elapsed =
-      performance.now()-
-      startTime;
+    const elapsed=
+      performance.now()-startTime;
 
-    const ratio =
-      Math.min(
-        elapsed/duration,
-        1
-      );
+    const ratio=Math.min(
+      elapsed/duration,
+      1
+    );
 
+    const messageIndex=Math.min(
+      messages.length-1,
+      Math.floor(
+        ratio*messages.length
+      )
+    );
 
-    const messageIndex =
-      Math.min(
-        messages.length-1,
-        Math.floor(
-          ratio*messages.length
-        )
-      );
-
-
-    message.textContent =
+    message.textContent=
       messages[messageIndex];
-
 
     let target;
 
-
     if(ratio<0.18){
 
-      target =
-        ratio/0.18*14;
+      target=ratio/0.18*14;
 
-    }
-    else if(ratio<0.50){
+    }else if(ratio<0.50){
 
-      target =
+      target=
         14+
         ((ratio-0.18)/0.32)*35;
 
-    }
-    else if(ratio<0.78){
+    }else if(ratio<0.78){
 
-      target =
+      target=
         49+
         ((ratio-0.50)/0.28)*33;
 
-    }
-    else{
+    }else{
 
-      target =
+      target=
         82+
         ((ratio-0.78)/0.22)*18;
 
     }
 
-
     if(progress<target){
 
-      progress +=
-        Math.min(
-          target-progress,
-          .2+Math.random()*1.2
-        );
+      progress+=Math.min(
+        target-progress,
+        .2+Math.random()*1.2
+      );
 
     }
-
 
     if(ratio<1){
 
-      progress =
-        Math.min(
-          progress,
-          99
-        );
+      progress=Math.min(progress,99);
 
-    }
-    else{
+    }else{
 
       progress=100;
 
     }
 
+    const display=Math.floor(progress);
 
-    const display =
-      Math.floor(progress);
-
-    bar.style.width =
-      display+"%";
-
-    percent.textContent =
-      display+"%";
-
+    bar.style.width=display+"%";
+    percent.textContent=display+"%";
 
     if(ratio<1){
 
@@ -4054,35 +3284,25 @@ function showLoading(
 
     }
 
-
     /*
-     * ここで初めて100%。
-     * その後に「完了しました。」を表示。
+     * 必ず100%になってから
+     * 完了表示を行う。
      */
 
     bar.style.width="100%";
-
     percent.textContent="100%";
 
-    message.textContent =
-      "完了しました。";
+    message.textContent="完了しました。";
 
+    setTimeout(function(){
 
-    setTimeout(
-      function(){
+      screen.classList.remove("active");
 
-        screen.classList.remove(
-          "active"
-        );
+      callback();
 
-        callback();
-
-      },
-      700
-    );
+    },500);
 
   }
-
 
   tick();
 
@@ -4103,69 +3323,50 @@ function openAdminLogin(){
     "adminLoginError"
   ).style.display="none";
 
-  showScreen(
-    "adminLoginScreen"
-  );
+  showScreen("adminLoginScreen");
 
 }
 
 
 function backToMenuFromAdminLogin(){
 
-  showScreen(
-    "menuScreen"
-  );
+  showScreen("menuScreen");
 
 }
 
 
 function checkAdminPassword(){
 
-  const password =
-    document.getElementById(
-      "adminPassword"
-    ).value;
+  const password=document.getElementById(
+    "adminPassword"
+  ).value;
 
-  const error =
-    document.getElementById(
-      "adminLoginError"
-    );
+  const error=document.getElementById(
+    "adminLoginError"
+  );
 
+  if(password!==adminPassword){
 
-  if(password!==ADMIN_PASSWORD){
-
-    error.textContent =
+    error.textContent=
       "パスワードが正しくありません。";
 
     error.style.display="block";
-
-    logOperation(
-      "管理者ログイン失敗"
-    );
 
     return;
 
   }
 
-
-  logOperation(
-    "管理者ログイン"
+  addHistory(
+    "管理者ログイン",
+    "管理者画面を開いた"
   );
 
-
   showLoading(
-
-    [
-      "登録情報を取得しています。",
-      "管理情報を確認しています。",
-      "完了しました。"
-    ],
-
+    ["登録情報を取得しています。"],
     2000,
-
     function(){
 
-      loadAdminSettings();
+      loadSystemSettings();
 
       renderAdminList();
 
@@ -4173,12 +3374,9 @@ function checkAdminPassword(){
 
       renderHistory();
 
-      showScreen(
-        "adminListScreen"
-      );
+      showScreen("adminListScreen");
 
     }
-
   );
 
 }
@@ -4188,572 +3386,142 @@ function checkAdminPassword(){
    管理者一覧
 ========================================= */
 
-let adminSortMode="new";
-
-
-function getExpiryClass(dateString){
-
-  const today =
-    new Date();
-
-  today.setHours(
-    0,0,0,0
-  );
-
-  const expiry =
-    new Date(
-      dateString+
-      "T00:00:00"
-    );
-
-  if(isNaN(expiry.getTime()))
-    return "expiry-normal";
-
-  const diff =
-    Math.ceil(
-      (
-        expiry.getTime()-
-        today.getTime()
-      )/
-      86400000
-    );
-
-  if(diff<0)
-    return "expiry-expired";
-
-  if(diff<=5)
-    return "expiry-warning";
-
-  return "expiry-normal";
-
-}
-
-
 function renderAdminList(){
 
-  const area =
-    document.getElementById(
-      "adminList"
-    );
+  const area=document.getElementById(
+    "adminList"
+  );
 
-  let allData =
-    getAllData();
+  let data=getAllData();
 
+  const search=document.getElementById(
+    "adminSearch"
+  ).value
+    .trim()
+    .toLowerCase();
 
-  const search =
-    document
-      .getElementById(
-        "adminSearch"
-      )
-      .value
-      .trim()
-      .toLowerCase();
-
+  const sort=document.getElementById(
+    "adminSort"
+  ).value;
 
   if(search){
 
-    allData =
-      allData.filter(
-        data=>
-          String(data.name)
-            .toLowerCase()
-            .includes(search) ||
-          String(data.number)
-            .toLowerCase()
-            .includes(search) ||
-          String(data.birth)
-            .toLowerCase()
-            .includes(search)
+    data=data.filter(item=>{
+
+      const text=(
+        item.name+" "+
+        item.number+" "+
+        item.birth
+      ).toLowerCase();
+
+      return text.includes(search);
+
+    });
+
+  }
+
+  data.sort((a,b)=>{
+
+    if(sort==="name")
+      return a.name.localeCompare(
+        b.name,
+        "ja"
       );
 
-  }
+    if(sort==="oldest")
+      return String(
+        a.createdAt||""
+      ).localeCompare(
+        String(b.createdAt||"")
+      );
 
+    if(sort==="expiry")
+      return String(
+        a.expiryDate||""
+      ).localeCompare(
+        String(b.expiryDate||"")
+      );
 
-  if(adminSortMode==="old"){
-
-    allData.sort(
-      (a,b)=>
-        String(a.agreementDate)
-          .localeCompare(
-            String(b.agreementDate)
-          )
+    return String(
+      b.createdAt||""
+    ).localeCompare(
+      String(a.createdAt||"")
     );
 
-  }
-  else if(adminSortMode==="name"){
-
-    allData.sort(
-      (a,b)=>
-        String(a.name)
-          .localeCompare(
-            String(b.name),
-            "ja"
-          )
-    );
-
-  }
-  else if(adminSortMode==="expiry"){
-
-    allData.sort(
-      (a,b)=>
-        String(a.expiryDate)
-          .localeCompare(
-            String(b.expiryDate)
-          )
-    );
-
-  }
-  else{
-
-    allData.reverse();
-
-  }
-
+  });
 
   area.innerHTML="";
 
+  if(data.length===0){
 
-  if(allData.length===0){
-
-    area.innerHTML = `
-
+    area.innerHTML=`
       <div class="admin-empty">
         保存されている登録情報はありません。
       </div>
-
     `;
+
+    renderMessageTargets();
 
     return;
 
   }
 
+  data.forEach(item=>{
 
-  allData.forEach(data=>{
+    const div=document.createElement("div");
 
-    const item =
-      document.createElement(
-        "div"
-      );
+    div.className="admin-list-item";
 
-    item.className =
-      "admin-list-item";
+    const days=daysUntilExpiry(
+      item.expiryDate
+    );
 
+    let expiryText=
+      "有効期限："+item.expiryDateText;
 
-    const expiryClass =
-      getExpiryClass(
-        data.expiryDate
-      );
+    if(days!==null){
 
+      if(days<0)
+        expiryText+="（期限切れ）";
+      else if(days<=5)
+        expiryText+="（あと"+days+"日）";
 
-    item.innerHTML = `
+    }
+
+    div.innerHTML=`
 
       <div class="admin-list-name">
-        ${escapeHTML(data.name)}
+        ${escapeHTML(item.name)}
       </div>
 
       <div class="admin-list-number">
         確認番号：
-        ${escapeHTML(data.number)}
+        ${escapeHTML(item.number)}
       </div>
 
-      <div class="admin-list-expiry ${expiryClass}">
-        有効期限：
-        ${escapeHTML(data.expiryDateText)}
+      <div class="admin-list-expiry
+        ${expiryClass(item.expiryDate)}">
+        ${escapeHTML(expiryText)}
       </div>
 
       <div class="admin-list-password">
         利用パスワード：
-        ${escapeHTML(data.password)}
+        ${escapeHTML(item.password)}
       </div>
 
     `;
 
+    div.onclick=function(){
 
-    item.onclick =
-      function(){
+      openAdminEdit(item.id);
 
-        openAdminEdit(
-          data.id
-        );
+    };
 
-      };
-
-
-    area.appendChild(item);
+    area.appendChild(div);
 
   });
 
-}
-
-
-function sortAdminList(mode){
-
-  adminSortMode=mode;
-
-  renderAdminList();
-
-}
-
-
-/* =========================================
-   管理者メッセージ表示
-========================================= */
-
-function renderMessagesAdmin(){
-
-  const messages =
-    getMessages();
-
-
-  const globalArea =
-    document.getElementById(
-      "globalMessages"
-    );
-
-  const personalArea =
-    document.getElementById(
-      "personalMessages"
-    );
-
-
-  globalArea.innerHTML="";
-
-  personalArea.innerHTML="";
-
-
-  messages.global.forEach(message=>{
-
-    const box =
-      document.createElement(
-        "div"
-      );
-
-    box.className =
-      "admin-message-box";
-
-
-    box.innerHTML = `
-
-      <div class="field">
-
-        <label>
-          メッセージ
-        </label>
-
-        <textarea
-          data-message-id="${escapeHTML(message.id)}"
-          class="globalMessageText"
-        >${escapeHTML(message.text)}</textarea>
-
-      </div>
-
-      <div class="field">
-
-        <label>
-          色
-        </label>
-
-        <select
-          class="globalMessageColor"
-          data-message-id="${escapeHTML(message.id)}">
-
-          <option value="#000000"
-            ${message.color==="#000000"?"selected":""}>
-            黒
-          </option>
-
-          <option value="#ff0000"
-            ${message.color==="#ff0000"?"selected":""}>
-            赤
-          </option>
-
-          <option value="#0000ff"
-            ${message.color==="#0000ff"?"selected":""}>
-            青
-          </option>
-
-        </select>
-
-      </div>
-
-      <button
-        class="message-delete-button"
-        onclick="deleteGlobalMessage('${escapeJS(message.id)}')">
-        メッセージを削除
-      </button>
-
-    `;
-
-    globalArea.appendChild(box);
-
-  });
-
-
-  const allData =
-    getAllData();
-
-
-  messages.personal.forEach(message=>{
-
-    const box =
-      document.createElement(
-        "div"
-      );
-
-    box.className =
-      "admin-message-box";
-
-
-    let options="";
-
-    allData.forEach(data=>{
-
-      options += `
-
-        <option
-          value="${escapeHTML(data.id)}"
-          ${message.userId===data.id?"selected":""}>
-          ${escapeHTML(data.name)}
-          （${escapeHTML(data.number)}）
-        </option>
-
-      `;
-
-    });
-
-
-    box.innerHTML = `
-
-      <div class="field">
-
-        <label>
-          利用者
-        </label>
-
-        <select
-          class="personalMessageUser"
-          data-message-id="${escapeHTML(message.id)}">
-
-          ${options}
-
-        </select>
-
-      </div>
-
-      <div class="field">
-
-        <label>
-          メッセージ
-        </label>
-
-        <textarea
-          class="personalMessageText"
-          data-message-id="${escapeHTML(message.id)}"
-        >${escapeHTML(message.text)}</textarea>
-
-      </div>
-
-      <div class="field">
-
-        <label>
-          色
-        </label>
-
-        <select
-          class="personalMessageColor"
-          data-message-id="${escapeHTML(message.id)}">
-
-          <option value="#000000"
-            ${message.color==="#000000"?"selected":""}>
-            黒
-          </option>
-
-          <option value="#ff0000"
-            ${message.color==="#ff0000"?"selected":""}>
-            赤
-          </option>
-
-          <option value="#0000ff"
-            ${message.color==="#0000ff"?"selected":""}>
-            青
-          </option>
-
-        </select>
-
-      </div>
-
-      <button
-        class="message-delete-button"
-        onclick="deletePersonalMessage('${escapeJS(message.id)}')">
-        メッセージを削除
-      </button>
-
-    `;
-
-    personalArea.appendChild(box);
-
-  });
-
-
-  document
-    .querySelectorAll(".globalMessageText")
-    .forEach(el=>{
-
-      el.addEventListener(
-        "input",
-        saveAdminMessagesFromUI
-      );
-
-    });
-
-
-  document
-    .querySelectorAll(".globalMessageColor")
-    .forEach(el=>{
-
-      el.addEventListener(
-        "change",
-        saveAdminMessagesFromUI
-      );
-
-    });
-
-
-  document
-    .querySelectorAll(".personalMessageText")
-    .forEach(el=>{
-
-      el.addEventListener(
-        "input",
-        saveAdminMessagesFromUI
-      );
-
-    });
-
-
-  document
-    .querySelectorAll(".personalMessageColor")
-    .forEach(el=>{
-
-      el.addEventListener(
-        "change",
-        saveAdminMessagesFromUI
-      );
-
-    });
-
-
-  document
-    .querySelectorAll(".personalMessageUser")
-    .forEach(el=>{
-
-      el.addEventListener(
-        "change",
-        saveAdminMessagesFromUI
-      );
-
-    });
-
-}
-
-
-function saveAdminMessagesFromUI(){
-
-  const messages =
-    getMessages();
-
-
-  document
-    .querySelectorAll(".globalMessageText")
-    .forEach(el=>{
-
-      const id =
-        el.dataset.messageId;
-
-      const item =
-        messages.global.find(
-          m=>m.id===id
-        );
-
-      if(item)
-        item.text=el.value;
-
-    });
-
-
-  document
-    .querySelectorAll(".globalMessageColor")
-    .forEach(el=>{
-
-      const id =
-        el.dataset.messageId;
-
-      const item =
-        messages.global.find(
-          m=>m.id===id
-        );
-
-      if(item)
-        item.color=el.value;
-
-    });
-
-
-  document
-    .querySelectorAll(".personalMessageText")
-    .forEach(el=>{
-
-      const id =
-        el.dataset.messageId;
-
-      const item =
-        messages.personal.find(
-          m=>m.id===id
-        );
-
-      if(item)
-        item.text=el.value;
-
-    });
-
-
-  document
-    .querySelectorAll(".personalMessageColor")
-    .forEach(el=>{
-
-      const id =
-        el.dataset.messageId;
-
-      const item =
-        messages.personal.find(
-          m=>m.id===id
-        );
-
-      if(item)
-        item.color=el.value;
-
-    });
-
-
-  document
-    .querySelectorAll(".personalMessageUser")
-    .forEach(el=>{
-
-      const id =
-        el.dataset.messageId;
-
-      const item =
-        messages.personal.find(
-          m=>m.id===id
-        );
-
-      if(item)
-        item.userId=el.value;
-
-    });
-
-
-  saveMessages(messages);
+  renderMessageTargets();
 
 }
 
@@ -4762,67 +3530,45 @@ function saveAdminMessagesFromUI(){
    管理者編集
 ========================================= */
 
-let currentAdminId=null;
-
-const adminSignatureCanvas =
+const adminSignatureCanvas=
   document.getElementById(
     "adminSignatureCanvas"
   );
 
-const adminSignatureCtx =
+const adminSignatureCtx=
   adminSignatureCanvas.getContext("2d");
 
 let adminDrawing=false;
-
 let adminSignatureEdited=false;
 
 
 function setupAdminCanvas(){
 
-  const rect =
-    adminSignatureCanvas
-      .getBoundingClientRect();
+  const rect=
+    adminSignatureCanvas.getBoundingClientRect();
 
-  if(
-    rect.width<=0 ||
-    rect.height<=0
-  ) return;
+  if(rect.width<=0||rect.height<=0)
+    return;
 
-
-  const ratio =
-    Math.max(
-      window.devicePixelRatio||1,
-      1
-    );
-
-
-  adminSignatureCanvas.width =
-    Math.round(
-      rect.width*ratio
-    );
-
-  adminSignatureCanvas.height =
-    Math.round(
-      rect.height*ratio
-    );
-
-
-  adminSignatureCtx.setTransform(
-    ratio,
-    0,
-    0,
-    ratio,
-    0,
-    0
+  const ratio=Math.max(
+    window.devicePixelRatio||1,
+    1
   );
 
+  adminSignatureCanvas.width=
+    Math.round(rect.width*ratio);
+
+  adminSignatureCanvas.height=
+    Math.round(rect.height*ratio);
+
+  adminSignatureCtx.setTransform(
+    ratio,0,0,ratio,0,0
+  );
 
   adminSignatureCtx.strokeStyle="#111";
-
+  adminSignatureCtx.fillStyle="#111";
   adminSignatureCtx.lineWidth=2.5;
-
   adminSignatureCtx.lineCap="round";
-
   adminSignatureCtx.lineJoin="round";
 
 }
@@ -4830,16 +3576,12 @@ function setupAdminCanvas(){
 
 function adminGetPosition(e){
 
-  const rect =
-    adminSignatureCanvas
-      .getBoundingClientRect();
+  const rect=
+    adminSignatureCanvas.getBoundingClientRect();
 
-  return {
-
+  return{
     x:e.clientX-rect.left,
-
     y:e.clientY-rect.top
-
   };
 
 }
@@ -4850,31 +3592,21 @@ function adminStartDrawing(e){
   e.preventDefault();
 
   adminDrawing=true;
-
   adminSignatureEdited=true;
-
 
   if(e.pointerId!==undefined){
 
     try{
-
       adminSignatureCanvas
-        .setPointerCapture(
-          e.pointerId
-        );
-
-    }
-    catch(error){}
+        .setPointerCapture(e.pointerId);
+    }catch(error){}
 
   }
 
-
-  const p =
-    adminGetPosition(e);
-
+  const p=adminGetPosition(e);
 
   /*
-   * 黒い丸を作らず線を開始。
+   * ここでも点を描かない。
    */
 
   adminSignatureCtx.beginPath();
@@ -4894,8 +3626,7 @@ function adminDraw(e){
 
   e.preventDefault();
 
-  const p =
-    adminGetPosition(e);
+  const p=adminGetPosition(e);
 
   adminSignatureCtx.lineTo(
     p.x,
@@ -4971,113 +3702,90 @@ function clearAdminSignature(){
 
 function openAdminEdit(id){
 
-  const allData =
-    getAllData();
+  const allData=getAllData();
 
-  const data =
-    allData.find(
-      item=>item.id===id
-    );
+  const data=allData.find(
+    item=>item.id===id
+  );
 
   if(!data)
     return;
 
-
   currentAdminId=id;
-
 
   document.getElementById(
     "adminNumber"
-  ).value =
-    data.number;
-
+  ).value=data.number;
 
   document.getElementById(
     "adminName"
-  ).value =
-    data.name;
-
+  ).value=data.name;
 
   setBirthValue(
-    "admin",
-    data.birth
+    data.birth,
+    "adminBirthYear",
+    "adminBirthMonth",
+    "adminBirthDay"
   );
-
 
   document.getElementById(
     "adminAgreementDate"
-  ).value =
-    data.agreementDate;
-
+  ).value=data.agreementDate;
 
   document.getElementById(
     "adminExpiryDate"
-  ).value =
-    data.expiryDate;
+  ).value=data.expiryDate;
 
+  /*
+   * 管理者は利用パスワードを閲覧・変更可能。
+   */
 
   document.getElementById(
     "adminUserPassword"
-  ).value =
-    data.password;
+  ).value=data.password;
 
+  renderAdminRules(data.rules);
 
-  renderAdminRules(
-    data.rules
-  );
+  showScreen("adminEditScreen");
 
+  setTimeout(function(){
 
-  showScreen(
-    "adminEditScreen"
-  );
+    setupAdminCanvas();
 
+    adminSignatureEdited=false;
 
-  setTimeout(
-    function(){
+    adminSignatureCtx.clearRect(
+      0,
+      0,
+      adminSignatureCanvas.width,
+      adminSignatureCanvas.height
+    );
 
-      setupAdminCanvas();
+    if(data.signature){
 
-      adminSignatureEdited=false;
+      const image=new Image();
 
+      image.onload=function(){
 
-      adminSignatureCtx.clearRect(
-        0,
-        0,
-        adminSignatureCanvas.width,
-        adminSignatureCanvas.height
-      );
+        const rect=
+          adminSignatureCanvas
+            .getBoundingClientRect();
 
+        adminSignatureCtx.drawImage(
+          image,
+          0,
+          0,
+          rect.width,
+          rect.height
+        );
 
-      if(data.signature){
+      };
 
-        const image =
-          new Image();
+      image.src=data.signature;
 
-        image.onload =
-          function(){
+    }
 
-            const rect =
-              adminSignatureCanvas
-                .getBoundingClientRect();
-
-            adminSignatureCtx.drawImage(
-              image,
-              0,
-              0,
-              rect.width,
-              rect.height
-            );
-
-          };
-
-        image.src =
-          data.signature;
-
-      }
-
-    },
-    50
-  );
+  },50);
 
 }
 
@@ -5088,54 +3796,45 @@ function openAdminEdit(id){
 
 function renderAdminRules(states){
 
-  const area =
-    document.getElementById(
-      "adminRules"
-    );
+  const area=document.getElementById(
+    "adminRules"
+  );
 
   area.innerHTML="";
 
+  rules.forEach((rule,index)=>{
 
-  rules.forEach(
-    (rule,index)=>{
+    const div=document.createElement("div");
 
-      const div =
-        document.createElement(
-          "div"
-        );
+    div.className="admin-rule-edit";
 
-      div.className =
-        "admin-rule-edit";
+    const checked=
+      !states ||
+      states[index]!==false;
 
-      const checked =
-        !states ||
-        states[index]!==false;
+    div.innerHTML=`
 
+      <label>
 
-      div.innerHTML = `
+        <input
+          type="checkbox"
+          class="adminRuleCheck"
+          data-index="${index}"
+          ${checked?"checked":""}
+        >
 
-        <label>
+        <span>
+          第${index+1}条　
+          ${escapeHTML(rule.title)}
+        </span>
 
-          <input
-            type="checkbox"
-            class="adminRuleCheck"
-            data-index="${index}"
-            ${checked?"checked":""}>
+      </label>
 
-          <span>
-            第${index+1}条　
-            ${escapeHTML(rule.title)}
-          </span>
+    `;
 
-        </label>
+    area.appendChild(div);
 
-      `;
-
-
-      area.appendChild(div);
-
-    }
-  );
+  });
 
 }
 
@@ -5149,78 +3848,59 @@ function saveAdminEdit(){
   if(!currentAdminId)
     return;
 
+  const allData=getAllData();
 
-  const allData =
-    getAllData();
-
-
-  const index =
-    allData.findIndex(
-      item=>item.id===currentAdminId
-    );
-
+  const index=allData.findIndex(
+    item=>item.id===currentAdminId
+  );
 
   if(index===-1)
     return;
 
+  const data=allData[index];
 
-  const data =
-    allData[index];
+  const number=document.getElementById(
+    "adminNumber"
+  ).value.trim();
 
+  const name=document.getElementById(
+    "adminName"
+  ).value.trim();
 
-  const number =
-    document.getElementById(
-      "adminNumber"
-    ).value.trim();
+  const birth=getBirthValue(
+    "adminBirthYear",
+    "adminBirthMonth",
+    "adminBirthDay"
+  );
 
+  const agreement=document.getElementById(
+    "adminAgreementDate"
+  ).value;
 
-  const name =
-    document.getElementById(
-      "adminName"
-    ).value.trim();
+  const expiry=document.getElementById(
+    "adminExpiryDate"
+  ).value;
 
+  const password=document.getElementById(
+    "adminUserPassword"
+  ).value;
 
-  const birth =
-    getBirthValue("admin");
-
-
-  const agreement =
-    document.getElementById(
-      "adminAgreementDate"
-    ).value;
-
-
-  const expiry =
-    document.getElementById(
-      "adminExpiryDate"
-    ).value;
-
-
-  const password =
-    document.getElementById(
-      "adminUserPassword"
-    ).value;
-
-
-  const error =
-    document.getElementById(
-      "adminEditError"
-    );
-
+  const error=document.getElementById(
+    "adminEditError"
+  );
 
   error.style.display="none";
 
-
   if(
-    !number ||
-    !name ||
-    !birth ||
-    !agreement ||
-    !expiry ||
+    !number||
+    !name||
+    !birth||
+    !agreement||
+    !expiry||
     !password
   ){
 
-    error.textContent =
+    error.textContent=
       "必要な項目をすべて入力してください。";
 
     error.style.display="block";
@@ -5229,10 +3909,9 @@ function saveAdminEdit(){
 
   }
 
-
   if(password.length<4){
 
-    error.textContent =
+    error.textContent=
       "利用パスワードは4文字以上にしてください。";
 
     error.style.display="block";
@@ -5241,103 +3920,67 @@ function saveAdminEdit(){
 
   }
 
-
   data.number=number;
-
   data.name=name;
-
   data.birth=birth;
-
   data.password=password;
-
   data.agreementDate=agreement;
-
   data.expiryDate=expiry;
 
+  const agreementDate=new Date(
+    agreement+"T00:00:00"
+  );
 
-  const agreementDate =
-    new Date(
-      agreement+"T00:00:00"
-    );
+  const expiryDate=new Date(
+    expiry+"T00:00:00"
+  );
 
-  const expiryDate =
-    new Date(
-      expiry+"T00:00:00"
-    );
+  if(!isNaN(agreementDate.getTime()))
+    data.agreementDateText=
+      formatDateJP(agreementDate);
 
+  if(!isNaN(expiryDate.getTime()))
+    data.expiryDateText=
+      formatDateJP(expiryDate);
 
-  if(!isNaN(
-    agreementDate.getTime()
-  )){
-
-    data.agreementDateText =
-      formatDateJP(
-        agreementDate
-      );
-
-  }
-
-
-  if(!isNaN(
-    expiryDate.getTime()
-  )){
-
-    data.expiryDateText =
-      formatDateJP(
-        expiryDate
-      );
-
-  }
-
-
-  data.rules =
-    [
-      ...document.querySelectorAll(
-        ".adminRuleCheck"
-      )
-    ].map(
-      checkbox=>checkbox.checked
-    );
-
+  data.rules=[
+    ...document.querySelectorAll(
+      ".adminRuleCheck"
+    )
+  ].map(
+    checkbox=>checkbox.checked
+  );
 
   if(adminSignatureEdited){
 
-    data.signature =
-      adminSignatureCanvas
-        .toDataURL("image/png");
+    data.signature=
+      adminSignatureCanvas.toDataURL(
+        "image/png"
+      );
 
   }
 
+  data.updatedAt=new Date().toISOString();
 
   allData[index]=data;
 
   saveAllData(allData);
 
-  logOperation(
-    "管理者が登録情報を変更："+data.name
+  addHistory(
+    "管理者による利用者情報編集",
+    data.name+" / "+data.number
   );
 
-
   showLoading(
-
-    [
-      "情報を保存しています。",
-      "変更内容を確認しています。",
-      "完了しました。"
-    ],
-
+    ["情報を保存しています。"],
     2000,
-
     function(){
 
       renderAdminList();
 
-      showScreen(
-        "adminListScreen"
-      );
+      showScreen("adminListScreen");
 
     }
-
   );
 
 }
@@ -5352,45 +3995,30 @@ function showDeleteConfirmation(){
   if(!currentAdminId)
     return;
 
-
-  const allData =
-    getAllData();
-
-
-  const data =
-    allData.find(
-      item=>item.id===currentAdminId
-    );
-
+  const data=getAllData().find(
+    item=>item.id===currentAdminId
+  );
 
   if(!data)
     return;
 
-
   document.getElementById(
     "deleteConfirmName"
-  ).textContent =
-    data.name;
-
+  ).textContent=data.name;
 
   document.getElementById(
     "deleteConfirmNumber"
-  ).textContent =
+  ).textContent=
     "確認番号："+data.number;
 
-
-  showScreen(
-    "deleteConfirmScreen"
-  );
+  showScreen("deleteConfirmScreen");
 
 }
 
 
 function cancelDelete(){
 
-  showScreen(
-    "adminEditScreen"
-  );
+  showScreen("adminEditScreen");
 
 }
 
@@ -5400,69 +4028,56 @@ function executeDelete(){
   if(!currentAdminId)
     return;
 
+  const allData=getAllData();
 
-  const allData =
-    getAllData();
+  const target=allData.find(
+    item=>item.id===currentAdminId
+  );
 
-
-  const target =
-    allData.find(
-      item=>item.id===currentAdminId
-    );
-
-
-  const newData =
-    allData.filter(
-      item=>item.id!==currentAdminId
-    );
-
+  const newData=allData.filter(
+    item=>item.id!==currentAdminId
+  );
 
   saveAllData(newData);
 
+  /*
+   * 削除対象者をメッセージ対象からも削除。
+   */
 
-  const messages =
-    getMessages();
+  const messages=getMessages();
 
-  messages.personal =
-    messages.personal.filter(
-      m=>m.userId!==currentAdminId
-    );
+  messages.forEach(message=>{
+
+    message.targets=
+      message.targets.filter(
+        id=>id!==currentAdminId
+      );
+
+  });
 
   saveMessages(messages);
 
-
-  logOperation(
-    "登録情報を削除："+(
-      target ? target.name : ""
-    )
+  addHistory(
+    "利用者情報削除",
+    target
+      ?target.name+" / "+target.number
+      :""
   );
-
 
   currentAdminId=null;
 
-
   showLoading(
-
-    [
-      "登録情報を削除しています。",
-      "関連メッセージを確認しています。",
-      "完了しました。"
-    ],
-
+    ["登録情報を削除しています。"],
     2000,
-
     function(){
 
       renderAdminList();
 
       renderMessagesAdmin();
 
-      showScreen(
-        "adminListScreen"
-      );
+      showScreen("adminListScreen");
 
     }
-
   );
 
 }
@@ -5478,9 +4093,7 @@ function backToAdminList(){
 
   renderAdminList();
 
-  showScreen(
-    "adminListScreen"
-  );
+  showScreen("adminListScreen");
 
 }
 
@@ -5493,245 +4106,356 @@ function adminLogout(){
     "adminPassword"
   ).value="";
 
-  showScreen(
-    "menuScreen"
-  );
+  showScreen("menuScreen");
 
 }
 
 
 /* =========================================
-   設定
+   メッセージ管理
 ========================================= */
 
-function loadAdminSettings(){
+let editingMessageId=null;
 
-  const settings =
-    getSettings();
 
-  document.getElementById(
-    "startURL"
-  ).value =
-    settings.startURL || "";
+function showMessageEditor(message=null){
+
+  editingMessageId=
+    message?message.id:null;
 
   document.getElementById(
-    "adminVersion"
-  ).value =
-    settings.version || VERSION;
+    "messageEditor"
+  ).style.display="block";
+
+  document.getElementById(
+    "messageText"
+  ).value=
+    message?message.text:"";
+
+  document.getElementById(
+    "messageColor"
+  ).value=
+    message?message.color:"#000000";
+
+  renderMessageTargets(
+    message?message.targets:[]
+  );
+
+  updateMessagePreview();
 
 }
 
 
-function saveSystemSettings(){
+function hideMessageEditor(){
 
-  const startURL =
-    document.getElementById(
-      "startURL"
-    ).value.trim();
+  editingMessageId=null;
 
-  const version =
-    document.getElementById(
-      "adminVersion"
-    ).value.trim();
+  document.getElementById(
+    "messageEditor"
+  ).style.display="none";
+
+}
 
 
-  let validURL=true;
+function renderMessageTargets(
+  selectedIds=[]
+){
 
-  try{
+  const area=document.getElementById(
+    "messageTargets"
+  );
 
-    const url =
-      new URL(startURL);
+  if(!area)
+    return;
 
-    validURL =
-      url.protocol==="http:" ||
-      url.protocol==="https:";
+  const allData=getAllData();
+
+  area.innerHTML="";
+
+  if(allData.length===0){
+
+    area.innerHTML=
+      '<div class="admin-empty">利用者がいません。</div>';
+
+    return;
 
   }
-  catch(e){
 
-    validURL=false;
+  allData.forEach(data=>{
 
-  }
+    const label=document.createElement("label");
+
+    label.className="target-item";
+
+    label.innerHTML=`
+
+      <input
+        type="checkbox"
+        class="messageTargetCheck"
+        value="${escapeHTML(data.id)}"
+        ${selectedIds.includes(data.id)?"checked":""}
+      >
+
+      <span>
+        ${escapeHTML(data.name)}
+        （${escapeHTML(data.number)}）
+      </span>
+
+    `;
+
+    area.appendChild(label);
+
+  });
+
+}
 
 
-  if(!validURL){
+function selectAllTargets(){
+
+  document
+    .querySelectorAll(".messageTargetCheck")
+    .forEach(c=>c.checked=true);
+
+}
+
+
+function clearAllTargets(){
+
+  document
+    .querySelectorAll(".messageTargetCheck")
+    .forEach(c=>c.checked=false);
+
+}
+
+
+function getSelectedTargets(){
+
+  return [
+    ...document.querySelectorAll(
+      ".messageTargetCheck:checked"
+    )
+  ].map(
+    c=>c.value
+  );
+
+}
+
+
+document.getElementById(
+  "messageText"
+).addEventListener(
+  "input",
+  updateMessagePreview
+);
+
+document.getElementById(
+  "messageColor"
+).addEventListener(
+  "change",
+  updateMessagePreview
+);
+
+
+function updateMessagePreview(){
+
+  const preview=document.getElementById(
+    "messagePreview"
+  );
+
+  const text=document.getElementById(
+    "messageText"
+  ).value;
+
+  const color=document.getElementById(
+    "messageColor"
+  ).value;
+
+  preview.textContent=
+    text||"メッセージプレビュー";
+
+  preview.style.color=color;
+
+}
+
+
+function saveMessage(){
+
+  const text=document.getElementById(
+    "messageText"
+  ).value.trim();
+
+  const color=document.getElementById(
+    "messageColor"
+  ).value;
+
+  const targets=getSelectedTargets();
+
+  if(!text){
 
     showGlobalNotice(
-      "設定エラー",
-      "利用開始後URLには正しいURLを入力してください。"
+      "入力エラー",
+      "メッセージを入力してください。"
     );
 
     return;
 
   }
 
+  if(targets.length===0){
 
-  const oldSettings =
-    getSettings();
-
-
-  saveSettings({
-
-    startURL:startURL,
-
-    version:
-      version || VERSION
-
-  });
-
-
-  logOperation(
-    "システム設定を変更"
-  );
-
-
-  /*
-   * 規約バージョンを変更した場合、
-   * 登録者のruleVersionとの比較によって
-   * 次回継続利用時に再同意させる。
-   */
-
-  if(
-    oldSettings.version!==version
-  ){
-
-    logOperation(
-      "規約バージョン変更："+version
+    showGlobalNotice(
+      "入力エラー",
+      "表示対象者を1人以上選択してください。"
     );
+
+    return;
 
   }
 
+  const messages=getMessages();
 
-  showGlobalNotice(
-    "設定を保存しました",
-    "システム設定を保存しました。"
-  );
+  if(editingMessageId){
 
-}
+    const index=messages.findIndex(
+      message=>
+        message.id===editingMessageId
+    );
 
+    if(index!==-1){
 
-/* =========================================
-   操作履歴
-========================================= */
+      messages[index].text=text;
+      messages[index].color=color;
+      messages[index].targets=targets;
+      messages[index].updatedAt=
+        new Date().toISOString();
 
-function getHistory(){
-
-  try{
-
-    const raw =
-      localStorage.getItem(
-        HISTORY_KEY
+      addHistory(
+        "メッセージ変更",
+        text
       );
 
-    if(!raw)
-      return [];
+    }
 
-    const data =
-      JSON.parse(raw);
+  }else{
 
-    return Array.isArray(data)
-      ? data
-      : [];
+    messages.push({
+
+      id:
+        Date.now()+"-"+
+        Math.random()
+          .toString(36)
+          .slice(2),
+
+      text:text,
+
+      color:color,
+
+      targets:targets,
+
+      createdAt:new Date().toISOString(),
+
+      updatedAt:new Date().toISOString()
+
+    });
+
+    addHistory(
+      "メッセージ追加",
+      text
+    );
 
   }
-  catch(e){
 
-    return [];
+  saveMessages(messages);
 
-  }
+  hideMessageEditor();
 
-}
+  renderMessagesAdmin();
 
-
-function logOperation(action){
-
-  const history =
-    getHistory();
-
-  history.push({
-
-    time:
-      new Date().toISOString(),
-
-    action:action
-
-  });
-
-
-  /*
-   * 無制限に増え続けないよう、
-   * 最新500件だけ保持。
-   */
-
-  const limited =
-    history.slice(-500);
-
-  localStorage.setItem(
-    HISTORY_KEY,
-    JSON.stringify(limited)
+  showGlobalNotice(
+    "保存完了",
+    "メッセージを保存しました。"
   );
 
 }
 
 
-function renderHistory(){
+function renderMessagesAdmin(){
 
-  const area =
-    document.getElementById(
-      "operationHistory"
-    );
+  const area=document.getElementById(
+    "messageList"
+  );
 
-  const history =
-    getHistory()
-      .slice()
-      .reverse();
+  if(!area)
+    return;
 
+  const messages=getMessages();
 
   area.innerHTML="";
 
+  if(messages.length===0){
 
-  if(history.length===0){
-
-    area.innerHTML = `
-
+    area.innerHTML=`
       <div class="admin-empty">
-        操作履歴はありません。
+        登録されているメッセージはありません。
       </div>
-
     `;
 
     return;
 
   }
 
+  messages.forEach(message=>{
 
-  history.slice(0,100).forEach(item=>{
+    const div=document.createElement("div");
 
-    const div =
-      document.createElement(
-        "div"
-      );
+    div.className="message-admin-card";
 
-    div.className =
-      "admin-list-item";
+    const targetNames=
+      message.targets.map(id=>{
 
-    div.style.cursor="default";
+        const user=getAllData().find(
+          item=>item.id===id
+        );
 
-    const date =
-      new Date(item.time);
+        return user
+          ?user.name
+          :"削除済み利用者";
 
-    div.innerHTML = `
+      });
 
-      <div class="admin-list-name">
-        ${escapeHTML(item.action)}
+    div.innerHTML=`
+
+      <div
+        class="message-preview"
+        style="color:${escapeHTML(
+          message.color||"#000000"
+        )}">
+        ${escapeHTML(message.text)}
       </div>
 
-      <div class="admin-list-number">
+      <div class="password-note">
+        表示対象：
         ${escapeHTML(
-          isNaN(date.getTime())
-            ? item.time
-            : date.toLocaleString("ja-JP")
+          targetNames.join("、")
         )}
+      </div>
+
+      <div class="button-row">
+
+        <button
+          class="small-button blue-button"
+          data-id="${escapeHTML(message.id)}"
+          onclick="editMessageById(this.dataset.id)">
+          編集
+        </button>
+
+        <button
+          class="small-button red-button"
+          data-id="${escapeHTML(message.id)}"
+          onclick="deleteMessageById(this.dataset.id)">
+          削除
+        </button>
+
       </div>
 
     `;
@@ -5743,252 +4467,311 @@ function renderHistory(){
 }
 
 
-/* =========================================
-   暗号化
-========================================= */
+function editMessageById(id){
 
-/*
- * Web Crypto APIを利用。
- *
- * 注意：
- * ブラウザだけで管理者パスワード等を
- * 完全に秘密にすることはできない。
- *
- * ここではデータ出力時に
- * AES-GCMで暗号化する。
- */
+  const message=getMessages().find(
+    item=>item.id===id
+  );
 
-async function deriveKey(){
+  if(!message)
+    return;
 
-  const encoder =
-    new TextEncoder();
+  showMessageEditor(message);
 
-  const material =
-    await crypto.subtle.importKey(
-      "raw",
-      encoder.encode(
-        ADMIN_PASSWORD
-      ),
-      "PBKDF2",
-      false,
-      ["deriveKey"]
-    );
+}
 
 
-  return crypto.subtle.deriveKey(
+function deleteMessageById(id){
 
-    {
-      name:"PBKDF2",
+  const messages=getMessages();
 
-      salt:
-        encoder.encode(
-          "smartphone-v10-data-export"
-        ),
+  const target=messages.find(
+    message=>message.id===id
+  );
 
-      iterations:150000,
+  const newMessages=messages.filter(
+    message=>message.id!==id
+  );
 
-      hash:"SHA-256"
+  saveMessages(newMessages);
 
-    },
+  addHistory(
+    "メッセージ削除",
+    target?target.text:""
+  );
 
-    material,
+  renderMessagesAdmin();
 
-    {
-      name:"AES-GCM",
-      length:256
-    },
-
-    false,
-
-    ["encrypt","decrypt"]
-
+  showGlobalNotice(
+    "削除完了",
+    "メッセージを削除しました。"
   );
 
 }
 
 
-async function encryptText(text){
+/* =========================================
+   システム設定
+========================================= */
 
-  const encoder =
-    new TextEncoder();
+function loadSystemSettings(){
 
-  const key =
-    await deriveKey();
+  const settings=getSettings();
 
-  const iv =
-    crypto.getRandomValues(
-      new Uint8Array(12)
-    );
+  document.getElementById(
+    "startUrl"
+  ).value=settings.startUrl||"";
 
-
-  const encrypted =
-    await crypto.subtle.encrypt(
-
-      {
-        name:"AES-GCM",
-        iv:iv
-      },
-
-      key,
-
-      encoder.encode(text)
-
-    );
-
-
-  return {
-
-    version:"AES-GCM-256",
-
-    iv:
-      arrayBufferToBase64(iv),
-
-    data:
-      arrayBufferToBase64(
-        new Uint8Array(encrypted)
-      )
-
-  };
+  document.getElementById(
+    "ruleVersion"
+  ).value=settings.ruleVersion||VERSION;
 
 }
 
 
-function arrayBufferToBase64(buffer){
+function saveSystemSettings(){
 
-  let binary="";
+  let url=document.getElementById(
+    "startUrl"
+  ).value.trim();
 
-  const bytes =
-    new Uint8Array(buffer);
+  const ruleVersion=document.getElementById(
+    "ruleVersion"
+  ).value.trim();
 
-  const chunk=0x8000;
+  if(!url)
+    url="https://www.google.com/";
 
-  for(
-    let i=0;
-    i<bytes.length;
-    i+=chunk
+  if(
+    !/^https?:\/\//i.test(url)
   ){
 
-    binary +=
-      String.fromCharCode(
-        ...bytes.subarray(
-          i,
-          i+chunk
-        )
-      );
+    showGlobalNotice(
+      "入力エラー",
+      "URLはhttp://またはhttps://から入力してください。"
+    );
+
+    return;
 
   }
 
-  return btoa(binary);
-
-}
-
-
-async function exportAllEncrypted(){
-
-  const payload = {
-
-    exportedAt:
-      new Date().toISOString(),
-
-    version:VERSION,
-
-    agreements:
-      getAllData(),
-
-    messages:
-      getMessages(),
-
-    settings:
-      getSettings(),
-
-    history:
-      getHistory()
-
-  };
-
-
-  const encrypted =
-    await encryptText(
-      JSON.stringify(
-        payload
-      )
-    );
-
-
-  document.getElementById(
-    "dataOutput"
-  ).value =
-    JSON.stringify(
-      encrypted
-    );
-
-
-  logOperation(
-    "全体データを暗号化出力"
-  );
-
-}
-
-
-async function exportStorageEncrypted(){
-
-  const payload = {
-
-    agreements:
-      localStorage.getItem(
-        STORAGE_KEY
-      ),
-
-    settings:
-      localStorage.getItem(
-        SETTINGS_KEY
-      ),
-
-    messages:
-      localStorage.getItem(
-        MESSAGE_KEY
-      ),
-
-    history:
-      localStorage.getItem(
-        HISTORY_KEY
-      )
-
-  };
-
-
-  const encrypted =
-    await encryptText(
-      JSON.stringify(payload)
-    );
-
-
-  document.getElementById(
-    "dataOutput"
-  ).value =
-    JSON.stringify(
-      encrypted
-    );
-
-
-  logOperation(
-    "ローカルストレージを暗号化出力"
-  );
-
-}
-
-
-async function copyDataOutput(){
-
-  const text =
-    document.getElementById(
-      "dataOutput"
-    ).value;
-
-  if(!text){
+  if(!ruleVersion){
 
     showGlobalNotice(
-      "データ",
+      "入力エラー",
+      "規約バージョンを入力してください。"
+    );
+
+    return;
+
+  }
+
+  const old=getSettings();
+
+  const settings={
+    startUrl:url,
+    ruleVersion:ruleVersion
+  };
+
+  saveSettings(settings);
+
+  /*
+   * 規約バージョン変更。
+   * 利用者データそのものを変更せず、
+   * 次回継続利用時に再同意させる。
+   */
+
+  if(old.ruleVersion!==ruleVersion){
+
+    addHistory(
+      "規約バージョン変更",
+      old.ruleVersion+" → "+ruleVersion
+    );
+
+  }else{
+
+    addHistory(
+      "システム設定変更",
+      "利用開始後URLを変更"
+    );
+
+  }
+
+  showGlobalNotice(
+    "保存完了",
+    "システム設定を保存しました。"
+  );
+
+}
+
+
+/* =========================================
+   管理者パスワード
+========================================= */
+
+function changeAdminPassword(){
+
+  const value=document.getElementById(
+    "newAdminPassword"
+  ).value;
+
+  if(value.length<4){
+
+    showGlobalNotice(
+      "入力エラー",
+      "管理者パスワードは4文字以上にしてください。"
+    );
+
+    return;
+
+  }
+
+  adminPassword=value;
+
+  localStorage.setItem(
+    "smartphoneAdminPassword",
+    value
+  );
+
+  document.getElementById(
+    "newAdminPassword"
+  ).value="";
+
+  addHistory(
+    "管理者パスワード変更",
+    "管理者パスワードを変更"
+  );
+
+  showGlobalNotice(
+    "変更完了",
+    "管理者パスワードを変更しました。"
+  );
+
+}
+
+
+/* =========================================
+   データ出力
+========================================= */
+
+function exportOneData(){
+
+  if(!currentAdminId){
+
+    showGlobalNotice(
+      "利用者未選択",
+      "先に利用者を選択してください。"
+    );
+
+    return;
+
+  }
+
+  const data=getAllData().find(
+    item=>item.id===currentAdminId
+  );
+
+  if(!data)
+    return;
+
+  document.getElementById(
+    "exportArea"
+  ).value=
+    createExportString({
+      type:"one",
+      data:data
+    });
+
+  addHistory(
+    "データ出力",
+    "個人データ"
+  );
+
+}
+
+
+function exportAllData(){
+
+  document.getElementById(
+    "exportArea"
+  ).value=
+    createExportString({
+      type:"all",
+      data:getAllData()
+    });
+
+  addHistory(
+    "データ出力",
+    "全体データ"
+  );
+
+}
+
+
+function exportLocalStorage(){
+
+  const result={};
+
+  for(let i=0;i<localStorage.length;i++){
+
+    const key=localStorage.key(i);
+
+    result[key]=localStorage.getItem(key);
+
+  }
+
+  document.getElementById(
+    "exportArea"
+  ).value=
+    createExportString({
+      type:"localStorage",
+      data:result
+    });
+
+  addHistory(
+    "データ出力",
+    "ローカルストレージ"
+  );
+
+}
+
+
+function createExportString(object){
+
+  const payload={
+    version:VERSION,
+    exportedAt:new Date().toISOString(),
+    payload:object
+  };
+
+  /*
+   * 可搬用文字列。
+   * Base64は暗号化ではないため、
+   * 「安全な暗号化」とは別物。
+   * 今回は既存のローカルストレージ方式を維持。
+   */
+
+  return btoa(
+    unescape(
+      encodeURIComponent(
+        JSON.stringify(payload)
+      )
+    )
+  );
+
+}
+
+
+async function copyExport(){
+
+  const area=document.getElementById(
+    "exportArea"
+  );
+
+  if(!area.value){
+
+    showGlobalNotice(
+      "コピーできません",
       "先にデータを出力してください。"
     );
 
@@ -5996,27 +4779,98 @@ async function copyDataOutput(){
 
   }
 
-
   try{
 
     await navigator.clipboard.writeText(
-      text
+      area.value
     );
 
-    showGlobalNotice(
-      "コピー完了",
-      "暗号化データをコピーしました。"
-    );
+  }catch(e){
+
+    area.select();
+
+    document.execCommand("copy");
 
   }
-  catch(e){
 
-    showGlobalNotice(
-      "コピーできません",
-      "このブラウザでは自動コピーを利用できません。"
-    );
+  showGlobalNotice(
+    "コピー完了",
+    "出力した文字列をコピーしました。"
+  );
+
+}
+
+
+/* =========================================
+   操作履歴
+========================================= */
+
+function renderHistory(){
+
+  const area=document.getElementById(
+    "operationHistory"
+  );
+
+  const history=[...getHistory()].reverse();
+
+  area.innerHTML="";
+
+  if(history.length===0){
+
+    area.innerHTML=`
+      <div class="admin-empty">
+        操作履歴はありません。
+      </div>
+    `;
+
+    return;
 
   }
+
+  history.slice(0,100).forEach(item=>{
+
+    const div=document.createElement("div");
+
+    div.className="admin-list-item";
+
+    const date=new Date(item.date);
+
+    div.innerHTML=`
+
+      <div class="admin-list-name">
+        ${escapeHTML(item.action)}
+      </div>
+
+      <div class="admin-list-number">
+        ${escapeHTML(
+          formatDateTime(date)
+        )}
+      </div>
+
+      <div class="password-note">
+        ${escapeHTML(item.detail)}
+      </div>
+
+    `;
+
+    area.appendChild(div);
+
+  });
+
+}
+
+
+function formatDateTime(date){
+
+  if(isNaN(date.getTime()))
+    return "";
+
+  return date.getFullYear()+"年"+
+    String(date.getMonth()+1).padStart(2,"0")+"月"+
+    String(date.getDate()).padStart(2,"0")+"日 "+
+    String(date.getHours()).padStart(2,"0")+":"+
+    String(date.getMinutes()).padStart(2,"0")+":"+
+    String(date.getSeconds()).padStart(2,"0");
 
 }
 
@@ -6029,27 +4883,22 @@ function toggleFullscreen(){
 
   if(document.fullscreenElement){
 
-    document
-      .exitFullscreen()
-      .catch(
-        function(){
+    document.exitFullscreen().catch(
+      function(){
 
-          showGlobalNotice(
-            "全画面表示",
-            "全画面表示を終了できませんでした。"
-          );
+        showGlobalNotice(
+          "全画面表示",
+          "全画面表示を終了できませんでした。"
+        );
 
-        }
-      );
+      }
+    );
 
     return;
 
   }
 
-
-  if(
-    !document.documentElement.requestFullscreen
-  ){
+  if(!document.documentElement.requestFullscreen){
 
     showGlobalNotice(
       "全画面表示",
@@ -6060,9 +4909,7 @@ function toggleFullscreen(){
 
   }
 
-
-  document
-    .documentElement
+  document.documentElement
     .requestFullscreen()
     .catch(
       function(){
@@ -6079,7 +4926,7 @@ function toggleFullscreen(){
 
 
 /* =========================================
-   画面内通知
+   通知
 ========================================= */
 
 function showGlobalNotice(
@@ -6089,24 +4936,19 @@ function showGlobalNotice(
 
   document.getElementById(
     "globalNoticeTitle"
-  ).textContent =
-    title;
+  ).textContent=title;
 
   document.getElementById(
     "globalNoticeText"
-  ).textContent =
-    text;
+  ).textContent=text;
 
   document.getElementById(
     "globalNoticeButton"
-  ).style.display =
-    "block";
+  ).style.display="block";
 
   document.getElementById(
     "globalNotice"
-  ).classList.add(
-    "active"
-  );
+  ).classList.add("active");
 
 }
 
@@ -6115,9 +4957,7 @@ function closeGlobalNotice(){
 
   document.getElementById(
     "globalNotice"
-  ).classList.remove(
-    "active"
-  );
+  ).classList.remove("active");
 
 }
 
@@ -6130,41 +4970,15 @@ function escapeHTML(value){
 
   return String(value)
 
-    .replaceAll(
-      "&",
-      "&amp;"
-    )
+    .replaceAll("&","&amp;")
 
-    .replaceAll(
-      "<",
-      "&lt;"
-    )
+    .replaceAll("<","&lt;")
 
-    .replaceAll(
-      ">",
-      "&gt;"
-    )
+    .replaceAll(">","&gt;")
 
-    .replaceAll(
-      '"',
-      "&quot;"
-    )
+    .replaceAll('"',"&quot;")
 
-    .replaceAll(
-      "'",
-      "&#039;"
-    );
-
-}
-
-
-function escapeJS(value){
-
-  return String(value)
-    .replaceAll("\\","\\\\")
-    .replaceAll("'","\\'")
-    .replaceAll("\n","\\n")
-    .replaceAll("\r","\\r");
+    .replaceAll("'","&#039;");
 
 }
 
@@ -6173,19 +4987,11 @@ function escapeJS(value){
    初期化
 ========================================= */
 
-function initialize(){
+setTimeout(function(){
 
   resizeSignatureCanvas();
 
-  renderUserMessages(null);
-
-}
-
-
-window.addEventListener(
-  "load",
-  initialize
-);
+},100);
 
 </script>
 
